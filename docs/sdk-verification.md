@@ -1,7 +1,7 @@
 # SDK 核验
 
 [SVD 总览](svd-overview.md)列出 20 个系列及归档 SVD 的 SDK 路径。每个归档文件均与相应
-SDK 文件逐字节一致，驱动矩阵的 52 个头文件名及 550 条系列记录已与 `driver/inc/` 全量比对。
+SDK 文件内容一致（行尾归一为 LF），驱动矩阵的 52 个头文件名及 550 条系列记录已与 `driver/inc/` 全量比对。
 各组的实例地址表按 SVD 生成，并核对了 869 个实例地址条目。各系列外部 IRQ 取自 20 份
 SDK 设备头的 `IRQn_Type`。F420 的 IRQ 来自 `mcu/common/HC32F420.h`，门控取
 `driver/inc/sysctrl.h` 和 `driver/src/sysctrl.c`，DMA 请求取 `driver/inc/dmac.h`。
