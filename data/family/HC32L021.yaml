@@ -1,0 +1,288 @@
+# HC32L021 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
+# 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
+- name: ADC
+  address: 0x40002400
+  registers:
+    kind: adc
+    block: ADC
+    version: v9
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockAdc
+  interrupts:
+  - signal: ADC
+    interrupt: ADC
+- name: ATIM3
+  address: 0x40009800
+  registers:
+    kind: atim
+    block: ATIM
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockAtim3
+  interrupts:
+  - signal: ATIM3
+    interrupt: ATIM3
+- name: BTIM0
+  address: 0x40001800
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim0
+- name: BTIM1
+  address: 0x40001900
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim0
+- name: BTIM2
+  address: 0x40001A00
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim0
+- name: BTIM3
+  address: 0x40001C00
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim1
+- name: BTIM4
+  address: 0x40001D00
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim1
+- name: BTIM5
+  address: 0x40001E00
+  registers:
+    kind: btim
+    block: BTIM
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim1
+- name: CTRIM
+  address: 0x40009000
+  registers:
+    kind: ctrim
+    block: CTRIM
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtrim
+  interrupts:
+  - signal: CTRIM_CLKDET
+    interrupt: CTRIM_CLKDET
+- name: FLASH
+  address: 0x40020000
+  registers:
+    kind: flash
+    block: FLASH
+    version: v9
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockFlash
+  interrupts:
+  - signal: FLASH
+    interrupt: FLASH
+- name: GPIOA
+  address: 0x40020C00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockGpio
+  interrupts:
+  - signal: PORTA
+    interrupt: PORTA
+- name: GPIOAUX
+  address: 0x40020C00
+  registers:
+    kind: gpioaux
+    block: GPIOAUX
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockGpio
+- name: GPIOB
+  address: 0x40020C40
+  registers:
+    kind: gpiob
+    block: GPIOB
+    version: common
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockGpio
+  interrupts:
+  - signal: PORTB
+    interrupt: PORTB
+- name: GTIM0
+  address: 0x40001800
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim0
+- name: GTIM1
+  address: 0x40001C00
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: PeriphClockCtim1
+- name: HSI2C
+  address: 0x4000BC00
+  registers:
+    kind: hsi
+    block: HSI
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockHsi2c
+  interrupts:
+  - signal: HSI2C
+    interrupt: HSI2C
+- name: IWDT
+  address: 0x40001000
+  registers:
+    kind: iwdt
+    block: IWDT
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockIwdt
+  interrupts:
+  - signal: IWDT
+    interrupt: IWDT
+- name: LPUART0
+  address: 0x40000000
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockLpuart0
+  interrupts:
+  - signal: LPUART0
+    interrupt: LPUART0
+- name: LPUART1
+  address: 0x40008000
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockLpuart1
+  interrupts:
+  - signal: LPUART1
+    interrupt: LPUART1
+- name: LVD
+  address: 0x40002C00
+  registers:
+    kind: lvd
+    block: LVD
+    version: v5
+  interrupts:
+  - signal: LVD
+    interrupt: LVD
+- name: RTC
+  address: 0x40001400
+  registers:
+    kind: rtc
+    block: RTC
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockRtc
+  interrupts:
+  - signal: RTC
+    interrupt: RTC
+- name: SPI
+  address: 0x40000800
+  registers:
+    kind: spi
+    block: SPI
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockSpi
+  interrupts:
+  - signal: SPI
+    interrupt: SPI
+- name: SYSCTRL
+  address: 0x40021800
+  registers:
+    kind: sysctrl
+    block: SYSCTRL
+    version: v9
+- name: TRNG
+  address: 0x40008C00
+  registers:
+    kind: trng
+    block: TRNG
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockTrng
+- name: VC
+  address: 0x40002800
+  registers:
+    kind: vc
+    block: VC
+    version: v6
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: PeriphClockVc
+  interrupts:
+  - signal: VC0
+    interrupt: VC0
+  - signal: VC1
+    interrupt: VC1

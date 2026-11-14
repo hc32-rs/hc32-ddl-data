@@ -1,0 +1,155 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F17x/DAC；覆盖系列：HC32F17x, HC32F19x, HC32L16x, HC32L17x, HC32L18x, HC32L19x。
+block/DAC:
+  description: desc DAC.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 0
+    fieldset: CR0
+  - name: SWTRIGR
+    description: desc SWTRIGR.
+    byte_offset: 4
+    access: Write
+    fieldset: SWTRIGR
+  - name: DHR12R0
+    description: desc DHR12R0.
+    byte_offset: 8
+    fieldset: DHR12R0
+  - name: DHR12L0
+    description: desc DHR12L0.
+    byte_offset: 12
+    fieldset: DHR12L0
+  - name: DHR8R0
+    description: desc DHR8R0.
+    byte_offset: 16
+    fieldset: DHR8R0
+  - name: DOR0
+    description: desc DOR0.
+    byte_offset: 44
+    access: Read
+    fieldset: DOR0
+  - name: SR
+    description: desc SR.
+    byte_offset: 52
+    fieldset: SR
+  - name: ETRS
+    description: desc ETRS.
+    byte_offset: 56
+    fieldset: ETRS
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN0
+    description: desc EN0.
+    bit_offset: 0
+    bit_size: 1
+  - name: BOFF0
+    description: desc BOFF0.
+    bit_offset: 1
+    bit_size: 1
+  - name: TEN0
+    description: desc TEN0.
+    bit_offset: 2
+    bit_size: 1
+  - name: TSEL0
+    description: desc TSEL0.
+    bit_offset: 3
+    bit_size: 3
+  - name: WAVE0
+    description: desc WAVE0.
+    bit_offset: 6
+    bit_size: 2
+  - name: MAMP0
+    description: desc MAMP0.
+    bit_offset: 8
+    bit_size: 4
+  - name: DMAEN0
+    description: desc DMAEN0.
+    bit_offset: 12
+    bit_size: 1
+  - name: DMAUDRIE0
+    description: desc DMAUDRIE0.
+    bit_offset: 13
+    bit_size: 1
+  - name: SREF0
+    description: desc SREF0.
+    bit_offset: 14
+    bit_size: 2
+fieldset/DHR12L0:
+  description: desc DHR12L0.
+  fields:
+  - name: DHR0
+    description: desc DHR0.
+    bit_offset: 4
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DHR12R0:
+  description: desc DHR12R0.
+  fields:
+  - name: DHR0
+    description: desc DHR0.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DHR8R0:
+  description: desc DHR8R0.
+  fields:
+  - name: DHR0
+    description: desc DHR0.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DOR0:
+  description: desc DOR0.
+  fields:
+  - name: DOR0
+    description: desc DOR0.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ETRS:
+  description: desc ETRS.
+  fields:
+  - name: PTRIGSEL
+    description: desc PTRIGSEL.
+    bit_offset: 4
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SR:
+  description: desc SR.
+  fields:
+  - name: DMAUDR0
+    description: desc DMAUDR0.
+    bit_offset: 13
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SWTRIGR:
+  description: desc SWTRIGR.
+  fields:
+  - name: SWTRIG0
+    description: desc SWTRIG0.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

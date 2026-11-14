@@ -1,0 +1,52 @@
+# HC32L110C6PA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L110C6PA
+family: HC32L110
+subfamily: cortex-m0
+packages:
+- name: HC32L110C6PA
+  package: TSSOP20
+include_memory: ../memory/HC32L110_F32S4.yaml
+memory_sizes:
+  FLASH: 32K
+  SRAM: 4K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1244.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L110.yaml
+  include_interrupts: ../interrupts/HC32L110.yaml
+_raw:
+  series: HC32L110
+  freq_mhz: '32'
+  flash_kb: '32'
+  sram_kb: '4'
+  package: TSSOP20
+  pin_count: '20'
+  gpio: '16'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '1'
+  i2c: '1'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '9'
+  dac: ''
+  timer: '6'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: '2'
+  other: gpio_note=16+1|LPTimer=1|RTC=✓|LPUART=1|LVD=✓|LVR=✓|脚间距=0.65mm|芯片厚度=1.2mm|出货形式=管装
+  url: https://www.xhsc.com.cn/product/1244.html
+  source: DS
+  Part NO.: HC32L110C6PA

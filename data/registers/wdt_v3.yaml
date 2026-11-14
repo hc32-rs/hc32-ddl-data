@@ -1,0 +1,52 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L16x/WDT；覆盖系列：HC32L16x, HC32L18x。
+block/WDT:
+  description: desc WDT.
+  items:
+  - name: RST
+    description: desc RST.
+    byte_offset: 0
+    access: Write
+    fieldset: RST
+  - name: CON
+    description: desc CON.
+    byte_offset: 4
+    fieldset: CON
+fieldset/CON:
+  description: desc CON.
+  fields:
+  - name: WOV
+    description: desc WOV.
+    bit_offset: 0
+    bit_size: 4
+  - name: R
+    description: desc R.
+    bit_offset: 4
+    bit_size: 1
+  - name: WINT_EN
+    description: desc WINT_EN.
+    bit_offset: 5
+    bit_size: 1
+  - name: INT
+    description: desc INT.
+    bit_offset: 7
+    bit_size: 1
+  - name: WCNTL
+    description: desc WCNTL.
+    bit_offset: 8
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RST:
+  description: desc RST.
+  fields:
+  - name: RST
+    description: desc RST.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

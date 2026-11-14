@@ -1,0 +1,305 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F420/GTIM0；覆盖系列：HC32F420。
+block/GTIM:
+  description: desc GTIM.
+  items:
+  - name: ARR
+    description: desc ARR.
+    byte_offset: 768
+    fieldset: ARR
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 772
+    fieldset: CNT
+  - name: CMMR
+    description: desc CMMR.
+    byte_offset: 776
+    fieldset: CMMR
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 780
+    fieldset: CR1
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 784
+    fieldset: CR0
+  - name: IER
+    description: desc IER.
+    byte_offset: 788
+    fieldset: IER
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 792
+    fieldset: IFR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 796
+    fieldset: ICR
+  - name: CCR0
+    description: desc CCR0.
+    byte_offset: 800
+    fieldset: CCR0
+  - name: CCR1
+    description: desc CCR1.
+    byte_offset: 804
+    fieldset: CCR1
+  - name: CCR2
+    description: desc CCR2.
+    byte_offset: 808
+    fieldset: CCR2
+  - name: CCR3
+    description: desc CCR3.
+    byte_offset: 812
+    fieldset: CCR3
+fieldset/ARR:
+  description: desc ARR.
+  fields:
+  - name: ARR
+    description: desc ARR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCR0:
+  description: desc CCR0.
+  fields:
+  - name: CCR
+    description: desc CCR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCR1:
+  description: desc CCR1.
+  fields:
+  - name: CCR
+    description: desc CCR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCR2:
+  description: desc CCR2.
+  fields:
+  - name: CCR
+    description: desc CCR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCR3:
+  description: desc CCR3.
+  fields:
+  - name: CCR
+    description: desc CCR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CMMR:
+  description: desc CMMR.
+  fields:
+  - name: CC0M
+    description: desc CC0M.
+    bit_offset: 0
+    bit_size: 3
+  - name: CC1M
+    description: desc CC1M.
+    bit_offset: 4
+    bit_size: 3
+  - name: CC2M
+    description: desc CC2M.
+    bit_offset: 8
+    bit_size: 3
+  - name: CC3M
+    description: desc CC3M.
+    bit_offset: 12
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: CEN
+    description: desc CEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: MD
+    description: desc MD.
+    bit_offset: 1
+    bit_size: 2
+  - name: TOGEN
+    description: desc TOGEN.
+    bit_offset: 3
+    bit_size: 1
+  - name: PRS
+    description: desc PRS.
+    bit_offset: 4
+    bit_size: 4
+  - name: OST
+    description: desc OST.
+    bit_offset: 8
+    bit_size: 1
+  - name: TRS
+    description: desc TRS.
+    bit_offset: 9
+    bit_size: 2
+  - name: ETP
+    description: desc ETP.
+    bit_offset: 11
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: ETRFLT
+    description: desc ETRFLT.
+    bit_offset: 4
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: UI
+    description: desc UI.
+    bit_offset: 0
+    bit_size: 1
+  - name: TI
+    description: desc TI.
+    bit_offset: 1
+    bit_size: 1
+  - name: CC0
+    description: desc CC0.
+    bit_offset: 2
+    bit_size: 1
+  - name: CC1
+    description: desc CC1.
+    bit_offset: 3
+    bit_size: 1
+  - name: CC2
+    description: desc CC2.
+    bit_offset: 4
+    bit_size: 1
+  - name: CC3
+    description: desc CC3.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IER:
+  description: desc IER.
+  fields:
+  - name: UI
+    description: desc UI.
+    bit_offset: 0
+    bit_size: 1
+  - name: TI
+    description: desc TI.
+    bit_offset: 1
+    bit_size: 1
+  - name: CC0
+    description: desc CC0.
+    bit_offset: 2
+    bit_size: 1
+  - name: CC1
+    description: desc CC1.
+    bit_offset: 3
+    bit_size: 1
+  - name: CC2
+    description: desc CC2.
+    bit_offset: 4
+    bit_size: 1
+  - name: CC3
+    description: desc CC3.
+    bit_offset: 5
+    bit_size: 1
+  - name: DCC0
+    description: desc DCC0.
+    bit_offset: 6
+    bit_size: 1
+  - name: DCC1
+    description: desc DCC1.
+    bit_offset: 7
+    bit_size: 1
+  - name: DCC2
+    description: desc DCC2.
+    bit_offset: 8
+    bit_size: 1
+  - name: DCC3
+    description: desc DCC3.
+    bit_offset: 9
+    bit_size: 1
+  - name: OVTRAD
+    description: desc OVTRAD.
+    bit_offset: 10
+    bit_size: 1
+  - name: CH0TRAD
+    description: desc CH0TRAD.
+    bit_offset: 11
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: UI
+    description: desc UI.
+    bit_offset: 0
+    bit_size: 1
+  - name: TI
+    description: desc TI.
+    bit_offset: 1
+    bit_size: 1
+  - name: CC0
+    description: desc CC0.
+    bit_offset: 2
+    bit_size: 1
+  - name: CC1
+    description: desc CC1.
+    bit_offset: 3
+    bit_size: 1
+  - name: CC2
+    description: desc CC2.
+    bit_offset: 4
+    bit_size: 1
+  - name: CC3
+    description: desc CC3.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

@@ -1,0 +1,54 @@
+# HC32L176PATA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L176PATA
+family: HC32L17x
+subfamily: cortex-m0
+packages:
+- name: HC32L176PATA
+  package: LQFP100
+include_memory: ../memory/HC32L17x_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1251.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L17x.yaml
+  include_interrupts: ../interrupts/HC32L17x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L17x_DMA1.yaml
+_raw:
+  series: HC32L17x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP100
+  pin_count: '100'
+  gpio: '1'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '4'
+  spi: '2'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '23'
+  dac: '1'
+  timer: '7'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: '4'
+  opa: '1'
+  cmp: '3'
+  other: GTIMER=4|ATIMER=3|LPTIMER=2|RTC=✓|LPUART=2|LCD=4*52/6*50/8*48|Secruty AES=✓|LQFP100(14*14)=LQFP80(12*12)|0.5mm=0.5mm|Part=Number
+  url: https://www.xhsc.com.cn/product/1251.html
+  source: DS
+  Part NO.: HC32L176PATA

@@ -1,0 +1,19 @@
+# HC32F005 Flash 32K / SRAM 4K 的内存布局（型号：HC32F005C6PA, HC32F005C6PA, HC32F005C6PB, HC32F005C6UA…）。
+# 基址来自设备头/链接脚本（见 data/csv/memory.csv notes）。
+memory:
+- name: FLASH
+  kind: flash
+  address: 0x0
+  size: 32K
+  access:
+    read: true
+    write: true
+    execute: true
+- name: SRAM
+  kind: ram
+  address: 0x20000000
+  size: 4K
+  access:
+    read: true
+    write: true
+    execute: true

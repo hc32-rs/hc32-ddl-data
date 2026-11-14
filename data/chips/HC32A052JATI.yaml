@@ -1,0 +1,55 @@
+# HC32A052JATI（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32A052JATI
+family: HC32A052
+subfamily: cortex-m0
+packages:
+- name: HC32A052JATI
+  package: LQFP48
+include_memory: ../memory/HC32A052_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1312.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32A052.yaml
+  include_interrupts: ../interrupts/HC32A052.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32A052_DMA1.yaml
+_raw:
+  series: HC32A052
+  freq_mhz: '64'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP48
+  pin_count: '48'
+  gpio: '40'
+  vdd_min: '2.0'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '1'
+  i2s: ''
+  can: '1'
+  usb: ''
+  adc: '16'
+  dac: ''
+  timer: '1'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: '2'
+  cmp: '2'
+  other: 内核=Cortex-M0+|temp=-40~105C|DMA=1*5ch|timer=[6](1)|timer_通用定时器=2|timer_高级定时器=4|timer_实时时钟定时器=1|IWDT=1|WWDT=1|PWM
+    总通道数=20ch|LPUART=2|LIN=√|ISO7816=√|LVD=√|CRC=√|EAU=1|包装方式=TrayT|脚间距=0.5mm|产品厚度=1.4mm|1.=该模块为复用模块，和通用定时器分时复用。
+  url: https://www.xhsc.com.cn/product/1312.html
+  source: DS
+  Part NO.: HC32A052JATI

@@ -1,0 +1,18 @@
+# HC32L021 中断向量（来自设备头 IRQn_Type 枚举，hc32-data-tools/csv_to_yaml.py 生成）
+PORTA: 0
+PORTB: 1
+ATIM3: 5
+LPUART0: 8
+LPUART1: 9
+SPI: 10
+CTIM0: 14
+CTIM1: 15
+HSI2C: 18
+IWDT: 22
+RTC: 23
+ADC: 24
+VC0: 26
+VC1: 27
+LVD: 28
+FLASH: 30
+CTRIM_CLKDET: 31

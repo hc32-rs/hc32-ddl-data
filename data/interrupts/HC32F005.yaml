@@ -1,0 +1,23 @@
+# HC32F005 中断向量（来自设备头 IRQn_Type 枚举，hc32-data-tools/csv_to_yaml.py 生成）
+PORT0: 0
+PORT1: 1
+PORT2: 2
+PORT3: 3
+UART0: 6
+UART1: 7
+SPI: 10
+I2C: 12
+TIM0: 14
+TIM1: 15
+TIM2: 16
+ADTIM4: 18
+ADTIM5: 19
+ADTIM6: 20
+PCA: 21
+WDT: 22
+ADC: 24
+VC0: 26
+VC1: 27
+LVD: 28
+FLASH_RAM: 30
+CLKTRIM: 31

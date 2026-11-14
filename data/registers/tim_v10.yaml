@@ -1,0 +1,140 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/TIM3_MODE0；覆盖系列：HC32A136, HC32F030, HC32F072, HC32F17x, HC32F19x, HC32L07x, HC32L13x, HC32L16x, HC32L17x, HC32L18x, HC32L19x。
+block/TIM:
+  description: desc TIM3_MODE0.
+  items:
+  - name: ARR
+    description: desc ARR.
+    byte_offset: 0
+    fieldset: ARR
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 4
+    fieldset: CNT
+  - name: CNT32
+    description: desc CNT32.
+    byte_offset: 8
+    fieldset: CNT32
+  - name: M0CR
+    description: desc M0CR.
+    byte_offset: 12
+    fieldset: M0CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 16
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICLR
+  - name: DTR
+    description: desc DTR.
+    byte_offset: 48
+    fieldset: DTR
+fieldset/ARR:
+  description: desc ARR.
+  fields:
+  - name: ARR
+    description: desc ARR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT32:
+  description: desc CNT32.
+  fields:
+  - name: CNT32
+    description: desc CNT32.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DTR:
+  description: desc DTR.
+  fields:
+  - name: MOE
+    description: desc MOE.
+    bit_offset: 12
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: UIF
+    description: desc UIF.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: UIF
+    description: desc UIF.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/M0CR:
+  description: desc M0CR.
+  fields:
+  - name: CTEN
+    description: desc CTEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: MD
+    description: desc MD.
+    bit_offset: 1
+    bit_size: 1
+  - name: CT
+    description: desc CT.
+    bit_offset: 2
+    bit_size: 1
+  - name: TOGEN
+    description: desc TOGEN.
+    bit_offset: 3
+    bit_size: 1
+  - name: PRS
+    description: desc PRS.
+    bit_offset: 4
+    bit_size: 3
+  - name: GATE
+    description: desc GATE.
+    bit_offset: 8
+    bit_size: 1
+  - name: GATEP
+    description: desc GATEP.
+    bit_offset: 9
+    bit_size: 1
+  - name: UIE
+    description: desc UIE.
+    bit_offset: 10
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 12
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

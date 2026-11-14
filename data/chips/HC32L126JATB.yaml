@@ -1,0 +1,55 @@
+# HC32L126JATB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L126JATB
+family: HC32L12x
+subfamily: cortex-m0plus
+packages:
+- name: HC32L126JATB
+  package: LQFP48
+include_memory: ../memory/HC32L12x_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1309.html
+cores:
+- name: cortex-m0plus
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L12x.yaml
+  include_interrupts: ../interrupts/HC32L12x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L12x_DMA1.yaml
+_raw:
+  series: HC32L12x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP48
+  pin_count: '48'
+  gpio: '40'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '3'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '10'
+  dac: ''
+  timer: '2'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: '4'
+  opa: ''
+  cmp: '2'
+  other: 内核=Cortex-M0+|temp=-40~105C|DMA=1*2ch|timer_通用定时器=4|timer_实时时钟定时器=1|IWDT=1|WWDT=1|LPUART=3|LIN=√|ISO7816=√|LCD=4*26|LVD=1|CRC=1|AES=1|TRNG=1|包装方式=Tray|脚间距=0.5mm
+    0.35mm|产品厚度=1.4mm 0.55mm
+  url: https://www.xhsc.com.cn/product/1309.html
+  source: DS
+  Part NO.: HC32L126JATB

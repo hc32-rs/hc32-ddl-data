@@ -1,0 +1,102 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/SPI；覆盖系列：HC32F003, HC32F005。
+block/SPI:
+  description: desc SPI.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 0
+    fieldset: CR
+  - name: SSN
+    description: desc SSN.
+    byte_offset: 4
+    fieldset: SSN
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 8
+    access: Read
+    fieldset: STAT
+  - name: DATA
+    description: desc DATA.
+    byte_offset: 12
+    fieldset: DATA
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: SPR0
+    description: desc SPR0.
+    bit_offset: 0
+    bit_size: 1
+  - name: SPR1
+    description: desc SPR1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CPHA
+    description: desc CPHA.
+    bit_offset: 2
+    bit_size: 1
+  - name: CPOL
+    description: desc CPOL.
+    bit_offset: 3
+    bit_size: 1
+  - name: MSTR
+    description: desc MSTR.
+    bit_offset: 4
+    bit_size: 1
+  - name: SPEN
+    description: desc SPEN.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPR2
+    description: desc SPR2.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DATA:
+  description: desc DATA.
+  fields:
+  - name: DAT
+    description: desc DAT.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SSN:
+  description: desc SSN.
+  fields:
+  - name: SSN
+    description: desc SSN.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: MDF
+    description: desc MDF.
+    bit_offset: 4
+    bit_size: 1
+  - name: SSERR
+    description: desc SSERR.
+    bit_offset: 5
+    bit_size: 1
+  - name: WCOL
+    description: desc WCOL.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPIF
+    description: desc SPIF.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

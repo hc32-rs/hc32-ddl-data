@@ -1,0 +1,54 @@
+# HC32F030J8TA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F030J8TA
+family: HC32F030
+subfamily: cortex-m0
+packages:
+- name: HC32F030J8TA
+  package: LQFP48
+include_memory: ../memory/HC32F030_F64S8.yaml
+memory_sizes:
+  FLASH: 64K
+  SRAM: 8K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1271.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F030.yaml
+  include_interrupts: ../interrupts/HC32F030.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32F030_DMA1.yaml
+_raw:
+  series: HC32F030
+  freq_mhz: '48'
+  flash_kb: '64'
+  sram_kb: '8'
+  package: LQFP48
+  pin_count: '48'
+  gpio: '40'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '1'
+  dac: ''
+  timer: '7'
+  rtc: ''
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: '2'
+  cmp: '2'
+  other: ADC_units=17|PWM=18|LVD=✓|LVR=✓|AES=✓|package_note=L|出货形式=盘装|脚间距=0.5mm
+  url: https://www.xhsc.com.cn/product/1271.html
+  source: DS
+  Part NO.: HC32F030J8TA

@@ -1,0 +1,75 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/HDIV；覆盖系列：HC32A136, HC32F030, HC32F072, HC32L07x, HC32L13x。
+block/HDIV:
+  description: desc HDIV.
+  items:
+  - name: DIVIDEND
+    description: desc DIVIDEND.
+    byte_offset: 0
+    fieldset: DIVIDEND
+  - name: DIVISOR
+    description: desc DIVISOR.
+    byte_offset: 4
+    fieldset: DIVISOR
+  - name: QUOTIENT
+    description: desc QUOTIENT.
+    byte_offset: 8
+    fieldset: QUOTIENT
+  - name: REMAINDER
+    description: desc REMAINDER.
+    byte_offset: 12
+    fieldset: REMAINDER
+  - name: SIGN
+    description: desc SIGN.
+    byte_offset: 16
+    fieldset: SIGN
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 20
+    fieldset: STAT
+fieldset/DIVIDEND:
+  description: desc DIVIDEND.
+  fields:
+  - name: DIVIDEND
+    description: desc DIVIDEND.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DIVISOR:
+  description: desc DIVISOR.
+  fields:
+  - name: DIVISOR
+    description: desc DIVISOR.
+    bit_offset: 0
+    bit_size: 16
+fieldset/QUOTIENT:
+  description: desc QUOTIENT.
+  fields:
+  - name: QUOTIENT
+    description: desc QUOTIENT.
+    bit_offset: 0
+    bit_size: 32
+fieldset/REMAINDER:
+  description: desc REMAINDER.
+  fields:
+  - name: REMAINDER
+    description: desc REMAINDER.
+    bit_offset: 0
+    bit_size: 32
+fieldset/SIGN:
+  description: desc SIGN.
+  fields:
+  - name: SIGN
+    description: desc SIGN.
+    bit_offset: 0
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: END
+    description: desc END.
+    bit_offset: 0
+    bit_size: 1
+  - name: ZERO
+    description: desc ZERO.
+    bit_offset: 1
+    bit_size: 1

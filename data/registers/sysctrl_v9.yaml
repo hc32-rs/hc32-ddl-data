@@ -1,0 +1,417 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/SYSCTRL；覆盖系列：HC32L021。
+block/SYSCTRL:
+  description: desc SYSCTRL.
+  items:
+  - name: SYSCTRL0
+    description: desc SYSCTRL0.
+    byte_offset: 0
+    fieldset: SYSCTRL0
+  - name: SYSCTRL1
+    description: desc SYSCTRL1.
+    byte_offset: 4
+    fieldset: SYSCTRL1
+  - name: SYSCTRL2
+    description: desc SYSCTRL2.
+    byte_offset: 8
+    fieldset: SYSCTRL2
+  - name: RC48M_CR
+    description: desc RC48M_CR.
+    byte_offset: 12
+    fieldset: RC48M_CR
+  - name: RCL_CR
+    description: desc RCL_CR.
+    byte_offset: 20
+    fieldset: RCL_CR
+  - name: XTL_CR
+    description: desc XTL_CR.
+    byte_offset: 24
+    fieldset: XTL_CR
+  - name: RESET_FLAG
+    description: desc RESET_FLAG.
+    byte_offset: 28
+    fieldset: RESET_FLAG
+  - name: PERI_CLKEN0
+    description: desc PERI_CLKEN0.
+    byte_offset: 32
+    fieldset: PERI_CLKEN0
+  - name: PERI_CLKEN1
+    description: desc PERI_CLKEN1.
+    byte_offset: 36
+    fieldset: PERI_CLKEN1
+  - name: PERI_RESET0
+    description: desc PERI_RESET0.
+    byte_offset: 40
+    fieldset: PERI_RESET0
+  - name: PERI_RESET1
+    description: desc PERI_RESET1.
+    byte_offset: 44
+    fieldset: PERI_RESET1
+  - name: DEBUG_ACTIVE
+    description: desc DEBUG_ACTIVE.
+    byte_offset: 56
+    fieldset: DEBUG_ACTIVE
+fieldset/DEBUG_ACTIVE:
+  description: desc DEBUG_ACTIVE.
+  fields:
+  - name: IWDT_DEBUG
+    description: desc IWDT_DEBUG.
+    bit_offset: 8
+    bit_size: 1
+  - name: RTC_DEBUG
+    description: desc RTC_DEBUG.
+    bit_offset: 9
+    bit_size: 1
+  - name: ATIM3_DEBUG
+    description: desc ATIM3_DEBUG.
+    bit_offset: 11
+    bit_size: 1
+  - name: CTIM0_DEBUG
+    description: desc CTIM0_DEBUG.
+    bit_offset: 16
+    bit_size: 1
+  - name: CTIM1_DEBUG
+    description: desc CTIM1_DEBUG.
+    bit_offset: 17
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERI_CLKEN0:
+  description: desc PERI_CLKEN0.
+  fields:
+  - name: LPUART0_EN
+    description: desc LPUART0_EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPUART1_EN
+    description: desc LPUART1_EN.
+    bit_offset: 3
+    bit_size: 1
+  - name: SPI_EN
+    description: desc SPI_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: ATIM3_EN
+    description: desc ATIM3_EN.
+    bit_offset: 11
+    bit_size: 1
+  - name: IWDT_EN
+    description: desc IWDT_EN.
+    bit_offset: 15
+    bit_size: 1
+  - name: ADC_EN
+    description: desc ADC_EN.
+    bit_offset: 16
+    bit_size: 1
+  - name: VC_EN
+    description: desc VC_EN.
+    bit_offset: 17
+    bit_size: 1
+  - name: TRNG_EN
+    description: desc TRNG_EN.
+    bit_offset: 18
+    bit_size: 1
+  - name: RTC_EN
+    description: desc RTC_EN.
+    bit_offset: 20
+    bit_size: 1
+  - name: GPIO_EN
+    description: desc GPIO_EN.
+    bit_offset: 28
+    bit_size: 1
+  - name: HSI2C_EN
+    description: desc HSI2C_EN.
+    bit_offset: 30
+    bit_size: 1
+  - name: FLASH_EN
+    description: desc FLASH_EN.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERI_CLKEN1:
+  description: desc PERI_CLKEN1.
+  fields:
+  - name: CTIM0_EN
+    description: desc CTIM0_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CTIM1_EN
+    description: desc CTIM1_EN.
+    bit_offset: 1
+    bit_size: 1
+  - name: CTRIM_EN
+    description: desc CTRIM_EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERI_RESET0:
+  description: desc PERI_RESET0.
+  fields:
+  - name: LPUART0_RST
+    description: desc LPUART0_RST.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPUART1_RST
+    description: desc LPUART1_RST.
+    bit_offset: 3
+    bit_size: 1
+  - name: SPI_RST
+    description: desc SPI_RST.
+    bit_offset: 6
+    bit_size: 1
+  - name: ATIM3_RST
+    description: desc ATIM3_RST.
+    bit_offset: 11
+    bit_size: 1
+  - name: ADC_RST
+    description: desc ADC_RST.
+    bit_offset: 16
+    bit_size: 1
+  - name: VC_RST
+    description: desc VC_RST.
+    bit_offset: 17
+    bit_size: 1
+  - name: TRNG_RST
+    description: desc TRNG_RST.
+    bit_offset: 18
+    bit_size: 1
+  - name: RTC_RST
+    description: desc RTC_RST.
+    bit_offset: 20
+    bit_size: 1
+  - name: GPIO_RST
+    description: desc GPIO_RST.
+    bit_offset: 28
+    bit_size: 1
+  - name: HSI2C_RST
+    description: desc HSI2C_RST.
+    bit_offset: 30
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERI_RESET1:
+  description: desc PERI_RESET1.
+  fields:
+  - name: CTIM0_RST
+    description: desc CTIM0_RST.
+    bit_offset: 0
+    bit_size: 1
+  - name: CTIM1_RST
+    description: desc CTIM1_RST.
+    bit_offset: 1
+    bit_size: 1
+  - name: CTRIM_RST
+    description: desc CTRIM_RST.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RC48M_CR:
+  description: desc RC48M_CR.
+  fields:
+  - name: TRIMF
+    description: desc TRIMF.
+    bit_offset: 2
+    bit_size: 6
+  - name: TRIMC
+    description: desc TRIMC.
+    bit_offset: 8
+    bit_size: 8
+  - name: FSEL
+    description: desc FSEL.
+    bit_offset: 16
+    bit_size: 2
+  - name: STABLE
+    description: desc STABLE.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RCL_CR:
+  description: desc RCL_CR.
+  fields:
+  - name: TRIM
+    description: desc TRIM.
+    bit_offset: 0
+    bit_size: 10
+  - name: STABLE
+    description: desc STABLE.
+    bit_offset: 12
+    bit_size: 1
+  - name: MSEL
+    description: desc MSEL.
+    bit_offset: 16
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RESET_FLAG:
+  description: desc RESET_FLAG.
+  fields:
+  - name: POR5V
+    description: desc POR5V.
+    bit_offset: 0
+    bit_size: 1
+  - name: POR15V
+    description: desc POR15V.
+    bit_offset: 1
+    bit_size: 1
+  - name: LVD_FLAG
+    description: desc LVD_FLAG.
+    bit_offset: 2
+    bit_size: 1
+  - name: IWDT_FLAG
+    description: desc IWDT_FLAG.
+    bit_offset: 3
+    bit_size: 1
+  - name: LOCKUP
+    description: desc LOCKUP.
+    bit_offset: 5
+    bit_size: 1
+  - name: SYSREQ
+    description: desc SYSREQ.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSTB
+    description: desc RSTB.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SYSCTRL0:
+  description: desc SYSCTRL0.
+  fields:
+  - name: RC48M_EN
+    description: desc RC48M_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: RCL_EN
+    description: desc RCL_EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: XTL_EN
+    description: desc XTL_EN.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLKSW
+    description: desc CLKSW.
+    bit_offset: 5
+    bit_size: 3
+  - name: HCLK_PRS
+    description: desc HCLK_PRS.
+    bit_offset: 8
+    bit_size: 3
+  - name: WAKEUP_BYRC48M
+    description: desc WAKEUP_BYRC48M.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SYSCTRL1:
+  description: desc SYSCTRL1.
+  fields:
+  - name: RESET_USE_IO
+    description: desc RESET_USE_IO.
+    bit_offset: 0
+    bit_size: 1
+  - name: EXTH_EN
+    description: desc EXTH_EN.
+    bit_offset: 1
+    bit_size: 1
+  - name: EXTL_EN
+    description: desc EXTL_EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: XTL_ALWAYS_ON
+    description: desc XTL_ALWAYS_ON.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLOCK_FAULT_EN
+    description: desc CLOCK_FAULT_EN.
+    bit_offset: 4
+    bit_size: 1
+  - name: LOCKUP_EN
+    description: desc LOCKUP_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPI_PCTRL
+    description: desc SPI_PCTRL.
+    bit_offset: 7
+    bit_size: 1
+  - name: SWD_USE_IO
+    description: desc SWD_USE_IO.
+    bit_offset: 8
+    bit_size: 1
+  - name: CTIMER0_FUN_SEL
+    description: desc CTIMER0_FUN_SEL.
+    bit_offset: 9
+    bit_size: 1
+  - name: CTIMER1_FUN_SEL
+    description: desc CTIMER1_FUN_SEL.
+    bit_offset: 10
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SYSCTRL2:
+  description: desc SYSCTRL2.
+  fields:
+  - name: SYSCTRL2
+    description: desc SYSCTRL2.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/XTL_CR:
+  description: desc XTL_CR.
+  fields:
+  - name: DRIVER
+    description: desc DRIVER.
+    bit_offset: 0
+    bit_size: 2
+  - name: AMP_SEL
+    description: desc AMP_SEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: STARTUP
+    description: desc STARTUP.
+    bit_offset: 4
+    bit_size: 2
+  - name: STABLE
+    description: desc STABLE.
+    bit_offset: 6
+    bit_size: 1
+  - name: DETIE
+    description: desc DETIE.
+    bit_offset: 7
+    bit_size: 1
+  - name: DETTIME
+    description: desc DETTIME.
+    bit_offset: 8
+    bit_size: 1
+  - name: DETEN
+    description: desc DETEN.
+    bit_offset: 9
+    bit_size: 1
+  - name: FAULT_STATE
+    description: desc FAULT_STATE.
+    bit_offset: 10
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

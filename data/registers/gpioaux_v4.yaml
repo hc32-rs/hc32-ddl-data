@@ -1,0 +1,120 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/GPIOAUX；覆盖系列：HC32L021。
+block/GPIOAUX:
+  description: desc GPIOAUX.
+  items:
+  - name: CTRL1
+    description: desc CTRL1.
+    byte_offset: 772
+    fieldset: CTRL1
+  - name: CTRL2
+    description: desc CTRL2.
+    byte_offset: 776
+    fieldset: CTRL2
+  - name: TIMES
+    description: desc TIMES.
+    byte_offset: 784
+    fieldset: TIMES
+  - name: TIMCPS
+    description: desc TIMCPS.
+    byte_offset: 788
+    fieldset: TIMCPS
+  - name: FLTCFG
+    description: desc FLTCFG.
+    byte_offset: 816
+    fieldset: FLTCFG
+fieldset/CTRL1:
+  description: desc CTRL1.
+  fields:
+  - name: IR_POL
+    description: desc IR_POL.
+    bit_offset: 14
+    bit_size: 1
+  - name: HSI2C_LSEL
+    description: desc HSI2C_LSEL.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CTRL2:
+  description: desc CTRL2.
+  fields:
+  - name: TCLK_SEL
+    description: desc TCLK_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: TCLK_DIV
+    description: desc TCLK_DIV.
+    bit_offset: 6
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/FLTCFG:
+  description: desc FLTCFG.
+  fields:
+  - name: PB0FLT_EN
+    description: desc PB0FLT_EN.
+    bit_offset: 5
+    bit_size: 1
+  - name: PA8FLT_EN
+    description: desc PA8FLT_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: PA0FLT_EN
+    description: desc PA0FLT_EN.
+    bit_offset: 7
+    bit_size: 1
+  - name: FCLK_DIV
+    description: desc FCLK_DIV.
+    bit_offset: 8
+    bit_size: 2
+  - name: FCLK_SEL
+    description: desc FCLK_SEL.
+    bit_offset: 10
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TIMCPS:
+  description: desc TIMCPS.
+  fields:
+  - name: CTIM0_C0
+    description: desc CTIM0_C0.
+    bit_offset: 0
+    bit_size: 2
+  - name: CTIM1_C0
+    description: desc CTIM1_C0.
+    bit_offset: 3
+    bit_size: 2
+  - name: ATIM3_C0A
+    description: desc ATIM3_C0A.
+    bit_offset: 9
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TIMES:
+  description: desc TIMES.
+  fields:
+  - name: CTIM0_E
+    description: desc CTIM0_E.
+    bit_offset: 0
+    bit_size: 2
+  - name: CTIM1_E
+    description: desc CTIM1_E.
+    bit_offset: 3
+    bit_size: 2
+  - name: ATIM3_E
+    description: desc ATIM3_E.
+    bit_offset: 9
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

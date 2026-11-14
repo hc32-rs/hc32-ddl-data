@@ -1,0 +1,52 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F420/CRC；覆盖系列：HC32F420。
+block/CRC:
+  description: desc CRC.
+  items:
+  - name: CSR
+    description: desc CSR.
+    byte_offset: 0
+    access: Read
+    fieldset: CSR
+  - name: RESULT
+    description: desc RESULT.
+    byte_offset: 4
+    fieldset: RESULT
+  - name: DR
+    description: desc DR.
+    byte_offset: 128
+    access: Write
+    fieldset: DR
+fieldset/CSR:
+  description: desc CSR.
+  fields:
+  - name: CODE
+    description: desc CODE.
+    bit_offset: 0
+    bit_size: 1
+  - name: FLAG
+    description: desc FLAG.
+    bit_offset: 1
+    bit_size: 1
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DR:
+  description: desc DR.
+  fields:
+  - name: DR
+    description: desc DR.
+    bit_offset: 0
+    bit_size: 32
+fieldset/RESULT:
+  description: desc RESULT.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 32

@@ -1,0 +1,55 @@
+# HC32L180JATH（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L180JATH
+family: HC32L18x
+subfamily: cortex-m0
+packages:
+- name: HC32L180JATH
+  package: LQFP48
+include_memory: ../memory/HC32L18x_F128S32.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 32K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1259.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L18x.yaml
+  include_interrupts: ../interrupts/HC32L18x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L18x_DMA1.yaml
+_raw:
+  series: HC32L18x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '32'
+  package: LQFP48
+  pin_count: '48'
+  gpio: '3'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '17'
+  dac: '1'
+  timer: '7'
+  rtc: '1'
+  wdt: '1'
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: '3'
+  other: CPUCore=Cortex-M0+|Power Supply Voltages=1.8~5.5V|T emp Range=-40~85℃|DMAC=2ch|timer=General|LPTimer=2|WWDT=1|LPUART=2|LVD=1|CRC=√|Security
+    AES=√|Packing=Tray|Pitch=0.5mm
+  url: https://www.xhsc.com.cn/product/1259.html
+  source: DS
+  Part NO.: HC32L180JATH

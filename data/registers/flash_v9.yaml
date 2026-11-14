@@ -1,0 +1,127 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/FLASH；覆盖系列：HC32L021。
+block/FLASH:
+  description: desc FLASH.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 32
+    fieldset: CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 36
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 40
+    access: Write
+    fieldset: ICLR
+  - name: BYPASS
+    description: desc BYPASS.
+    byte_offset: 44
+    access: Write
+    fieldset: BYPASS
+  - name: SLOCK0
+    description: desc SLOCK0.
+    byte_offset: 48
+    fieldset: SLOCK0
+  - name: LOCK_ST
+    description: desc LOCK_ST.
+    byte_offset: 108
+    access: Read
+    fieldset: LOCK_ST
+fieldset/BYPASS:
+  description: desc BYPASS.
+  fields:
+  - name: BYSEQ
+    description: desc BYSEQ.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 16
+    bit_size: 16
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: OP
+    description: desc OP.
+    bit_offset: 0
+    bit_size: 2
+  - name: WAIT
+    description: desc WAIT.
+    bit_offset: 2
+    bit_size: 2
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 4
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 5
+    bit_size: 2
+  - name: DPSTB_EN
+    description: desc DPSTB_EN.
+    bit_offset: 9
+    bit_size: 1
+  - name: CONTP
+    description: desc CONTP.
+    bit_offset: 10
+    bit_size: 1
+  - name: RO
+    description: desc RO.
+    bit_offset: 11
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 12
+    bit_size: 20
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: PC
+    description: desc PC.
+    bit_offset: 0
+    bit_size: 1
+  - name: PROT
+    description: desc PROT.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 2
+    bit_size: 30
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: PC
+    description: desc PC.
+    bit_offset: 0
+    bit_size: 1
+  - name: PROT
+    description: desc PROT.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 2
+    bit_size: 30
+fieldset/LOCK_ST:
+  description: desc LOCK_ST.
+  fields:
+  - name: LOCK_ST
+    description: desc LOCK_ST.
+    bit_offset: 0
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 2
+    bit_size: 30
+fieldset/SLOCK0:
+  description: desc SLOCK0.
+  fields:
+  - name: SLOCK
+    description: desc SLOCK.
+    bit_offset: 0
+    bit_size: 32

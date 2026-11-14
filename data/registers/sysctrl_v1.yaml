@@ -1,0 +1,772 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A052/SYSCTRL；覆盖系列：HC32A052, HC32F052。
+block/SYSCTRL:
+  description: desc SYSCTRL.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 0
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 4
+    fieldset: CR1
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 8
+    fieldset: CR2
+  - name: CR3
+    description: desc CR3.
+    byte_offset: 12
+    access: Write
+    fieldset: CR3
+  - name: RCHCR
+    description: desc RCHCR.
+    byte_offset: 16
+    fieldset: RCHCR
+  - name: XTHCR
+    description: desc XTHCR.
+    byte_offset: 20
+    fieldset: XTHCR
+  - name: RCLCR
+    description: desc RCLCR.
+    byte_offset: 24
+    fieldset: RCLCR
+  - name: XTLCR
+    description: desc XTLCR.
+    byte_offset: 28
+    fieldset: XTLCR
+  - name: PLLCR
+    description: desc PLLCR.
+    byte_offset: 32
+    fieldset: PLLCR
+  - name: RCHTRIM
+    description: desc RCHTRIM.
+    byte_offset: 36
+    fieldset: RCHTRIM
+  - name: RCLTRIM
+    description: desc RCLTRIM.
+    byte_offset: 40
+    fieldset: RCLTRIM
+  - name: STATE
+    description: desc STATE.
+    byte_offset: 44
+    fieldset: STATE
+  - name: PERICLKEN0
+    description: desc PERICLKEN0.
+    byte_offset: 48
+    fieldset: PERICLKEN0
+  - name: PERICLKEN1
+    description: desc PERICLKEN1.
+    byte_offset: 52
+    fieldset: PERICLKEN1
+  - name: PERIRESET0
+    description: desc PERIRESET0.
+    byte_offset: 56
+    fieldset: PERIRESET0
+  - name: PERIRESET1
+    description: desc PERIRESET1.
+    byte_offset: 60
+    fieldset: PERIRESET1
+  - name: RSTFLAG
+    description: desc RSTFLAG.
+    byte_offset: 64
+    fieldset: RSTFLAG
+  - name: DBGSTOP
+    description: desc DBGSTOP.
+    byte_offset: 68
+    fieldset: DBGSTOP
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: CLKSRC
+    description: desc CLKSRC.
+    bit_offset: 0
+    bit_size: 3
+  - name: HCLKPRS
+    description: desc HCLKPRS.
+    bit_offset: 3
+    bit_size: 3
+  - name: PCLKPRS
+    description: desc PCLKPRS.
+    bit_offset: 6
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: SWDUSEIO
+    description: desc SWDUSEIO.
+    bit_offset: 0
+    bit_size: 1
+  - name: LOCKUP_EN
+    description: desc LOCKUP_EN.
+    bit_offset: 1
+    bit_size: 1
+  - name: WAKEUPBYRCH
+    description: desc WAKEUPBYRCH.
+    bit_offset: 2
+    bit_size: 1
+  - name: RTCLPW
+    description: desc RTCLPW.
+    bit_offset: 3
+    bit_size: 1
+  - name: RTCADJ
+    description: desc RTCADJ.
+    bit_offset: 4
+    bit_size: 3
+  - name: AUTOSWITCH
+    description: desc AUTOSWITCH.
+    bit_offset: 7
+    bit_size: 1
+  - name: SPIPCTRL
+    description: desc SPIPCTRL.
+    bit_offset: 8
+    bit_size: 1
+  - name: XTHFLT
+    description: desc XTHFLT.
+    bit_offset: 9
+    bit_size: 1
+  - name: GTIM0CFG
+    description: desc GTIM0CFG.
+    bit_offset: 10
+    bit_size: 1
+  - name: GTIM1CFG
+    description: desc GTIM1CFG.
+    bit_offset: 11
+    bit_size: 1
+  - name: FASTIOENB
+    description: desc FASTIOENB.
+    bit_offset: 12
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: RCH
+    description: desc RCH.
+    bit_offset: 0
+    bit_size: 1
+  - name: XTH
+    description: desc XTH.
+    bit_offset: 1
+    bit_size: 1
+  - name: RCL
+    description: desc RCL.
+    bit_offset: 2
+    bit_size: 1
+  - name: XTL
+    description: desc XTL.
+    bit_offset: 3
+    bit_size: 1
+  - name: PLL
+    description: desc PLL.
+    bit_offset: 4
+    bit_size: 1
+  - name: EXXTH
+    description: desc EXXTH.
+    bit_offset: 5
+    bit_size: 1
+  - name: EXXTL
+    description: desc EXXTL.
+    bit_offset: 6
+    bit_size: 1
+  - name: XTLLOCK
+    description: desc XTLLOCK.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR3:
+  description: desc CR3.
+  fields:
+  - name: CR3
+    description: desc CR3.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DBGSTOP:
+  description: desc DBGSTOP.
+  fields:
+  - name: ATIM0
+    description: desc ATIM0.
+    bit_offset: 0
+    bit_size: 1
+  - name: ATIM1
+    description: desc ATIM1.
+    bit_offset: 1
+    bit_size: 1
+  - name: ATIM2
+    description: desc ATIM2.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPTIM
+    description: desc LPTIM.
+    bit_offset: 3
+    bit_size: 1
+  - name: GTIM0
+    description: desc GTIM0.
+    bit_offset: 4
+    bit_size: 1
+  - name: GTIM1
+    description: desc GTIM1.
+    bit_offset: 5
+    bit_size: 1
+  - name: CTRIM
+    description: desc CTRIM.
+    bit_offset: 7
+    bit_size: 1
+  - name: IWDT
+    description: desc IWDT.
+    bit_offset: 8
+    bit_size: 1
+  - name: RTC
+    description: desc RTC.
+    bit_offset: 9
+    bit_size: 1
+  - name: TICK
+    description: desc TICK.
+    bit_offset: 10
+    bit_size: 1
+  - name: ATIM3
+    description: desc ATIM3.
+    bit_offset: 11
+    bit_size: 1
+  - name: WWDT
+    description: desc WWDT.
+    bit_offset: 12
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERICLKEN0:
+  description: desc PERICLKEN0.
+  fields:
+  - name: USART0
+    description: desc USART0.
+    bit_offset: 0
+    bit_size: 1
+  - name: USART1
+    description: desc USART1.
+    bit_offset: 1
+    bit_size: 1
+  - name: LPUART0
+    description: desc LPUART0.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPUART1
+    description: desc LPUART1.
+    bit_offset: 3
+    bit_size: 1
+  - name: I2C0
+    description: desc I2C0.
+    bit_offset: 4
+    bit_size: 1
+  - name: I2C1
+    description: desc I2C1.
+    bit_offset: 5
+    bit_size: 1
+  - name: SPI0
+    description: desc SPI0.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPI1
+    description: desc SPI1.
+    bit_offset: 7
+    bit_size: 1
+  - name: ATIM0
+    description: desc ATIM0.
+    bit_offset: 8
+    bit_size: 1
+  - name: LPTIM
+    description: desc LPTIM.
+    bit_offset: 9
+    bit_size: 1
+  - name: ATIM1
+    description: desc ATIM1.
+    bit_offset: 10
+    bit_size: 1
+  - name: ATIM3
+    description: desc ATIM3.
+    bit_offset: 11
+    bit_size: 1
+  - name: ATIM2
+    description: desc ATIM2.
+    bit_offset: 12
+    bit_size: 1
+  - name: OPA
+    description: desc OPA.
+    bit_offset: 13
+    bit_size: 1
+  - name: WWDT
+    description: desc WWDT.
+    bit_offset: 14
+    bit_size: 1
+  - name: IWDT
+    description: desc IWDT.
+    bit_offset: 15
+    bit_size: 1
+  - name: ADC
+    description: desc ADC.
+    bit_offset: 16
+    bit_size: 1
+  - name: VCLVD
+    description: desc VCLVD.
+    bit_offset: 17
+    bit_size: 1
+  - name: I2CSLV
+    description: desc I2CSLV.
+    bit_offset: 18
+    bit_size: 1
+  - name: RTC
+    description: desc RTC.
+    bit_offset: 20
+    bit_size: 1
+  - name: CTRIM
+    description: desc CTRIM.
+    bit_offset: 21
+    bit_size: 1
+  - name: TICK
+    description: desc TICK.
+    bit_offset: 24
+    bit_size: 1
+  - name: SWD
+    description: desc SWD.
+    bit_offset: 25
+    bit_size: 1
+  - name: CRC
+    description: desc CRC.
+    bit_offset: 26
+    bit_size: 1
+  - name: DMA
+    description: desc DMA.
+    bit_offset: 29
+    bit_size: 1
+  - name: EAU
+    description: desc EAU.
+    bit_offset: 30
+    bit_size: 1
+  - name: FLASH
+    description: desc FLASH.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERICLKEN1:
+  description: desc PERICLKEN1.
+  fields:
+  - name: GPIOA
+    description: desc GPIOA.
+    bit_offset: 0
+    bit_size: 1
+  - name: GPIOB
+    description: desc GPIOB.
+    bit_offset: 1
+    bit_size: 1
+  - name: GPIOC
+    description: desc GPIOC.
+    bit_offset: 2
+    bit_size: 1
+  - name: GPIOD
+    description: desc GPIOD.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAN
+    description: desc CAN.
+    bit_offset: 7
+    bit_size: 1
+  - name: GTIM0
+    description: desc GTIM0.
+    bit_offset: 8
+    bit_size: 1
+  - name: GTIM1
+    description: desc GTIM1.
+    bit_offset: 9
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERIRESET0:
+  description: desc PERIRESET0.
+  fields:
+  - name: USART0
+    description: desc USART0.
+    bit_offset: 0
+    bit_size: 1
+  - name: USART1
+    description: desc USART1.
+    bit_offset: 1
+    bit_size: 1
+  - name: LPUART0
+    description: desc LPUART0.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPUART1
+    description: desc LPUART1.
+    bit_offset: 3
+    bit_size: 1
+  - name: I2C0
+    description: desc I2C0.
+    bit_offset: 4
+    bit_size: 1
+  - name: I2C1
+    description: desc I2C1.
+    bit_offset: 5
+    bit_size: 1
+  - name: SPI0
+    description: desc SPI0.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPI1
+    description: desc SPI1.
+    bit_offset: 7
+    bit_size: 1
+  - name: ATIM0
+    description: desc ATIM0.
+    bit_offset: 8
+    bit_size: 1
+  - name: LPTIM
+    description: desc LPTIM.
+    bit_offset: 9
+    bit_size: 1
+  - name: ATIM1
+    description: desc ATIM1.
+    bit_offset: 10
+    bit_size: 1
+  - name: ATIM3
+    description: desc ATIM3.
+    bit_offset: 11
+    bit_size: 1
+  - name: ATIM2
+    description: desc ATIM2.
+    bit_offset: 12
+    bit_size: 1
+  - name: OPA
+    description: desc OPA.
+    bit_offset: 13
+    bit_size: 1
+  - name: WWDT
+    description: desc WWDT.
+    bit_offset: 14
+    bit_size: 1
+  - name: IWDT
+    description: desc IWDT.
+    bit_offset: 15
+    bit_size: 1
+  - name: ADC
+    description: desc ADC.
+    bit_offset: 16
+    bit_size: 1
+  - name: VCLVD
+    description: desc VCLVD.
+    bit_offset: 17
+    bit_size: 1
+  - name: I2CSLV
+    description: desc I2CSLV.
+    bit_offset: 18
+    bit_size: 1
+  - name: RTC
+    description: desc RTC.
+    bit_offset: 20
+    bit_size: 1
+  - name: CTRIM
+    description: desc CTRIM.
+    bit_offset: 21
+    bit_size: 1
+  - name: TICK
+    description: desc TICK.
+    bit_offset: 24
+    bit_size: 1
+  - name: SWD
+    description: desc SWD.
+    bit_offset: 25
+    bit_size: 1
+  - name: CRC
+    description: desc CRC.
+    bit_offset: 26
+    bit_size: 1
+  - name: DMA
+    description: desc DMA.
+    bit_offset: 29
+    bit_size: 1
+  - name: EAU
+    description: desc EAU.
+    bit_offset: 30
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PERIRESET1:
+  description: desc PERIRESET1.
+  fields:
+  - name: GPIOA
+    description: desc GPIOA.
+    bit_offset: 0
+    bit_size: 1
+  - name: GPIOB
+    description: desc GPIOB.
+    bit_offset: 1
+    bit_size: 1
+  - name: GPIOC
+    description: desc GPIOC.
+    bit_offset: 2
+    bit_size: 1
+  - name: GPIOD
+    description: desc GPIOD.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAN
+    description: desc CAN.
+    bit_offset: 7
+    bit_size: 1
+  - name: GTIM0
+    description: desc GTIM0.
+    bit_offset: 8
+    bit_size: 1
+  - name: GTIM1
+    description: desc GTIM1.
+    bit_offset: 9
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PLLCR:
+  description: desc PLLCR.
+  fields:
+  - name: SRC
+    description: desc SRC.
+    bit_offset: 0
+    bit_size: 2
+  - name: DIVR
+    description: desc DIVR.
+    bit_offset: 2
+    bit_size: 1
+  - name: WAITCYCLE
+    description: desc WAITCYCLE.
+    bit_offset: 4
+    bit_size: 3
+  - name: DIVN
+    description: desc DIVN.
+    bit_offset: 8
+    bit_size: 7
+  - name: DIVF
+    description: desc DIVF.
+    bit_offset: 16
+    bit_size: 3
+  - name: POSTDIV
+    description: desc POSTDIV.
+    bit_offset: 20
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RCHCR:
+  description: desc RCHCR.
+  fields:
+  - name: DIV
+    description: desc DIV.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RCHTRIM:
+  description: desc RCHTRIM.
+  fields:
+  - name: TRIML
+    description: desc TRIML.
+    bit_offset: 0
+    bit_size: 6
+  - name: TRIMH
+    description: desc TRIMH.
+    bit_offset: 6
+    bit_size: 5
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RCLCR:
+  description: desc RCLCR.
+  fields:
+  - name: STARTUP
+    description: desc STARTUP.
+    bit_offset: 10
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RCLTRIM:
+  description: desc RCLTRIM.
+  fields:
+  - name: TRIM
+    description: desc TRIM.
+    bit_offset: 0
+    bit_size: 10
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RSTFLAG:
+  description: desc RSTFLAG.
+  fields:
+  - name: POR5V
+    description: desc POR5V.
+    bit_offset: 0
+    bit_size: 1
+  - name: POR12V
+    description: desc POR12V.
+    bit_offset: 1
+    bit_size: 1
+  - name: LVD
+    description: desc LVD.
+    bit_offset: 2
+    bit_size: 1
+  - name: IWDT
+    description: desc IWDT.
+    bit_offset: 3
+    bit_size: 1
+  - name: WWDT
+    description: desc WWDT.
+    bit_offset: 4
+    bit_size: 1
+  - name: LOCKUP
+    description: desc LOCKUP.
+    bit_offset: 5
+    bit_size: 1
+  - name: SYSREQ
+    description: desc SYSREQ.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSTB
+    description: desc RSTB.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STATE:
+  description: desc STATE.
+  fields:
+  - name: RCH
+    description: desc RCH.
+    bit_offset: 0
+    bit_size: 1
+  - name: XTH
+    description: desc XTH.
+    bit_offset: 1
+    bit_size: 1
+  - name: RCL
+    description: desc RCL.
+    bit_offset: 2
+    bit_size: 1
+  - name: XTL
+    description: desc XTL.
+    bit_offset: 3
+    bit_size: 1
+  - name: PLL
+    description: desc PLL.
+    bit_offset: 4
+    bit_size: 1
+  - name: PLLLOCK
+    description: desc PLLLOCK.
+    bit_offset: 5
+    bit_size: 1
+  - name: XTHFAIL
+    description: desc XTHFAIL.
+    bit_offset: 8
+    bit_size: 1
+  - name: XTHFAULT
+    description: desc XTHFAULT.
+    bit_offset: 9
+    bit_size: 1
+  - name: XTLFAIL
+    description: desc XTLFAIL.
+    bit_offset: 10
+    bit_size: 1
+  - name: XTLFAULT
+    description: desc XTLFAULT.
+    bit_offset: 11
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/XTHCR:
+  description: desc XTHCR.
+  fields:
+  - name: DRIVER
+    description: desc DRIVER.
+    bit_offset: 0
+    bit_size: 2
+  - name: RANGE
+    description: desc RANGE.
+    bit_offset: 2
+    bit_size: 2
+  - name: STARTUP
+    description: desc STARTUP.
+    bit_offset: 4
+    bit_size: 2
+  - name: DETEN
+    description: desc DETEN.
+    bit_offset: 6
+    bit_size: 1
+  - name: DETTIME
+    description: desc DETTIME.
+    bit_offset: 7
+    bit_size: 1
+  - name: DETIE
+    description: desc DETIE.
+    bit_offset: 8
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/XTLCR:
+  description: desc XTLCR.
+  fields:
+  - name: DRIVER
+    description: desc DRIVER.
+    bit_offset: 0
+    bit_size: 2
+  - name: AMP_SEL
+    description: desc AMP_SEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: STARTUP
+    description: desc STARTUP.
+    bit_offset: 4
+    bit_size: 2
+  - name: DETEN
+    description: desc DETEN.
+    bit_offset: 6
+    bit_size: 1
+  - name: DETTIME
+    description: desc DETTIME.
+    bit_offset: 7
+    bit_size: 1
+  - name: DETIE
+    description: desc DETIE.
+    bit_offset: 8
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

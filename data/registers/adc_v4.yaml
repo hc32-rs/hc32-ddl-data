@@ -1,0 +1,334 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/ADC；覆盖系列：HC32F003, HC32F005, HC32L110。
+block/ADC:
+  description: desc ADC.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 4
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 8
+    fieldset: CR1
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 12
+    fieldset: CR2
+  - name: RESULT0
+    description: desc RESULT0.
+    byte_offset: 48
+    access: Read
+    fieldset: RESULT0
+  - name: RESULT1
+    description: desc RESULT1.
+    byte_offset: 52
+    access: Read
+    fieldset: RESULT1
+  - name: RESULT2
+    description: desc RESULT2.
+    byte_offset: 56
+    access: Read
+    fieldset: RESULT2
+  - name: RESULT3
+    description: desc RESULT3.
+    byte_offset: 60
+    access: Read
+    fieldset: RESULT3
+  - name: RESULT4
+    description: desc RESULT4.
+    byte_offset: 64
+    access: Read
+    fieldset: RESULT4
+  - name: RESULT5
+    description: desc RESULT5.
+    byte_offset: 68
+    access: Read
+    fieldset: RESULT5
+  - name: RESULT6
+    description: desc RESULT6.
+    byte_offset: 72
+    access: Read
+    fieldset: RESULT6
+  - name: RESULT7
+    description: desc RESULT7.
+    byte_offset: 76
+    access: Read
+    fieldset: RESULT7
+  - name: RESULT8
+    description: desc RESULT8.
+    byte_offset: 80
+    access: Read
+    fieldset: RESULT8
+  - name: RESULT_ACC
+    description: desc RESULT_ACC.
+    byte_offset: 84
+    access: Read
+    fieldset: RESULT_ACC
+  - name: HT
+    description: desc HT.
+    byte_offset: 88
+    access: Read
+    fieldset: HT
+  - name: LT
+    description: desc LT.
+    byte_offset: 92
+    access: Read
+    fieldset: LT
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 96
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 100
+    access: Write
+    fieldset: ICLR
+  - name: RESULT
+    description: desc RESULT.
+    byte_offset: 104
+    access: Read
+    fieldset: RESULT
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: ADCEN
+    description: desc ADCEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: START
+    description: desc START.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLKSEL
+    description: desc CLKSEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: SREF
+    description: desc SREF.
+    bit_offset: 8
+    bit_size: 2
+  - name: BUFEN
+    description: desc BUFEN.
+    bit_offset: 10
+    bit_size: 1
+  - name: SAM
+    description: desc SAM.
+    bit_offset: 11
+    bit_size: 2
+  - name: IE
+    description: desc IE.
+    bit_offset: 14
+    bit_size: 1
+  - name: STATERST
+    description: desc STATERST.
+    bit_offset: 15
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: TRIGS0
+    description: desc TRIGS0.
+    bit_offset: 0
+    bit_size: 5
+  - name: TRIGS1
+    description: desc TRIGS1.
+    bit_offset: 5
+    bit_size: 5
+  - name: CT
+    description: desc CT.
+    bit_offset: 10
+    bit_size: 1
+  - name: RACC_EN
+    description: desc RACC_EN.
+    bit_offset: 11
+    bit_size: 1
+  - name: LTCMP
+    description: desc LTCMP.
+    bit_offset: 12
+    bit_size: 1
+  - name: HTCMP
+    description: desc HTCMP.
+    bit_offset: 13
+    bit_size: 1
+  - name: REGCMP
+    description: desc REGCMP.
+    bit_offset: 14
+    bit_size: 1
+  - name: RACC_CLR
+    description: desc RACC_CLR.
+    bit_offset: 15
+    bit_size: 1
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: CH0EN
+    description: desc CH0EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CH1EN
+    description: desc CH1EN.
+    bit_offset: 1
+    bit_size: 1
+  - name: CH2EN
+    description: desc CH2EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: CH3EN
+    description: desc CH3EN.
+    bit_offset: 3
+    bit_size: 1
+  - name: CH4EN
+    description: desc CH4EN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CH5EN
+    description: desc CH5EN.
+    bit_offset: 5
+    bit_size: 1
+  - name: CH6EN
+    description: desc CH6EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: CH7EN
+    description: desc CH7EN.
+    bit_offset: 7
+    bit_size: 1
+  - name: ADCCNT
+    description: desc ADCCNT.
+    bit_offset: 8
+    bit_size: 8
+fieldset/HT:
+  description: desc HT.
+  fields:
+  - name: HT
+    description: desc HT.
+    bit_offset: 0
+    bit_size: 12
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: LLT_INTC
+    description: desc LLT_INTC.
+    bit_offset: 0
+    bit_size: 1
+  - name: HHT_INTC
+    description: desc HHT_INTC.
+    bit_offset: 1
+    bit_size: 1
+  - name: REG_INTC
+    description: desc REG_INTC.
+    bit_offset: 2
+    bit_size: 1
+  - name: CONT_INTC
+    description: desc CONT_INTC.
+    bit_offset: 3
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: LLT_INTF
+    description: desc LLT_INTF.
+    bit_offset: 0
+    bit_size: 1
+  - name: HHT_INTF
+    description: desc HHT_INTF.
+    bit_offset: 1
+    bit_size: 1
+  - name: REG_INTF
+    description: desc REG_INTF.
+    bit_offset: 2
+    bit_size: 1
+  - name: CONT_INTF
+    description: desc CONT_INTF.
+    bit_offset: 3
+    bit_size: 1
+fieldset/LT:
+  description: desc LT.
+  fields:
+  - name: LT
+    description: desc LT.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT:
+  description: desc RESULT.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT0:
+  description: desc RESULT0.
+  fields:
+  - name: RESULT0
+    description: desc RESULT0.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT1:
+  description: desc RESULT1.
+  fields:
+  - name: RESULT1
+    description: desc RESULT1.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT2:
+  description: desc RESULT2.
+  fields:
+  - name: RESULT2
+    description: desc RESULT2.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT3:
+  description: desc RESULT3.
+  fields:
+  - name: RESULT3
+    description: desc RESULT3.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT4:
+  description: desc RESULT4.
+  fields:
+  - name: RESULT4
+    description: desc RESULT4.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT5:
+  description: desc RESULT5.
+  fields:
+  - name: RESULT5
+    description: desc RESULT5.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT6:
+  description: desc RESULT6.
+  fields:
+  - name: RESULT6
+    description: desc RESULT6.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT7:
+  description: desc RESULT7.
+  fields:
+  - name: RESULT7
+    description: desc RESULT7.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT8:
+  description: desc RESULT8.
+  fields:
+  - name: RESULT8
+    description: desc RESULT8.
+    bit_offset: 0
+    bit_size: 12
+fieldset/RESULT_ACC:
+  description: desc RESULT_ACC.
+  fields:
+  - name: RESULT_ACC
+    description: desc RESULT_ACC.
+    bit_offset: 0
+    bit_size: 20

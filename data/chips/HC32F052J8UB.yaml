@@ -1,0 +1,55 @@
+# HC32F052J8UB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F052J8UB
+family: HC32F052
+subfamily: cortex-m0
+packages:
+- name: HC32F052J8UB
+  package: QFN48
+include_memory: ../memory/HC32F052_F64S16.yaml
+memory_sizes:
+  FLASH: 64K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1254.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F052.yaml
+  include_interrupts: ../interrupts/HC32F052.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32F052_DMA1.yaml
+_raw:
+  series: HC32F052
+  freq_mhz: '64'
+  flash_kb: '64'
+  sram_kb: '16'
+  package: QFN48
+  pin_count: '48'
+  gpio: '40'
+  vdd_min: '2.0'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '1'
+  i2s: ''
+  can: '1'
+  usb: ''
+  adc: '16'
+  dac: ''
+  timer: '1'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: '2'
+  cmp: '2'
+  other: 内核=Cortex-M0+|temp=-40~105C|DMA=1*5ch|timer=[6](1)|timer_通用定时器=2|timer_高级定时器=4|timer_实时时钟定时器=1|IWDT=1|WWDT=1|PWM
+    总通道数=20ch|LPUART=2|LIN=√|ISO7816=√|7=订购信息|版权所有 ©小华半导体有限公司=75
+  url: https://www.xhsc.com.cn/product/1254.html
+  source: DS
+  Part NO.: HC32F052J8UB

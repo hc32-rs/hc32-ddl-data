@@ -1,0 +1,82 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A052/GPIOAUX；覆盖系列：HC32A052, HC32F052。
+block/GPIOAUX:
+  description: desc GPIOAUX.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 112
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 116
+    fieldset: CR1
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 120
+    fieldset: CR2
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: PCLKDIV
+    description: desc PCLKDIV.
+    bit_offset: 0
+    bit_size: 3
+  - name: MCODIV
+    description: desc MCODIV.
+    bit_offset: 8
+    bit_size: 3
+  - name: MCOSEL
+    description: desc MCOSEL.
+    bit_offset: 12
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: ATIM0ETR
+    description: desc ATIM0ETR.
+    bit_offset: 0
+    bit_size: 3
+  - name: CTIM0ETR
+    description: desc CTIM0ETR.
+    bit_offset: 4
+    bit_size: 3
+  - name: CTIM1ETR
+    description: desc CTIM1ETR.
+    bit_offset: 8
+    bit_size: 3
+  - name: ATIM3ETR
+    description: desc ATIM3ETR.
+    bit_offset: 12
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: ATIM0CAP0
+    description: desc ATIM0CAP0.
+    bit_offset: 0
+    bit_size: 3
+  - name: CTIM0CAP3
+    description: desc CTIM0CAP3.
+    bit_offset: 4
+    bit_size: 3
+  - name: CTIM1CAP3
+    description: desc CTIM1CAP3.
+    bit_offset: 8
+    bit_size: 3
+  - name: ATIM3CAP3
+    description: desc ATIM3CAP3.
+    bit_offset: 12
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

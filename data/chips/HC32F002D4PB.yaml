@@ -1,0 +1,52 @@
+# HC32F002D4PB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F002D4PB
+family: HC32F002
+subfamily: cortex-m0plus
+packages:
+- name: HC32F002D4PB
+  package: TSSOP24
+include_memory: ../memory/HC32F002_F18S2.yaml
+memory_sizes:
+  FLASH: 18K
+  SRAM: 2K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1277.html
+cores:
+- name: cortex-m0plus
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F002.yaml
+  include_interrupts: ../interrupts/HC32F002.yaml
+_raw:
+  series: HC32F002
+  freq_mhz: '48'
+  flash_kb: '18'
+  sram_kb: '2'
+  package: TSSOP24
+  pin_count: '24'
+  gpio: '21'
+  vdd_min: '2.7'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '1'
+  i2c: '1'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '14'
+  dac: ''
+  timer: '1'
+  rtc: ''
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: ''
+  other: gpio_note=21+1|内核=Cortex-M0+|temp=-40~105C|timer=[3](1)|timer_通用定时器=1|timer_高级定时器=1|IWDT=1|WWDT=1|LPUART=2|LVD=√|包装方式=Tube|脚间距=0.65mm|产品厚度=1.2mm
+  url: https://www.xhsc.com.cn/product/1277.html
+  source: DS
+  Part NO.: HC32F002D4PB

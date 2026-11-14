@@ -1,0 +1,169 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F072/OPA；覆盖系列：HC32F072, HC32L07x。
+block/OPA:
+  description: desc OPA.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 48
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 52
+    fieldset: CR1
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 56
+    fieldset: CR2
+  - name: CR
+    description: desc CR.
+    byte_offset: 60
+    fieldset: CR
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: ADCTR_EN
+    description: desc ADCTR_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TRIGGER
+    description: desc TRIGGER.
+    bit_offset: 1
+    bit_size: 1
+  - name: AZ_PULSE
+    description: desc AZ_PULSE.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLK_SW_SET
+    description: desc CLK_SW_SET.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLK_SEL
+    description: desc CLK_SEL.
+    bit_offset: 4
+    bit_size: 4
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: OP0OEN1
+    description: desc OP0OEN1.
+    bit_offset: 0
+    bit_size: 1
+  - name: OP0OEN2
+    description: desc OP0OEN2.
+    bit_offset: 1
+    bit_size: 1
+  - name: OP0OEN3
+    description: desc OP0OEN3.
+    bit_offset: 2
+    bit_size: 1
+  - name: OP0OEN4
+    description: desc OP0OEN4.
+    bit_offset: 3
+    bit_size: 1
+  - name: OP1OEN1
+    description: desc OP1OEN1.
+    bit_offset: 4
+    bit_size: 1
+  - name: OP1OEN2
+    description: desc OP1OEN2.
+    bit_offset: 5
+    bit_size: 1
+  - name: OP1OEN3
+    description: desc OP1OEN3.
+    bit_offset: 6
+    bit_size: 1
+  - name: OP1OEN4
+    description: desc OP1OEN4.
+    bit_offset: 7
+    bit_size: 1
+  - name: OP2OEN1
+    description: desc OP2OEN1.
+    bit_offset: 8
+    bit_size: 1
+  - name: OP2OEN2
+    description: desc OP2OEN2.
+    bit_offset: 9
+    bit_size: 1
+  - name: OP2OEN3
+    description: desc OP2OEN3.
+    bit_offset: 10
+    bit_size: 1
+  - name: OP2OEN4
+    description: desc OP2OEN4.
+    bit_offset: 11
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: AZEN0
+    description: desc AZEN0.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN1
+    description: desc AZEN1.
+    bit_offset: 1
+    bit_size: 1
+  - name: AZEN2
+    description: desc AZEN2.
+    bit_offset: 2
+    bit_size: 1
+  - name: AZEN3
+    description: desc AZEN3.
+    bit_offset: 3
+    bit_size: 1
+  - name: AZEN4
+    description: desc AZEN4.
+    bit_offset: 4
+    bit_size: 1
+  - name: EN0
+    description: desc EN0.
+    bit_offset: 5
+    bit_size: 1
+  - name: EN1
+    description: desc EN1.
+    bit_offset: 6
+    bit_size: 1
+  - name: EN2
+    description: desc EN2.
+    bit_offset: 7
+    bit_size: 1
+  - name: EN3
+    description: desc EN3.
+    bit_offset: 8
+    bit_size: 1
+  - name: EN4
+    description: desc EN4.
+    bit_offset: 9
+    bit_size: 1
+  - name: OP3BUFEN
+    description: desc OP3BUFEN.
+    bit_offset: 10
+    bit_size: 1
+  - name: OP4BUFEN
+    description: desc OP4BUFEN.
+    bit_offset: 11
+    bit_size: 1
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: BIASSEL0
+    description: desc BIASSEL0.
+    bit_offset: 0
+    bit_size: 3
+  - name: BIASSEL1
+    description: desc BIASSEL1.
+    bit_offset: 3
+    bit_size: 3
+  - name: BIASSEL2
+    description: desc BIASSEL2.
+    bit_offset: 6
+    bit_size: 3
+  - name: BIASSEL3
+    description: desc BIASSEL3.
+    bit_offset: 9
+    bit_size: 3
+  - name: BIASSEL4
+    description: desc BIASSEL4.
+    bit_offset: 12
+    bit_size: 3

@@ -1,0 +1,68 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F19x/RAM；覆盖系列：HC32F19x, HC32L16x, HC32L18x, HC32L19x。
+block/RAM:
+  description: desc RAM.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 0
+    fieldset: CR
+  - name: ERRADDR
+    description: desc ERRADDR.
+    byte_offset: 4
+    access: Read
+    fieldset: ERRADDR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 8
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 12
+    access: Write
+    fieldset: ICLR
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: IE
+    description: desc IE.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ERRADDR:
+  description: desc ERRADDR.
+  fields:
+  - name: ERRADDR
+    description: desc ERRADDR.
+    bit_offset: 0
+    bit_size: 15
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: ERRCLR
+    description: desc ERRCLR.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: ERR
+    description: desc ERR.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

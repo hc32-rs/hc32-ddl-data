@@ -1,0 +1,55 @@
+# HC32L126KATB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L126KATB
+family: HC32L12x
+subfamily: cortex-m0plus
+packages:
+- name: HC32L126KATB
+  package: LQFP64
+include_memory: ../memory/HC32L12x_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1309.html
+cores:
+- name: cortex-m0plus
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L12x.yaml
+  include_interrupts: ../interrupts/HC32L12x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L12x_DMA1.yaml
+_raw:
+  series: HC32L12x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP64
+  pin_count: '64'
+  gpio: '56'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '3'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '16'
+  dac: ''
+  timer: '4'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: '4'
+  opa: ''
+  cmp: '2'
+  other: 内核=Cortex-M0+|temp=-40~105C|DMA=1*2ch|timer=2 2|timer=4 4|timer=1 1|IWDT=1|WWDT=1|LPUART=3|LIN=√
+    √|ISO7816=√ √|LCD=4*40/6*38/8*36|LVD=1 1|CRC=1 1|AES=1 1|TRNG=1 1|包装方式=Tray|脚间距=0.5mm|产品厚度=1.4mm
+  url: https://www.xhsc.com.cn/product/1309.html
+  source: DS
+  Part NO.: HC32L126KATB

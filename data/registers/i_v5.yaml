@@ -1,0 +1,120 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/I2C；覆盖系列：HC32F003, HC32F005。
+block/I:
+  description: desc I2C.
+  items:
+  - name: TMRUN
+    description: desc TMRUN.
+    byte_offset: 0
+    fieldset: TMRUN
+  - name: TM
+    description: desc TM.
+    byte_offset: 4
+    fieldset: TM
+  - name: CR
+    description: desc CR.
+    byte_offset: 8
+    fieldset: CR
+  - name: DATA
+    description: desc DATA.
+    byte_offset: 12
+    fieldset: DATA
+  - name: ADDR
+    description: desc ADDR.
+    byte_offset: 16
+    fieldset: ADDR
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 20
+    access: Read
+    fieldset: STAT
+fieldset/ADDR:
+  description: desc ADDR.
+  fields:
+  - name: GC
+    description: desc GC.
+    bit_offset: 0
+    bit_size: 1
+  - name: ADR
+    description: desc ADR.
+    bit_offset: 1
+    bit_size: 7
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: H1M
+    description: desc H1M.
+    bit_offset: 0
+    bit_size: 1
+  - name: AA
+    description: desc AA.
+    bit_offset: 2
+    bit_size: 1
+  - name: SI
+    description: desc SI.
+    bit_offset: 3
+    bit_size: 1
+  - name: STO
+    description: desc STO.
+    bit_offset: 4
+    bit_size: 1
+  - name: STA
+    description: desc STA.
+    bit_offset: 5
+    bit_size: 1
+  - name: ENS
+    description: desc ENS.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DATA:
+  description: desc DATA.
+  fields:
+  - name: DAT
+    description: desc DAT.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: STA
+    description: desc STA.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TM:
+  description: desc TM.
+  fields:
+  - name: TM
+    description: desc TM.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TMRUN:
+  description: desc TMRUN.
+  fields:
+  - name: TME
+    description: desc TME.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

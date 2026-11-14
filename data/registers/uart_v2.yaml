@@ -1,0 +1,121 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/UART0；覆盖系列：HC32F003, HC32F005, HC32L110。
+block/UART:
+  description: desc UART.
+  items:
+  - name: SBUF
+    description: desc SBUF.
+    byte_offset: 0
+    fieldset: SBUF
+  - name: SCON
+    description: desc SCON.
+    byte_offset: 4
+    fieldset: SCON
+  - name: SADDR
+    description: desc SADDR.
+    byte_offset: 8
+    fieldset: SADDR
+  - name: SADEN
+    description: desc SADEN.
+    byte_offset: 12
+    fieldset: SADEN
+  - name: ISR
+    description: desc ISR.
+    byte_offset: 16
+    access: Read
+    fieldset: ISR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICR
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: RICLR
+    description: desc RICLR.
+    bit_offset: 0
+    bit_size: 1
+  - name: TICLR
+    description: desc TICLR.
+    bit_offset: 1
+    bit_size: 1
+  - name: FECLR
+    description: desc FECLR.
+    bit_offset: 2
+    bit_size: 1
+fieldset/ISR:
+  description: desc ISR.
+  fields:
+  - name: RI
+    description: desc RI.
+    bit_offset: 0
+    bit_size: 1
+  - name: TI
+    description: desc TI.
+    bit_offset: 1
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 2
+    bit_size: 1
+  - name: TE
+    description: desc TE.
+    bit_offset: 3
+    bit_size: 1
+fieldset/SADDR:
+  description: desc SADDR.
+  fields:
+  - name: SADDR
+    description: desc SADDR.
+    bit_offset: 0
+    bit_size: 8
+fieldset/SADEN:
+  description: desc SADEN.
+  fields:
+  - name: SADEN
+    description: desc SADEN.
+    bit_offset: 0
+    bit_size: 8
+fieldset/SBUF:
+  description: desc SBUF.
+  fields:
+  - name: SBUF
+    description: desc SBUF.
+    bit_offset: 0
+    bit_size: 8
+fieldset/SCON:
+  description: desc SCON.
+  fields:
+  - name: RIEN
+    description: desc RIEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIEN
+    description: desc TIEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: RB8
+    description: desc RB8.
+    bit_offset: 2
+    bit_size: 1
+  - name: TB8
+    description: desc TB8.
+    bit_offset: 3
+    bit_size: 1
+  - name: REN
+    description: desc REN.
+    bit_offset: 4
+    bit_size: 1
+  - name: SM2
+    description: desc SM2.
+    bit_offset: 5
+    bit_size: 1
+  - name: SM01
+    description: desc SM01.
+    bit_offset: 6
+    bit_size: 2
+  - name: DBAUD
+    description: desc DBAUD.
+    bit_offset: 9
+    bit_size: 1

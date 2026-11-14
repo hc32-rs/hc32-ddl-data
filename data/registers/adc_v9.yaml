@@ -1,0 +1,208 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/ADC；覆盖系列：HC32L021。
+block/ADC:
+  description: desc ADC.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 4
+    fieldset: CR0
+  - name: SQR0
+    description: desc SQR0.
+    byte_offset: 64
+    fieldset: SQR0
+  - name: SQR1
+    description: desc SQR1.
+    byte_offset: 72
+    fieldset: SQR1
+  - name: SQRRESULT0
+    description: desc SQRRESULT0.
+    byte_offset: 80
+    access: Read
+    fieldset: SQRRESULT0
+  - name: SQRRESULT1
+    description: desc SQRRESULT1.
+    byte_offset: 84
+    access: Read
+    fieldset: SQRRESULT1
+  - name: SQRRESULT2
+    description: desc SQRRESULT2.
+    byte_offset: 88
+    access: Read
+    fieldset: SQRRESULT2
+  - name: SQRRESULT3
+    description: desc SQRRESULT3.
+    byte_offset: 92
+    access: Read
+    fieldset: SQRRESULT3
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 176
+    access: Read
+    fieldset: IFR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 180
+    access: Write
+    fieldset: ICR
+  - name: EXTTRIGGER
+    description: desc EXTTRIGGER.
+    byte_offset: 184
+    fieldset: EXTTRIGGER
+  - name: SQRSTART
+    description: desc SQRSTART.
+    byte_offset: 196
+    fieldset: SQRSTART
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CLKDIV
+    description: desc CLKDIV.
+    bit_offset: 2
+    bit_size: 2
+  - name: REF
+    description: desc REF.
+    bit_offset: 9
+    bit_size: 1
+  - name: IBSEL
+    description: desc IBSEL.
+    bit_offset: 12
+    bit_size: 2
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+  - name: SAM
+    description: desc SAM.
+    bit_offset: 17
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EXTTRIGGER:
+  description: desc EXTTRIGGER.
+  fields:
+  - name: EXT_TRIG_EN
+    description: desc EXT_TRIG_EN.
+    bit_offset: 0
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: SQRIC
+    description: desc SQRIC.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: SQRIF
+    description: desc SQRIF.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR0:
+  description: desc SQR0.
+  fields:
+  - name: CH0MUX
+    description: desc CH0MUX.
+    bit_offset: 0
+    bit_size: 4
+  - name: CH1MUX
+    description: desc CH1MUX.
+    bit_offset: 5
+    bit_size: 4
+  - name: CH2MUX
+    description: desc CH2MUX.
+    bit_offset: 10
+    bit_size: 4
+  - name: CH3MUX
+    description: desc CH3MUX.
+    bit_offset: 15
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR1:
+  description: desc SQR1.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT0:
+  description: desc SQRRESULT0.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT1:
+  description: desc SQRRESULT1.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT2:
+  description: desc SQRRESULT2.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT3:
+  description: desc SQRRESULT3.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRSTART:
+  description: desc SQRSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

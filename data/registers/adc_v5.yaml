@@ -1,0 +1,1011 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F072/ADC；覆盖系列：HC32F072。
+block/ADC:
+  description: desc ADC.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 4
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 8
+    fieldset: CR1
+  - name: SQR0
+    description: desc SQR0.
+    byte_offset: 64
+    fieldset: SQR0
+  - name: SQR1
+    description: desc SQR1.
+    byte_offset: 68
+    fieldset: SQR1
+  - name: SQR2
+    description: desc SQR2.
+    byte_offset: 72
+    fieldset: SQR2
+  - name: JQR
+    description: desc JQR.
+    byte_offset: 76
+    fieldset: JQR
+  - name: SQRRESULT0
+    description: desc SQRRESULT0.
+    byte_offset: 80
+    access: Read
+    fieldset: SQRRESULT0
+  - name: SQRRESULT1
+    description: desc SQRRESULT1.
+    byte_offset: 84
+    access: Read
+    fieldset: SQRRESULT1
+  - name: SQRRESULT2
+    description: desc SQRRESULT2.
+    byte_offset: 88
+    access: Read
+    fieldset: SQRRESULT2
+  - name: SQRRESULT3
+    description: desc SQRRESULT3.
+    byte_offset: 92
+    access: Read
+    fieldset: SQRRESULT3
+  - name: SQRRESULT4
+    description: desc SQRRESULT4.
+    byte_offset: 96
+    access: Read
+    fieldset: SQRRESULT4
+  - name: SQRRESULT5
+    description: desc SQRRESULT5.
+    byte_offset: 100
+    access: Read
+    fieldset: SQRRESULT5
+  - name: SQRRESULT6
+    description: desc SQRRESULT6.
+    byte_offset: 104
+    access: Read
+    fieldset: SQRRESULT6
+  - name: SQRRESULT7
+    description: desc SQRRESULT7.
+    byte_offset: 108
+    access: Read
+    fieldset: SQRRESULT7
+  - name: SQRRESULT8
+    description: desc SQRRESULT8.
+    byte_offset: 112
+    access: Read
+    fieldset: SQRRESULT8
+  - name: SQRRESULT9
+    description: desc SQRRESULT9.
+    byte_offset: 116
+    access: Read
+    fieldset: SQRRESULT9
+  - name: SQRRESULT10
+    description: desc SQRRESULT10.
+    byte_offset: 120
+    access: Read
+    fieldset: SQRRESULT10
+  - name: SQRRESULT11
+    description: desc SQRRESULT11.
+    byte_offset: 124
+    access: Read
+    fieldset: SQRRESULT11
+  - name: SQRRESULT12
+    description: desc SQRRESULT12.
+    byte_offset: 128
+    access: Read
+    fieldset: SQRRESULT12
+  - name: SQR_RESULT13
+    description: desc SQR_RESULT13.
+    byte_offset: 132
+    access: Read
+    fieldset: SQR_RESULT13
+  - name: SQRRESULT14
+    description: desc SQRRESULT14.
+    byte_offset: 136
+    access: Read
+    fieldset: SQRRESULT14
+  - name: SQRRESULT15
+    description: desc SQRRESULT15.
+    byte_offset: 140
+    access: Read
+    fieldset: SQRRESULT15
+  - name: JQRRESULT0
+    description: desc JQRRESULT0.
+    byte_offset: 144
+    access: Read
+    fieldset: JQRRESULT0
+  - name: JQRRESULT1
+    description: desc JQRRESULT1.
+    byte_offset: 148
+    access: Read
+    fieldset: JQRRESULT1
+  - name: JQRRESULT2
+    description: desc JQRRESULT2.
+    byte_offset: 152
+    access: Read
+    fieldset: JQRRESULT2
+  - name: JQRRESULT3
+    description: desc JQRRESULT3.
+    byte_offset: 156
+    access: Read
+    fieldset: JQRRESULT3
+  - name: RESULT
+    description: desc RESULT.
+    byte_offset: 160
+    access: Read
+    fieldset: RESULT
+  - name: RESULTACC
+    description: desc RESULTACC.
+    byte_offset: 164
+    access: Read
+    fieldset: RESULTACC
+  - name: HT
+    description: desc HT.
+    byte_offset: 168
+    fieldset: HT
+  - name: LT
+    description: desc LT.
+    byte_offset: 172
+    fieldset: LT
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 176
+    access: Read
+    fieldset: IFR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 180
+    access: Write
+    fieldset: ICR
+  - name: EXTTRIGGER0
+    description: desc EXTTRIGGER0.
+    byte_offset: 184
+    fieldset: EXTTRIGGER0
+  - name: EXTTRIGGER1
+    description: desc EXTTRIGGER1.
+    byte_offset: 188
+    fieldset: EXTTRIGGER1
+  - name: SGLSTART
+    description: desc SGLSTART.
+    byte_offset: 192
+    fieldset: SGLSTART
+  - name: SQRSTART
+    description: desc SQRSTART.
+    byte_offset: 196
+    fieldset: SQRSTART
+  - name: JQRSTART
+    description: desc JQRSTART.
+    byte_offset: 200
+    fieldset: JQRSTART
+  - name: ALLSTART
+    description: desc ALLSTART.
+    byte_offset: 204
+    fieldset: ALLSTART
+fieldset/ALLSTART:
+  description: desc ALLSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CHMAP
+    description: desc CHMAP.
+    bit_offset: 1
+    bit_size: 1
+  - name: CLKDIV
+    description: desc CLKDIV.
+    bit_offset: 2
+    bit_size: 2
+  - name: SGLMUX
+    description: desc SGLMUX.
+    bit_offset: 4
+    bit_size: 5
+  - name: REF
+    description: desc REF.
+    bit_offset: 9
+    bit_size: 2
+  - name: BUF
+    description: desc BUF.
+    bit_offset: 11
+    bit_size: 1
+  - name: SAM
+    description: desc SAM.
+    bit_offset: 12
+    bit_size: 2
+  - name: INREFEN
+    description: desc INREFEN.
+    bit_offset: 14
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: ALIGN
+    description: desc ALIGN.
+    bit_offset: 2
+    bit_size: 1
+  - name: THCH
+    description: desc THCH.
+    bit_offset: 3
+    bit_size: 5
+  - name: DMASQR
+    description: desc DMASQR.
+    bit_offset: 8
+    bit_size: 1
+  - name: DMAJQR
+    description: desc DMAJQR.
+    bit_offset: 9
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 10
+    bit_size: 1
+  - name: RACCEN
+    description: desc RACCEN.
+    bit_offset: 11
+    bit_size: 1
+  - name: LTCMP
+    description: desc LTCMP.
+    bit_offset: 12
+    bit_size: 1
+  - name: HTCMP
+    description: desc HTCMP.
+    bit_offset: 13
+    bit_size: 1
+  - name: REGCMP
+    description: desc REGCMP.
+    bit_offset: 14
+    bit_size: 1
+  - name: RACCCLR
+    description: desc RACCCLR.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EXTTRIGGER0:
+  description: desc EXTTRIGGER0.
+  fields:
+  - name: TIM0
+    description: desc TIM0.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIM1
+    description: desc TIM1.
+    bit_offset: 1
+    bit_size: 1
+  - name: TIM2
+    description: desc TIM2.
+    bit_offset: 2
+    bit_size: 1
+  - name: TIM3
+    description: desc TIM3.
+    bit_offset: 3
+    bit_size: 1
+  - name: TIM4
+    description: desc TIM4.
+    bit_offset: 4
+    bit_size: 1
+  - name: TIM5
+    description: desc TIM5.
+    bit_offset: 5
+    bit_size: 1
+  - name: TIM6
+    description: desc TIM6.
+    bit_offset: 6
+    bit_size: 1
+  - name: UART0
+    description: desc UART0.
+    bit_offset: 7
+    bit_size: 1
+  - name: UART1
+    description: desc UART1.
+    bit_offset: 8
+    bit_size: 1
+  - name: LPUART0
+    description: desc LPUART0.
+    bit_offset: 9
+    bit_size: 1
+  - name: LPUART1
+    description: desc LPUART1.
+    bit_offset: 10
+    bit_size: 1
+  - name: VC0
+    description: desc VC0.
+    bit_offset: 11
+    bit_size: 1
+  - name: VC1
+    description: desc VC1.
+    bit_offset: 12
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 14
+    bit_size: 1
+  - name: SPI0
+    description: desc SPI0.
+    bit_offset: 15
+    bit_size: 1
+  - name: SPI1
+    description: desc SPI1.
+    bit_offset: 16
+    bit_size: 1
+  - name: DMA
+    description: desc DMA.
+    bit_offset: 17
+    bit_size: 1
+  - name: PA03
+    description: desc PA03.
+    bit_offset: 18
+    bit_size: 1
+  - name: PB03
+    description: desc PB03.
+    bit_offset: 19
+    bit_size: 1
+  - name: PC03
+    description: desc PC03.
+    bit_offset: 20
+    bit_size: 1
+  - name: PD03
+    description: desc PD03.
+    bit_offset: 21
+    bit_size: 1
+  - name: PA07
+    description: desc PA07.
+    bit_offset: 22
+    bit_size: 1
+  - name: PB07
+    description: desc PB07.
+    bit_offset: 23
+    bit_size: 1
+  - name: PC07
+    description: desc PC07.
+    bit_offset: 24
+    bit_size: 1
+  - name: PD07
+    description: desc PD07.
+    bit_offset: 25
+    bit_size: 1
+  - name: PA11
+    description: desc PA11.
+    bit_offset: 26
+    bit_size: 1
+  - name: PB11
+    description: desc PB11.
+    bit_offset: 27
+    bit_size: 1
+  - name: PC11
+    description: desc PC11.
+    bit_offset: 28
+    bit_size: 1
+  - name: PA15
+    description: desc PA15.
+    bit_offset: 29
+    bit_size: 1
+  - name: PB15
+    description: desc PB15.
+    bit_offset: 30
+    bit_size: 1
+  - name: PC15
+    description: desc PC15.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EXTTRIGGER1:
+  description: desc EXTTRIGGER1.
+  fields:
+  - name: TIM0
+    description: desc TIM0.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIM1
+    description: desc TIM1.
+    bit_offset: 1
+    bit_size: 1
+  - name: TIM2
+    description: desc TIM2.
+    bit_offset: 2
+    bit_size: 1
+  - name: TIM3
+    description: desc TIM3.
+    bit_offset: 3
+    bit_size: 1
+  - name: TIM4
+    description: desc TIM4.
+    bit_offset: 4
+    bit_size: 1
+  - name: TIM5
+    description: desc TIM5.
+    bit_offset: 5
+    bit_size: 1
+  - name: TIM6
+    description: desc TIM6.
+    bit_offset: 6
+    bit_size: 1
+  - name: UART0
+    description: desc UART0.
+    bit_offset: 7
+    bit_size: 1
+  - name: UART1
+    description: desc UART1.
+    bit_offset: 8
+    bit_size: 1
+  - name: LPUART0
+    description: desc LPUART0.
+    bit_offset: 9
+    bit_size: 1
+  - name: LPUART1
+    description: desc LPUART1.
+    bit_offset: 10
+    bit_size: 1
+  - name: VC0
+    description: desc VC0.
+    bit_offset: 11
+    bit_size: 1
+  - name: VC1
+    description: desc VC1.
+    bit_offset: 12
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 14
+    bit_size: 1
+  - name: SPI0
+    description: desc SPI0.
+    bit_offset: 15
+    bit_size: 1
+  - name: SPI1
+    description: desc SPI1.
+    bit_offset: 16
+    bit_size: 1
+  - name: DMA
+    description: desc DMA.
+    bit_offset: 17
+    bit_size: 1
+  - name: PA03
+    description: desc PA03.
+    bit_offset: 18
+    bit_size: 1
+  - name: PB03
+    description: desc PB03.
+    bit_offset: 19
+    bit_size: 1
+  - name: PC03
+    description: desc PC03.
+    bit_offset: 20
+    bit_size: 1
+  - name: PD03
+    description: desc PD03.
+    bit_offset: 21
+    bit_size: 1
+  - name: PA07
+    description: desc PA07.
+    bit_offset: 22
+    bit_size: 1
+  - name: PB07
+    description: desc PB07.
+    bit_offset: 23
+    bit_size: 1
+  - name: PC07
+    description: desc PC07.
+    bit_offset: 24
+    bit_size: 1
+  - name: PD07
+    description: desc PD07.
+    bit_offset: 25
+    bit_size: 1
+  - name: PA11
+    description: desc PA11.
+    bit_offset: 26
+    bit_size: 1
+  - name: PB11
+    description: desc PB11.
+    bit_offset: 27
+    bit_size: 1
+  - name: PC11
+    description: desc PC11.
+    bit_offset: 28
+    bit_size: 1
+  - name: PA15
+    description: desc PA15.
+    bit_offset: 29
+    bit_size: 1
+  - name: PB15
+    description: desc PB15.
+    bit_offset: 30
+    bit_size: 1
+  - name: PC15
+    description: desc PC15.
+    bit_offset: 31
+    bit_size: 1
+fieldset/HT:
+  description: desc HT.
+  fields:
+  - name: HT
+    description: desc HT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: SGLIC
+    description: desc SGLIC.
+    bit_offset: 0
+    bit_size: 1
+  - name: LTIC
+    description: desc LTIC.
+    bit_offset: 1
+    bit_size: 1
+  - name: HTIC
+    description: desc HTIC.
+    bit_offset: 2
+    bit_size: 1
+  - name: REGIC
+    description: desc REGIC.
+    bit_offset: 3
+    bit_size: 1
+  - name: SQRIC
+    description: desc SQRIC.
+    bit_offset: 4
+    bit_size: 1
+  - name: JQRIC
+    description: desc JQRIC.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: SGLIF
+    description: desc SGLIF.
+    bit_offset: 0
+    bit_size: 1
+  - name: LTIF
+    description: desc LTIF.
+    bit_offset: 1
+    bit_size: 1
+  - name: HTIF
+    description: desc HTIF.
+    bit_offset: 2
+    bit_size: 1
+  - name: REGIF
+    description: desc REGIF.
+    bit_offset: 3
+    bit_size: 1
+  - name: SQRIF
+    description: desc SQRIF.
+    bit_offset: 4
+    bit_size: 1
+  - name: JQRIF
+    description: desc JQRIF.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQR:
+  description: desc JQR.
+  fields:
+  - name: CH0MUX
+    description: desc CH0MUX.
+    bit_offset: 0
+    bit_size: 5
+  - name: CH1MUX
+    description: desc CH1MUX.
+    bit_offset: 5
+    bit_size: 5
+  - name: CH2MUX
+    description: desc CH2MUX.
+    bit_offset: 10
+    bit_size: 5
+  - name: CH3MUX
+    description: desc CH3MUX.
+    bit_offset: 15
+    bit_size: 5
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 20
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQRRESULT0:
+  description: desc JQRRESULT0.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQRRESULT1:
+  description: desc JQRRESULT1.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQRRESULT2:
+  description: desc JQRRESULT2.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQRRESULT3:
+  description: desc JQRRESULT3.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/JQRSTART:
+  description: desc JQRSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/LT:
+  description: desc LT.
+  fields:
+  - name: LT
+    description: desc LT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RESULT:
+  description: desc RESULT.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RESULTACC:
+  description: desc RESULTACC.
+  fields:
+  - name: RESULTACC
+    description: desc RESULTACC.
+    bit_offset: 0
+    bit_size: 20
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SGLSTART:
+  description: desc SGLSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR0:
+  description: desc SQR0.
+  fields:
+  - name: CH0MUX
+    description: desc CH0MUX.
+    bit_offset: 0
+    bit_size: 5
+  - name: CH1MUX
+    description: desc CH1MUX.
+    bit_offset: 5
+    bit_size: 5
+  - name: CH2MUX
+    description: desc CH2MUX.
+    bit_offset: 10
+    bit_size: 5
+  - name: CH3MUX
+    description: desc CH3MUX.
+    bit_offset: 15
+    bit_size: 5
+  - name: CH4MUX
+    description: desc CH4MUX.
+    bit_offset: 20
+    bit_size: 5
+  - name: CH5MUX
+    description: desc CH5MUX.
+    bit_offset: 25
+    bit_size: 5
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR1:
+  description: desc SQR1.
+  fields:
+  - name: CH6MUX
+    description: desc CH6MUX.
+    bit_offset: 0
+    bit_size: 5
+  - name: CH7MUX
+    description: desc CH7MUX.
+    bit_offset: 5
+    bit_size: 5
+  - name: CH8MUX
+    description: desc CH8MUX.
+    bit_offset: 10
+    bit_size: 5
+  - name: CH9MUX
+    description: desc CH9MUX.
+    bit_offset: 15
+    bit_size: 5
+  - name: CH10MUX
+    description: desc CH10MUX.
+    bit_offset: 20
+    bit_size: 5
+  - name: CH11MUX
+    description: desc CH11MUX.
+    bit_offset: 25
+    bit_size: 5
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR2:
+  description: desc SQR2.
+  fields:
+  - name: CH12MUX
+    description: desc CH12MUX.
+    bit_offset: 0
+    bit_size: 5
+  - name: CH13MUX
+    description: desc CH13MUX.
+    bit_offset: 5
+    bit_size: 5
+  - name: CH14MUX
+    description: desc CH14MUX.
+    bit_offset: 10
+    bit_size: 5
+  - name: CH15MUX
+    description: desc CH15MUX.
+    bit_offset: 15
+    bit_size: 5
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 20
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT0:
+  description: desc SQRRESULT0.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT1:
+  description: desc SQRRESULT1.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT10:
+  description: desc SQRRESULT10.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT11:
+  description: desc SQRRESULT11.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT12:
+  description: desc SQRRESULT12.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT14:
+  description: desc SQRRESULT14.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT15:
+  description: desc SQRRESULT15.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT2:
+  description: desc SQRRESULT2.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT3:
+  description: desc SQRRESULT3.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT4:
+  description: desc SQRRESULT4.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT5:
+  description: desc SQRRESULT5.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT6:
+  description: desc SQRRESULT6.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT7:
+  description: desc SQRRESULT7.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT8:
+  description: desc SQRRESULT8.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRRESULT9:
+  description: desc SQRRESULT9.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQRSTART:
+  description: desc SQRSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SQR_RESULT13:
+  description: desc SQR_RESULT13.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 12
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

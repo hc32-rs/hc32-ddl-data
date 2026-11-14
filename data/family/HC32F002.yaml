@@ -1,0 +1,257 @@
+# HC32F002 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
+# 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
+- name: ADC
+  address: 0x40002400
+  registers:
+    kind: adc
+    block: ADC
+    version: v3
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralADC
+  interrupts:
+  - signal: ADC
+    interrupt: ADC
+- name: ATIM3
+  address: 0x40005800
+  registers:
+    kind: atim
+    block: ATIM
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralATIM3
+  interrupts:
+  - signal: ATIM3
+    interrupt: ATIM3
+- name: BTIM3
+  address: 0x40007400
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralGTIM
+  interrupts:
+  - signal: BTIM3_4_5
+    interrupt: BTIM3_4_5
+- name: BTIM4
+  address: 0x40007500
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralGTIM
+  interrupts:
+  - signal: BTIM3_4_5
+    interrupt: BTIM3_4_5
+- name: BTIM5
+  address: 0x40007600
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralGTIM
+  interrupts:
+  - signal: BTIM3_4_5
+    interrupt: BTIM3_4_5
+- name: CTRIM
+  address: 0x40005000
+  registers:
+    kind: ctrim
+    block: CTRIM
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralCTRIM
+  interrupts:
+  - signal: CTRIM
+    interrupt: CTRIM
+- name: FLASH
+  address: 0x40020000
+  registers:
+    kind: flash
+    block: FLASH
+    version: v3
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralFLASH
+  interrupts:
+  - signal: FLASH
+    interrupt: FLASH
+- name: GPIOA
+  address: 0x40020C00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralPA
+  interrupts:
+  - signal: PORTA
+    interrupt: PORTA
+- name: GPIOAUX
+  address: 0x40020CA0
+  registers:
+    kind: gpioaux
+    block: GPIOAUX
+    version: v2
+- name: GPIOB
+  address: 0x40020D00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralPB
+  interrupts:
+  - signal: PORTB
+    interrupt: PORTB
+- name: GPIOC
+  address: 0x40020E00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralPC
+  interrupts:
+  - signal: PORTC
+    interrupt: PORTC
+- name: GPIOD
+  address: 0x40020F00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralPD
+  interrupts:
+  - signal: PORTD
+    interrupt: PORTD
+- name: GTIM
+  address: 0x40007400
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralGTIM
+  interrupts:
+  - signal: GTIM
+    interrupt: GTIM
+- name: I2C
+  address: 0x40000400
+  registers:
+    kind: i
+    block: I
+    version: v4
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralI2C
+  interrupts:
+  - signal: I2C
+    interrupt: I2C
+- name: IWDT
+  address: 0x40000F80
+  registers:
+    kind: iwdt
+    block: IWDT
+    version: v2
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralIWDT
+  interrupts:
+  - signal: IWDT_WWDT
+    interrupt: IWDT_WWDT
+- name: LPUART0
+  address: 0x40000000
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v3
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralLPUART0
+  interrupts:
+  - signal: LPUART0
+    interrupt: LPUART0
+- name: LPUART1
+  address: 0x40004000
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v3
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralLPUART1
+  interrupts:
+  - signal: LPUART1
+    interrupt: LPUART1
+- name: LVD
+  address: 0x40002680
+  registers:
+    kind: lvd
+    block: LVD
+    version: v3
+  interrupts:
+  - signal: LVD
+    interrupt: LVD
+- name: SPI
+  address: 0x40000800
+  registers:
+    kind: spi
+    block: SPI
+    version: v3
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralSPI
+  interrupts:
+  - signal: SPI0
+    interrupt: SPI0
+- name: SYSCTRL
+  address: 0x40002000
+  registers:
+    kind: sysctrl
+    block: SYSCTRL
+    version: v3
+- name: WWDT
+  address: 0x40006800
+  registers:
+    kind: wwdt
+    block: WWDT
+    version: common
+  rcc:
+    enable:
+      register: PERICLKEN0
+      field: SysctrlPeripheralWWDT
+  interrupts:
+  - signal: IWDT_WWDT
+    interrupt: IWDT_WWDT

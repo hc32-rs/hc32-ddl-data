@@ -1,0 +1,171 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L110/FLASH；覆盖系列：HC32L110。
+block/FLASH:
+  description: desc FLASH.
+  items:
+  - name: TNVS
+    description: desc TNVS.
+    byte_offset: 0
+    fieldset: TNVS
+  - name: TPGS
+    description: desc TPGS.
+    byte_offset: 4
+    fieldset: TPGS
+  - name: TPROG
+    description: desc TPROG.
+    byte_offset: 8
+    fieldset: TPROG
+  - name: TSERASE
+    description: desc TSERASE.
+    byte_offset: 12
+    fieldset: TSERASE
+  - name: TMERASE
+    description: desc TMERASE.
+    byte_offset: 16
+    fieldset: TMERASE
+  - name: TPRCV
+    description: desc TPRCV.
+    byte_offset: 20
+    fieldset: TPRCV
+  - name: TSRCV
+    description: desc TSRCV.
+    byte_offset: 24
+    fieldset: TSRCV
+  - name: TMRCV
+    description: desc TMRCV.
+    byte_offset: 28
+    fieldset: TMRCV
+  - name: CR
+    description: desc CR.
+    byte_offset: 32
+    fieldset: CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 36
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 40
+    access: Write
+    fieldset: ICLR
+  - name: BYPASS
+    description: desc BYPASS.
+    byte_offset: 44
+    access: Write
+    fieldset: BYPASS
+  - name: SLOCK
+    description: desc SLOCK.
+    byte_offset: 48
+    fieldset: SLOCK
+fieldset/BYPASS:
+  description: desc BYPASS.
+  fields:
+  - name: BYSEQ
+    description: desc BYSEQ.
+    bit_offset: 0
+    bit_size: 16
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: OP
+    description: desc OP.
+    bit_offset: 0
+    bit_size: 2
+  - name: WAIT
+    description: desc WAIT.
+    bit_offset: 2
+    bit_size: 1
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 4
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 5
+    bit_size: 2
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: ICLR0
+    description: desc ICLR0.
+    bit_offset: 0
+    bit_size: 1
+  - name: ICLR1
+    description: desc ICLR1.
+    bit_offset: 1
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: IF0
+    description: desc IF0.
+    bit_offset: 0
+    bit_size: 1
+  - name: IF1
+    description: desc IF1.
+    bit_offset: 1
+    bit_size: 1
+fieldset/SLOCK:
+  description: desc SLOCK.
+  fields:
+  - name: SLOCK
+    description: desc SLOCK.
+    bit_offset: 0
+    bit_size: 16
+fieldset/TMERASE:
+  description: desc TMERASE.
+  fields:
+  - name: TMERASE
+    description: desc TMERASE.
+    bit_offset: 0
+    bit_size: 21
+fieldset/TMRCV:
+  description: desc TMRCV.
+  fields:
+  - name: TMRCV
+    description: desc TMRCV.
+    bit_offset: 0
+    bit_size: 13
+fieldset/TNVS:
+  description: desc TNVS.
+  fields:
+  - name: TNVS
+    description: desc TNVS.
+    bit_offset: 0
+    bit_size: 9
+fieldset/TPGS:
+  description: desc TPGS.
+  fields:
+  - name: TPGS
+    description: desc TPGS.
+    bit_offset: 0
+    bit_size: 8
+fieldset/TPRCV:
+  description: desc TPRCV.
+  fields:
+  - name: TPRCV
+    description: desc TPRCV.
+    bit_offset: 0
+    bit_size: 12
+fieldset/TPROG:
+  description: desc TPROG.
+  fields:
+  - name: TPROG
+    description: desc TPROG.
+    bit_offset: 0
+    bit_size: 8
+fieldset/TSERASE:
+  description: desc TSERASE.
+  fields:
+  - name: TSERASE
+    description: desc TSERASE.
+    bit_offset: 0
+    bit_size: 18
+fieldset/TSRCV:
+  description: desc TSRCV.
+  fields:
+  - name: TSRCV
+    description: desc TSRCV.
+    bit_offset: 0
+    bit_size: 12

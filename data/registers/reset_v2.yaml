@@ -1,0 +1,103 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/RESET；覆盖系列：HC32F003, HC32F005。
+block/RESET:
+  description: desc RESET.
+  items:
+  - name: RESET_FLAG
+    description: desc RESET_FLAG.
+    byte_offset: 0
+    fieldset: RESET_FLAG
+  - name: PERI_RESET
+    description: desc PERI_RESET.
+    byte_offset: 12
+    fieldset: PERI_RESET
+fieldset/PERI_RESET:
+  description: desc PERI_RESET.
+  fields:
+  - name: UART0
+    description: desc UART0.
+    bit_offset: 0
+    bit_size: 1
+  - name: UART1
+    description: desc UART1.
+    bit_offset: 1
+    bit_size: 1
+  - name: I2C
+    description: desc I2C.
+    bit_offset: 4
+    bit_size: 1
+  - name: SPI
+    description: desc SPI.
+    bit_offset: 6
+    bit_size: 1
+  - name: BASETIM
+    description: desc BASETIM.
+    bit_offset: 8
+    bit_size: 1
+  - name: ADVTIM
+    description: desc ADVTIM.
+    bit_offset: 10
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 14
+    bit_size: 1
+  - name: ADC
+    description: desc ADC.
+    bit_offset: 16
+    bit_size: 1
+  - name: VC
+    description: desc VC.
+    bit_offset: 17
+    bit_size: 1
+  - name: TRIM
+    description: desc TRIM.
+    bit_offset: 21
+    bit_size: 1
+  - name: TICK
+    description: desc TICK.
+    bit_offset: 24
+    bit_size: 1
+  - name: CRC
+    description: desc CRC.
+    bit_offset: 26
+    bit_size: 1
+  - name: GPIO
+    description: desc GPIO.
+    bit_offset: 28
+    bit_size: 1
+fieldset/RESET_FLAG:
+  description: desc RESET_FLAG.
+  fields:
+  - name: POR5V
+    description: desc POR5V.
+    bit_offset: 0
+    bit_size: 1
+  - name: POR15V
+    description: desc POR15V.
+    bit_offset: 1
+    bit_size: 1
+  - name: LVD
+    description: desc LVD.
+    bit_offset: 2
+    bit_size: 1
+  - name: WDT
+    description: desc WDT.
+    bit_offset: 3
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 4
+    bit_size: 1
+  - name: LOCKUP
+    description: desc LOCKUP.
+    bit_offset: 5
+    bit_size: 1
+  - name: SYSREQ
+    description: desc SYSREQ.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSTB
+    description: desc RSTB.
+    bit_offset: 7
+    bit_size: 1

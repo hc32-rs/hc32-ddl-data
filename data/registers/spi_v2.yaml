@@ -1,0 +1,157 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/SPI0；覆盖系列：HC32A136, HC32F030, HC32F072, HC32F17x, HC32F19x, HC32L07x, HC32L13x, HC32L16x, HC32L17x, HC32L18x, HC32L19x。
+block/SPI:
+  description: desc SPI.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 0
+    fieldset: CR
+  - name: SSN
+    description: desc SSN.
+    byte_offset: 4
+    fieldset: SSN
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 8
+    access: Read
+    fieldset: STAT
+  - name: DATA
+    description: desc DATA.
+    byte_offset: 12
+    fieldset: DATA
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 16
+    fieldset: CR2
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICLR
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: SPR0
+    description: desc SPR0.
+    bit_offset: 0
+    bit_size: 1
+  - name: SPR1
+    description: desc SPR1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CPHA
+    description: desc CPHA.
+    bit_offset: 2
+    bit_size: 1
+  - name: CPOL
+    description: desc CPOL.
+    bit_offset: 3
+    bit_size: 1
+  - name: MSTR
+    description: desc MSTR.
+    bit_offset: 4
+    bit_size: 1
+  - name: SPEN
+    description: desc SPEN.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPR2
+    description: desc SPR2.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: INT_EN
+    description: desc INT_EN.
+    bit_offset: 2
+    bit_size: 1
+  - name: HDMA_RX
+    description: desc HDMA_RX.
+    bit_offset: 3
+    bit_size: 1
+  - name: HDMA_TX
+    description: desc HDMA_TX.
+    bit_offset: 4
+    bit_size: 1
+  - name: TXEIE
+    description: desc TXEIE.
+    bit_offset: 5
+    bit_size: 1
+  - name: RXNEIE
+    description: desc RXNEIE.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DATA:
+  description: desc DATA.
+  fields:
+  - name: DAT
+    description: desc DAT.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: INT_CLR
+    description: desc INT_CLR.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SSN:
+  description: desc SSN.
+  fields:
+  - name: SSN
+    description: desc SSN.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: RXNE
+    description: desc RXNE.
+    bit_offset: 1
+    bit_size: 1
+  - name: TXE
+    description: desc TXE.
+    bit_offset: 2
+    bit_size: 1
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 3
+    bit_size: 1
+  - name: MDF
+    description: desc MDF.
+    bit_offset: 4
+    bit_size: 1
+  - name: SSERR
+    description: desc SSERR.
+    bit_offset: 5
+    bit_size: 1
+  - name: SPIF
+    description: desc SPIF.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

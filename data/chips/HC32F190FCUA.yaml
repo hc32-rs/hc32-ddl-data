@@ -1,0 +1,54 @@
+# HC32F190FCUA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F190FCUA
+family: HC32F19x
+subfamily: cortex-m0
+packages:
+- name: HC32F190FCUA
+  package: QFN32
+include_memory: ../memory/HC32F19x_F256S32.yaml
+memory_sizes:
+  FLASH: 256K
+  SRAM: 32K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1275.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F19x.yaml
+  include_interrupts: ../interrupts/HC32F19x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32F19x_DMA1.yaml
+_raw:
+  series: HC32F19x
+  freq_mhz: '48'
+  flash_kb: '256'
+  sram_kb: '32'
+  package: QFN32
+  pin_count: '32'
+  gpio: '26'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '1'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '8'
+  dac: '1'
+  timer: '7'
+  rtc: ''
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: '1'
+  cmp: '3'
+  other: GTIMER=4|ATIMER=3|Secruty AES=✓|Part=Number
+  url: https://www.xhsc.com.cn/product/1275.html
+  source: DS
+  Part NO.: HC32F190FCUA

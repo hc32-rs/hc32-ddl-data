@@ -1,0 +1,54 @@
+# HC32F420JAUB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F420JAUB
+family: HC32F420
+subfamily: cortex-m4
+packages:
+- name: HC32F420JAUB
+  package: QFN48
+include_memory: ../memory/HC32F420_F128S24.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 24K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1216.html
+cores:
+- name: cortex-m4
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F420.yaml
+  include_interrupts: ../interrupts/HC32F420.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32F420_DMA1.yaml
+_raw:
+  series: HC32F420
+  freq_mhz: '84'
+  flash_kb: '128'
+  sram_kb: '24'
+  package: QFN48
+  pin_count: '48'
+  gpio: '38'
+  vdd_min: '2.0'
+  vdd_max: '5.5'
+  uart: '4'
+  spi: '2'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '10'
+  dac: ''
+  timer: '3'
+  rtc: ''
+  wdt: '1'
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: '2'
+  other: 内核=M4|DMA=6|timer_高级定时器=2|OTS=✓|LVD=✓|唯一识别码=✓|temp=-40~105|脚间距=0.5mm|包装形式=Tape&Reel
+  url: https://www.xhsc.com.cn/product/1216.html
+  source: DS
+  Part NO.: HC32F420JAUB

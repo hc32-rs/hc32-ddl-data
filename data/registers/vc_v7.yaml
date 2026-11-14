@@ -1,0 +1,291 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L110/VC；覆盖系列：HC32L110。
+block/VC:
+  description: desc VC.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 16
+    fieldset: CR
+  - name: VC0_CR
+    description: desc VC0_CR.
+    byte_offset: 20
+    fieldset: VC0_CR
+  - name: VC1_CR
+    description: desc VC1_CR.
+    byte_offset: 24
+    fieldset: VC1_CR
+  - name: VC0_OUT_CFG
+    description: desc VC0_OUT_CFG.
+    byte_offset: 28
+    fieldset: VC0_OUT_CFG
+  - name: VC1_OUT_CFG
+    description: desc VC1_OUT_CFG.
+    byte_offset: 32
+    fieldset: VC1_OUT_CFG
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 36
+    fieldset: IFR
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: DIV
+    description: desc DIV.
+    bit_offset: 0
+    bit_size: 6
+  - name: DIV_EN
+    description: desc DIV_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: REF2P5_SEL
+    description: desc REF2P5_SEL.
+    bit_offset: 7
+    bit_size: 1
+  - name: VC0_BIAS_SEL
+    description: desc VC0_BIAS_SEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: VC0_HYS_SEL
+    description: desc VC0_HYS_SEL.
+    bit_offset: 10
+    bit_size: 2
+  - name: VC1_BIAS_SEL
+    description: desc VC1_BIAS_SEL.
+    bit_offset: 12
+    bit_size: 2
+  - name: VC1_HYS_SEL
+    description: desc VC1_HYS_SEL.
+    bit_offset: 14
+    bit_size: 2
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: VC0_INTF
+    description: desc VC0_INTF.
+    bit_offset: 0
+    bit_size: 1
+  - name: VC1_INTF
+    description: desc VC1_INTF.
+    bit_offset: 1
+    bit_size: 1
+  - name: VC0_FILTER
+    description: desc VC0_FILTER.
+    bit_offset: 2
+    bit_size: 1
+  - name: VC1_FILTER
+    description: desc VC1_FILTER.
+    bit_offset: 3
+    bit_size: 1
+fieldset/VC0_CR:
+  description: desc VC0_CR.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: P_SEL
+    description: desc P_SEL.
+    bit_offset: 1
+    bit_size: 3
+  - name: N_SEL
+    description: desc N_SEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: FLTEN
+    description: desc FLTEN.
+    bit_offset: 8
+    bit_size: 1
+  - name: DEBOUNCE_TIME
+    description: desc DEBOUNCE_TIME.
+    bit_offset: 9
+    bit_size: 3
+  - name: FALLING
+    description: desc FALLING.
+    bit_offset: 12
+    bit_size: 1
+  - name: RISING
+    description: desc RISING.
+    bit_offset: 13
+    bit_size: 1
+  - name: LEVEL
+    description: desc LEVEL.
+    bit_offset: 14
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+fieldset/VC0_OUT_CFG:
+  description: desc VC0_OUT_CFG.
+  fields:
+  - name: INV_TIMER
+    description: desc INV_TIMER.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIM0G
+    description: desc TIM0G.
+    bit_offset: 1
+    bit_size: 1
+  - name: TIM1G
+    description: desc TIM1G.
+    bit_offset: 2
+    bit_size: 1
+  - name: TIM2G
+    description: desc TIM2G.
+    bit_offset: 3
+    bit_size: 1
+  - name: TIM3G
+    description: desc TIM3G.
+    bit_offset: 4
+    bit_size: 1
+  - name: TIM3ECLK
+    description: desc TIM3ECLK.
+    bit_offset: 5
+    bit_size: 1
+  - name: INV_PCA
+    description: desc INV_PCA.
+    bit_offset: 6
+    bit_size: 1
+  - name: PCACAP0
+    description: desc PCACAP0.
+    bit_offset: 7
+    bit_size: 1
+  - name: PCAECI
+    description: desc PCAECI.
+    bit_offset: 8
+    bit_size: 1
+  - name: INV_TIM4
+    description: desc INV_TIM4.
+    bit_offset: 9
+    bit_size: 1
+  - name: TIM4
+    description: desc TIM4.
+    bit_offset: 10
+    bit_size: 1
+  - name: INV_TIM5
+    description: desc INV_TIM5.
+    bit_offset: 11
+    bit_size: 1
+  - name: TIM5
+    description: desc TIM5.
+    bit_offset: 12
+    bit_size: 1
+  - name: INV_TIM6
+    description: desc INV_TIM6.
+    bit_offset: 13
+    bit_size: 1
+  - name: TIM6
+    description: desc TIM6.
+    bit_offset: 14
+    bit_size: 1
+  - name: BRAKE
+    description: desc BRAKE.
+    bit_offset: 15
+    bit_size: 1
+fieldset/VC1_CR:
+  description: desc VC1_CR.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: P_SEL
+    description: desc P_SEL.
+    bit_offset: 1
+    bit_size: 3
+  - name: N_SEL
+    description: desc N_SEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: FLTEN
+    description: desc FLTEN.
+    bit_offset: 8
+    bit_size: 1
+  - name: DEBOUNCE_TIME
+    description: desc DEBOUNCE_TIME.
+    bit_offset: 9
+    bit_size: 3
+  - name: FALLING
+    description: desc FALLING.
+    bit_offset: 12
+    bit_size: 1
+  - name: RISING
+    description: desc RISING.
+    bit_offset: 13
+    bit_size: 1
+  - name: LEVEL
+    description: desc LEVEL.
+    bit_offset: 14
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+fieldset/VC1_OUT_CFG:
+  description: desc VC1_OUT_CFG.
+  fields:
+  - name: INV_TIMER
+    description: desc INV_TIMER.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIM0G
+    description: desc TIM0G.
+    bit_offset: 1
+    bit_size: 1
+  - name: TIM1G
+    description: desc TIM1G.
+    bit_offset: 2
+    bit_size: 1
+  - name: TIM2G
+    description: desc TIM2G.
+    bit_offset: 3
+    bit_size: 1
+  - name: TIM3G
+    description: desc TIM3G.
+    bit_offset: 4
+    bit_size: 1
+  - name: TIM3ECLK
+    description: desc TIM3ECLK.
+    bit_offset: 5
+    bit_size: 1
+  - name: INV_PCA
+    description: desc INV_PCA.
+    bit_offset: 6
+    bit_size: 1
+  - name: PCACAP0
+    description: desc PCACAP0.
+    bit_offset: 7
+    bit_size: 1
+  - name: PCAECI
+    description: desc PCAECI.
+    bit_offset: 8
+    bit_size: 1
+  - name: INV_TIM4
+    description: desc INV_TIM4.
+    bit_offset: 9
+    bit_size: 1
+  - name: TIM4
+    description: desc TIM4.
+    bit_offset: 10
+    bit_size: 1
+  - name: INV_TIM5
+    description: desc INV_TIM5.
+    bit_offset: 11
+    bit_size: 1
+  - name: TIM5
+    description: desc TIM5.
+    bit_offset: 12
+    bit_size: 1
+  - name: INV_TIM6
+    description: desc INV_TIM6.
+    bit_offset: 13
+    bit_size: 1
+  - name: TIM6
+    description: desc TIM6.
+    bit_offset: 14
+    bit_size: 1
+  - name: BRAKE
+    description: desc BRAKE.
+    bit_offset: 15
+    bit_size: 1

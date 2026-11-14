@@ -1,0 +1,44 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L16x/OPA；覆盖系列：HC32L16x, HC32L18x。
+block/OPA:
+  description: desc OPA.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 48
+    fieldset: CR0
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: BUFEN
+    description: desc BUFEN.
+    bit_offset: 2
+    bit_size: 1
+  - name: OEN1
+    description: desc OEN1.
+    bit_offset: 3
+    bit_size: 1
+  - name: OEN2
+    description: desc OEN2.
+    bit_offset: 4
+    bit_size: 1
+  - name: OEN3
+    description: desc OEN3.
+    bit_offset: 5
+    bit_size: 1
+  - name: OEN4
+    description: desc OEN4.
+    bit_offset: 6
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 7
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

@@ -1,0 +1,155 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F002/ADC；覆盖系列：HC32F002。
+block/ADC:
+  description: desc ADC.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 4
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 8
+    fieldset: CR1
+  - name: RESULT
+    description: desc RESULT.
+    byte_offset: 160
+    access: Read
+    fieldset: RESULT
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 176
+    access: Read
+    fieldset: IFR
+  - name: IER
+    description: desc IER.
+    byte_offset: 180
+    fieldset: IER
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 184
+    fieldset: ICR
+  - name: EXTTRIGGER
+    description: desc EXTTRIGGER.
+    byte_offset: 188
+    fieldset: EXTTRIGGER
+  - name: START
+    description: desc START.
+    byte_offset: 192
+    access: Write
+    fieldset: START
+  - name: ALLSTART
+    description: desc ALLSTART.
+    byte_offset: 204
+    fieldset: ALLSTART
+fieldset/ALLSTART:
+  description: desc ALLSTART.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CKDIV
+    description: desc CKDIV.
+    bit_offset: 2
+    bit_size: 3
+  - name: REF
+    description: desc REF.
+    bit_offset: 9
+    bit_size: 2
+  - name: SAM
+    description: desc SAM.
+    bit_offset: 12
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: CHSEL
+    description: desc CHSEL.
+    bit_offset: 0
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EXTTRIGGER:
+  description: desc EXTTRIGGER.
+  fields:
+  - name: TRIGSEL
+    description: desc TRIGSEL.
+    bit_offset: 0
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: EOC
+    description: desc EOC.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IER:
+  description: desc IER.
+  fields:
+  - name: EOC
+    description: desc EOC.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: EOC
+    description: desc EOC.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RESULT:
+  description: desc RESULT.
+  fields:
+  - name: RESULT
+    description: desc RESULT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/START:
+  description: desc START.
+  fields:
+  - name: START
+    description: desc START.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

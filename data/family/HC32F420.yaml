@@ -1,0 +1,526 @@
+# HC32F420 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
+# 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
+- name: ADC0
+  address: 0x4000A000
+  registers:
+    kind: adc
+    block: ADC
+    version: v7
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralAdc0
+  interrupts:
+  - signal: ADC0_ADC1
+    interrupt: ADC0_ADC1
+- name: ADC1
+  address: 0x4000A400
+  registers:
+    kind: adc
+    block: ADC
+    version: v8
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralAdc1
+  interrupts:
+  - signal: ADC0_ADC1
+    interrupt: ADC0_ADC1
+- name: ATIM0
+  address: 0x40006000
+  registers:
+    kind: atim
+    block: ATIM
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralATim0
+  interrupts:
+  - signal: ATIM0_UEV
+    interrupt: ATIM0_UEV
+  - signal: ATIM0_CHA
+    interrupt: ATIM0_CHA
+  - signal: ATIM0_CHB
+    interrupt: ATIM0_CHB
+  - signal: ATIM0_BKETR
+    interrupt: ATIM0_BKETR
+- name: ATIM3
+  address: 0x40006C00
+  registers:
+    kind: atim
+    block: ATIM
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralATim3
+  interrupts:
+  - signal: ATIM3_UEV
+    interrupt: ATIM3_UEV
+  - signal: ATIM3_CHA
+    interrupt: ATIM3_CHA
+  - signal: ATIM3_CHB
+    interrupt: ATIM3_CHB
+  - signal: ATIM3_BK_ETR_OV_UD_CMP3
+    interrupt: ATIM3_BK_ETR_OV_UD_CMP3
+- name: BTIM0
+  address: 0x40005000
+  registers:
+    kind: btim
+    block: BTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim0
+- name: BTIM1
+  address: 0x40005100
+  registers:
+    kind: btim
+    block: BTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim0
+- name: BTIM2
+  address: 0x40005200
+  registers:
+    kind: btim
+    block: BTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim0
+- name: BTIM3
+  address: 0x40005400
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim1
+- name: BTIM4
+  address: 0x40005500
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim1
+- name: BTIM5
+  address: 0x40005600
+  registers:
+    kind: btim
+    block: BTIM
+    version: v2
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim1
+- name: BTIM6
+  address: 0x40005800
+  registers:
+    kind: btim
+    block: BTIM
+    version: v4
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim2
+- name: BTIM7
+  address: 0x40005900
+  registers:
+    kind: btim
+    block: BTIM
+    version: v4
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim2
+- name: BTIM8
+  address: 0x40005A00
+  registers:
+    kind: btim
+    block: BTIM
+    version: v4
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim2
+- name: CRC
+  address: 0x40020800
+  registers:
+    kind: crc
+    block: CRC
+    version: v4
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCrc
+- name: CTRIM
+  address: 0x40008000
+  registers:
+    kind: ctrim
+    block: CTRIM
+    version: v3
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralCtrim
+  interrupts:
+  - signal: CTRIM
+    interrupt: CTRIM
+- name: DMAC
+  address: 0x40020000
+  registers:
+    kind: dmac
+    block: DMAC
+    version: v4
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralDma
+  interrupts:
+  - signal: DMA_CH0
+    interrupt: DMA_CH0
+  - signal: DMA_CH1
+    interrupt: DMA_CH1
+  - signal: DMA_CH2
+    interrupt: DMA_CH2
+  - signal: DMA_CH3
+    interrupt: DMA_CH3
+  - signal: DMA_CH4
+    interrupt: DMA_CH4
+  - signal: DMA_CH5
+    interrupt: DMA_CH5
+- name: FLASH
+  address: 0x40021400
+  registers:
+    kind: flash
+    block: FLASH
+    version: v8
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralFlash
+  interrupts:
+  - signal: FLASH
+    interrupt: FLASH
+- name: GPIOA
+  address: 0x40024000
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v1
+  rcc:
+    enable:
+      register: AHB1EN
+      field: SysctrlPeripheralGpioa
+  interrupts:
+  - signal: PORTA
+    interrupt: PORTA
+- name: GPIOAUX
+  address: 0x4000B800
+  registers:
+    kind: gpioaux
+    block: GPIOAUX
+    version: v3
+- name: GPIOB
+  address: 0x40024400
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v1
+  rcc:
+    enable:
+      register: AHB1EN
+      field: SysctrlPeripheralGpiob
+  interrupts:
+  - signal: PORTB
+    interrupt: PORTB
+- name: GPIOC
+  address: 0x40024800
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v1
+  rcc:
+    enable:
+      register: AHB1EN
+      field: SysctrlPeripheralGpioc
+  interrupts:
+  - signal: PORTC
+    interrupt: PORTC
+- name: GPIOD
+  address: 0x40024C00
+  registers:
+    kind: gpioa
+    block: GPIOA
+    version: v1
+  rcc:
+    enable:
+      register: AHB1EN
+      field: SysctrlPeripheralGpiod
+  interrupts:
+  - signal: PORTD
+    interrupt: PORTD
+- name: GTIM0
+  address: 0x40005000
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim0
+  interrupts:
+  - signal: GTIM0_UEV_ETR_BTIMA
+    interrupt: GTIM0_UEV_ETR_BTIMA
+  - signal: GTIM0_CH01_BTIMB
+    interrupt: GTIM0_CH01_BTIMB
+  - signal: GTIM0_CH23_BTIMC
+    interrupt: GTIM0_CH23_BTIMC
+- name: GTIM1
+  address: 0x40005400
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim1
+  interrupts:
+  - signal: GTIM1_UEV_ETR_BTIMA
+    interrupt: GTIM1_UEV_ETR_BTIMA
+  - signal: GTIM1_CH01_BTIMB
+    interrupt: GTIM1_CH01_BTIMB
+  - signal: GTIM1_CH23_BTIMC
+    interrupt: GTIM1_CH23_BTIMC
+- name: GTIM2
+  address: 0x40005800
+  registers:
+    kind: gtim
+    block: GTIM
+    version: v3
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralCTim2
+  interrupts:
+  - signal: GTIM2_UEV_ETR_BTIMA
+    interrupt: GTIM2_UEV_ETR_BTIMA
+  - signal: GTIM2_CH01_BTIMB
+    interrupt: GTIM2_CH01_BTIMB
+  - signal: GTIM2_CH23_BTIMC
+    interrupt: GTIM2_CH23_BTIMC
+- name: I2C0
+  address: 0x40002800
+  registers:
+    kind: i
+    block: I
+    version: v7
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralI2c0
+  interrupts:
+  - signal: I2C0
+    interrupt: I2C0
+- name: I2C1
+  address: 0x40002C00
+  registers:
+    kind: i
+    block: I
+    version: v7
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralI2c1
+  interrupts:
+  - signal: I2C1
+    interrupt: I2C1
+- name: IWDT
+  address: 0x40008C80
+  registers:
+    kind: iwdt
+    block: IWDT
+    version: v1
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralIwt
+  interrupts:
+  - signal: IWDT
+    interrupt: IWDT
+- name: LVD
+  address: 0x4000AA00
+  registers:
+    kind: lvd
+    block: LVD
+    version: v3
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripherallvd
+  interrupts:
+  - signal: LVD
+    interrupt: LVD
+- name: SPI0
+  address: 0x40003800
+  registers:
+    kind: spi
+    block: SPI
+    version: v1
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralSpi0
+  interrupts:
+  - signal: SPI0_TX
+    interrupt: SPI0_TX
+  - signal: SPI0_RX
+    interrupt: SPI0_RX
+  - signal: SPI0_SSR
+    interrupt: SPI0_SSR
+  - signal: SPI0_ERR
+    interrupt: SPI0_ERR
+- name: SPI1
+  address: 0x40003C00
+  registers:
+    kind: spi
+    block: SPI
+    version: v1
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralSpi1
+  interrupts:
+  - signal: SPI1_TX
+    interrupt: SPI1_TX
+  - signal: SPI1_RX
+    interrupt: SPI1_RX
+  - signal: SPI1_SSR
+    interrupt: SPI1_SSR
+  - signal: SPI1_ERR
+    interrupt: SPI1_ERR
+- name: SYSCTRL
+  address: 0x4000B800
+  registers:
+    kind: sysctrl
+    block: SYSCTRL
+    version: v8
+- name: USART0
+  address: 0x40000000
+  registers:
+    kind: usart
+    block: USART
+    version: common
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralUsart0
+  interrupts:
+  - signal: USART0_RX
+    interrupt: USART0_RX
+  - signal: USART0_TX
+    interrupt: USART0_TX
+  - signal: USART0_FLAG
+    interrupt: USART0_FLAG
+- name: USART1
+  address: 0x40000400
+  registers:
+    kind: usart
+    block: USART
+    version: common
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralUsart1
+  interrupts:
+  - signal: USART1_RX
+    interrupt: USART1_RX
+  - signal: USART1_TX
+    interrupt: USART1_TX
+  - signal: USART1_FLAG
+    interrupt: USART1_FLAG
+- name: USART2
+  address: 0x40000800
+  registers:
+    kind: usart
+    block: USART
+    version: common
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralUsart2
+  interrupts:
+  - signal: USART2_RX
+    interrupt: USART2_RX
+  - signal: USART2_TX
+    interrupt: USART2_TX
+  - signal: USART2_FLAG
+    interrupt: USART2_FLAG
+- name: USART3
+  address: 0x40000C00
+  registers:
+    kind: usart
+    block: USART
+    version: common
+  rcc:
+    enable:
+      register: AHB0EN
+      field: SysctrlPeripheralUsart3
+  interrupts:
+  - signal: USART3_RX
+    interrupt: USART3_RX
+  - signal: USART3_TX
+    interrupt: USART3_TX
+  - signal: USART3_FLAG
+    interrupt: USART3_FLAG
+- name: VC0
+  address: 0x4000A800
+  registers:
+    kind: vc
+    block: VC
+    version: v5
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralVc
+  interrupts:
+  - signal: VC
+    interrupt: VC
+- name: VC1
+  address: 0x4000A810
+  registers:
+    kind: vc
+    block: VC
+    version: v5
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralVc
+  interrupts:
+  - signal: VC
+    interrupt: VC
+- name: WWDT
+  address: 0x40008800
+  registers:
+    kind: wwdt
+    block: WWDT
+    version: common
+  rcc:
+    enable:
+      register: APB1EN
+      field: SysctrlPeripheralWwt
+  interrupts:
+  - signal: WWDT
+    interrupt: WWDT

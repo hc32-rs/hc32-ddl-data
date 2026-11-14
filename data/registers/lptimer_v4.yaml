@@ -1,0 +1,138 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L12x/LPTIMER0；覆盖系列：HC32L12x。
+block/LPTIMER:
+  description: desc LPTIMER.
+  items:
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 0
+    access: Read
+    fieldset: CNT
+  - name: ARR
+    description: desc ARR.
+    byte_offset: 4
+    fieldset: ARR
+  - name: CMP
+    description: desc CMP.
+    byte_offset: 8
+    fieldset: CMP
+  - name: CR
+    description: desc CR.
+    byte_offset: 12
+    fieldset: CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 16
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICLR
+fieldset/ARR:
+  description: desc ARR.
+  fields:
+  - name: ARR
+    description: desc ARR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CMP:
+  description: desc CMP.
+  fields:
+  - name: CMP
+    description: desc CMP.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: TR
+    description: desc TR.
+    bit_offset: 0
+    bit_size: 1
+  - name: MD
+    description: desc MD.
+    bit_offset: 1
+    bit_size: 1
+  - name: CT
+    description: desc CT.
+    bit_offset: 2
+    bit_size: 1
+  - name: TOG_EN
+    description: desc TOG_EN.
+    bit_offset: 3
+    bit_size: 1
+  - name: TCK_SEL
+    description: desc TCK_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: WT_FLAG
+    description: desc WT_FLAG.
+    bit_offset: 7
+    bit_size: 1
+  - name: GATE
+    description: desc GATE.
+    bit_offset: 8
+    bit_size: 1
+  - name: GATE_P
+    description: desc GATE_P.
+    bit_offset: 9
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 10
+    bit_size: 1
+  - name: PRS
+    description: desc PRS.
+    bit_offset: 11
+    bit_size: 4
+  - name: SYNCCOUNTRST
+    description: desc SYNCCOUNTRST.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: OV
+    description: desc OV.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: OV
+    description: desc OV.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

@@ -1,0 +1,187 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/OPA；覆盖系列：HC32A136, HC32F030, HC32L13x。
+block/OPA:
+  description: desc OPA.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 48
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 52
+    fieldset: CR1
+  - name: CR2
+    description: desc CR2.
+    byte_offset: 56
+    fieldset: CR2
+  - name: CR
+    description: desc CR.
+    byte_offset: 60
+    bit_size: 8
+    fieldset: CR
+fieldset/CR:
+  description: desc CR.
+  bit_size: 8
+  fields:
+  - name: ADCTR_EN
+    description: desc ADCTR_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TRIGGER
+    description: desc TRIGGER.
+    bit_offset: 1
+    bit_size: 1
+  - name: AZ_PULSE
+    description: desc AZ_PULSE.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLK_SW_SET
+    description: desc CLK_SW_SET.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLK_SEL
+    description: desc CLK_SEL.
+    bit_offset: 4
+    bit_size: 4
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 2
+    bit_size: 1
+  - name: UBUFSEL
+    description: desc UBUFSEL.
+    bit_offset: 3
+    bit_size: 1
+  - name: RESSEL
+    description: desc RESSEL.
+    bit_offset: 4
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 5
+    bit_size: 3
+  - name: NEGSEL
+    description: desc NEGSEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: POSSEL
+    description: desc POSSEL.
+    bit_offset: 10
+    bit_size: 2
+  - name: PGAGAIN
+    description: desc PGAGAIN.
+    bit_offset: 12
+    bit_size: 3
+  - name: POEN
+    description: desc POEN.
+    bit_offset: 15
+    bit_size: 1
+  - name: RESINMUX
+    description: desc RESINMUX.
+    bit_offset: 16
+    bit_size: 2
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 2
+    bit_size: 1
+  - name: UBUFSEL
+    description: desc UBUFSEL.
+    bit_offset: 3
+    bit_size: 1
+  - name: RESSEL
+    description: desc RESSEL.
+    bit_offset: 4
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 5
+    bit_size: 3
+  - name: NEGSEL
+    description: desc NEGSEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: POSSEL
+    description: desc POSSEL.
+    bit_offset: 10
+    bit_size: 2
+  - name: PGAGAIN
+    description: desc PGAGAIN.
+    bit_offset: 12
+    bit_size: 3
+  - name: POEN
+    description: desc POEN.
+    bit_offset: 15
+    bit_size: 1
+  - name: RESINMUX
+    description: desc RESINMUX.
+    bit_offset: 16
+    bit_size: 2
+fieldset/CR2:
+  description: desc CR2.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 2
+    bit_size: 1
+  - name: UBUFSEL
+    description: desc UBUFSEL.
+    bit_offset: 3
+    bit_size: 1
+  - name: RESSEL
+    description: desc RESSEL.
+    bit_offset: 4
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 5
+    bit_size: 3
+  - name: NEGSEL
+    description: desc NEGSEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: POSSEL
+    description: desc POSSEL.
+    bit_offset: 10
+    bit_size: 2
+  - name: PGAGAIN
+    description: desc PGAGAIN.
+    bit_offset: 12
+    bit_size: 3
+  - name: POEN
+    description: desc POEN.
+    bit_offset: 15
+    bit_size: 1
+  - name: RESINMUX
+    description: desc RESINMUX.
+    bit_offset: 16
+    bit_size: 2

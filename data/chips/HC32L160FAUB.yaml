@@ -1,0 +1,55 @@
+# HC32L160FAUB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L160FAUB
+family: HC32L16x
+subfamily: cortex-m0
+packages:
+- name: HC32L160FAUB
+  package: QFN32
+include_memory: ../memory/HC32L16x_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1252.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L16x.yaml
+  include_interrupts: ../interrupts/HC32L16x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L16x_DMA1.yaml
+_raw:
+  series: HC32L16x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: QFN32
+  pin_count: '32'
+  gpio: '26'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '1'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '1'
+  dac: '1'
+  timer: '4'
+  rtc: '1'
+  wdt: '1'
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: '3'
+  other: CPUCore=Cortex-M0+|Power Supply Voltages=1.8~5.5V|Temp Range=-40~105℃|DMAC=2ch|Advanced=3|LPTimer=2|WWDT=1|LPUART=1|Analog
+    12-bit=8ch|12-bit=1ch|LVD=1|CRC=√|Security AES=√|Packing=Tape & Reel|Pitch=0.4mm
+  url: https://www.xhsc.com.cn/product/1252.html
+  source: DS
+  Part NO.: HC32L160FAUB

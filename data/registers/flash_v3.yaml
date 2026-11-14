@@ -1,0 +1,138 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F002/FLASH；覆盖系列：HC32F002。
+block/FLASH:
+  description: desc FLASH.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 32
+    fieldset: CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 36
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 40
+    access: Write
+    fieldset: ICLR
+  - name: BYPASS
+    description: desc BYPASS.
+    byte_offset: 44
+    access: Write
+    fieldset: BYPASS
+  - name: SLOCK
+    description: desc SLOCK.
+    byte_offset: 48
+    fieldset: SLOCK
+  - name: WAIT
+    description: desc WAIT.
+    byte_offset: 80
+    fieldset: WAIT
+  - name: LOCKSTATE
+    description: desc LOCKSTATE.
+    byte_offset: 84
+    access: Read
+    fieldset: LOCKSTATE
+fieldset/BYPASS:
+  description: desc BYPASS.
+  fields:
+  - name: BYPASS
+    description: desc BYPASS.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: OP
+    description: desc OP.
+    bit_offset: 0
+    bit_size: 2
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 4
+    bit_size: 1
+  - name: PCIE
+    description: desc PCIE.
+    bit_offset: 5
+    bit_size: 1
+  - name: FLASHIE
+    description: desc FLASHIE.
+    bit_offset: 6
+    bit_size: 1
+  - name: LPMODE
+    description: desc LPMODE.
+    bit_offset: 9
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: PC
+    description: desc PC.
+    bit_offset: 0
+    bit_size: 1
+  - name: FLASH
+    description: desc FLASH.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: PC
+    description: desc PC.
+    bit_offset: 0
+    bit_size: 1
+  - name: FLASH
+    description: desc FLASH.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/LOCKSTATE:
+  description: desc LOCKSTATE.
+  fields:
+  - name: STATE
+    description: desc STATE.
+    bit_offset: 0
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SLOCK:
+  description: desc SLOCK.
+  fields:
+  - name: SLOCK
+    description: desc SLOCK.
+    bit_offset: 0
+    bit_size: 9
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/WAIT:
+  description: desc WAIT.
+  fields:
+  - name: WAIT
+    description: desc WAIT.
+    bit_offset: 0
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

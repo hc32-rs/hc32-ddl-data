@@ -1,0 +1,280 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/VC；覆盖系列：HC32L021。
+block/VC:
+  description: desc VC.
+  items:
+  - name: VC0_CR0
+    description: desc VC0_CR0.
+    byte_offset: 0
+    fieldset: VC0_CR0
+  - name: VC0_CR1
+    description: desc VC0_CR1.
+    byte_offset: 4
+    fieldset: VC0_CR1
+  - name: VC0_CR2
+    description: desc VC0_CR2.
+    byte_offset: 8
+    fieldset: VC0_CR2
+  - name: VC0_SR
+    description: desc VC0_SR.
+    byte_offset: 12
+    fieldset: VC0_SR
+  - name: VC1_CR0
+    description: desc VC1_CR0.
+    byte_offset: 16
+    fieldset: VC1_CR0
+  - name: VC1_CR1
+    description: desc VC1_CR1.
+    byte_offset: 20
+    fieldset: VC1_CR1
+  - name: VC1_CR2
+    description: desc VC1_CR2.
+    byte_offset: 24
+    fieldset: VC1_CR2
+  - name: VC1_SR
+    description: desc VC1_SR.
+    byte_offset: 28
+    fieldset: VC1_SR
+  - name: VC_TRIM
+    description: desc VC_TRIM.
+    byte_offset: 32
+    fieldset: VC_TRIM
+fieldset/VC0_CR0:
+  description: desc VC0_CR0.
+  fields:
+  - name: DIV
+    description: desc DIV.
+    bit_offset: 0
+    bit_size: 6
+  - name: DIV_EN
+    description: desc DIV_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: BIAS
+    description: desc BIAS.
+    bit_offset: 8
+    bit_size: 2
+  - name: HYS
+    description: desc HYS.
+    bit_offset: 10
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC0_CR1:
+  description: desc VC0_CR1.
+  fields:
+  - name: PSEL
+    description: desc PSEL.
+    bit_offset: 0
+    bit_size: 4
+  - name: NSEL
+    description: desc NSEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: FLTTIME
+    description: desc FLTTIME.
+    bit_offset: 8
+    bit_size: 4
+  - name: FALLING
+    description: desc FALLING.
+    bit_offset: 12
+    bit_size: 1
+  - name: RISING
+    description: desc RISING.
+    bit_offset: 13
+    bit_size: 1
+  - name: LEVEL
+    description: desc LEVEL.
+    bit_offset: 14
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+  - name: EN
+    description: desc EN.
+    bit_offset: 16
+    bit_size: 1
+  - name: FLTCLK
+    description: desc FLTCLK.
+    bit_offset: 17
+    bit_size: 1
+  - name: FLT_MODE
+    description: desc FLT_MODE.
+    bit_offset: 18
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC0_CR2:
+  description: desc VC0_CR2.
+  fields:
+  - name: POL
+    description: desc POL.
+    bit_offset: 0
+    bit_size: 1
+  - name: ATIM3CLR
+    description: desc ATIM3CLR.
+    bit_offset: 4
+    bit_size: 1
+  - name: ATIMBK
+    description: desc ATIMBK.
+    bit_offset: 5
+    bit_size: 1
+  - name: WINDOW
+    description: desc WINDOW.
+    bit_offset: 6
+    bit_size: 1
+  - name: BLANK
+    description: desc BLANK.
+    bit_offset: 8
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC0_SR:
+  description: desc VC0_SR.
+  fields:
+  - name: INTF
+    description: desc INTF.
+    bit_offset: 0
+    bit_size: 1
+  - name: FLTV
+    description: desc FLTV.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC1_CR0:
+  description: desc VC1_CR0.
+  fields:
+  - name: DIV
+    description: desc DIV.
+    bit_offset: 0
+    bit_size: 6
+  - name: DIV_EN
+    description: desc DIV_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: BIAS
+    description: desc BIAS.
+    bit_offset: 8
+    bit_size: 2
+  - name: HYS
+    description: desc HYS.
+    bit_offset: 10
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC1_CR1:
+  description: desc VC1_CR1.
+  fields:
+  - name: PSEL
+    description: desc PSEL.
+    bit_offset: 0
+    bit_size: 4
+  - name: NSEL
+    description: desc NSEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: FLTTIME
+    description: desc FLTTIME.
+    bit_offset: 8
+    bit_size: 4
+  - name: FALLING
+    description: desc FALLING.
+    bit_offset: 12
+    bit_size: 1
+  - name: RISING
+    description: desc RISING.
+    bit_offset: 13
+    bit_size: 1
+  - name: LEVEL
+    description: desc LEVEL.
+    bit_offset: 14
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 15
+    bit_size: 1
+  - name: EN
+    description: desc EN.
+    bit_offset: 16
+    bit_size: 1
+  - name: FLTCLK
+    description: desc FLTCLK.
+    bit_offset: 17
+    bit_size: 1
+  - name: FLT_MODE
+    description: desc FLT_MODE.
+    bit_offset: 18
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC1_CR2:
+  description: desc VC1_CR2.
+  fields:
+  - name: POL
+    description: desc POL.
+    bit_offset: 0
+    bit_size: 1
+  - name: ATIM3CLR
+    description: desc ATIM3CLR.
+    bit_offset: 4
+    bit_size: 1
+  - name: ATIMBK
+    description: desc ATIMBK.
+    bit_offset: 5
+    bit_size: 1
+  - name: WINDOW
+    description: desc WINDOW.
+    bit_offset: 6
+    bit_size: 1
+  - name: BLANK
+    description: desc BLANK.
+    bit_offset: 8
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC1_SR:
+  description: desc VC1_SR.
+  fields:
+  - name: INTF
+    description: desc INTF.
+    bit_offset: 0
+    bit_size: 1
+  - name: FLTV
+    description: desc FLTV.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/VC_TRIM:
+  description: desc VC_TRIM.
+  fields:
+  - name: TRIM0
+    description: desc TRIM0.
+    bit_offset: 0
+    bit_size: 4
+  - name: TRIM1
+    description: desc TRIM1.
+    bit_offset: 4
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

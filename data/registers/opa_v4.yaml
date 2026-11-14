@@ -1,0 +1,79 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F17x/OPA；覆盖系列：HC32F17x, HC32F19x, HC32L17x, HC32L19x。
+block/OPA:
+  description: desc OPA.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 48
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 60
+    fieldset: CR1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: BUFEN
+    description: desc BUFEN.
+    bit_offset: 2
+    bit_size: 1
+  - name: OEN1
+    description: desc OEN1.
+    bit_offset: 3
+    bit_size: 1
+  - name: OEN2
+    description: desc OEN2.
+    bit_offset: 4
+    bit_size: 1
+  - name: OEN3
+    description: desc OEN3.
+    bit_offset: 5
+    bit_size: 1
+  - name: OEN4
+    description: desc OEN4.
+    bit_offset: 6
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 7
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: ADCTR_EN
+    description: desc ADCTR_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TRIGGER
+    description: desc TRIGGER.
+    bit_offset: 1
+    bit_size: 1
+  - name: AZ_PULSE
+    description: desc AZ_PULSE.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLK_SW_SET
+    description: desc CLK_SW_SET.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLK_SEL
+    description: desc CLK_SEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

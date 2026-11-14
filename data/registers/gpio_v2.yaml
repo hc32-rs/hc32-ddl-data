@@ -1,0 +1,1652 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/GPIO；覆盖系列：HC32F003, HC32F005, HC32L110。
+block/GPIO:
+  description: desc GPIO.
+  items:
+  - name: P01_SEL
+    description: desc P01_SEL.
+    byte_offset: 4
+    fieldset: P01_SEL
+  - name: P02_SEL
+    description: desc P02_SEL.
+    byte_offset: 8
+    fieldset: P02_SEL
+  - name: P03_SEL
+    description: desc P03_SEL.
+    byte_offset: 12
+    fieldset: P03_SEL
+  - name: P14_SEL
+    description: desc P14_SEL.
+    byte_offset: 80
+    fieldset: P14_SEL
+  - name: P15_SEL
+    description: desc P15_SEL.
+    byte_offset: 84
+    fieldset: P15_SEL
+  - name: P23_SEL
+    description: desc P23_SEL.
+    byte_offset: 140
+    fieldset: P23_SEL
+  - name: P24_SEL
+    description: desc P24_SEL.
+    byte_offset: 144
+    fieldset: P24_SEL
+  - name: P25_SEL
+    description: desc P25_SEL.
+    byte_offset: 148
+    fieldset: P25_SEL
+  - name: P26_SEL
+    description: desc P26_SEL.
+    byte_offset: 152
+    fieldset: P26_SEL
+  - name: P27_SEL
+    description: desc P27_SEL.
+    byte_offset: 156
+    fieldset: P27_SEL
+  - name: P31_SEL
+    description: desc P31_SEL.
+    byte_offset: 196
+    fieldset: P31_SEL
+  - name: P32_SEL
+    description: desc P32_SEL.
+    byte_offset: 200
+    fieldset: P32_SEL
+  - name: P33_SEL
+    description: desc P33_SEL.
+    byte_offset: 204
+    fieldset: P33_SEL
+  - name: P34_SEL
+    description: desc P34_SEL.
+    byte_offset: 208
+    fieldset: P34_SEL
+  - name: P35_SEL
+    description: desc P35_SEL.
+    byte_offset: 212
+    fieldset: P35_SEL
+  - name: P36_SEL
+    description: desc P36_SEL.
+    byte_offset: 216
+    fieldset: P36_SEL
+  - name: P0DIR
+    description: desc P0DIR.
+    byte_offset: 256
+    fieldset: P0DIR
+  - name: P0IN
+    description: desc P0IN.
+    byte_offset: 260
+    access: Read
+    fieldset: P0IN
+  - name: P0OUT
+    description: desc P0OUT.
+    byte_offset: 264
+    fieldset: P0OUT
+  - name: P0ADS
+    description: desc P0ADS.
+    byte_offset: 268
+    fieldset: P0ADS
+  - name: P0DR
+    description: desc P0DR.
+    byte_offset: 284
+    fieldset: P0DR
+  - name: P0PU
+    description: desc P0PU.
+    byte_offset: 288
+    fieldset: P0PU
+  - name: P0PD
+    description: desc P0PD.
+    byte_offset: 292
+    fieldset: P0PD
+  - name: P0OD
+    description: desc P0OD.
+    byte_offset: 300
+    fieldset: P0OD
+  - name: P0HIE
+    description: desc P0HIE.
+    byte_offset: 304
+    access: Read
+    fieldset: P0HIE
+  - name: P0LIE
+    description: desc P0LIE.
+    byte_offset: 308
+    access: Read
+    fieldset: P0LIE
+  - name: P0RIE
+    description: desc P0RIE.
+    byte_offset: 312
+    access: Read
+    fieldset: P0RIE
+  - name: P0FIE
+    description: desc P0FIE.
+    byte_offset: 316
+    access: Read
+    fieldset: P0FIE
+  - name: P1DIR
+    description: desc P1DIR.
+    byte_offset: 320
+    fieldset: P1DIR
+  - name: P1IN
+    description: desc P1IN.
+    byte_offset: 324
+    access: Read
+    fieldset: P1IN
+  - name: P1OUT
+    description: desc P1OUT.
+    byte_offset: 328
+    fieldset: P1OUT
+  - name: P1ADS
+    description: desc P1ADS.
+    byte_offset: 332
+    fieldset: P1ADS
+  - name: P1DR
+    description: desc P1DR.
+    byte_offset: 348
+    fieldset: P1DR
+  - name: P1PU
+    description: desc P1PU.
+    byte_offset: 352
+    fieldset: P1PU
+  - name: P1PD
+    description: desc P1PD.
+    byte_offset: 356
+    fieldset: P1PD
+  - name: P1OD
+    description: desc P1OD.
+    byte_offset: 364
+    fieldset: P1OD
+  - name: P1HIE
+    description: desc P1HIE.
+    byte_offset: 368
+    access: Read
+    fieldset: P1HIE
+  - name: P1LIE
+    description: desc P1LIE.
+    byte_offset: 372
+    access: Read
+    fieldset: P1LIE
+  - name: P1RIE
+    description: desc P1RIE.
+    byte_offset: 376
+    access: Read
+    fieldset: P1RIE
+  - name: P1FIE
+    description: desc P1FIE.
+    byte_offset: 380
+    access: Read
+    fieldset: P1FIE
+  - name: P2DIR
+    description: desc P2DIR.
+    byte_offset: 384
+    fieldset: P2DIR
+  - name: P2IN
+    description: desc P2IN.
+    byte_offset: 388
+    access: Read
+    fieldset: P2IN
+  - name: P2OUT
+    description: desc P2OUT.
+    byte_offset: 392
+    fieldset: P2OUT
+  - name: P2ADS
+    description: desc P2ADS.
+    byte_offset: 396
+    fieldset: P2ADS
+  - name: P2DR
+    description: desc P2DR.
+    byte_offset: 412
+    fieldset: P2DR
+  - name: P2PU
+    description: desc P2PU.
+    byte_offset: 416
+    fieldset: P2PU
+  - name: P2PD
+    description: desc P2PD.
+    byte_offset: 420
+    fieldset: P2PD
+  - name: P2OD
+    description: desc P2OD.
+    byte_offset: 428
+    fieldset: P2OD
+  - name: P2HIE
+    description: desc P2HIE.
+    byte_offset: 432
+    access: Read
+    fieldset: P2HIE
+  - name: P2LIE
+    description: desc P2LIE.
+    byte_offset: 436
+    access: Read
+    fieldset: P2LIE
+  - name: P2RIE
+    description: desc P2RIE.
+    byte_offset: 440
+    access: Read
+    fieldset: P2RIE
+  - name: P2FIE
+    description: desc P2FIE.
+    byte_offset: 444
+    access: Read
+    fieldset: P2FIE
+  - name: P3DIR
+    description: desc P3DIR.
+    byte_offset: 448
+    fieldset: P3DIR
+  - name: P3IN
+    description: desc P3IN.
+    byte_offset: 452
+    access: Read
+    fieldset: P3IN
+  - name: P3OUT
+    description: desc P3OUT.
+    byte_offset: 456
+    fieldset: P3OUT
+  - name: P3ADS
+    description: desc P3ADS.
+    byte_offset: 460
+    fieldset: P3ADS
+  - name: P3DR
+    description: desc P3DR.
+    byte_offset: 476
+    fieldset: P3DR
+  - name: P3PU
+    description: desc P3PU.
+    byte_offset: 480
+    fieldset: P3PU
+  - name: P3PD
+    description: desc P3PD.
+    byte_offset: 484
+    fieldset: P3PD
+  - name: P3OD
+    description: desc P3OD.
+    byte_offset: 492
+    fieldset: P3OD
+  - name: P3HIE
+    description: desc P3HIE.
+    byte_offset: 496
+    access: Read
+    fieldset: P3HIE
+  - name: P3LIE
+    description: desc P3LIE.
+    byte_offset: 500
+    access: Read
+    fieldset: P3LIE
+  - name: P3RIE
+    description: desc P3RIE.
+    byte_offset: 504
+    access: Read
+    fieldset: P3RIE
+  - name: P3FIE
+    description: desc P3FIE.
+    byte_offset: 508
+    access: Read
+    fieldset: P3FIE
+  - name: P0STAT
+    description: desc P0STAT.
+    byte_offset: 512
+    access: Read
+    fieldset: P0STAT
+  - name: P0ICLR
+    description: desc P0ICLR.
+    byte_offset: 528
+    access: Read
+    fieldset: P0ICLR
+  - name: P1STAT
+    description: desc P1STAT.
+    byte_offset: 576
+    access: Read
+    fieldset: P1STAT
+  - name: P1ICLR
+    description: desc P1ICLR.
+    byte_offset: 592
+    access: Read
+    fieldset: P1ICLR
+  - name: P2STAT
+    description: desc P2STAT.
+    byte_offset: 640
+    access: Read
+    fieldset: P2STAT
+  - name: P2ICLR
+    description: desc P2ICLR.
+    byte_offset: 656
+    access: Read
+    fieldset: P2ICLR
+  - name: P3STAT
+    description: desc P3STAT.
+    byte_offset: 704
+    access: Read
+    fieldset: P3STAT
+  - name: P3ICLR
+    description: desc P3ICLR.
+    byte_offset: 720
+    access: Read
+    fieldset: P3ICLR
+  - name: CTRL0
+    description: desc CTRL0.
+    byte_offset: 768
+    fieldset: CTRL0
+  - name: CTRL1
+    description: desc CTRL1.
+    byte_offset: 772
+    fieldset: CTRL1
+  - name: CTRL2
+    description: desc CTRL2.
+    byte_offset: 776
+    fieldset: CTRL2
+  - name: CTRL3
+    description: desc CTRL3.
+    byte_offset: 780
+    fieldset: CTRL3
+  - name: CTRL4
+    description: desc CTRL4.
+    byte_offset: 784
+    fieldset: CTRL4
+fieldset/CTRL0:
+  description: desc CTRL0.
+  fields:
+  - name: IESEL
+    description: desc IESEL.
+    bit_offset: 0
+    bit_size: 1
+fieldset/CTRL1:
+  description: desc CTRL1.
+  fields:
+  - name: EXT_CLK_SEL
+    description: desc EXT_CLK_SEL.
+    bit_offset: 0
+    bit_size: 4
+  - name: SSN_SEL
+    description: desc SSN_SEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: PCLK_SEL
+    description: desc PCLK_SEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: HCLK_SEL
+    description: desc HCLK_SEL.
+    bit_offset: 10
+    bit_size: 2
+  - name: PCLK_EN
+    description: desc PCLK_EN.
+    bit_offset: 12
+    bit_size: 1
+  - name: HCLK_EN
+    description: desc HCLK_EN.
+    bit_offset: 13
+    bit_size: 1
+  - name: IR_POL
+    description: desc IR_POL.
+    bit_offset: 14
+    bit_size: 1
+fieldset/CTRL2:
+  description: desc CTRL2.
+  fields:
+  - name: PCA_CAP0_SEL
+    description: desc PCA_CAP0_SEL.
+    bit_offset: 0
+    bit_size: 2
+  - name: PCA_CAP1_SEL
+    description: desc PCA_CAP1_SEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: PCA_CAP2_SEL
+    description: desc PCA_CAP2_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: PCA_CAP3_SEL
+    description: desc PCA_CAP3_SEL.
+    bit_offset: 6
+    bit_size: 2
+  - name: PCA_CAP4_SEL
+    description: desc PCA_CAP4_SEL.
+    bit_offset: 8
+    bit_size: 2
+fieldset/CTRL3:
+  description: desc CTRL3.
+  fields:
+  - name: TM4_B_SEL
+    description: desc TM4_B_SEL.
+    bit_offset: 0
+    bit_size: 2
+  - name: TM5_B_SEL
+    description: desc TM5_B_SEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: TM6_B_SEL
+    description: desc TM6_B_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: TM4_A_SEL
+    description: desc TM4_A_SEL.
+    bit_offset: 6
+    bit_size: 2
+  - name: TM5_A_SEL
+    description: desc TM5_A_SEL.
+    bit_offset: 8
+    bit_size: 2
+  - name: TM6_A_SEL
+    description: desc TM6_A_SEL.
+    bit_offset: 10
+    bit_size: 2
+fieldset/CTRL4:
+  description: desc CTRL4.
+  fields:
+  - name: TM0_GATE_SEL
+    description: desc TM0_GATE_SEL.
+    bit_offset: 0
+    bit_size: 2
+  - name: TM1_GATE_SEL
+    description: desc TM1_GATE_SEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: TM2_GATE_SEL
+    description: desc TM2_GATE_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: TM3_GATE_SEL
+    description: desc TM3_GATE_SEL.
+    bit_offset: 6
+    bit_size: 2
+fieldset/P01_SEL:
+  description: desc P01_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P02_SEL:
+  description: desc P02_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P03_SEL:
+  description: desc P03_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P0ADS:
+  description: desc P0ADS.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0DIR:
+  description: desc P0DIR.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0DR:
+  description: desc P0DR.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0FIE:
+  description: desc P0FIE.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0HIE:
+  description: desc P0HIE.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0ICLR:
+  description: desc P0ICLR.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0IN:
+  description: desc P0IN.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0LIE:
+  description: desc P0LIE.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0OD:
+  description: desc P0OD.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0OUT:
+  description: desc P0OUT.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0PD:
+  description: desc P0PD.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0PU:
+  description: desc P0PU.
+  fields:
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0RIE:
+  description: desc P0RIE.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P0STAT:
+  description: desc P0STAT.
+  fields:
+  - name: P00
+    description: desc P00.
+    bit_offset: 0
+    bit_size: 1
+  - name: P01
+    description: desc P01.
+    bit_offset: 1
+    bit_size: 1
+  - name: P02
+    description: desc P02.
+    bit_offset: 2
+    bit_size: 1
+  - name: P03
+    description: desc P03.
+    bit_offset: 3
+    bit_size: 1
+fieldset/P14_SEL:
+  description: desc P14_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P15_SEL:
+  description: desc P15_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P1ADS:
+  description: desc P1ADS.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1DIR:
+  description: desc P1DIR.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1DR:
+  description: desc P1DR.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1FIE:
+  description: desc P1FIE.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1HIE:
+  description: desc P1HIE.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1ICLR:
+  description: desc P1ICLR.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1IN:
+  description: desc P1IN.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1LIE:
+  description: desc P1LIE.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1OD:
+  description: desc P1OD.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1OUT:
+  description: desc P1OUT.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1PD:
+  description: desc P1PD.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1PU:
+  description: desc P1PU.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1RIE:
+  description: desc P1RIE.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P1STAT:
+  description: desc P1STAT.
+  fields:
+  - name: P14
+    description: desc P14.
+    bit_offset: 4
+    bit_size: 1
+  - name: P15
+    description: desc P15.
+    bit_offset: 5
+    bit_size: 1
+fieldset/P23_SEL:
+  description: desc P23_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P24_SEL:
+  description: desc P24_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P25_SEL:
+  description: desc P25_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P26_SEL:
+  description: desc P26_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P27_SEL:
+  description: desc P27_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P2ADS:
+  description: desc P2ADS.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2DIR:
+  description: desc P2DIR.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2DR:
+  description: desc P2DR.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2FIE:
+  description: desc P2FIE.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2HIE:
+  description: desc P2HIE.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2ICLR:
+  description: desc P2ICLR.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2IN:
+  description: desc P2IN.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2LIE:
+  description: desc P2LIE.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2OD:
+  description: desc P2OD.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2OUT:
+  description: desc P2OUT.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2PD:
+  description: desc P2PD.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2PU:
+  description: desc P2PU.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2RIE:
+  description: desc P2RIE.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P2STAT:
+  description: desc P2STAT.
+  fields:
+  - name: P23
+    description: desc P23.
+    bit_offset: 3
+    bit_size: 1
+  - name: P24
+    description: desc P24.
+    bit_offset: 4
+    bit_size: 1
+  - name: P25
+    description: desc P25.
+    bit_offset: 5
+    bit_size: 1
+  - name: P26
+    description: desc P26.
+    bit_offset: 6
+    bit_size: 1
+  - name: P27
+    description: desc P27.
+    bit_offset: 7
+    bit_size: 1
+fieldset/P31_SEL:
+  description: desc P31_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P32_SEL:
+  description: desc P32_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P33_SEL:
+  description: desc P33_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P34_SEL:
+  description: desc P34_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P35_SEL:
+  description: desc P35_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P36_SEL:
+  description: desc P36_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+fieldset/P3ADS:
+  description: desc P3ADS.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3DIR:
+  description: desc P3DIR.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3DR:
+  description: desc P3DR.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3FIE:
+  description: desc P3FIE.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3HIE:
+  description: desc P3HIE.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3ICLR:
+  description: desc P3ICLR.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3IN:
+  description: desc P3IN.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3LIE:
+  description: desc P3LIE.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3OD:
+  description: desc P3OD.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3OUT:
+  description: desc P3OUT.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3PD:
+  description: desc P3PD.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3PU:
+  description: desc P3PU.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3RIE:
+  description: desc P3RIE.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1
+fieldset/P3STAT:
+  description: desc P3STAT.
+  fields:
+  - name: P31
+    description: desc P31.
+    bit_offset: 1
+    bit_size: 1
+  - name: P32
+    description: desc P32.
+    bit_offset: 2
+    bit_size: 1
+  - name: P33
+    description: desc P33.
+    bit_offset: 3
+    bit_size: 1
+  - name: P34
+    description: desc P34.
+    bit_offset: 4
+    bit_size: 1
+  - name: P35
+    description: desc P35.
+    bit_offset: 5
+    bit_size: 1
+  - name: P36
+    description: desc P36.
+    bit_offset: 6
+    bit_size: 1

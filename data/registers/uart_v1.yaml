@@ -1,0 +1,216 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/UART0；覆盖系列：HC32A136, HC32F030, HC32L13x。
+block/UART:
+  description: desc UART.
+  items:
+  - name: SBUF
+    description: desc SBUF.
+    byte_offset: 0
+    fieldset: SBUF
+  - name: SCON
+    description: desc SCON.
+    byte_offset: 4
+    fieldset: SCON
+  - name: SADDR
+    description: desc SADDR.
+    byte_offset: 8
+    fieldset: SADDR
+  - name: SADEN
+    description: desc SADEN.
+    byte_offset: 12
+    fieldset: SADEN
+  - name: ISR
+    description: desc ISR.
+    byte_offset: 16
+    access: Read
+    fieldset: ISR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICR
+  - name: SCNT
+    description: desc SCNT.
+    byte_offset: 24
+    fieldset: SCNT
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: RCCF
+    description: desc RCCF.
+    bit_offset: 0
+    bit_size: 1
+  - name: TCCF
+    description: desc TCCF.
+    bit_offset: 1
+    bit_size: 1
+  - name: FECF
+    description: desc FECF.
+    bit_offset: 2
+    bit_size: 1
+  - name: PECF
+    description: desc PECF.
+    bit_offset: 4
+    bit_size: 1
+  - name: CTSIFCF
+    description: desc CTSIFCF.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ISR:
+  description: desc ISR.
+  fields:
+  - name: RC
+    description: desc RC.
+    bit_offset: 0
+    bit_size: 1
+  - name: TC
+    description: desc TC.
+    bit_offset: 1
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 2
+    bit_size: 1
+  - name: TXE
+    description: desc TXE.
+    bit_offset: 3
+    bit_size: 1
+  - name: PE
+    description: desc PE.
+    bit_offset: 4
+    bit_size: 1
+  - name: CTSIF
+    description: desc CTSIF.
+    bit_offset: 5
+    bit_size: 1
+  - name: CTS
+    description: desc CTS.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SADDR:
+  description: desc SADDR.
+  fields:
+  - name: SADDR
+    description: desc SADDR.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SADEN:
+  description: desc SADEN.
+  fields:
+  - name: SADEN
+    description: desc SADEN.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SBUF:
+  description: desc SBUF.
+  fields:
+  - name: DATA
+    description: desc DATA.
+    bit_offset: 0
+    bit_size: 8
+  - name: DATA8
+    description: desc DATA8.
+    bit_offset: 8
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SCNT:
+  description: desc SCNT.
+  fields:
+  - name: SCNT
+    description: desc SCNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SCON:
+  description: desc SCON.
+  fields:
+  - name: RCIE
+    description: desc RCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: TCIE
+    description: desc TCIE.
+    bit_offset: 1
+    bit_size: 1
+  - name: B8CONT
+    description: desc B8CONT.
+    bit_offset: 2
+    bit_size: 2
+  - name: REN
+    description: desc REN.
+    bit_offset: 4
+    bit_size: 1
+  - name: ADRDET
+    description: desc ADRDET.
+    bit_offset: 5
+    bit_size: 1
+  - name: SM
+    description: desc SM.
+    bit_offset: 6
+    bit_size: 2
+  - name: TXEIE
+    description: desc TXEIE.
+    bit_offset: 8
+    bit_size: 1
+  - name: OVER
+    description: desc OVER.
+    bit_offset: 9
+    bit_size: 1
+  - name: PEIE
+    description: desc PEIE.
+    bit_offset: 13
+    bit_size: 1
+  - name: STOPBIT
+    description: desc STOPBIT.
+    bit_offset: 14
+    bit_size: 2
+  - name: DMARXEN
+    description: desc DMARXEN.
+    bit_offset: 16
+    bit_size: 1
+  - name: DMATXEN
+    description: desc DMATXEN.
+    bit_offset: 17
+    bit_size: 1
+  - name: RTSEN
+    description: desc RTSEN.
+    bit_offset: 18
+    bit_size: 1
+  - name: CTSEN
+    description: desc CTSEN.
+    bit_offset: 19
+    bit_size: 1
+  - name: CTSIE
+    description: desc CTSIE.
+    bit_offset: 20
+    bit_size: 1
+  - name: FEIE
+    description: desc FEIE.
+    bit_offset: 21
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

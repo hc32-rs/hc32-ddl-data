@@ -1,0 +1,603 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/PCA；覆盖系列：HC32A136, HC32F030, HC32F072, HC32F17x, HC32F19x, HC32L07x, HC32L13x, HC32L16x, HC32L17x, HC32L18x, HC32L19x。
+block/PCA:
+  description: desc PCA.
+  items:
+  - name: CCON
+    description: desc CCON.
+    byte_offset: 0
+    fieldset: CCON
+  - name: CMOD
+    description: desc CMOD.
+    byte_offset: 4
+    fieldset: CMOD
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 8
+    fieldset: CNT
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 12
+    access: Write
+    fieldset: ICLR
+  - name: CCAPM0
+    description: desc CCAPM0.
+    byte_offset: 16
+    fieldset: CCAPM0
+  - name: CCAPM1
+    description: desc CCAPM1.
+    byte_offset: 20
+    fieldset: CCAPM1
+  - name: CCAPM2
+    description: desc CCAPM2.
+    byte_offset: 24
+    fieldset: CCAPM2
+  - name: CCAPM3
+    description: desc CCAPM3.
+    byte_offset: 28
+    fieldset: CCAPM3
+  - name: CCAPM4
+    description: desc CCAPM4.
+    byte_offset: 32
+    fieldset: CCAPM4
+  - name: CCAP0H
+    description: desc CCAP0H.
+    byte_offset: 36
+    fieldset: CCAP0H
+  - name: CCAP0L
+    description: desc CCAP0L.
+    byte_offset: 40
+    fieldset: CCAP0L
+  - name: CCAP1H
+    description: desc CCAP1H.
+    byte_offset: 44
+    fieldset: CCAP1H
+  - name: CCAP1L
+    description: desc CCAP1L.
+    byte_offset: 48
+    fieldset: CCAP1L
+  - name: CCAP2H
+    description: desc CCAP2H.
+    byte_offset: 52
+    fieldset: CCAP2H
+  - name: CCAP2L
+    description: desc CCAP2L.
+    byte_offset: 56
+    fieldset: CCAP2L
+  - name: CCAP3H
+    description: desc CCAP3H.
+    byte_offset: 60
+    fieldset: CCAP3H
+  - name: CCAP3L
+    description: desc CCAP3L.
+    byte_offset: 64
+    fieldset: CCAP3L
+  - name: CCAP4H
+    description: desc CCAP4H.
+    byte_offset: 68
+    fieldset: CCAP4H
+  - name: CCAP4L
+    description: desc CCAP4L.
+    byte_offset: 72
+    fieldset: CCAP4L
+  - name: CCAPO
+    description: desc CCAPO.
+    byte_offset: 76
+    fieldset: CCAPO
+  - name: CCAP0
+    description: desc CCAP0.
+    byte_offset: 80
+    fieldset: CCAP0
+  - name: CCAP1
+    description: desc CCAP1.
+    byte_offset: 84
+    fieldset: CCAP1
+  - name: CCAP2
+    description: desc CCAP2.
+    byte_offset: 88
+    fieldset: CCAP2
+  - name: CCAP3
+    description: desc CCAP3.
+    byte_offset: 92
+    fieldset: CCAP3
+  - name: CCAP4
+    description: desc CCAP4.
+    byte_offset: 96
+    fieldset: CCAP4
+  - name: CARR
+    description: desc CARR.
+    byte_offset: 100
+    fieldset: CARR
+  - name: EPWM
+    description: desc EPWM.
+    byte_offset: 104
+    fieldset: EPWM
+fieldset/CARR:
+  description: desc CARR.
+  fields:
+  - name: CARR
+    description: desc CARR.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP0:
+  description: desc CCAP0.
+  fields:
+  - name: CCAP0
+    description: desc CCAP0.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP0H:
+  description: desc CCAP0H.
+  fields:
+  - name: CCAP0
+    description: desc CCAP0.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP0L:
+  description: desc CCAP0L.
+  fields:
+  - name: CCAP0
+    description: desc CCAP0.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP1:
+  description: desc CCAP1.
+  fields:
+  - name: CCAP1
+    description: desc CCAP1.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP1H:
+  description: desc CCAP1H.
+  fields:
+  - name: CCAP1
+    description: desc CCAP1.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP1L:
+  description: desc CCAP1L.
+  fields:
+  - name: CCAP1
+    description: desc CCAP1.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP2:
+  description: desc CCAP2.
+  fields:
+  - name: CCAP2
+    description: desc CCAP2.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP2H:
+  description: desc CCAP2H.
+  fields:
+  - name: CCAP2
+    description: desc CCAP2.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP2L:
+  description: desc CCAP2L.
+  fields:
+  - name: CCAP2
+    description: desc CCAP2.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP3:
+  description: desc CCAP3.
+  fields:
+  - name: CCAP3
+    description: desc CCAP3.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP3H:
+  description: desc CCAP3H.
+  fields:
+  - name: CCAP3
+    description: desc CCAP3.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP3L:
+  description: desc CCAP3L.
+  fields:
+  - name: CCAP3
+    description: desc CCAP3.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP4:
+  description: desc CCAP4.
+  fields:
+  - name: CCAP4
+    description: desc CCAP4.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP4H:
+  description: desc CCAP4H.
+  fields:
+  - name: CCAP4
+    description: desc CCAP4.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAP4L:
+  description: desc CCAP4L.
+  fields:
+  - name: CCAP4
+    description: desc CCAP4.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPM0:
+  description: desc CCAPM0.
+  fields:
+  - name: CCIE
+    description: desc CCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWM
+    description: desc PWM.
+    bit_offset: 1
+    bit_size: 1
+  - name: TOG
+    description: desc TOG.
+    bit_offset: 2
+    bit_size: 1
+  - name: MAT
+    description: desc MAT.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAPN
+    description: desc CAPN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CAPP
+    description: desc CAPP.
+    bit_offset: 5
+    bit_size: 1
+  - name: ECOM
+    description: desc ECOM.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPM1:
+  description: desc CCAPM1.
+  fields:
+  - name: CCIE
+    description: desc CCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWM
+    description: desc PWM.
+    bit_offset: 1
+    bit_size: 1
+  - name: TOG
+    description: desc TOG.
+    bit_offset: 2
+    bit_size: 1
+  - name: MAT
+    description: desc MAT.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAPN
+    description: desc CAPN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CAPP
+    description: desc CAPP.
+    bit_offset: 5
+    bit_size: 1
+  - name: ECOM
+    description: desc ECOM.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPM2:
+  description: desc CCAPM2.
+  fields:
+  - name: CCIE
+    description: desc CCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWM
+    description: desc PWM.
+    bit_offset: 1
+    bit_size: 1
+  - name: TOG
+    description: desc TOG.
+    bit_offset: 2
+    bit_size: 1
+  - name: MAT
+    description: desc MAT.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAPN
+    description: desc CAPN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CAPP
+    description: desc CAPP.
+    bit_offset: 5
+    bit_size: 1
+  - name: ECOM
+    description: desc ECOM.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPM3:
+  description: desc CCAPM3.
+  fields:
+  - name: CCIE
+    description: desc CCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWM
+    description: desc PWM.
+    bit_offset: 1
+    bit_size: 1
+  - name: TOG
+    description: desc TOG.
+    bit_offset: 2
+    bit_size: 1
+  - name: MAT
+    description: desc MAT.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAPN
+    description: desc CAPN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CAPP
+    description: desc CAPP.
+    bit_offset: 5
+    bit_size: 1
+  - name: ECOM
+    description: desc ECOM.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPM4:
+  description: desc CCAPM4.
+  fields:
+  - name: CCIE
+    description: desc CCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWM
+    description: desc PWM.
+    bit_offset: 1
+    bit_size: 1
+  - name: TOG
+    description: desc TOG.
+    bit_offset: 2
+    bit_size: 1
+  - name: MAT
+    description: desc MAT.
+    bit_offset: 3
+    bit_size: 1
+  - name: CAPN
+    description: desc CAPN.
+    bit_offset: 4
+    bit_size: 1
+  - name: CAPP
+    description: desc CAPP.
+    bit_offset: 5
+    bit_size: 1
+  - name: ECOM
+    description: desc ECOM.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCAPO:
+  description: desc CCAPO.
+  fields:
+  - name: CCAPO0
+    description: desc CCAPO0.
+    bit_offset: 0
+    bit_size: 1
+  - name: CCAPO1
+    description: desc CCAPO1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CCAPO2
+    description: desc CCAPO2.
+    bit_offset: 2
+    bit_size: 1
+  - name: CCAPO3
+    description: desc CCAPO3.
+    bit_offset: 3
+    bit_size: 1
+  - name: CCAPO4
+    description: desc CCAPO4.
+    bit_offset: 4
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CCON:
+  description: desc CCON.
+  fields:
+  - name: CCF0
+    description: desc CCF0.
+    bit_offset: 0
+    bit_size: 1
+  - name: CCF1
+    description: desc CCF1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CCF2
+    description: desc CCF2.
+    bit_offset: 2
+    bit_size: 1
+  - name: CCF3
+    description: desc CCF3.
+    bit_offset: 3
+    bit_size: 1
+  - name: CCF4
+    description: desc CCF4.
+    bit_offset: 4
+    bit_size: 1
+  - name: CR
+    description: desc CR.
+    bit_offset: 6
+    bit_size: 1
+  - name: CF
+    description: desc CF.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CMOD:
+  description: desc CMOD.
+  fields:
+  - name: CFIE
+    description: desc CFIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: CPS
+    description: desc CPS.
+    bit_offset: 1
+    bit_size: 3
+  - name: WDTE
+    description: desc WDTE.
+    bit_offset: 6
+    bit_size: 1
+  - name: CIDL
+    description: desc CIDL.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/EPWM:
+  description: desc EPWM.
+  fields:
+  - name: EPWM
+    description: desc EPWM.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: CCF0
+    description: desc CCF0.
+    bit_offset: 0
+    bit_size: 1
+  - name: CCF1
+    description: desc CCF1.
+    bit_offset: 1
+    bit_size: 1
+  - name: CCF2
+    description: desc CCF2.
+    bit_offset: 2
+    bit_size: 1
+  - name: CCF3
+    description: desc CCF3.
+    bit_offset: 3
+    bit_size: 1
+  - name: CCF4
+    description: desc CCF4.
+    bit_offset: 4
+    bit_size: 1
+  - name: CF
+    description: desc CF.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

@@ -1,0 +1,1435 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/GPIOA；覆盖系列：HC32L021。
+block/GPIOA:
+  description: desc GPIO.
+  items:
+  - name: PIN00_SEL
+    description: desc PIN00_SEL.
+    byte_offset: 0
+    fieldset: PIN00_SEL
+  - name: PIN01_SEL
+    description: desc PIN01_SEL.
+    byte_offset: 4
+    fieldset: PIN01_SEL
+  - name: PIN02_SEL
+    description: desc PIN02_SEL.
+    byte_offset: 8
+    fieldset: PIN02_SEL
+  - name: PIN03_SEL
+    description: desc PIN03_SEL.
+    byte_offset: 12
+    fieldset: PIN03_SEL
+  - name: PIN04_SEL
+    description: desc PIN04_SEL.
+    byte_offset: 16
+    fieldset: PIN04_SEL
+  - name: PIN05_SEL
+    description: desc PIN05_SEL.
+    byte_offset: 20
+    fieldset: PIN05_SEL
+  - name: PIN06_SEL
+    description: desc PIN06_SEL.
+    byte_offset: 24
+    fieldset: PIN06_SEL
+  - name: PIN07_SEL
+    description: desc PIN07_SEL.
+    byte_offset: 28
+    fieldset: PIN07_SEL
+  - name: PIN08_SEL
+    description: desc PIN08_SEL.
+    byte_offset: 32
+    fieldset: PIN08_SEL
+  - name: PIN09_SEL
+    description: desc PIN09_SEL.
+    byte_offset: 36
+    fieldset: PIN09_SEL
+  - name: PIN10_SEL
+    description: desc PIN10_SEL.
+    byte_offset: 40
+    fieldset: PIN10_SEL
+  - name: PIN11_SEL
+    description: desc PIN11_SEL.
+    byte_offset: 44
+    fieldset: PIN11_SEL
+  - name: PIN12_SEL
+    description: desc PIN12_SEL.
+    byte_offset: 48
+    fieldset: PIN12_SEL
+  - name: PIN13_SEL
+    description: desc PIN13_SEL.
+    byte_offset: 52
+    fieldset: PIN13_SEL
+  - name: PIN14_SEL
+    description: desc PIN14_SEL.
+    byte_offset: 56
+    fieldset: PIN14_SEL
+  - name: PIN15_SEL
+    description: desc PIN15_SEL.
+    byte_offset: 60
+    fieldset: PIN15_SEL
+  - name: DIR
+    description: desc DIR.
+    byte_offset: 256
+    fieldset: DIR
+  - name: IN
+    description: desc IN.
+    byte_offset: 260
+    access: Read
+    fieldset: IN
+  - name: OUT
+    description: desc OUT.
+    byte_offset: 264
+    fieldset: OUT
+  - name: ADS
+    description: desc ADS.
+    byte_offset: 268
+    fieldset: ADS
+  - name: BSET
+    description: desc BSET.
+    byte_offset: 272
+    access: Write
+    fieldset: BSET
+  - name: BCLR
+    description: desc BCLR.
+    byte_offset: 276
+    access: Write
+    fieldset: BCLR
+  - name: BSETCLR
+    description: desc BSETCLR.
+    byte_offset: 280
+    access: Write
+    fieldset: BSETCLR
+  - name: PU
+    description: desc PU.
+    byte_offset: 288
+    fieldset: PU
+  - name: OD
+    description: desc OD.
+    byte_offset: 300
+    fieldset: OD
+  - name: HIE
+    description: desc HIE.
+    byte_offset: 304
+    fieldset: HIE
+  - name: LIE
+    description: desc LIE.
+    byte_offset: 308
+    fieldset: LIE
+  - name: RIE
+    description: desc RIE.
+    byte_offset: 312
+    fieldset: RIE
+  - name: FIE
+    description: desc FIE.
+    byte_offset: 316
+    fieldset: FIE
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 512
+    access: Read
+    fieldset: STAT
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 528
+    fieldset: ICLR
+fieldset/ADS:
+  description: desc ADS.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/BCLR:
+  description: desc BCLR.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/BSET:
+  description: desc BSET.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/BSETCLR:
+  description: desc BSETCLR.
+  fields:
+  - name: BCLRPIN00
+    description: desc BCLRPIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: BCLRPIN01
+    description: desc BCLRPIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: BCLRPIN02
+    description: desc BCLRPIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: BCLRPIN03
+    description: desc BCLRPIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: BCLRPIN04
+    description: desc BCLRPIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: BCLRPIN05
+    description: desc BCLRPIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: BCLRPIN06
+    description: desc BCLRPIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: BCLRPIN07
+    description: desc BCLRPIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: BCLRPIN08
+    description: desc BCLRPIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: BCLRPIN09
+    description: desc BCLRPIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: BCLRPIN10
+    description: desc BCLRPIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: BCLRPIN11
+    description: desc BCLRPIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: BCLRPIN12
+    description: desc BCLRPIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: BCLRPIN13
+    description: desc BCLRPIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: BCLRPIN14
+    description: desc BCLRPIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: BCLRPIN15
+    description: desc BCLRPIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: BSETPIN00
+    description: desc BSETPIN00.
+    bit_offset: 16
+    bit_size: 1
+  - name: BSETPIN01
+    description: desc BSETPIN01.
+    bit_offset: 17
+    bit_size: 1
+  - name: BSETPIN02
+    description: desc BSETPIN02.
+    bit_offset: 18
+    bit_size: 1
+  - name: BSETPIN03
+    description: desc BSETPIN03.
+    bit_offset: 19
+    bit_size: 1
+  - name: BSETPIN04
+    description: desc BSETPIN04.
+    bit_offset: 20
+    bit_size: 1
+  - name: BSETPIN05
+    description: desc BSETPIN05.
+    bit_offset: 21
+    bit_size: 1
+  - name: BSETPIN06
+    description: desc BSETPIN06.
+    bit_offset: 22
+    bit_size: 1
+  - name: BSETPIN07
+    description: desc BSETPIN07.
+    bit_offset: 23
+    bit_size: 1
+  - name: BSETPIN08
+    description: desc BSETPIN08.
+    bit_offset: 24
+    bit_size: 1
+  - name: BSETPIN09
+    description: desc BSETPIN09.
+    bit_offset: 25
+    bit_size: 1
+  - name: BSETPIN10
+    description: desc BSETPIN10.
+    bit_offset: 26
+    bit_size: 1
+  - name: BSETPIN11
+    description: desc BSETPIN11.
+    bit_offset: 27
+    bit_size: 1
+  - name: BSETPIN12
+    description: desc BSETPIN12.
+    bit_offset: 28
+    bit_size: 1
+  - name: BSETPIN13
+    description: desc BSETPIN13.
+    bit_offset: 29
+    bit_size: 1
+  - name: BSETPIN14
+    description: desc BSETPIN14.
+    bit_offset: 30
+    bit_size: 1
+  - name: BSETPIN15
+    description: desc BSETPIN15.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DIR:
+  description: desc DIR.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/FIE:
+  description: desc FIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/HIE:
+  description: desc HIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IN:
+  description: desc IN.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/LIE:
+  description: desc LIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/OD:
+  description: desc OD.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/OUT:
+  description: desc OUT.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN00_SEL:
+  description: desc PIN00_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN01_SEL:
+  description: desc PIN01_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN02_SEL:
+  description: desc PIN02_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN03_SEL:
+  description: desc PIN03_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN04_SEL:
+  description: desc PIN04_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN05_SEL:
+  description: desc PIN05_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN06_SEL:
+  description: desc PIN06_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN07_SEL:
+  description: desc PIN07_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN08_SEL:
+  description: desc PIN08_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN09_SEL:
+  description: desc PIN09_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN10_SEL:
+  description: desc PIN10_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN11_SEL:
+  description: desc PIN11_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN12_SEL:
+  description: desc PIN12_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN13_SEL:
+  description: desc PIN13_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN14_SEL:
+  description: desc PIN14_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN15_SEL:
+  description: desc PIN15_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PU:
+  description: desc PU.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RIE:
+  description: desc RIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: PIN01
+    description: desc PIN01.
+    bit_offset: 1
+    bit_size: 1
+  - name: PIN02
+    description: desc PIN02.
+    bit_offset: 2
+    bit_size: 1
+  - name: PIN03
+    description: desc PIN03.
+    bit_offset: 3
+    bit_size: 1
+  - name: PIN04
+    description: desc PIN04.
+    bit_offset: 4
+    bit_size: 1
+  - name: PIN05
+    description: desc PIN05.
+    bit_offset: 5
+    bit_size: 1
+  - name: PIN06
+    description: desc PIN06.
+    bit_offset: 6
+    bit_size: 1
+  - name: PIN07
+    description: desc PIN07.
+    bit_offset: 7
+    bit_size: 1
+  - name: PIN08
+    description: desc PIN08.
+    bit_offset: 8
+    bit_size: 1
+  - name: PIN09
+    description: desc PIN09.
+    bit_offset: 9
+    bit_size: 1
+  - name: PIN10
+    description: desc PIN10.
+    bit_offset: 10
+    bit_size: 1
+  - name: PIN11
+    description: desc PIN11.
+    bit_offset: 11
+    bit_size: 1
+  - name: PIN12
+    description: desc PIN12.
+    bit_offset: 12
+    bit_size: 1
+  - name: PIN13
+    description: desc PIN13.
+    bit_offset: 13
+    bit_size: 1
+  - name: PIN14
+    description: desc PIN14.
+    bit_offset: 14
+    bit_size: 1
+  - name: PIN15
+    description: desc PIN15.
+    bit_offset: 15
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

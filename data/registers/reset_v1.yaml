@@ -1,0 +1,167 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/RESET；覆盖系列：HC32A136, HC32F030, HC32L13x。
+block/RESET:
+  description: desc RESET.
+  items:
+  - name: RESET_FLAG
+    description: desc RESET_FLAG.
+    byte_offset: 0
+    fieldset: RESET_FLAG
+  - name: PERI_RESET
+    description: desc PERI_RESET.
+    byte_offset: 12
+    fieldset: PERI_RESET
+fieldset/PERI_RESET:
+  description: desc PERI_RESET.
+  fields:
+  - name: UART0
+    description: desc UART0.
+    bit_offset: 0
+    bit_size: 1
+  - name: UART1
+    description: desc UART1.
+    bit_offset: 1
+    bit_size: 1
+  - name: LPUART0
+    description: desc LPUART0.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPUART1
+    description: desc LPUART1.
+    bit_offset: 3
+    bit_size: 1
+  - name: I2C0
+    description: desc I2C0.
+    bit_offset: 4
+    bit_size: 1
+  - name: I2C1
+    description: desc I2C1.
+    bit_offset: 5
+    bit_size: 1
+  - name: SPI0
+    description: desc SPI0.
+    bit_offset: 6
+    bit_size: 1
+  - name: SPI1
+    description: desc SPI1.
+    bit_offset: 7
+    bit_size: 1
+  - name: BASETIM
+    description: desc BASETIM.
+    bit_offset: 8
+    bit_size: 1
+  - name: LPTIM
+    description: desc LPTIM.
+    bit_offset: 9
+    bit_size: 1
+  - name: ADVTIM
+    description: desc ADVTIM.
+    bit_offset: 10
+    bit_size: 1
+  - name: TIM3
+    description: desc TIM3.
+    bit_offset: 11
+    bit_size: 1
+  - name: OPA
+    description: desc OPA.
+    bit_offset: 13
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 14
+    bit_size: 1
+  - name: ADC
+    description: desc ADC.
+    bit_offset: 16
+    bit_size: 1
+  - name: VC
+    description: desc VC.
+    bit_offset: 17
+    bit_size: 1
+  - name: RNG
+    description: desc RNG.
+    bit_offset: 18
+    bit_size: 1
+  - name: PCNT
+    description: desc PCNT.
+    bit_offset: 19
+    bit_size: 1
+  - name: RTC
+    description: desc RTC.
+    bit_offset: 20
+    bit_size: 1
+  - name: TRIM
+    description: desc TRIM.
+    bit_offset: 21
+    bit_size: 1
+  - name: LCD
+    description: desc LCD.
+    bit_offset: 22
+    bit_size: 1
+  - name: TICK
+    description: desc TICK.
+    bit_offset: 24
+    bit_size: 1
+  - name: SWD
+    description: desc SWD.
+    bit_offset: 25
+    bit_size: 1
+  - name: CRC
+    description: desc CRC.
+    bit_offset: 26
+    bit_size: 1
+  - name: AES
+    description: desc AES.
+    bit_offset: 27
+    bit_size: 1
+  - name: GPIO
+    description: desc GPIO.
+    bit_offset: 28
+    bit_size: 1
+  - name: DMA
+    description: desc DMA.
+    bit_offset: 29
+    bit_size: 1
+  - name: DIV
+    description: desc DIV.
+    bit_offset: 30
+    bit_size: 1
+fieldset/RESET_FLAG:
+  description: desc RESET_FLAG.
+  fields:
+  - name: POR5V
+    description: desc POR5V.
+    bit_offset: 0
+    bit_size: 1
+  - name: POR15V
+    description: desc POR15V.
+    bit_offset: 1
+    bit_size: 1
+  - name: LVD
+    description: desc LVD.
+    bit_offset: 2
+    bit_size: 1
+  - name: WDT
+    description: desc WDT.
+    bit_offset: 3
+    bit_size: 1
+  - name: PCA
+    description: desc PCA.
+    bit_offset: 4
+    bit_size: 1
+  - name: LOCKUP
+    description: desc LOCKUP.
+    bit_offset: 5
+    bit_size: 1
+  - name: SYSREQ
+    description: desc SYSREQ.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSTB
+    description: desc RSTB.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

@@ -1,0 +1,505 @@
+# HC32L16x 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
+# 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
+- name: ADC
+  address: 0x40002400
+  registers:
+    kind: adc
+    block: ADC
+    version: v12
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAdcBgr
+  interrupts:
+  - signal: ADC_DAC
+    interrupt: ADC_DAC
+- name: ADTIM4
+  address: 0x40003000
+  registers:
+    kind: adtim
+    block: ADTIM
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAdvTim
+  interrupts:
+  - signal: ADTIM4
+    interrupt: ADTIM4
+- name: ADTIM5
+  address: 0x40003400
+  registers:
+    kind: adtim
+    block: ADTIM
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAdvTim
+  interrupts:
+  - signal: ADTIM5
+    interrupt: ADTIM5
+- name: ADTIM6
+  address: 0x40003800
+  registers:
+    kind: adtim
+    block: ADTIM
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAdvTim
+  interrupts:
+  - signal: ADTIM6
+    interrupt: ADTIM6
+- name: AES
+  address: 0x40021400
+  registers:
+    kind: aes
+    block: AES
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAes
+- name: BGR
+  address: 0x40002400
+  registers:
+    kind: bgr
+    block: BGR
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralAdcBgr
+- name: CLK_TRIM
+  address: 0x40001800
+  registers:
+    kind: clk
+    block: CLK
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralTrim
+- name: CRC
+  address: 0x40020900
+  registers:
+    kind: crc
+    block: CRC
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralCrc
+- name: CTRIM
+  address: 0x40005000
+  registers:
+    kind: ctrim
+    block: CTRIM
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralTrim;SysctrlPeripheralCtrim
+- name: DAC
+  address: 0x40002500
+  registers:
+    kind: dac
+    block: DAC
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: SysctrlPeripheralDac
+  interrupts:
+  - signal: ADC_DAC
+    interrupt: ADC_DAC
+- name: DEBUG_ACTIVE
+  address: 0x40002038
+  registers:
+    kind: debug
+    block: DEBUG
+    version: v5
+- name: DMAC
+  address: 0x40021000
+  registers:
+    kind: dmac
+    block: DMAC
+    version: v6
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralDma
+  interrupts:
+  - signal: DMAC
+    interrupt: DMAC
+- name: FLASH
+  address: 0x40020000
+  registers:
+    kind: flash
+    block: FLASH
+    version: v12
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralFlash
+  interrupts:
+  - signal: FLASH_RAM
+    interrupt: FLASH_RAM
+- name: GPIO
+  address: 0x40020C00
+  registers:
+    kind: gpio
+    block: GPIO
+    version: v6
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralGpio
+- name: I2C0
+  address: 0x40000400
+  registers:
+    kind: i
+    block: I
+    version: v9
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralI2c0
+  interrupts:
+  - signal: I2C0
+    interrupt: I2C0
+- name: I2C1
+  address: 0x40004400
+  registers:
+    kind: i
+    block: I
+    version: v9
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralI2c1
+  interrupts:
+  - signal: I2C1
+    interrupt: I2C1
+- name: LCD
+  address: 0x40005C00
+  registers:
+    kind: lcd
+    block: LCD
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralLcd
+  interrupts:
+  - signal: LCD
+    interrupt: LCD
+- name: LPTIMER0
+  address: 0x40000F00
+  registers:
+    kind: lptimer
+    block: LPTIMER
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralLpTim0
+- name: LPTIMER1
+  address: 0x40000F40
+  registers:
+    kind: lptimer
+    block: LPTIMER
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: SysctrlPeripheralLpTim1
+- name: LPUART0
+  address: 0x40000200
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v7
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralLpUart0
+  interrupts:
+  - signal: LPUART0
+    interrupt: LPUART0
+- name: LPUART1
+  address: 0x40004000
+  registers:
+    kind: lpuart
+    block: LPUART
+    version: v7
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralLpUart1
+  interrupts:
+  - signal: LPUART1
+    interrupt: LPUART1
+- name: LVD
+  address: 0x40002400
+  registers:
+    kind: lvd
+    block: LVD
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralVcLvd
+  interrupts:
+  - signal: LVD
+    interrupt: LVD
+- name: OPA
+  address: 0x40002400
+  registers:
+    kind: opa
+    block: OPA
+    version: v5
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralOpa
+- name: PCA
+  address: 0x40001000
+  registers:
+    kind: pca
+    block: PCA
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralPca
+  interrupts:
+  - signal: PCA_WWDT
+    interrupt: PCA_WWDT
+- name: PCNT
+  address: 0x40005400
+  registers:
+    kind: pcnt
+    block: PCNT
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralPcnt
+  interrupts:
+  - signal: PCNT
+    interrupt: PCNT
+- name: RAM
+  address: 0x40020400
+  registers:
+    kind: ram
+    block: RAM
+    version: v5
+  interrupts:
+  - signal: FLASH_RAM
+    interrupt: FLASH_RAM
+- name: RESET
+  address: 0x4000201C
+  registers:
+    kind: reset
+    block: RESET
+    version: v8
+- name: RTC
+  address: 0x40001400
+  registers:
+    kind: rtc
+    block: RTC
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralRtc
+  interrupts:
+  - signal: RTC
+    interrupt: RTC
+- name: SPI0
+  address: 0x40000800
+  registers:
+    kind: spi
+    block: SPI
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralSpi0
+  interrupts:
+  - signal: SPI0
+    interrupt: SPI0
+- name: SPI1
+  address: 0x40004800
+  registers:
+    kind: spi
+    block: SPI
+    version: v2
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralSpi1
+  interrupts:
+  - signal: SPI1
+    interrupt: SPI1
+- name: SYSCTRL
+  address: 0x40002000
+  registers:
+    kind: sysctrl
+    block: SYSCTRL
+    version: v12
+- name: TIM0
+  address: 0x40000C00
+  registers:
+    kind: tim
+    block: TIM
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralBaseTim
+  interrupts:
+  - signal: TIM0
+    interrupt: TIM0
+- name: TIM1
+  address: 0x40000D00
+  registers:
+    kind: tim
+    block: TIM
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralBaseTim
+  interrupts:
+  - signal: TIM1
+    interrupt: TIM1
+- name: TIM2
+  address: 0x40000E00
+  registers:
+    kind: tim
+    block: TIM
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralBaseTim
+  interrupts:
+  - signal: TIM2
+    interrupt: TIM2
+- name: TIM3
+  address: 0x40005800
+  registers:
+    kind: tim
+    block: TIM
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralBaseTim;SysctrlPeripheralTim3
+  interrupts:
+  - signal: TIM3
+    interrupt: TIM3
+- name: TRNG
+  address: 0x40004C00
+  registers:
+    kind: trng
+    block: TRNG
+    version: v1
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralRng
+- name: UART0
+  address: 0x40000000
+  registers:
+    kind: uart
+    block: UART
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralUart0
+  interrupts:
+  - signal: UART0_2
+    interrupt: UART0_2
+- name: UART1
+  address: 0x40000100
+  registers:
+    kind: uart
+    block: UART
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralUart1
+  interrupts:
+  - signal: UART1_3
+    interrupt: UART1_3
+- name: UART2
+  address: 0x40006000
+  registers:
+    kind: uart
+    block: UART
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: SysctrlPeripheralUart2
+  interrupts:
+  - signal: UART0_2
+    interrupt: UART0_2
+- name: UART3
+  address: 0x40006400
+  registers:
+    kind: uart
+    block: UART
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: SysctrlPeripheralUart3
+  interrupts:
+  - signal: UART1_3
+    interrupt: UART1_3
+- name: VC
+  address: 0x40002400
+  registers:
+    kind: vc
+    block: VC
+    version: v4
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralVcLvd
+  interrupts:
+  - signal: VC0
+    interrupt: VC0
+  - signal: VC1_2
+    interrupt: VC1_2
+- name: WDT
+  address: 0x40000F80
+  registers:
+    kind: wdt
+    block: WDT
+    version: v3
+  rcc:
+    enable:
+      register: PERI_CLKEN0
+      field: SysctrlPeripheralWdt
+  interrupts:
+  - signal: WDT
+    interrupt: WDT
+- name: WWDT
+  address: 0x40007800
+  registers:
+    kind: wwdt
+    block: WWDT
+    version: common
+  rcc:
+    enable:
+      register: PERI_CLKEN1
+      field: SysctrlPeripheralWwdt
+  interrupts:
+  - signal: PCA_WWDT
+    interrupt: PCA_WWDT

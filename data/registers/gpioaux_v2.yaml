@@ -1,0 +1,43 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F002/GPIOAUX；覆盖系列：HC32F002。
+block/GPIOAUX:
+  description: desc GPIOAUX.
+  items:
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 4
+    fieldset: CR1
+  - name: CR4
+    description: desc CR4.
+    byte_offset: 16
+    fieldset: CR4
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: TCLKSRC
+    description: desc TCLKSRC.
+    bit_offset: 0
+    bit_size: 2
+  - name: TCLKDIV
+    description: desc TCLKDIV.
+    bit_offset: 3
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR4:
+  description: desc CR4.
+  fields:
+  - name: ATIM3CH0A
+    description: desc ATIM3CH0A.
+    bit_offset: 4
+    bit_size: 2
+  - name: GTIMCH1
+    description: desc GTIMCH1.
+    bit_offset: 8
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

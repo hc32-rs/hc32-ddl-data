@@ -1,0 +1,19 @@
+# HC32L16x Flash 128K / SRAM 16K 的内存布局（型号：HC32L160FAUA, HC32L160FAUB, HC32L166JATA, HC32L166JATB…）。
+# 基址来自设备头/链接脚本（见 data/csv/memory.csv notes）。
+memory:
+- name: FLASH
+  kind: flash
+  address: 0x0
+  size: 128K
+  access:
+    read: true
+    write: true
+    execute: true
+- name: SRAM
+  kind: ram
+  address: 0x20000000
+  size: 16K
+  access:
+    read: true
+    write: true
+    execute: true

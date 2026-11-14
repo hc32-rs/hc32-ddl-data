@@ -1,0 +1,54 @@
+# HC32L073JATA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L073JATA
+family: HC32L07x
+subfamily: cortex-m0
+packages:
+- name: HC32L073JATA
+  package: LQFP48
+include_memory: ../memory/HC32L07x_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1215.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L07x.yaml
+  include_interrupts: ../interrupts/HC32L07x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L07x_DMA1.yaml
+_raw:
+  series: HC32L07x
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP48
+  pin_count: '48'
+  gpio: '38'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '2'
+  i2s: '2'
+  can: '1'
+  usb: ''
+  adc: '17'
+  dac: '2'
+  timer: '7'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: '4'
+  opa: '3'
+  cmp: '3'
+  other: GTIMER=4|AT IME R=3|T IME R L P T IME R=2|RTC=✓|P C NT=1|LPUART=2|LCD=4*26|Se curity AE S=✓|LVD=✓|LVR=✓|出货形式=盘装|产品厚度=1.4mm|脚间距=0.5mm
+  url: https://www.xhsc.com.cn/product/1215.html
+  source: DS
+  Part NO.: HC32L073JATA

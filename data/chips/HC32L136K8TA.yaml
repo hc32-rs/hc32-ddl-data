@@ -1,0 +1,54 @@
+# HC32L136K8TA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L136K8TA
+family: HC32L13x
+subfamily: cortex-m0
+packages:
+- name: HC32L136K8TA
+  package: LQFP64
+include_memory: ../memory/HC32L13x_F64S8.yaml
+memory_sizes:
+  FLASH: 64K
+  SRAM: 8K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/296.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L13x.yaml
+  include_interrupts: ../interrupts/HC32L13x.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32L13x_DMA1.yaml
+_raw:
+  series: HC32L13x
+  freq_mhz: '48'
+  flash_kb: '64'
+  sram_kb: '8'
+  package: LQFP64
+  pin_count: '64'
+  gpio: '56'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '2'
+  i2c: '2'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '1'
+  dac: ''
+  timer: '7'
+  rtc: '1'
+  wdt: ''
+  touchkey: ''
+  lcd: '4'
+  opa: '3'
+  cmp: '2'
+  other: LPUART=2|ADC_units=24|PWM=23|RTC=√|LVD=√|LVR=√|AES=√|LCD=4*40|出货形式=盘装|脚间距=0.5mm
+  url: https://www.xhsc.com.cn/product/296.html
+  source: DS
+  Part NO.: HC32L136K8TA

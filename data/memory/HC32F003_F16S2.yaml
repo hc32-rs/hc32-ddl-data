@@ -1,0 +1,19 @@
+# HC32F003 Flash 16K / SRAM 2K 的内存布局（型号：HC32F003C4PA, HC32F003C4PA, HC32F003C4PB, HC32F003C4UA…）。
+# 基址来自设备头/链接脚本（见 data/csv/memory.csv notes）。
+memory:
+- name: FLASH
+  kind: flash
+  address: 0x0
+  size: 16K
+  access:
+    read: true
+    write: true
+    execute: true
+- name: SRAM
+  kind: ram
+  address: 0x20000000
+  size: 2K
+  access:
+    read: true
+    write: true
+    execute: true

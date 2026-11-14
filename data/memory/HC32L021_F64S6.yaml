@@ -1,0 +1,19 @@
+# HC32L021 Flash 64K / SRAM 6K 的内存布局（型号：HC32L021B8UB, HC32L021C8PB, HC32L021C8UB…）。
+# 基址来自设备头/链接脚本（见 data/csv/memory.csv notes）。
+memory:
+- name: FLASH
+  kind: flash
+  address: 0x0
+  size: 64K
+  access:
+    read: true
+    write: true
+    execute: true
+- name: SRAM
+  kind: ram
+  address: 0x20000000
+  size: 6K
+  access:
+    read: true
+    write: true
+    execute: true

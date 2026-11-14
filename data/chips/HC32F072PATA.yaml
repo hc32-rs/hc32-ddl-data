@@ -1,0 +1,54 @@
+# HC32F072PATA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32F072PATA
+family: HC32F072
+subfamily: cortex-m0
+packages:
+- name: HC32F072PATA
+  package: LQFP100
+include_memory: ../memory/HC32F072_F128S16.yaml
+memory_sizes:
+  FLASH: 128K
+  SRAM: 16K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1272.html
+cores:
+- name: cortex-m0
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32F072.yaml
+  include_interrupts: ../interrupts/HC32F072.yaml
+  include_dma_channels:
+    DMA1: ../dma/HC32F072_DMA1.yaml
+_raw:
+  series: HC32F072
+  freq_mhz: '48'
+  flash_kb: '128'
+  sram_kb: '16'
+  package: LQFP100
+  pin_count: '100'
+  gpio: '86'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '4'
+  spi: '2'
+  i2c: '2'
+  i2s: '2'
+  can: '1'
+  usb: USB 2.0 device
+  adc: '24'
+  dac: '2'
+  timer: '7'
+  rtc: ''
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: '5'
+  cmp: '3'
+  other: T IME R GTIMER=4|AT IME R=3|LPUART=2|LVD=✓|LVR=✓|出货形式=盘装|产品厚度=1.4mm|脚间距=0.5mm
+  url: https://www.xhsc.com.cn/product/1272.html
+  source: DS
+  Part NO.: HC32F072PATA

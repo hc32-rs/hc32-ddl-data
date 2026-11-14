@@ -1,0 +1,53 @@
+# HC32L021B8UB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
+name: HC32L021B8UB
+family: HC32L021
+subfamily: cortex-m0plus
+packages:
+- name: HC32L021B8UB
+  package: QFN14
+include_memory: ../memory/HC32L021_F64S6.yaml
+memory_sizes:
+  FLASH: 64K
+  SRAM: 6K
+docs:
+- type: homepage
+  title: Homepage
+  name: ''
+  url: https://www.xhsc.com.cn/product/1263.html
+cores:
+- name: cortex-m0plus
+  arch: arm
+  peripherals: []
+  include_peripherals:
+  - ../family/HC32L021.yaml
+  include_interrupts: ../interrupts/HC32L021.yaml
+_raw:
+  series: HC32L021
+  freq_mhz: '48'
+  flash_kb: '64'
+  sram_kb: '6'
+  package: QFN14
+  pin_count: '14'
+  gpio: '9'
+  vdd_min: '1.8'
+  vdd_max: '5.5'
+  uart: '2'
+  spi: '1'
+  i2c: '1'
+  i2s: ''
+  can: ''
+  usb: ''
+  adc: '7'
+  dac: ''
+  timer: '1'
+  rtc: √
+  wdt: ''
+  touchkey: ''
+  lcd: ''
+  opa: ''
+  cmp: '2'
+  other: gpio_note=9+1|内核=Cortex-M0+|temp=-40~105C|timer=[3](1)|timer_高级定时器=1|timer_低功耗定时器=1|timer_实时时钟定时器=1|IWDT=1|LPUART=2|LVD=√|TRNG=1|包装方式
+    T ube=ape&Reel|脚间距=0.35mm|产品厚度=0.45mm|1.=该模块为复用模块，和通用定时器分时复用。
+  url: https://www.xhsc.com.cn/product/1263.html
+  source: DS
+  Part NO.: HC32L021B8UB

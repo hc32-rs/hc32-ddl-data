@@ -1,0 +1,54 @@
+# CRC、AES、TRNG、RTC、LCD 与 CAN
+
+## Cortex-M0/M0+
+
+| 建议版本 | 系列或实例 | 布局备注 |
+|---|---|---|
+| `crc_v1` | A136 F030 F072 F17x F19x L07x L13x L16x L17x L18x L19x | CRC 基址 0x40020900。 |
+| `crc_v1_csr` | A052 F052（CSR/CODE 命名） | — |
+| `crc_v1_sel` | L12x（CR 多 SEL[2:4]） | — |
+| `crc_v1_min` | F003 F005 L110（无 CR，FLAG 在 RESULT[16]） | — |
+| `aes_v1` | A136 F030 L13x（AES-128） | — |
+| `aes_v2` | F072 F17x F19x L07x L17x L19x（AES-128/256） | — |
+| `aes_v2_crdm` | L12x L16x L18x（+CRDM 镜像） | — |
+| `trng_v1` | A136 F030 F072 F17x F19x L021 L07x L12x L13x L16x L17x L18x L19x | L021 和 L12x 基址不同。 |
+| `rtc_v1` | A136 L13x L110 | — |
+| `rtc_v1s` | L07x L16x L17x L18x L19x（+ALMSEC） | — |
+| `rtc_v2` | A052 F052 L021 L12x | A052/F052 为基准。L021/L12x 的 COMPEN 位宽及 HCOMP/CKSEL/O2SEL 字段按系列记录。 |
+| `lcd_v1` | F17x F19x L07x L17x L19x（L07x 多 COMMUX 位） | — |
+| `lcd_v1_8bit` | A136 L13x（RAM8–F 8bit） | — |
+| `lcd_v1_drvres` | L16x L18x（+DRVRES） | — |
+| `lcd_v2` | L12x（电荷泵版） | — |
+| `can_v1` | A052 F052 F072 L07x | — |
+
+## HC32F420（Cortex-M4）
+
+CRC 归 `crc_v1_csr` 布局族。数据寄存器 `DR` 与 A052/F052 的 `DATA` 同址，
+另有 `CSR.BUSY` 位，`driver/src/crc.c` 在计算流程中轮询该位。
+`SysctrlPeripheralCrc=66` 由 `SYSCTRL_PeriphClkEnable()` 映射到 AHB0EN bit 2。
+
+## SVD 实例与基址
+
+表中使用 SVD 的实例名与基址。SDK 目录与文件来源见 [SVD 总览](../svd-overview.md)。
+
+| 系列 | SVD 实例与基址 |
+|---|---|
+| A052 | `CAN@0x40030000`, `CRC@0x40020800`, `RTC@0x40001400` |
+| A136 | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| F003 | `CRC@0x40020900` |
+| F005 | `CRC@0x40020900` |
+| F030 | `AES@0x40021400`, `CRC@0x40020900`, `TRNG@0x40004C00` |
+| F052 | `CAN@0x40030000`, `CRC@0x40020800`, `RTC@0x40001400` |
+| F072 | `AES@0x40021400`, `CAN@0x40030000`, `CRC@0x40020900`, `TRNG@0x40004C00` |
+| F17x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `TRNG@0x40004C00` |
+| F19x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `TRNG@0x40004C00` |
+| F420 | `CRC@0x40020800` |
+| L021 | `RTC@0x40001400`, `TRNG@0x40008C00` |
+| L07x | `AES@0x40021400`, `CAN@0x40030000`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| L110 | `CRC@0x40020900`, `RTC@0x40001400` |
+| L12x | `AES@0x40021400`, `CRC@0x40020800`, `LCD@0x40009C00`, `RTC@0x40001400`, `TRNG@0x40008C00` |
+| L13x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| L16x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| L17x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| L18x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |
+| L19x | `AES@0x40021400`, `CRC@0x40020900`, `LCD@0x40005C00`, `RTC@0x40001400`, `TRNG@0x40004C00` |

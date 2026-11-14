@@ -1,0 +1,216 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F002/LPUART0；覆盖系列：HC32F002。
+block/LPUART:
+  description: desc LPUART.
+  items:
+  - name: DR
+    description: desc DR.
+    byte_offset: 0
+    fieldset: DR
+  - name: CR
+    description: desc CR.
+    byte_offset: 4
+    fieldset: CR
+  - name: ADDR
+    description: desc ADDR.
+    byte_offset: 8
+    fieldset: ADDR
+  - name: ADDRMASK
+    description: desc ADDRMASK.
+    byte_offset: 12
+    fieldset: ADDRMASK
+  - name: ISR
+    description: desc ISR.
+    byte_offset: 16
+    access: Read
+    fieldset: ISR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 20
+    access: Write
+    fieldset: ICR
+  - name: BRR
+    description: desc BRR.
+    byte_offset: 24
+    fieldset: BRR
+fieldset/ADDR:
+  description: desc ADDR.
+  fields:
+  - name: ADDR
+    description: desc ADDR.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ADDRMASK:
+  description: desc ADDRMASK.
+  fields:
+  - name: MASK
+    description: desc MASK.
+    bit_offset: 0
+    bit_size: 8
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/BRR:
+  description: desc BRR.
+  fields:
+  - name: SCNT
+    description: desc SCNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: RCIE
+    description: desc RCIE.
+    bit_offset: 0
+    bit_size: 1
+  - name: TCIE
+    description: desc TCIE.
+    bit_offset: 1
+    bit_size: 1
+  - name: DR8CFG
+    description: desc DR8CFG.
+    bit_offset: 2
+    bit_size: 2
+  - name: RXEN
+    description: desc RXEN.
+    bit_offset: 4
+    bit_size: 1
+  - name: ADRDET
+    description: desc ADRDET.
+    bit_offset: 5
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 6
+    bit_size: 2
+  - name: TXEIE
+    description: desc TXEIE.
+    bit_offset: 8
+    bit_size: 1
+  - name: OVER
+    description: desc OVER.
+    bit_offset: 9
+    bit_size: 2
+  - name: CLKSRC
+    description: desc CLKSRC.
+    bit_offset: 11
+    bit_size: 2
+  - name: PEIE
+    description: desc PEIE.
+    bit_offset: 13
+    bit_size: 1
+  - name: STOP
+    description: desc STOP.
+    bit_offset: 14
+    bit_size: 2
+  - name: RTSEN
+    description: desc RTSEN.
+    bit_offset: 18
+    bit_size: 1
+  - name: CTSEN
+    description: desc CTSEN.
+    bit_offset: 19
+    bit_size: 1
+  - name: CTSIE
+    description: desc CTSIE.
+    bit_offset: 20
+    bit_size: 1
+  - name: FEIE
+    description: desc FEIE.
+    bit_offset: 21
+    bit_size: 1
+  - name: HDSEL
+    description: desc HDSEL.
+    bit_offset: 22
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DR:
+  description: desc DR.
+  fields:
+  - name: DR
+    description: desc DR.
+    bit_offset: 0
+    bit_size: 8
+  - name: DR8
+    description: desc DR8.
+    bit_offset: 8
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: RC
+    description: desc RC.
+    bit_offset: 0
+    bit_size: 1
+  - name: TC
+    description: desc TC.
+    bit_offset: 1
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 2
+    bit_size: 1
+  - name: PE
+    description: desc PE.
+    bit_offset: 4
+    bit_size: 1
+  - name: CTSIF
+    description: desc CTSIF.
+    bit_offset: 5
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ISR:
+  description: desc ISR.
+  fields:
+  - name: RC
+    description: desc RC.
+    bit_offset: 0
+    bit_size: 1
+  - name: TC
+    description: desc TC.
+    bit_offset: 1
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 2
+    bit_size: 1
+  - name: TXE
+    description: desc TXE.
+    bit_offset: 3
+    bit_size: 1
+  - name: PE
+    description: desc PE.
+    bit_offset: 4
+    bit_size: 1
+  - name: CTSIF
+    description: desc CTSIF.
+    bit_offset: 5
+    bit_size: 1
+  - name: CTS
+    description: desc CTS.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

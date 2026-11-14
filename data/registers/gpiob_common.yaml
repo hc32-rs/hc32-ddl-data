@@ -1,0 +1,127 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L021/GPIOB；覆盖系列：HC32L021。
+block/GPIOB:
+  description: desc GPIO.
+  items:
+  - name: PIN00_SEL
+    description: desc PIN00_SEL.
+    byte_offset: 0
+    fieldset: PIN00_SEL
+  - name: IN
+    description: desc IN.
+    byte_offset: 260
+    access: Read
+    fieldset: IN
+  - name: HIE
+    description: desc HIE.
+    byte_offset: 304
+    fieldset: HIE
+  - name: LIE
+    description: desc LIE.
+    byte_offset: 308
+    fieldset: LIE
+  - name: RIE
+    description: desc RIE.
+    byte_offset: 312
+    fieldset: RIE
+  - name: FIE
+    description: desc FIE.
+    byte_offset: 316
+    fieldset: FIE
+  - name: STAT
+    description: desc STAT.
+    byte_offset: 512
+    access: Read
+    fieldset: STAT
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 528
+    fieldset: ICLR
+fieldset/FIE:
+  description: desc FIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/HIE:
+  description: desc HIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IN:
+  description: desc IN.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/LIE:
+  description: desc LIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/PIN00_SEL:
+  description: desc PIN00_SEL.
+  fields:
+  - name: SEL
+    description: desc SEL.
+    bit_offset: 0
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RIE:
+  description: desc RIE.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/STAT:
+  description: desc STAT.
+  fields:
+  - name: PIN00
+    description: desc PIN00.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

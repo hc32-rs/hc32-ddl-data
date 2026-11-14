@@ -1,0 +1,78 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A052/EAU；覆盖系列：HC32A052, HC32F052。
+block/EAU:
+  description: desc EAU.
+  items:
+  - name: CSR
+    description: desc CSR.
+    byte_offset: 0
+    fieldset: CSR
+  - name: DIVIDEND
+    description: desc DIVIDEND.
+    byte_offset: 4
+    fieldset: DIVIDEND
+  - name: DIVISOR
+    description: desc DIVISOR.
+    byte_offset: 8
+    fieldset: DIVISOR
+  - name: QUOTIENT
+    description: desc QUOTIENT.
+    byte_offset: 12
+    access: Read
+    fieldset: QUOTIENT
+  - name: REMAINDER
+    description: desc REMAINDER.
+    byte_offset: 16
+    access: Read
+    fieldset: REMAINDER
+fieldset/CSR:
+  description: desc CSR.
+  fields:
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 0
+    bit_size: 2
+  - name: OVR
+    description: desc OVR.
+    bit_offset: 2
+    bit_size: 1
+  - name: ZERO
+    description: desc ZERO.
+    bit_offset: 3
+    bit_size: 1
+  - name: BUSY
+    description: desc BUSY.
+    bit_offset: 4
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/DIVIDEND:
+  description: desc DIVIDEND.
+  fields:
+  - name: DIVIDEND
+    description: desc DIVIDEND.
+    bit_offset: 0
+    bit_size: 32
+fieldset/DIVISOR:
+  description: desc DIVISOR.
+  fields:
+  - name: DIVISOR
+    description: desc DIVISOR.
+    bit_offset: 0
+    bit_size: 32
+fieldset/QUOTIENT:
+  description: desc QUOTIENT.
+  fields:
+  - name: QUOTIENT
+    description: desc QUOTIENT.
+    bit_offset: 0
+    bit_size: 32
+fieldset/REMAINDER:
+  description: desc REMAINDER.
+  fields:
+  - name: REMAINDER
+    description: desc REMAINDER.
+    bit_offset: 0
+    bit_size: 32

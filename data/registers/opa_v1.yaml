@@ -1,0 +1,82 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A052/OPA；覆盖系列：HC32A052, HC32F052。
+block/OPA:
+  description: desc OPA.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 0
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 4
+    fieldset: CR1
+  - name: AZ
+    description: desc AZ.
+    byte_offset: 8
+    fieldset: AZ
+fieldset/AZ:
+  description: desc AZ.
+  fields:
+  - name: ADCTREN
+    description: desc ADCTREN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TRIGGER
+    description: desc TRIGGER.
+    bit_offset: 1
+    bit_size: 1
+  - name: AZPULSE
+    description: desc AZPULSE.
+    bit_offset: 2
+    bit_size: 1
+  - name: CLKSWSET
+    description: desc CLKSWSET.
+    bit_offset: 3
+    bit_size: 1
+  - name: CLKSEL
+    description: desc CLKSEL.
+    bit_offset: 4
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: OPAEN
+    description: desc OPAEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 7
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: OPAEN
+    description: desc OPAEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: AZEN
+    description: desc AZEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: BIASSEL
+    description: desc BIASSEL.
+    bit_offset: 7
+    bit_size: 3
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

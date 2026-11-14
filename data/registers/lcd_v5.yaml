@@ -1,0 +1,2281 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L16x/LCD；覆盖系列：HC32L16x, HC32L18x。
+block/LCD:
+  description: desc LCD.
+  items:
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 0
+    fieldset: CR0
+  - name: CR1
+    description: desc CR1.
+    byte_offset: 4
+    fieldset: CR1
+  - name: INTCLR
+    description: desc INTCLR.
+    byte_offset: 8
+    access: Write
+    fieldset: INTCLR
+  - name: POEN0
+    description: desc POEN0.
+    byte_offset: 12
+    fieldset: POEN0
+  - name: POEN1
+    description: desc POEN1.
+    byte_offset: 16
+    fieldset: POEN1
+  - name: RAM0
+    description: desc RAM0.
+    byte_offset: 64
+    fieldset: RAM0
+  - name: RAM1
+    description: desc RAM1.
+    byte_offset: 68
+    fieldset: RAM1
+  - name: RAM2
+    description: desc RAM2.
+    byte_offset: 72
+    fieldset: RAM2
+  - name: RAM3
+    description: desc RAM3.
+    byte_offset: 76
+    fieldset: RAM3
+  - name: RAM4
+    description: desc RAM4.
+    byte_offset: 80
+    fieldset: RAM4
+  - name: RAM5
+    description: desc RAM5.
+    byte_offset: 84
+    fieldset: RAM5
+  - name: RAM6
+    description: desc RAM6.
+    byte_offset: 88
+    fieldset: RAM6
+  - name: RAM7
+    description: desc RAM7.
+    byte_offset: 92
+    fieldset: RAM7
+  - name: RAM8
+    description: desc RAM8.
+    byte_offset: 96
+    fieldset: RAM8
+  - name: RAM9
+    description: desc RAM9.
+    byte_offset: 100
+    fieldset: RAM9
+  - name: RAMA
+    description: desc RAMA.
+    byte_offset: 104
+    fieldset: RAMA
+  - name: RAMB
+    description: desc RAMB.
+    byte_offset: 108
+    fieldset: RAMB
+  - name: RAMC
+    description: desc RAMC.
+    byte_offset: 112
+    fieldset: RAMC
+  - name: RAMD
+    description: desc RAMD.
+    byte_offset: 116
+    fieldset: RAMD
+  - name: RAME
+    description: desc RAME.
+    byte_offset: 120
+    fieldset: RAME
+  - name: RAMF
+    description: desc RAMF.
+    byte_offset: 124
+    fieldset: RAMF
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: EN
+    description: desc EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: LCDCLK
+    description: desc LCDCLK.
+    bit_offset: 1
+    bit_size: 2
+  - name: CPCLK
+    description: desc CPCLK.
+    bit_offset: 3
+    bit_size: 2
+  - name: BIAS
+    description: desc BIAS.
+    bit_offset: 5
+    bit_size: 1
+  - name: DUTY
+    description: desc DUTY.
+    bit_offset: 6
+    bit_size: 3
+  - name: BSEL
+    description: desc BSEL.
+    bit_offset: 9
+    bit_size: 3
+  - name: CONTRAST
+    description: desc CONTRAST.
+    bit_offset: 12
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR1:
+  description: desc CR1.
+  fields:
+  - name: BLINKCNT
+    description: desc BLINKCNT.
+    bit_offset: 0
+    bit_size: 6
+  - name: BLINKEN
+    description: desc BLINKEN.
+    bit_offset: 6
+    bit_size: 1
+  - name: CLKSRC
+    description: desc CLKSRC.
+    bit_offset: 7
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 8
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 9
+    bit_size: 1
+  - name: DMAEN
+    description: desc DMAEN.
+    bit_offset: 10
+    bit_size: 1
+  - name: INTF
+    description: desc INTF.
+    bit_offset: 11
+    bit_size: 1
+  - name: DRVRES
+    description: desc DRVRES.
+    bit_offset: 12
+    bit_size: 2
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/INTCLR:
+  description: desc INTCLR.
+  fields:
+  - name: INTF
+    description: desc INTF.
+    bit_offset: 10
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/POEN0:
+  description: desc POEN0.
+  fields:
+  - name: S0
+    description: desc S0.
+    bit_offset: 0
+    bit_size: 1
+  - name: S1
+    description: desc S1.
+    bit_offset: 1
+    bit_size: 1
+  - name: S2
+    description: desc S2.
+    bit_offset: 2
+    bit_size: 1
+  - name: S3
+    description: desc S3.
+    bit_offset: 3
+    bit_size: 1
+  - name: S4
+    description: desc S4.
+    bit_offset: 4
+    bit_size: 1
+  - name: S5
+    description: desc S5.
+    bit_offset: 5
+    bit_size: 1
+  - name: S6
+    description: desc S6.
+    bit_offset: 6
+    bit_size: 1
+  - name: S7
+    description: desc S7.
+    bit_offset: 7
+    bit_size: 1
+  - name: S8
+    description: desc S8.
+    bit_offset: 8
+    bit_size: 1
+  - name: S9
+    description: desc S9.
+    bit_offset: 9
+    bit_size: 1
+  - name: S10
+    description: desc S10.
+    bit_offset: 10
+    bit_size: 1
+  - name: S11
+    description: desc S11.
+    bit_offset: 11
+    bit_size: 1
+  - name: S12
+    description: desc S12.
+    bit_offset: 12
+    bit_size: 1
+  - name: S13
+    description: desc S13.
+    bit_offset: 13
+    bit_size: 1
+  - name: S14
+    description: desc S14.
+    bit_offset: 14
+    bit_size: 1
+  - name: S15
+    description: desc S15.
+    bit_offset: 15
+    bit_size: 1
+  - name: S16
+    description: desc S16.
+    bit_offset: 16
+    bit_size: 1
+  - name: S17
+    description: desc S17.
+    bit_offset: 17
+    bit_size: 1
+  - name: S18
+    description: desc S18.
+    bit_offset: 18
+    bit_size: 1
+  - name: S19
+    description: desc S19.
+    bit_offset: 19
+    bit_size: 1
+  - name: S20
+    description: desc S20.
+    bit_offset: 20
+    bit_size: 1
+  - name: S21
+    description: desc S21.
+    bit_offset: 21
+    bit_size: 1
+  - name: S22
+    description: desc S22.
+    bit_offset: 22
+    bit_size: 1
+  - name: S23
+    description: desc S23.
+    bit_offset: 23
+    bit_size: 1
+  - name: S24
+    description: desc S24.
+    bit_offset: 24
+    bit_size: 1
+  - name: S25
+    description: desc S25.
+    bit_offset: 25
+    bit_size: 1
+  - name: S26
+    description: desc S26.
+    bit_offset: 26
+    bit_size: 1
+  - name: S27
+    description: desc S27.
+    bit_offset: 27
+    bit_size: 1
+  - name: S28
+    description: desc S28.
+    bit_offset: 28
+    bit_size: 1
+  - name: S29
+    description: desc S29.
+    bit_offset: 29
+    bit_size: 1
+  - name: S30
+    description: desc S30.
+    bit_offset: 30
+    bit_size: 1
+  - name: S31
+    description: desc S31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/POEN1:
+  description: desc POEN1.
+  fields:
+  - name: S32
+    description: desc S32.
+    bit_offset: 0
+    bit_size: 1
+  - name: S33
+    description: desc S33.
+    bit_offset: 1
+    bit_size: 1
+  - name: S34
+    description: desc S34.
+    bit_offset: 2
+    bit_size: 1
+  - name: S35
+    description: desc S35.
+    bit_offset: 3
+    bit_size: 1
+  - name: S36C7
+    description: desc S36C7.
+    bit_offset: 4
+    bit_size: 1
+  - name: S37C6
+    description: desc S37C6.
+    bit_offset: 5
+    bit_size: 1
+  - name: S38C5
+    description: desc S38C5.
+    bit_offset: 6
+    bit_size: 1
+  - name: S39C4
+    description: desc S39C4.
+    bit_offset: 7
+    bit_size: 1
+  - name: S40
+    description: desc S40.
+    bit_offset: 8
+    bit_size: 1
+  - name: S41
+    description: desc S41.
+    bit_offset: 9
+    bit_size: 1
+  - name: S42
+    description: desc S42.
+    bit_offset: 10
+    bit_size: 1
+  - name: S43
+    description: desc S43.
+    bit_offset: 11
+    bit_size: 1
+  - name: MUX
+    description: desc MUX.
+    bit_offset: 12
+    bit_size: 1
+  - name: S44
+    description: desc S44.
+    bit_offset: 13
+    bit_size: 1
+  - name: S45
+    description: desc S45.
+    bit_offset: 14
+    bit_size: 1
+  - name: S46
+    description: desc S46.
+    bit_offset: 15
+    bit_size: 1
+  - name: S47
+    description: desc S47.
+    bit_offset: 16
+    bit_size: 1
+  - name: S48
+    description: desc S48.
+    bit_offset: 17
+    bit_size: 1
+  - name: S49
+    description: desc S49.
+    bit_offset: 18
+    bit_size: 1
+  - name: S50
+    description: desc S50.
+    bit_offset: 19
+    bit_size: 1
+  - name: S51
+    description: desc S51.
+    bit_offset: 20
+    bit_size: 1
+  - name: C0
+    description: desc C0.
+    bit_offset: 21
+    bit_size: 1
+  - name: C1
+    description: desc C1.
+    bit_offset: 22
+    bit_size: 1
+  - name: C2
+    description: desc C2.
+    bit_offset: 23
+    bit_size: 1
+  - name: C3
+    description: desc C3.
+    bit_offset: 24
+    bit_size: 1
+fieldset/RAM0:
+  description: desc RAM0.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM1:
+  description: desc RAM1.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM2:
+  description: desc RAM2.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM3:
+  description: desc RAM3.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM4:
+  description: desc RAM4.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM5:
+  description: desc RAM5.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM6:
+  description: desc RAM6.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM7:
+  description: desc RAM7.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: D24
+    description: desc D24.
+    bit_offset: 24
+    bit_size: 1
+  - name: D25
+    description: desc D25.
+    bit_offset: 25
+    bit_size: 1
+  - name: D26
+    description: desc D26.
+    bit_offset: 26
+    bit_size: 1
+  - name: D27
+    description: desc D27.
+    bit_offset: 27
+    bit_size: 1
+  - name: D28
+    description: desc D28.
+    bit_offset: 28
+    bit_size: 1
+  - name: D29
+    description: desc D29.
+    bit_offset: 29
+    bit_size: 1
+  - name: D30
+    description: desc D30.
+    bit_offset: 30
+    bit_size: 1
+  - name: D31
+    description: desc D31.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RAM8:
+  description: desc RAM8.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAM9:
+  description: desc RAM9.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAMA:
+  description: desc RAMA.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAMB:
+  description: desc RAMB.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAMC:
+  description: desc RAMC.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAMD:
+  description: desc RAMD.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAME:
+  description: desc RAME.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8
+fieldset/RAMF:
+  description: desc RAMF.
+  fields:
+  - name: D0
+    description: desc D0.
+    bit_offset: 0
+    bit_size: 1
+  - name: D1
+    description: desc D1.
+    bit_offset: 1
+    bit_size: 1
+  - name: D2
+    description: desc D2.
+    bit_offset: 2
+    bit_size: 1
+  - name: D3
+    description: desc D3.
+    bit_offset: 3
+    bit_size: 1
+  - name: D4
+    description: desc D4.
+    bit_offset: 4
+    bit_size: 1
+  - name: D5
+    description: desc D5.
+    bit_offset: 5
+    bit_size: 1
+  - name: D6
+    description: desc D6.
+    bit_offset: 6
+    bit_size: 1
+  - name: D7
+    description: desc D7.
+    bit_offset: 7
+    bit_size: 1
+  - name: D8
+    description: desc D8.
+    bit_offset: 8
+    bit_size: 1
+  - name: D9
+    description: desc D9.
+    bit_offset: 9
+    bit_size: 1
+  - name: D10
+    description: desc D10.
+    bit_offset: 10
+    bit_size: 1
+  - name: D11
+    description: desc D11.
+    bit_offset: 11
+    bit_size: 1
+  - name: D12
+    description: desc D12.
+    bit_offset: 12
+    bit_size: 1
+  - name: D13
+    description: desc D13.
+    bit_offset: 13
+    bit_size: 1
+  - name: D14
+    description: desc D14.
+    bit_offset: 14
+    bit_size: 1
+  - name: D15
+    description: desc D15.
+    bit_offset: 15
+    bit_size: 1
+  - name: D16
+    description: desc D16.
+    bit_offset: 16
+    bit_size: 1
+  - name: D17
+    description: desc D17.
+    bit_offset: 17
+    bit_size: 1
+  - name: D18
+    description: desc D18.
+    bit_offset: 18
+    bit_size: 1
+  - name: D19
+    description: desc D19.
+    bit_offset: 19
+    bit_size: 1
+  - name: D20
+    description: desc D20.
+    bit_offset: 20
+    bit_size: 1
+  - name: D21
+    description: desc D21.
+    bit_offset: 21
+    bit_size: 1
+  - name: D22
+    description: desc D22.
+    bit_offset: 22
+    bit_size: 1
+  - name: D23
+    description: desc D23.
+    bit_offset: 23
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 24
+    bit_size: 8

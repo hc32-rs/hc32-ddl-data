@@ -1,0 +1,187 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F420/ATIM3MODE1；覆盖系列：HC32F420。
+block/ATIM:
+  description: desc ATIM3MODE1.
+  items:
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 4
+    fieldset: CNT
+  - name: M1CR
+    description: desc M1CR.
+    byte_offset: 12
+    fieldset: M1CR
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 16
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 20
+    fieldset: ICLR
+  - name: MSCR
+    description: desc MSCR.
+    byte_offset: 24
+    fieldset: MSCR
+  - name: FLTR
+    description: desc FLTR.
+    byte_offset: 28
+    fieldset: FLTR
+  - name: CR0
+    description: desc CR0.
+    byte_offset: 36
+    fieldset: CR0
+  - name: CCR0A
+    description: desc CCR0A.
+    byte_offset: 60
+    access: Read
+    fieldset: CCR0A
+fieldset/CCR0A:
+  description: desc CCR0A.
+  fields:
+  - name: CCR0A
+    description: desc CCR0A.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CR0:
+  description: desc CR0.
+  fields:
+  - name: CSA
+    description: desc CSA.
+    bit_offset: 4
+    bit_size: 1
+  - name: CSB
+    description: desc CSB.
+    bit_offset: 5
+    bit_size: 1
+  - name: CIEA
+    description: desc CIEA.
+    bit_offset: 8
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/FLTR:
+  description: desc FLTR.
+  fields:
+  - name: FLTA0
+    description: desc FLTA0.
+    bit_offset: 0
+    bit_size: 3
+  - name: FLTB0
+    description: desc FLTB0.
+    bit_offset: 4
+    bit_size: 3
+  - name: FLTET
+    description: desc FLTET.
+    bit_offset: 28
+    bit_size: 3
+  - name: ETP
+    description: desc ETP.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: UI
+    description: desc UI.
+    bit_offset: 0
+    bit_size: 1
+  - name: CA0
+    description: desc CA0.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: UI
+    description: desc UI.
+    bit_offset: 0
+    bit_size: 1
+  - name: PWC
+    description: desc PWC.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/M1CR:
+  description: desc M1CR.
+  fields:
+  - name: CEN
+    description: desc CEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: CT
+    description: desc CT.
+    bit_offset: 2
+    bit_size: 1
+  - name: PRS
+    description: desc PRS.
+    bit_offset: 4
+    bit_size: 3
+  - name: EDG1ST
+    description: desc EDG1ST.
+    bit_offset: 8
+    bit_size: 1
+  - name: EDG2ND
+    description: desc EDG2ND.
+    bit_offset: 9
+    bit_size: 1
+  - name: UI
+    description: desc UI.
+    bit_offset: 10
+    bit_size: 1
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 12
+    bit_size: 2
+  - name: ONESHOT
+    description: desc ONESHOT.
+    bit_offset: 14
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/MSCR:
+  description: desc MSCR.
+  fields:
+  - name: TS
+    description: desc TS.
+    bit_offset: 5
+    bit_size: 3
+  - name: IA0S
+    description: desc IA0S.
+    bit_offset: 11
+    bit_size: 1
+  - name: IB0S
+    description: desc IB0S.
+    bit_offset: 12
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

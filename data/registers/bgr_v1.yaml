@@ -1,0 +1,24 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/BGR；覆盖系列：HC32A136, HC32F003, HC32F005, HC32F030, HC32F072, HC32F17x, HC32F19x, HC32L07x, HC32L13x, HC32L16x, HC32L17x, HC32L18x, HC32L19x。
+block/BGR:
+  description: desc BGR.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 0
+    fieldset: CR
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: BGR_EN
+    description: desc BGR_EN.
+    bit_offset: 0
+    bit_size: 1
+  - name: TS_EN
+    description: desc TS_EN.
+    bit_offset: 1
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

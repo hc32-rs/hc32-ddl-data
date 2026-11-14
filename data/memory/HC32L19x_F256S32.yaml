@@ -1,0 +1,19 @@
+# HC32L19x Flash 256K / SRAM 32K 的内存布局（型号：HC32L190FCUA, HC32L190JCTA, HC32L196JCTA, HC32L196KCTA…）。
+# 基址来自设备头/链接脚本（见 data/csv/memory.csv notes）。
+memory:
+- name: FLASH
+  kind: flash
+  address: 0x0
+  size: 256K
+  access:
+    read: true
+    write: true
+    execute: true
+- name: SRAM
+  kind: ram
+  address: 0x20000000
+  size: 32K
+  access:
+    read: true
+    write: true
+    execute: true

@@ -1,0 +1,24 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L12x/VCTRIM；覆盖系列：HC32L12x。
+block/VCTRIM:
+  description: desc VCTRIM.
+  items:
+  - name: VCTRIM
+    description: desc VCTRIM.
+    byte_offset: 0
+    fieldset: VCTRIM
+fieldset/VCTRIM:
+  description: desc VCTRIM.
+  fields:
+  - name: TRIM0
+    description: desc TRIM0.
+    bit_offset: 0
+    bit_size: 4
+  - name: TRIM1
+    description: desc TRIM1.
+    bit_offset: 8
+    bit_size: 4
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

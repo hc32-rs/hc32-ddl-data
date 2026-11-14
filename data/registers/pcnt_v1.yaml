@@ -1,0 +1,335 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32A136/PCNT；覆盖系列：HC32A136, HC32L13x。
+block/PCNT:
+  description: desc PCNT.
+  items:
+  - name: RUN
+    description: desc RUN.
+    byte_offset: 0
+    fieldset: RUN
+  - name: CTRL
+    description: desc CTRL.
+    byte_offset: 4
+    fieldset: CTRL
+  - name: FLT
+    description: desc FLT.
+    byte_offset: 8
+    fieldset: FLT
+  - name: TOCR
+    description: desc TOCR.
+    byte_offset: 12
+    fieldset: TOCR
+  - name: CMD
+    description: desc CMD.
+    byte_offset: 16
+    access: Write
+    fieldset: CMD
+  - name: SR1
+    description: desc SR1.
+    byte_offset: 20
+    access: Read
+    fieldset: SR1
+  - name: CNT
+    description: desc CNT.
+    byte_offset: 24
+    access: Read
+    fieldset: CNT
+  - name: TOP
+    description: desc TOP.
+    byte_offset: 28
+    access: Read
+    fieldset: TOP
+  - name: BUF
+    description: desc BUF.
+    byte_offset: 32
+    fieldset: BUF
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 36
+    access: Read
+    fieldset: IFR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 40
+    access: Write
+    fieldset: ICR
+  - name: IEN
+    description: desc IEN.
+    byte_offset: 44
+    fieldset: IEN
+  - name: SR2
+    description: desc SR2.
+    byte_offset: 48
+    access: Read
+    fieldset: SR2
+fieldset/BUF:
+  description: desc BUF.
+  fields:
+  - name: BUF
+    description: desc BUF.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CMD:
+  description: desc CMD.
+  fields:
+  - name: T2C
+    description: desc T2C.
+    bit_offset: 0
+    bit_size: 1
+  - name: B2T
+    description: desc B2T.
+    bit_offset: 1
+    bit_size: 1
+  - name: B2C
+    description: desc B2C.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CNT:
+  description: desc CNT.
+  fields:
+  - name: CNT
+    description: desc CNT.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/CTRL:
+  description: desc CTRL.
+  fields:
+  - name: MODE
+    description: desc MODE.
+    bit_offset: 0
+    bit_size: 2
+  - name: CLKSEL
+    description: desc CLKSEL.
+    bit_offset: 2
+    bit_size: 2
+  - name: DIR
+    description: desc DIR.
+    bit_offset: 4
+    bit_size: 1
+  - name: S0P
+    description: desc S0P.
+    bit_offset: 5
+    bit_size: 1
+  - name: S1P
+    description: desc S1P.
+    bit_offset: 6
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/FLT:
+  description: desc FLT.
+  fields:
+  - name: CLKDIV
+    description: desc CLKDIV.
+    bit_offset: 0
+    bit_size: 13
+  - name: DEBTOP
+    description: desc DEBTOP.
+    bit_offset: 13
+    bit_size: 3
+  - name: EN
+    description: desc EN.
+    bit_offset: 16
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: UF
+    description: desc UF.
+    bit_offset: 0
+    bit_size: 1
+  - name: OV
+    description: desc OV.
+    bit_offset: 1
+    bit_size: 1
+  - name: TO
+    description: desc TO.
+    bit_offset: 2
+    bit_size: 1
+  - name: DIR
+    description: desc DIR.
+    bit_offset: 3
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 4
+    bit_size: 1
+  - name: BB
+    description: desc BB.
+    bit_offset: 5
+    bit_size: 1
+  - name: S0E
+    description: desc S0E.
+    bit_offset: 6
+    bit_size: 1
+  - name: S1E
+    description: desc S1E.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IEN:
+  description: desc IEN.
+  fields:
+  - name: UF
+    description: desc UF.
+    bit_offset: 0
+    bit_size: 1
+  - name: OV
+    description: desc OV.
+    bit_offset: 1
+    bit_size: 1
+  - name: TO
+    description: desc TO.
+    bit_offset: 2
+    bit_size: 1
+  - name: DIR
+    description: desc DIR.
+    bit_offset: 3
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 4
+    bit_size: 1
+  - name: BB
+    description: desc BB.
+    bit_offset: 5
+    bit_size: 1
+  - name: S0E
+    description: desc S0E.
+    bit_offset: 6
+    bit_size: 1
+  - name: S1E
+    description: desc S1E.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: UF
+    description: desc UF.
+    bit_offset: 0
+    bit_size: 1
+  - name: OV
+    description: desc OV.
+    bit_offset: 1
+    bit_size: 1
+  - name: TO
+    description: desc TO.
+    bit_offset: 2
+    bit_size: 1
+  - name: DIR
+    description: desc DIR.
+    bit_offset: 3
+    bit_size: 1
+  - name: FE
+    description: desc FE.
+    bit_offset: 4
+    bit_size: 1
+  - name: BB
+    description: desc BB.
+    bit_offset: 5
+    bit_size: 1
+  - name: S0E
+    description: desc S0E.
+    bit_offset: 6
+    bit_size: 1
+  - name: S1E
+    description: desc S1E.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/RUN:
+  description: desc RUN.
+  fields:
+  - name: RUN
+    description: desc RUN.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SR1:
+  description: desc SR1.
+  fields:
+  - name: DIR
+    description: desc DIR.
+    bit_offset: 0
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/SR2:
+  description: desc SR2.
+  fields:
+  - name: T2C
+    description: desc T2C.
+    bit_offset: 0
+    bit_size: 1
+  - name: B2T
+    description: desc B2T.
+    bit_offset: 1
+    bit_size: 1
+  - name: B2C
+    description: desc B2C.
+    bit_offset: 2
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TOCR:
+  description: desc TOCR.
+  fields:
+  - name: TH
+    description: desc TH.
+    bit_offset: 0
+    bit_size: 12
+  - name: EN
+    description: desc EN.
+    bit_offset: 16
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/TOP:
+  description: desc TOP.
+  fields:
+  - name: TOP
+    description: desc TOP.
+    bit_offset: 0
+    bit_size: 16
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
