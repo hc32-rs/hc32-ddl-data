@@ -1,49 +1,110 @@
 # 时钟、复位与校准
 
-## Cortex-M0/M0+
+SYSCTRL 由内部 RC 基础控制、外部时钟控制、PLL 扩展，再到 APB/AHB 多组门控分档。
+PLL、RC48M、XTL 与复位寄存器是不同能力维度，后缀保留同档分支，不将它们视为彼此超集。
+L110 的 CLOCK 目标名统一为 sysctrl，CLK_TRIM 使用完整的 clk_trim。
+RESET 按状态/外设复位分组能力整理，CTRIM/CLK_TRIM 的输入源、限值位宽及字段差异分变体。
 
-旧式 SYSCTRL 负责系统时钟和外设门控。L110 的节点名为 CLOCK；部分系列的 RESET 由 SVD 单列。
+F420 SYSCTRL 有 21 个寄存器。`SYSCTRL_PeriphClkEnable/Disable()` 按枚举组标记
+0x00/0x20/0x40/0x80 选择 APB0EN/APB1EN/AHB0EN/AHB1EN。
+CTRIM 门控为 APB1EN bit 0，IRQ 为 0；CLK_FAULT IRQ 为 9。
+F420 的 FLIM 为 8 位，A052/F052 为 12 位，且 F420 缺少 CR1.MDRCH。
+L110 的 RESET 在 SVD 与设备头中都使用 PREI_RESET 拼写，保留原始字段。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `sysctrl_v1` | F17x F19x L17x L19x | SYSCTRL0–2、振荡器控制和 PERI_CLKEN0/1。 |
-| `sysctrl_v2` | A136 L13x | 门控寄存器为 PERI_CLKEN。 |
-| `sysctrl_v3` | F030 | 单组 PERI_CLKEN，字段与 A136/L13x 有差异。 |
-| `sysctrl_v4` | A052 F052 | CR0–3、PERICLKEN0/1、PERIRESET0/1。 |
-| `sysctrl_v5` | F003 F005 | 含 SYSTICK_CR，无 PLL。 |
-| `sysctrl_v6` | F072 | 含 OVCK_CR 和 RC48M_CR。 |
-| `sysctrl_v7` | L07x | 含 OVCK_CR 和 RC48M_CR，字段与 F072 有差异。 |
-| `sysctrl_v8` | L16x L18x | 含 RC48M_CR，无 XTL_CR。 |
-| `sysctrl_v9` | F002 | 无 XTH、XTL、PLL 控制。 |
-| `sysctrl_v10` | L021 | SYSCTRL@0x40021800。 |
-| `sysctrl_v11` | L12x | SYSCTRL@0x40021800，单列 RESET 窗口。 |
-| `sysctrl_v12` | L110 | 节点名 CLOCK，与 F003/F005 布局相近。 |
-| `reset_v1` | F17x F19x L17x L19x | RESET_FLAG 和 PERI_RESET0/1。 |
-| `reset_v2` | F072 | RESET_FLAG、PERI_RESET0/1；位域按系列记录。 |
-| `reset_v3` | L07x | RESET_FLAG、PERI_RESET0/1；位域按系列记录。 |
-| `reset_v4` | L16x L18x | RESET_FLAG、PERI_RESET0/1；位域按系列记录。 |
-| `reset_v5` | L12x | RESET_FLAG、PERI_RESET0/1，基址 0x4002181C。 |
-| `reset_v6` | A136 F030 L13x | RESET_FLAG、PERI_RESET。 |
-| `reset_v7` | F003 F005 | RESET_FLAG、PERI_RESET；位域按系列记录。 |
-| `reset_v8` | L110 | SVD 与 SDK 设备头均写作 PREI_RESET。 |
-| `clktrim_v1` | A136 F030 F072 F17x F19x L07x L13x L17x L19x | — |
-| `clktrim_v2` | F003 F005 | — |
-| `clktrim_v3` | L16x L18x | — |
-| `clktrim_v4` | L110 | — |
-| `ctrim_v1` | A052 F052 L16x L18x | — |
-| `ctrim_v2` | F002 | — |
-| `ctrim_v3` | L021 | — |
-| `ctrim_v4` | L12x | — |
-| `vctrim_v1` | L12x | VC 的单寄存器校准块。 |
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-## HC32F420（Cortex-M4）
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-SYSCTRL 归 `sysctrl_v14`，有 21 个寄存器，时钟门控分为 APB0/1 和 AHB0/1 四组。
-CTRIM 归 `ctrim_v6`，与 A052/F052 同骨架但 `FLIM.FLIM` 位宽为 8 位（A052/F052 为 12 位），
-且缺少 `CR1.MDRCH`。设备头中 `CLK_FAULT_IRQn=9`、`CTRIM_IRQn=0`。
-`SYSCTRL_PeriphClkEnable()` 和 `SYSCTRL_PeriphClkDisable()` 按门控枚举值选择寄存器。
-枚举组标记 `0x00/0x20/0x40/0x80` 分别对应 APB0EN/APB1EN/AHB0EN/AHB1EN。
-CTRIM 门控在 APB1EN bit 0。
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+
+### clk_trim：v1
+
+时钟参考计数与校准。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `clk_trim_ddl_v1.rs` | [clk_v3](../../data/registers/clk_v3.yaml) | L110: CLK_TRIM | 7 / 15 | 本档位对照基准；完整定义见来源 YAML |
+| `clk_trim_ddl_v1_1.rs` | [clk_v2](../../data/registers/clk_v2.yaml) | F003/F005: CLK_TRIM | 7 / 16 | 相对 clk_trim_ddl_v1：定义差异 CR/ICLR/IFR |
+| `clk_trim_ddl_v1_2.rs` | [clk_v1](../../data/registers/clk_v1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: CLK_TRIM | 7 / 21 | 相对 clk_trim_ddl_v1：定义差异 CR/ICLR/IFR |
+| `clk_trim_ddl_v1_3.rs` | [clk_v4](../../data/registers/clk_v4.yaml) | L16x/L18x: CLK_TRIM | 7 / 21 | 相对 clk_trim_ddl_v1：定义差异 CR/ICLR/IFR |
+
+### ctrim：v1
+
+计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `ctrim_ddl_v1.rs` | [ctrim_v2](../../data/registers/ctrim_v2.yaml) | F002: CTRIM | 10 / 41 | 本档位对照基准；完整定义见来源 YAML |
+| `ctrim_ddl_v1_1.rs` | [ctrim_v3](../../data/registers/ctrim_v3.yaml) | F420: CTRIM | 10 / 42 | 相对 ctrim_ddl_v1：定义差异 IER/ISR |
+| `ctrim_ddl_v1_2.rs` | [ctrim_v4](../../data/registers/ctrim_v4.yaml) | L021/L12x: CTRIM | 10 / 42 | 相对 ctrim_ddl_v1：定义差异 FLIM/ICR/IER/ISR |
+| `ctrim_ddl_v1_3.rs` | [ctrim_v1](../../data/registers/ctrim_v1.yaml) | A052/F052: CTRIM | 10 / 43 | 相对 ctrim_ddl_v1：定义差异 CR1/FLIM/IER/ISR |
+| `ctrim_ddl_v1_4.rs` | [ctrim_v5](../../data/registers/ctrim_v5.yaml) | L16x/L18x: CTRIM | 10 / 43 | 相对 ctrim_ddl_v1：定义差异 CR1/FLIM/ICR/IER/ISR |
+
+### reset：v1
+
+外设复位控制，分组规模及字段按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `reset_ddl_v1.rs` | [reset_v2](../../data/registers/reset_v2.yaml) | F003/F005: RESET | 2 / 21 | 本档位对照基准；完整定义见来源 YAML |
+| `reset_ddl_v1_1.rs` | [reset_v6](../../data/registers/reset_v6.yaml) | L110: RESET | 2 / 24 | 相对 reset_ddl_v1：增加 PREI_RESET；缺少 PERI_RESET |
+| `reset_ddl_v1_2.rs` | [reset_v1](../../data/registers/reset_v1.yaml) | A136/F030/L13x: RESET | 2 / 37 | 相对 reset_ddl_v1：定义差异 PERI_RESET/RESET_FLAG |
+| `reset_ddl_v1_3.rs` | [reset_v7](../../data/registers/reset_v7.yaml) | L12x: RESET | 3 / 36 | 相对 reset_ddl_v1：增加 PERI_RESET0/PERI_RESET1；缺少 PERI_RESET；定义差异 RESET_FLAG |
+| `reset_ddl_v1_4.rs` | [reset_v4](../../data/registers/reset_v4.yaml) | F17x/F19x/L17x/L19x: RESET | 3 / 41 | 相对 reset_ddl_v1：增加 PERI_RESET0/PERI_RESET1；缺少 PERI_RESET；定义差异 RESET_FLAG |
+| `reset_ddl_v1_5.rs` | [reset_v3](../../data/registers/reset_v3.yaml) | F072: RESET | 3 / 42 | 相对 reset_ddl_v1：增加 PERI_RESET0/PERI_RESET1；缺少 PERI_RESET；定义差异 RESET_FLAG |
+| `reset_ddl_v1_6.rs` | [reset_v8](../../data/registers/reset_v8.yaml) | L16x/L18x: RESET | 3 / 42 | 相对 reset_ddl_v1：增加 PERI_RESET0/PERI_RESET1；缺少 PERI_RESET；定义差异 RESET_FLAG |
+| `reset_ddl_v1_7.rs` | [reset_v5](../../data/registers/reset_v5.yaml) | L07x: RESET | 3 / 47 | 相对 reset_ddl_v1：增加 PERI_RESET0/PERI_RESET1；缺少 PERI_RESET；定义差异 RESET_FLAG |
+
+### sysctrl：v1
+
+内部 RC 时钟与基础门控，无外部晶振/PLL。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `sysctrl_ddl_v1.rs` | [sysctrl_v3](../../data/registers/sysctrl_v3.yaml) | F002: SYSCTRL | 12 / 69 | 本档位对照基准；完整定义见来源 YAML |
+
+### sysctrl：v2
+
+外部时钟或低速晶振控制，无 PLL。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `sysctrl_ddl_v2.rs` | [sysctrl_v4](../../data/registers/sysctrl_v4.yaml) | F003/F005: SYSCTRL | 9 / 56 | 本档位对照基准；完整定义见来源 YAML |
+| `sysctrl_ddl_v2_1.rs` | [sysctrl_v11](../../data/registers/sysctrl_v11.yaml) | L12x: SYSCTRL | 9 / 73 | 相对 sysctrl_ddl_v2：增加 PERI_CLKEN0/PERI_CLKEN1；缺少 PERI_CLKEN/SYSTICK_CR；定义差异 RCH_CR/RCL_CR/SYSCTRL0/SYSCTRL1/XTH_CR 等 6 项 |
+| `sysctrl_ddl_v2_2.rs` | [clock_common](../../data/registers/clock_common.yaml) | L110: CLOCK | 10 / 62 | 相对 sysctrl_ddl_v2：增加 DEBUG_ACTIVE；定义差异 PERI_CLKEN/RCH_CR/RCL_CR/SYSCTRL0/SYSCTRL1 等 8 项 |
+| `sysctrl_ddl_v2_3.rs` | [sysctrl_v9](../../data/registers/sysctrl_v9.yaml) | L021: SYSCTRL | 12 / 82 | 相对 sysctrl_ddl_v2：增加 DEBUG_ACTIVE/PERI_CLKEN0/PERI_CLKEN1/PERI_RESET0/PERI_RESET1 等 7 项；缺少 PERI_CLKEN/RCH_CR/SYSTICK_CR/XTH_CR；定义差异 RCL_CR/SYSCTRL0/SYSCTRL1/SYSCTRL2/XTL_CR |
+
+### sysctrl：v3
+
+PLL 时钟；RC48M、门控及复位窗口按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `sysctrl_ddl_v3.rs` | [sysctrl_v5](../../data/registers/sysctrl_v5.yaml) | F030: SYSCTRL | 9 / 68 | 本档位对照基准；完整定义见来源 YAML |
+| `sysctrl_ddl_v3_1.rs` | [sysctrl_v2](../../data/registers/sysctrl_v2.yaml) | A136/L13x: SYSCTRL | 9 / 76 | 相对 sysctrl_ddl_v3：定义差异 PERI_CLKEN/SYSCTRL1 |
+| `sysctrl_ddl_v3_2.rs` | [sysctrl_v7](../../data/registers/sysctrl_v7.yaml) | F17x/F19x/L17x/L19x: SYSCTRL | 10 / 80 | 相对 sysctrl_ddl_v3：增加 PERI_CLKEN0/PERI_CLKEN1；缺少 PERI_CLKEN；定义差异 SYSCTRL1 |
+| `sysctrl_ddl_v3_3.rs` | [sysctrl_v12](../../data/registers/sysctrl_v12.yaml) | L16x/L18x: SYSCTRL | 11 / 87 | 相对 sysctrl_ddl_v3：增加 PERI_CLKEN0/PERI_CLKEN1/RC48M_CR；缺少 PERI_CLKEN；定义差异 SYSCTRL0/SYSCTRL1 |
+| `sysctrl_ddl_v3_4.rs` | [sysctrl_v6](../../data/registers/sysctrl_v6.yaml) | F072: SYSCTRL | 12 / 84 | 相对 sysctrl_ddl_v3：增加 OVCK_CR/PERI_CLKEN0/PERI_CLKEN1/RC48M_CR；缺少 PERI_CLKEN；定义差异 SYSCTRL1 |
+| `sysctrl_ddl_v3_5.rs` | [sysctrl_v10](../../data/registers/sysctrl_v10.yaml) | L07x: SYSCTRL | 12 / 91 | 相对 sysctrl_ddl_v3：增加 OVCK_CR/PERI_CLKEN0/PERI_CLKEN1/RC48M_CR；缺少 PERI_CLKEN；定义差异 SYSCTRL1 |
+| `sysctrl_ddl_v3_6.rs` | [sysctrl_v1](../../data/registers/sysctrl_v1.yaml) | A052/F052: SYSCTRL | 18 / 160 | 相对 sysctrl_ddl_v3：增加 CR0/CR1/CR2/CR3/DBGSTOP 等 18 项；缺少 PERI_CLKEN/PLL_CR/RCH_CR/RCL_CR/SYSCTRL0 等 9 项 |
+
+### sysctrl：v4
+
+PLL 与 APB0/1、AHB0/1 四组门控/复位。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `sysctrl_ddl_v4.rs` | [sysctrl_v8](../../data/registers/sysctrl_v8.yaml) | F420: SYSCTRL | 21 / 134 | 本档位对照基准；完整定义见来源 YAML |
+
+### vctrim：v1
+
+比较器校准。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `vctrim_ddl_v1.rs` | [vctrim_common](../../data/registers/vctrim_common.yaml) | L12x: VCTRIM | 1 / 3 | 本档位对照基准；完整定义见来源 YAML |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 

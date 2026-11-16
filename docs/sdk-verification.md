@@ -1,7 +1,7 @@
 # SDK 核验
 
-[SVD 总览](svd-overview.md)列出 20 个系列及归档 SVD 的 SDK 路径。每个归档文件均与相应
-SDK 文件内容一致（行尾归一为 LF），驱动矩阵的 52 个头文件名及 550 条系列记录已与 `driver/inc/` 全量比对。
+[SVD 总览](svd-overview.md)列出 20 个系列及归档 SVD 的 SDK 路径。初始归档时文件与相应
+SDK 文件内容一致（行尾归一为 LF）；后续 SVD 修订以 [CHANGELOG](../svd/CHANGELOG.md) 为准，驱动矩阵的 52 个头文件名及 550 条系列记录已与 `driver/inc/` 全量比对。
 各组的实例地址表按 SVD 生成，并核对了 869 个实例地址条目。各系列外部 IRQ 取自 20 份
 SDK 设备头的 `IRQn_Type`。F420 的 IRQ 来自 `mcu/common/HC32F420.h`，门控取
 `driver/inc/sysctrl.h` 和 `driver/src/sysctrl.c`，DMA 请求取 `driver/inc/dmac.h`。
@@ -18,7 +18,7 @@ SDK 路径以下均相对于工作区的 `xh_ddl_sdk/`。F420 的包目录为 `H
 | [电源与看门狗](explore/power-wdt.md) | F420 LVD 位域与 F002 相同，IWDT/WWDT 的寄存器名、偏移及位域与 F052 相同。 | F420、F002、F052 的 SVD，F420 设备头的 IRQn_Type。 |
 | [GPIO 与中断](explore/gpio-int.md) | F420 端口块与 A052/F052 一致，GPIOAUX 有分频和定时器字段差异。57 个外部中断号覆盖 0–56。 | F420 的 `mcu/common/HC32F420.h`、`driver/inc/gpio.h` 及三份 SVD。 |
 | [串口](explore/serial.md) | F420 四个 USART 的寄存器名、偏移和位域与 A052/F052 一致，每实例三条固定 IRQ。 | F420 的 `mcu/common/HC32F420.h`、`example/usart/usart_lin_master/` 及三份 SVD。 |
-| [SPI、I2C 与 I2S](explore/spi-i2c-i2s.md) | F420 SPI0/1 归 `spi_v2`。I2C0/1 与 F002 的 BRREN/BRR/DR 布局一致，归 `i2c_v3`。 | F420 的 `driver/inc/spi.h`、`driver/inc/i2c.h`，F420、F002、F052、L12x 的 SVD。 |
+| [SPI、I2C 与 I2S](explore/spi-i2c-i2s.md) | F420 SPI0/1 采用 CR0/CR1 布局。I2C0/1 与 F002 的 BRREN/BRR/DR 布局一致，采用 BRREN/BRR/DR 布局。 | F420 的 `driver/inc/spi.h`、`driver/inc/i2c.h`，F420、F002、F052、L12x 的 SVD。 |
 | [高级定时器](explore/timer-adv.md) | F420 ATIM0 MODE23 有 CA3 定义，ATIM3 MODE1.CR0 有 CSA/CSB，各实例有四条固定 IRQ。 | F420 的 `mcu/common/HC32F420.h`、`driver/inc/atim0.h`，对比 F002、A052/F052 SVD。 |
 | [通用定时器](explore/timer-gen.md) | F420 三组 CTIM 以 SYSCTRL 选择 GTIM/BTIM，按组共用中断；BTIM 字段按 bank 编号。 | F420 的 `driver/inc/sysctrl.h`、`mcu/common/HC32F420.h`，对比 A052/F052/F002 SVD。 |
 | [PCA、BT、PCNT、AOS 与 EAU](explore/pca-bt-pcnt-aos.md) | F420 未列 PCA、PCNT 或 AOS。BTIM/GTIM 地址窗口与通用定时器组共用。 | F420 的 SVD 与 `driver/inc/`。 |
@@ -26,5 +26,5 @@ SDK 路径以下均相对于工作区的 `xh_ddl_sdk/`。F420 的包目录为 `H
 | [Flash 与 RAM](explore/memory.md) | F420 的 CACHE 位于 +0x0C，使后续四个寄存器偏移改变。例程为 128 KiB Flash、24 KiB RAM。 | F420、A052/F052 SVD；F420 的 `example/flash/flash_erase_write/EWARM/hc32f420.icf`。 |
 | [CRC、AES、TRNG、RTC、LCD 与 CAN](explore/crypto-comm.md) | F420 CRC 的 BUSY 是 SDK 驱动轮询位，DR 与 A052/F052 的 DATA 偏移一致。 | F420 的 `driver/src/crc.c` 及 F420、A052/F052 SVD。 |
 
-M0/M0+ 的版本编号沿用已有聚类。核对涵盖 SDK 归属、实例存在性和表中列出的差异。
+版本命名已统一为[待确认方案](layout-versions.md)，实际生成布局以来源 YAML 和显式映射为准。核对涵盖 SDK 归属、实例存在性和表中列出的差异。
 复位值、封装引脚表和各系列例程行为仍需按生成目标逐项确认。

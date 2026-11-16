@@ -1,27 +1,55 @@
-# PCA、BT、PCNT、AOS 与 EAU
+# PCA、BT、PCNT 与 EAU
 
-## Cortex-M0/M0+
+PCA 的基础布局有 25 个寄存器，扩展增加 CARR@0x64 和 EPWM@0x68，使用同主档位的数字后缀。
+PCNT 的基础计数布局有 13 个寄存器，DBG@0x34 的扩展保留后缀。
+EAU 包含 CSR、DIVIDEND、DIVISOR、QUOTIENT、REMAINDER。
 
-PCA 分为 `pca_v1` 和 `pca_v1_1`，BT 为 bt_v1–v5，PCNT 为 `pcnt_v1` 和 `pcnt_v1_1`，A052/F052 的 EAU 为 eau_v1；BTIM 与定时器组共用分类。
+本页的 bt 仅指 L110 的 BT0–2 紧凑实例。原文将 TIM 的 MODE 视图也称为 BT 版本，
+容易与真实 BT 实例混淆，现统一在[通用定时器](timer-gen.md)按 tim 登记。
+BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `pca_v1` | F003, F005, L110 | 25 寄存器，无 CARR/EPWM |
-| `pca_v1_1` | A136, F030, F072, F17x, F19x, L07x, L13x, L16x, L17x, L18x, L19x | 27 寄存器，含 CARR@0x64、EPWM@0x68 |
-| `bt_v1` | A136, F030, L13x | mode-split，MODE23 子簇 a（MODE0 全部相同） |
-| `bt_v2` | F072, F17x, F19x, L07x, L17x, L19x | mode-split，MODE23 子簇 b |
-| `bt_v3` | L12x, L16x, L18x | mode-split，MODE1/23 均独立成簇；L12x 基地址异（0x40003000 起）但布局同簇 |
-| `bt_v4` | F003, F005 | compact，6 寄存器，CTEN/GATEP 字段体系 |
-| `bt_v5` | L110 | compact，BT0/1/2 命名，GATE_P/TR 字段体系 |
-| `btim_v1` | A052, F052, L021, F002 | 唯一布局；AIFR/AICR 标注为 6 定时器共享全局寄存器 |
-| `pcnt_v1` | A136, L13x | 13 寄存器，无 DBG |
-| `pcnt_v1_1` | L07x, L16x, L17x, L18x, L19x | 14 寄存器，含 DBG@0x34 |
-| `eau_v1` | A052, F052 | CSR+DIVIDEND+DIVISOR+QUOTIENT+REMAINDER |
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-## HC32F420（Cortex-M4）
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-F420 的 SVD 与驱动目录无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
-[通用定时器](timer-gen.md)列出 CTIM 的共享视图和 BTIM 字段命名差异。
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+
+### bt：v1
+
+紧凑基本定时器。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `bt_ddl_v1.rs` | [bt_common](../../data/registers/bt_common.yaml) | L110: BT0, BT1, BT2 | 6 / 13 | 本档位对照基准；完整定义见来源 YAML |
+
+### eau：v1
+
+算术除法控制。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `eau_ddl_v1.rs` | [eau_common](../../data/registers/eau_common.yaml) | A052/F052: EAU | 5 / 9 | 本档位对照基准；完整定义见来源 YAML |
+
+### pca：v1
+
+基础计数/捕获；CARR/EPWM 扩展。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `pca_ddl_v1.rs` | [pca_v3](../../data/registers/pca_v3.yaml) | L110: PCA | 25 / 73 | 本档位对照基准；完整定义见来源 YAML |
+| `pca_ddl_v1_1.rs` | [pca_v2](../../data/registers/pca_v2.yaml) | F003/F005: PCA | 25 / 98 | 相对 pca_ddl_v1：定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
+| `pca_ddl_v1_2.rs` | [pca_v1](../../data/registers/pca_v1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: PCA | 27 / 102 | 相对 pca_ddl_v1：增加 CARR/EPWM；定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
+
+### pcnt：v1
+
+基础脉冲计数；DBG 扩展。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `pcnt_ddl_v1.rs` | [pcnt_v1](../../data/registers/pcnt_v1.yaml) | A136/L13x: PCNT | 13 / 58 | 本档位对照基准；完整定义见来源 YAML |
+| `pcnt_ddl_v1_1.rs` | [pcnt_v2](../../data/registers/pcnt_v2.yaml) | L07x/L16x/L17x/L18x/L19x: PCNT | 14 / 60 | 相对 pcnt_ddl_v1：增加 DBG |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 

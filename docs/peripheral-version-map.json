@@ -1,0 +1,5465 @@
+{
+  "schema_version": 1,
+  "side": "ddl",
+  "stage": "proposal-awaiting-confirmation",
+  "layouts": [
+    {
+      "source": "adc_v3",
+      "source_sha256": "c86214a412dcc0a8a8e1f4c3b9cf744d447ba0c8a09da817dac57d6f39df2087",
+      "kind": "adc",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "基础转换、单结果",
+      "register_count": 9,
+      "field_count": 21,
+      "instances": {
+        "HC32F002": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v9",
+      "source_sha256": "16bd1815690fa5390684a05bf5486ccabe460250bc04211b616588019b86767c",
+      "kind": "adc",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "四通道顺序转换",
+      "register_count": 11,
+      "field_count": 30,
+      "instances": {
+        "HC32L021": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v7",
+      "source_sha256": "12d29793a4d7cee50faa2fa46ce75d5f062b52eef8c5de30a3075caaced3c75c",
+      "kind": "adc",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 3,
+      "rationale": "内嵌 BGR、SQR、单 RESULT",
+      "register_count": 16,
+      "field_count": 87,
+      "instances": {
+        "HC32F420": [
+          "ADC0"
+        ]
+      }
+    },
+    {
+      "source": "adc_v8",
+      "source_sha256": "5fa6cb3e31ba65fd79e009dee49f3fafb43b61f920a002df58f2b1bfc7392445",
+      "kind": "adc",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 3,
+      "rationale": "内嵌 BGR、SQR、单 RESULT",
+      "register_count": 16,
+      "field_count": 87,
+      "instances": {
+        "HC32F420": [
+          "ADC1"
+        ]
+      }
+    },
+    {
+      "source": "adc_v4",
+      "source_sha256": "a92156fc7bfa823aa3e2730d5dabec9f2acfc63abd51d9793bb5add9fbeaee58",
+      "kind": "adc",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 4,
+      "rationale": "早期多结果读出",
+      "register_count": 18,
+      "field_count": 47,
+      "instances": {
+        "HC32F003": [
+          "ADC"
+        ],
+        "HC32F005": [
+          "ADC"
+        ],
+        "HC32L110": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v1",
+      "source_sha256": "7d59ca1dd3fe2e8d6aca20b1aa74c7e22122c91fc367979449926f958e6f868f",
+      "kind": "adc",
+      "version": "v5",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 5,
+      "rationale": "四 rank 顺序/插队转换、内嵌 BGR",
+      "register_count": 27,
+      "field_count": 112,
+      "instances": {
+        "HC32A052": [
+          "ADC"
+        ],
+        "HC32F052": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v11",
+      "source_sha256": "8eb5355a3ef9c59cb99155187729584686216aad5431d1c56e67c78b760ffd66",
+      "kind": "adc",
+      "version": "v6",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 6,
+      "rationale": "六 rank、顺序/插队转换",
+      "register_count": 28,
+      "field_count": 89,
+      "instances": {
+        "HC32L12x": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v2",
+      "source_sha256": "fb63e09e641945b2150c6d90da16c3aa9f74da086eaf67ba423d4343618e5cf2",
+      "kind": "adc",
+      "version": "v7",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 7,
+      "rationale": "十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留",
+      "register_count": 37,
+      "field_count": 178,
+      "instances": {
+        "HC32A136": [
+          "ADC"
+        ],
+        "HC32F030": [
+          "ADC"
+        ],
+        "HC32L13x": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v12",
+      "source_sha256": "233444cd9141222121a3bec8b1b0c5e28eb92a03d8f185c566e705d2a4cee647",
+      "kind": "adc",
+      "version": "v7_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 7,
+      "rationale": "十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留",
+      "register_count": 38,
+      "field_count": 178,
+      "instances": {
+        "HC32L16x": [
+          "ADC"
+        ],
+        "HC32L18x": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v5",
+      "source_sha256": "4529fa995600d05bcc899a260a1509618216477d3cdc29fc72e124f03ecd7d90",
+      "kind": "adc",
+      "version": "v7_2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 7,
+      "rationale": "十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留",
+      "register_count": 38,
+      "field_count": 179,
+      "instances": {
+        "HC32F072": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v6",
+      "source_sha256": "8bc117799e995217af953be0f8cd9899e48af1bf22b77837f8d04d18d6bcfbbe",
+      "kind": "adc",
+      "version": "v7_3",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 7,
+      "rationale": "十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留",
+      "register_count": 38,
+      "field_count": 180,
+      "instances": {
+        "HC32F17x": [
+          "ADC"
+        ],
+        "HC32F19x": [
+          "ADC"
+        ],
+        "HC32L17x": [
+          "ADC"
+        ],
+        "HC32L19x": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adc_v10",
+      "source_sha256": "c16338906c4d32e136946a896e0fa31027ad5e1f7716e82f3df9928ffe3212c3",
+      "kind": "adc",
+      "version": "v7_4",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 7,
+      "rationale": "十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留",
+      "register_count": 38,
+      "field_count": 181,
+      "instances": {
+        "HC32L07x": [
+          "ADC"
+        ]
+      }
+    },
+    {
+      "source": "adt_common",
+      "source_sha256": "60f8703512ddfb32963cd73535eac717b4665433429214c4c59777a977d76b70",
+      "kind": "adt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体",
+      "register_count": 36,
+      "field_count": 285,
+      "instances": {
+        "HC32L110": [
+          "ADT0",
+          "ADT1",
+          "ADT2"
+        ]
+      }
+    },
+    {
+      "source": "adtim_v2",
+      "source_sha256": "fa24d9c119af282ff8b894b268931b1e859e7fae059eb8d24ca58f87fcb78b98",
+      "kind": "adt",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体",
+      "register_count": 36,
+      "field_count": 317,
+      "instances": {
+        "HC32F003": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32F005": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ]
+      }
+    },
+    {
+      "source": "adtim_v3",
+      "source_sha256": "633723c059f5ffcacfd100effcaf52409c27654b31d9f03b4ee3ae9929817b43",
+      "kind": "adt",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体",
+      "register_count": 38,
+      "field_count": 337,
+      "instances": {
+        "HC32L16x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32L18x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ]
+      }
+    },
+    {
+      "source": "adtim_v1",
+      "source_sha256": "f0a0ac0d564d085422a36d0bd036805ba0b92859927a9c9a3a89a8809cd88949",
+      "kind": "adt",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体",
+      "register_count": 38,
+      "field_count": 341,
+      "instances": {
+        "HC32A136": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32F030": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32F072": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32F17x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32F19x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32L07x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32L13x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32L17x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ],
+        "HC32L19x": [
+          "ADTIM4",
+          "ADTIM5",
+          "ADTIM6"
+        ]
+      }
+    },
+    {
+      "source": "aes_v1",
+      "source_sha256": "63b9957cba8922f227eabe55321c126de24d9e1f84017a13a00aa45e8a899ff6",
+      "kind": "aes",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "AES 基础密钥控制；CRDM 镜像按变体保留",
+      "register_count": 9,
+      "field_count": 11,
+      "instances": {
+        "HC32A136": [
+          "AES"
+        ],
+        "HC32F030": [
+          "AES"
+        ],
+        "HC32L13x": [
+          "AES"
+        ]
+      }
+    },
+    {
+      "source": "aes_v2",
+      "source_sha256": "51fde15d89cd06cf1de6eae8ca8c6cb21a01c1c656f2440b634b4ab22ad41412",
+      "kind": "aes",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "AES 密钥长度控制扩展",
+      "register_count": 13,
+      "field_count": 16,
+      "instances": {
+        "HC32F072": [
+          "AES"
+        ],
+        "HC32F17x": [
+          "AES"
+        ],
+        "HC32F19x": [
+          "AES"
+        ],
+        "HC32L07x": [
+          "AES"
+        ],
+        "HC32L17x": [
+          "AES"
+        ],
+        "HC32L19x": [
+          "AES"
+        ]
+      }
+    },
+    {
+      "source": "aes_v3",
+      "source_sha256": "8510cb5fb9f4ca8cddbcb92365c49b54e8760511cdf05a0a191b3d3fe3653727",
+      "kind": "aes",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "AES 密钥长度控制扩展",
+      "register_count": 14,
+      "field_count": 20,
+      "instances": {
+        "HC32L12x": [
+          "AES"
+        ],
+        "HC32L16x": [
+          "AES"
+        ],
+        "HC32L18x": [
+          "AES"
+        ]
+      }
+    },
+    {
+      "source": "atim_v1",
+      "source_sha256": "cd6028517c0bdfbe8f59807b749a94bef2b24eeab67d737f55c7735a208bb17b",
+      "kind": "atim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A052": [
+          "ATIM0MODE0",
+          "ATIM1MODE0",
+          "ATIM2MODE0"
+        ],
+        "HC32F052": [
+          "ATIM0MODE0",
+          "ATIM1MODE0",
+          "ATIM2MODE0"
+        ]
+      }
+    },
+    {
+      "source": "atim_v10",
+      "source_sha256": "8b3f3fdcd4775da244284d65c769378463199a0e3aae737f83f599ed46b97f88",
+      "kind": "atim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32F420": [
+          "ATIM0MODE0"
+        ]
+      }
+    },
+    {
+      "source": "atim_v15",
+      "source_sha256": "8f595aa153fb487cae19fe007e78b3d597e744fb8003488fd1e6fa0daf5e2d9a",
+      "kind": "atim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32L021": [
+          "ATIM3_MODE0"
+        ]
+      }
+    },
+    {
+      "source": "atim_v4",
+      "source_sha256": "4aca5c9be11f0c1cb5539320d37d2c1cf04d71c14e85bc6280c9637388d2b5a6",
+      "kind": "atim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A052": [
+          "ATIM3MODE0"
+        ],
+        "HC32F052": [
+          "ATIM3MODE0"
+        ]
+      }
+    },
+    {
+      "source": "atim_v7",
+      "source_sha256": "70cf7bd2aac89fa65aa56d10c8756bb9f8cb9ec0b0c4d31af922e1cfee7037c9",
+      "kind": "atim",
+      "version": "v1_4",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 1,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32F002": [
+          "ATIM3MODE0"
+        ],
+        "HC32F420": [
+          "ATIM3MODE0"
+        ]
+      }
+    },
+    {
+      "source": "atim_v8",
+      "source_sha256": "ee2878ceabef36f9e606ef51004e550f940168170c297bb00b4e133ca8a91e77",
+      "kind": "atim",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 29,
+      "instances": {
+        "HC32F002": [
+          "ATIM3MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v11",
+      "source_sha256": "924b233ed0e4dea837bb581011241ee31b82cfb11a1e6c82e47f78beba036ac9",
+      "kind": "atim",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32F420": [
+          "ATIM0MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v13",
+      "source_sha256": "3d0f53a4cec3534c0228b61b90248ef1fa4c636f0af37388774f65be6169f267",
+      "kind": "atim",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32F420": [
+          "ATIM3MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v16",
+      "source_sha256": "23273bb005e505b054320629d6314c226b03d2d4f21caff15200f9e3c0df1e19",
+      "kind": "atim",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32L021": [
+          "ATIM3_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v2",
+      "source_sha256": "cac86eb0f10236c4bda8991b41d3080c8b3d644f60d2b5e80db7645d6b9056cf",
+      "kind": "atim",
+      "version": "v2_4",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32A052": [
+          "ATIM0MODE1",
+          "ATIM1MODE1",
+          "ATIM2MODE1"
+        ],
+        "HC32F052": [
+          "ATIM0MODE1",
+          "ATIM1MODE1",
+          "ATIM2MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v5",
+      "source_sha256": "f59f3a861f0081b22eb04dfb79f4e8c57129164c93daf18d31b7e41bd316a2ff",
+      "kind": "atim",
+      "version": "v2_5",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 2,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32A052": [
+          "ATIM3MODE1"
+        ],
+        "HC32F052": [
+          "ATIM3MODE1"
+        ]
+      }
+    },
+    {
+      "source": "atim_v3",
+      "source_sha256": "3b45b8a28b49a9a2f8b37fc9f15f8361c07caf8bcf04fd033d0d61f1076a0231",
+      "kind": "atim",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 3,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 13,
+      "field_count": 103,
+      "instances": {
+        "HC32A052": [
+          "ATIM0MODE23",
+          "ATIM1MODE23",
+          "ATIM2MODE23"
+        ],
+        "HC32F052": [
+          "ATIM0MODE23",
+          "ATIM1MODE23",
+          "ATIM2MODE23"
+        ]
+      }
+    },
+    {
+      "source": "atim_v12",
+      "source_sha256": "cf4d0b31509019771861d0ddbc853b4b84699ca9d0a338b13a146f14bf52591c",
+      "kind": "atim",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 3,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 13,
+      "field_count": 105,
+      "instances": {
+        "HC32F420": [
+          "ATIM0MODE23"
+        ]
+      }
+    },
+    {
+      "source": "atim_v17",
+      "source_sha256": "3b54c54d6b8dd402a8db3a3455e621ca5fe2e9afccf28c6d3f5ae46c2954d444",
+      "kind": "atim",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 20,
+      "field_count": 162,
+      "instances": {
+        "HC32L021": [
+          "ATIM3_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "atim_v14",
+      "source_sha256": "5cc6562af820c7421fffc3aed26af9a274029651ddba251896936f75259e8f41",
+      "kind": "atim",
+      "version": "v4_1",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 21,
+      "field_count": 177,
+      "instances": {
+        "HC32F420": [
+          "ATIM3MODE23"
+        ]
+      }
+    },
+    {
+      "source": "atim_v9",
+      "source_sha256": "9a98b786407ebbf9c149a667d4f37193cd30cce227690a075aa33957a532e10b",
+      "kind": "atim",
+      "version": "v4_2",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 21,
+      "field_count": 177,
+      "instances": {
+        "HC32F002": [
+          "ATIM3MODE23"
+        ]
+      }
+    },
+    {
+      "source": "atim_v6",
+      "source_sha256": "8028781a84a25a9352b507a3d32be2d8db4d26a932d76cb3f63af6e39f092c43",
+      "kind": "atim",
+      "version": "v4_3",
+      "status": "proposed",
+      "topic": "timer-adv",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，4 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 23,
+      "field_count": 187,
+      "instances": {
+        "HC32A052": [
+          "ATIM3MODE23"
+        ],
+        "HC32F052": [
+          "ATIM3MODE23"
+        ]
+      }
+    },
+    {
+      "source": "bgr_v2",
+      "source_sha256": "580d39b90b2b2b99483a1fbcec542010b727acd62c5e8fe3ad0fe4be6addb601",
+      "kind": "bgr",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "带隙基准控制",
+      "register_count": 1,
+      "field_count": 2,
+      "instances": {
+        "HC32L110": [
+          "BGR"
+        ]
+      }
+    },
+    {
+      "source": "bgr_v1",
+      "source_sha256": "f1d7e97200a603f681c9288ef76d8774222833eefc7352002f22891202998fd7",
+      "kind": "bgr",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "带隙基准控制",
+      "register_count": 1,
+      "field_count": 3,
+      "instances": {
+        "HC32A136": [
+          "BGR"
+        ],
+        "HC32F003": [
+          "BGR"
+        ],
+        "HC32F005": [
+          "BGR"
+        ],
+        "HC32F030": [
+          "BGR"
+        ],
+        "HC32F072": [
+          "BGR"
+        ],
+        "HC32F17x": [
+          "BGR"
+        ],
+        "HC32F19x": [
+          "BGR"
+        ],
+        "HC32L07x": [
+          "BGR"
+        ],
+        "HC32L13x": [
+          "BGR"
+        ],
+        "HC32L16x": [
+          "BGR"
+        ],
+        "HC32L17x": [
+          "BGR"
+        ],
+        "HC32L18x": [
+          "BGR"
+        ],
+        "HC32L19x": [
+          "BGR"
+        ]
+      }
+    },
+    {
+      "source": "bt_common",
+      "source_sha256": "429343eb97e4a43d9ddaeeec6f5a61518f4e95469f7bced18c7045de7f30dd7b",
+      "kind": "bt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "紧凑基本定时器",
+      "register_count": 6,
+      "field_count": 13,
+      "instances": {
+        "HC32L110": [
+          "BT0",
+          "BT1",
+          "BT2"
+        ]
+      }
+    },
+    {
+      "source": "btim_v1",
+      "source_sha256": "f21b76caff322ab7e1ccf9f3df640cce6fb636df31bf2bc5a1b4a50ff0a502a7",
+      "kind": "btim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "基本定时器；共享 AIFR/AICR bank 位图分变体",
+      "register_count": 8,
+      "field_count": 35,
+      "instances": {
+        "HC32A052": [
+          "BTIM0",
+          "BTIM1",
+          "BTIM2"
+        ],
+        "HC32F052": [
+          "BTIM0",
+          "BTIM1",
+          "BTIM2"
+        ],
+        "HC32L021": [
+          "BTIM0",
+          "BTIM1",
+          "BTIM2",
+          "BTIM3",
+          "BTIM4",
+          "BTIM5"
+        ]
+      }
+    },
+    {
+      "source": "btim_v2",
+      "source_sha256": "e1fa8c3cd48f06da338b5388e489df5b36d540dc7eef3ff60f29f2e708582ad4",
+      "kind": "btim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "基本定时器；共享 AIFR/AICR bank 位图分变体",
+      "register_count": 8,
+      "field_count": 35,
+      "instances": {
+        "HC32A052": [
+          "BTIM3",
+          "BTIM4",
+          "BTIM5"
+        ],
+        "HC32F002": [
+          "BTIM3",
+          "BTIM4",
+          "BTIM5"
+        ],
+        "HC32F052": [
+          "BTIM3",
+          "BTIM4",
+          "BTIM5"
+        ],
+        "HC32F420": [
+          "BTIM3",
+          "BTIM4",
+          "BTIM5"
+        ]
+      }
+    },
+    {
+      "source": "btim_v3",
+      "source_sha256": "b2689cfe405e978d58dadecfee1c7cf1c2bc2c9742cce65bcb67d62b4f74b758",
+      "kind": "btim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "基本定时器；共享 AIFR/AICR bank 位图分变体",
+      "register_count": 8,
+      "field_count": 35,
+      "instances": {
+        "HC32F420": [
+          "BTIM0",
+          "BTIM1",
+          "BTIM2"
+        ]
+      }
+    },
+    {
+      "source": "btim_v4",
+      "source_sha256": "8a1c0bea61b16acf65b94ebe360a1f767b0f8d84fc505ed1a072120d173fb324",
+      "kind": "btim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "基本定时器；共享 AIFR/AICR bank 位图分变体",
+      "register_count": 8,
+      "field_count": 35,
+      "instances": {
+        "HC32F420": [
+          "BTIM6",
+          "BTIM7",
+          "BTIM8"
+        ]
+      }
+    },
+    {
+      "source": "can_v1",
+      "source_sha256": "a41262160b6f3376e7d9b935db5781be2a167f076e3c726a5843d2f4b286db29",
+      "kind": "can",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "CAN 控制，字段方言分变体",
+      "register_count": 29,
+      "field_count": 86,
+      "instances": {
+        "HC32A052": [
+          "CAN"
+        ],
+        "HC32F052": [
+          "CAN"
+        ]
+      }
+    },
+    {
+      "source": "can_v2",
+      "source_sha256": "a414a9132fed8ae36db925b22fea8f5ce23ef9708c18d032a282bb0c0b54ff71",
+      "kind": "can",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "CAN 控制，字段方言分变体",
+      "register_count": 29,
+      "field_count": 86,
+      "instances": {
+        "HC32F072": [
+          "CAN"
+        ],
+        "HC32L07x": [
+          "CAN"
+        ]
+      }
+    },
+    {
+      "source": "clk_v3",
+      "source_sha256": "c478095391c048b4efb31bc0bba96e231e7996c55b1d91eb746b6efbb7c6b4ed",
+      "kind": "clk_trim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "时钟参考计数与校准",
+      "register_count": 7,
+      "field_count": 15,
+      "instances": {
+        "HC32L110": [
+          "CLK_TRIM"
+        ]
+      }
+    },
+    {
+      "source": "clk_v2",
+      "source_sha256": "06a5735189f8c0b7fb893e0bb56bf18ac468098fcf34e10e535497b416b23dbb",
+      "kind": "clk_trim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "时钟参考计数与校准",
+      "register_count": 7,
+      "field_count": 16,
+      "instances": {
+        "HC32F003": [
+          "CLK_TRIM"
+        ],
+        "HC32F005": [
+          "CLK_TRIM"
+        ]
+      }
+    },
+    {
+      "source": "clk_v1",
+      "source_sha256": "b24cc0d60addbb71587f92be121a39dd21bfdec0e9acb49cd53feed1473a2619",
+      "kind": "clk_trim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "时钟参考计数与校准",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A136": [
+          "CLK_TRIM"
+        ],
+        "HC32F030": [
+          "CLK_TRIM"
+        ],
+        "HC32F072": [
+          "CLK_TRIM"
+        ],
+        "HC32F17x": [
+          "CLK_TRIM"
+        ],
+        "HC32F19x": [
+          "CLK_TRIM"
+        ],
+        "HC32L07x": [
+          "CLK_TRIM"
+        ],
+        "HC32L13x": [
+          "CLK_TRIM"
+        ],
+        "HC32L17x": [
+          "CLK_TRIM"
+        ],
+        "HC32L19x": [
+          "CLK_TRIM"
+        ]
+      }
+    },
+    {
+      "source": "clk_v4",
+      "source_sha256": "5cbeadac148996519553404a2c8a6c2579bc1ff9ecedc3806ab4230cedf92389",
+      "kind": "clk_trim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "时钟参考计数与校准",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32L16x": [
+          "CLK_TRIM"
+        ],
+        "HC32L18x": [
+          "CLK_TRIM"
+        ]
+      }
+    },
+    {
+      "source": "crc_v3",
+      "source_sha256": "5a6c0556282eb2b0ba50d2b04cc7ab09b63ce03926299aa2e1372cb3df443f3d",
+      "kind": "crc",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "无控制窗口的基础 CRC",
+      "register_count": 2,
+      "field_count": 3,
+      "instances": {
+        "HC32F003": [
+          "CRC"
+        ],
+        "HC32F005": [
+          "CRC"
+        ],
+        "HC32L110": [
+          "CRC"
+        ]
+      }
+    },
+    {
+      "source": "crc_v1",
+      "source_sha256": "e8c269a7ef72757846642326ed1e71eaa6e439432468f02868d8f22422eb2696",
+      "kind": "crc",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "可配置 CRC；SEL/BUSY 与方言分变体",
+      "register_count": 3,
+      "field_count": 5,
+      "instances": {
+        "HC32A052": [
+          "CRC"
+        ],
+        "HC32F052": [
+          "CRC"
+        ]
+      }
+    },
+    {
+      "source": "crc_v2",
+      "source_sha256": "ddbb4e4d66584581bdf588d337fdb8b9810f2b1177992b3cc04a951fd5105dea",
+      "kind": "crc",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "可配置 CRC；SEL/BUSY 与方言分变体",
+      "register_count": 3,
+      "field_count": 5,
+      "instances": {
+        "HC32A136": [
+          "CRC"
+        ],
+        "HC32F030": [
+          "CRC"
+        ],
+        "HC32F072": [
+          "CRC"
+        ],
+        "HC32F17x": [
+          "CRC"
+        ],
+        "HC32F19x": [
+          "CRC"
+        ],
+        "HC32L07x": [
+          "CRC"
+        ],
+        "HC32L13x": [
+          "CRC"
+        ],
+        "HC32L16x": [
+          "CRC"
+        ],
+        "HC32L17x": [
+          "CRC"
+        ],
+        "HC32L18x": [
+          "CRC"
+        ],
+        "HC32L19x": [
+          "CRC"
+        ]
+      }
+    },
+    {
+      "source": "crc_v4",
+      "source_sha256": "4b6a947d4167217ce85251d23fa7459894439ec37b774056c0d14a7ab2efe3fd",
+      "kind": "crc",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "可配置 CRC；SEL/BUSY 与方言分变体",
+      "register_count": 3,
+      "field_count": 6,
+      "instances": {
+        "HC32F420": [
+          "CRC"
+        ]
+      }
+    },
+    {
+      "source": "crc_v5",
+      "source_sha256": "8227120880478cb7e02d00c7605899bc5de5c16eb7aebf389f9830d4be7b5c27",
+      "kind": "crc",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "可配置 CRC；SEL/BUSY 与方言分变体",
+      "register_count": 3,
+      "field_count": 6,
+      "instances": {
+        "HC32L12x": [
+          "CRC"
+        ]
+      }
+    },
+    {
+      "source": "ctrim_v2",
+      "source_sha256": "4688828000555153b6c77402ec737a6891b24f4c8c0893390683a06195f1c18c",
+      "kind": "ctrim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体",
+      "register_count": 10,
+      "field_count": 41,
+      "instances": {
+        "HC32F002": [
+          "CTRIM"
+        ]
+      }
+    },
+    {
+      "source": "ctrim_v3",
+      "source_sha256": "72050cdfad991b8c5086ba64a85e33c0d6b9a43caf641be42cc6657022b0c249",
+      "kind": "ctrim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体",
+      "register_count": 10,
+      "field_count": 42,
+      "instances": {
+        "HC32F420": [
+          "CTRIM"
+        ]
+      }
+    },
+    {
+      "source": "ctrim_v4",
+      "source_sha256": "beccbf5fa5e10bd173aa1a29da40d19fbe52e5263a3d16828d236b5ea6ed4ab9",
+      "kind": "ctrim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体",
+      "register_count": 10,
+      "field_count": 42,
+      "instances": {
+        "HC32L021": [
+          "CTRIM"
+        ],
+        "HC32L12x": [
+          "CTRIM"
+        ]
+      }
+    },
+    {
+      "source": "ctrim_v1",
+      "source_sha256": "89822ba4644661ec26f6a1262a1e554d654d206b51d01625dc4a73c8f7f30bf1",
+      "kind": "ctrim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体",
+      "register_count": 10,
+      "field_count": 43,
+      "instances": {
+        "HC32A052": [
+          "CTRIM"
+        ],
+        "HC32F052": [
+          "CTRIM"
+        ]
+      }
+    },
+    {
+      "source": "ctrim_v5",
+      "source_sha256": "ba75a2f8f6c7116e668fa2922f91161f337d0f2ba6bee6da078f1f2741185200",
+      "kind": "ctrim",
+      "version": "v1_4",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "计数/捕获时钟校准；FLIM 位宽、校准源与控制位分变体",
+      "register_count": 10,
+      "field_count": 43,
+      "instances": {
+        "HC32L16x": [
+          "CTRIM"
+        ],
+        "HC32L18x": [
+          "CTRIM"
+        ]
+      }
+    },
+    {
+      "source": "cts_common",
+      "source_sha256": "3b4fadfd04287b366cc2049f0fc5d1311f9b0dc944a37b5dc69c5d001d799a57",
+      "kind": "cts",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "电容触摸控制（DDL）",
+      "register_count": 4,
+      "field_count": 31,
+      "instances": {
+        "HC32F072": [
+          "CTS"
+        ],
+        "HC32L07x": [
+          "CTS"
+        ]
+      }
+    },
+    {
+      "source": "dac_v2",
+      "source_sha256": "2b952b3d1eadcefd28558e8b03161795983d8f52ea86b8ed2785d91ca7067620",
+      "kind": "dac",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "单通道转换",
+      "register_count": 8,
+      "field_count": 23,
+      "instances": {
+        "HC32F17x": [
+          "DAC"
+        ],
+        "HC32F19x": [
+          "DAC"
+        ],
+        "HC32L16x": [
+          "DAC"
+        ],
+        "HC32L17x": [
+          "DAC"
+        ],
+        "HC32L18x": [
+          "DAC"
+        ],
+        "HC32L19x": [
+          "DAC"
+        ]
+      }
+    },
+    {
+      "source": "dac_v1",
+      "source_sha256": "757d94f701e0b6b0572a1e4b7b5853e621ebde6defeba41f3da17feabf91f58c",
+      "kind": "dac",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "双通道、双数据写入",
+      "register_count": 15,
+      "field_count": 50,
+      "instances": {
+        "HC32F072": [
+          "DAC"
+        ],
+        "HC32L07x": [
+          "DAC"
+        ]
+      }
+    },
+    {
+      "source": "debug_v2",
+      "source_sha256": "3d548ed40d3541ca63ba15568fd675fa7a5b6df35b744a0d1c59f4e03d704180",
+      "kind": "debug_active",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "单寄存器调试活动控制，停机目标位分变体",
+      "register_count": 1,
+      "field_count": 10,
+      "instances": {
+        "HC32F003": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32F005": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32F030": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32F072": [
+          "DEBUG_ACTIVE"
+        ]
+      }
+    },
+    {
+      "source": "debug_v4",
+      "source_sha256": "660130307d72c475781519dd83e25396c6854ad24e70a393a5706dbce017009d",
+      "kind": "debug_active",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "单寄存器调试活动控制，停机目标位分变体",
+      "register_count": 1,
+      "field_count": 10,
+      "instances": {
+        "HC32L12x": [
+          "DEBUG_ACTIVE"
+        ]
+      }
+    },
+    {
+      "source": "debug_v1",
+      "source_sha256": "1b83a4c47e25a0880c032f606d2ff2ad0d58683f349c17a44a8bd68f5beebdbd",
+      "kind": "debug_active",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "单寄存器调试活动控制，停机目标位分变体",
+      "register_count": 1,
+      "field_count": 12,
+      "instances": {
+        "HC32A136": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32L13x": [
+          "DEBUG_ACTIVE"
+        ]
+      }
+    },
+    {
+      "source": "debug_v3",
+      "source_sha256": "72ac248ae73cc5a02ec6da2572b71eea09e3a76983da6598ef13e6ae1a4f16a3",
+      "kind": "debug_active",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "单寄存器调试活动控制，停机目标位分变体",
+      "register_count": 1,
+      "field_count": 13,
+      "instances": {
+        "HC32F17x": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32F19x": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32L07x": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32L17x": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32L19x": [
+          "DEBUG_ACTIVE"
+        ]
+      }
+    },
+    {
+      "source": "debug_v5",
+      "source_sha256": "e1f4a0657848e2c25e2404074c55cb2595ff1f10afe499ae8776545ed2e24222",
+      "kind": "debug_active",
+      "version": "v1_4",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "单寄存器调试活动控制，停机目标位分变体",
+      "register_count": 1,
+      "field_count": 14,
+      "instances": {
+        "HC32L16x": [
+          "DEBUG_ACTIVE"
+        ],
+        "HC32L18x": [
+          "DEBUG_ACTIVE"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v5",
+      "source_sha256": "20d53fcf6f0381af7bd6b640983b9fcd292b7d4a72c59a025ab4f3dc74ea8946",
+      "kind": "dmac",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 1,
+      "rationale": "旧式 CONF/CONFA DMA；2 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 9,
+      "field_count": 41,
+      "instances": {
+        "HC32L12x": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v6",
+      "source_sha256": "2afdb81605128a070809b7c8e41710d2f0b4679393d9ff220485fe4924f40417",
+      "kind": "dmac",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 1,
+      "rationale": "旧式 CONF/CONFA DMA；2 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 9,
+      "field_count": 41,
+      "instances": {
+        "HC32L16x": [
+          "DMAC"
+        ],
+        "HC32L18x": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v2",
+      "source_sha256": "c537b47f3e2c8e61d45766d121b8e0be36b0e7203f0305cebde35d20ff555523",
+      "kind": "dmac",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 1,
+      "rationale": "旧式 CONF/CONFA DMA；2 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 9,
+      "field_count": 42,
+      "instances": {
+        "HC32A136": [
+          "DMAC"
+        ],
+        "HC32F030": [
+          "DMAC"
+        ],
+        "HC32L13x": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v3",
+      "source_sha256": "3c465549851472403613cdbf339c9aa7ef0dec5aba6c4b25aacffb94dcf48780",
+      "kind": "dmac",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 1,
+      "rationale": "旧式 CONF/CONFA DMA；2 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 9,
+      "field_count": 42,
+      "instances": {
+        "HC32F072": [
+          "DMAC"
+        ],
+        "HC32F17x": [
+          "DMAC"
+        ],
+        "HC32F19x": [
+          "DMAC"
+        ],
+        "HC32L07x": [
+          "DMAC"
+        ],
+        "HC32L17x": [
+          "DMAC"
+        ],
+        "HC32L19x": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v1",
+      "source_sha256": "349088dd84bd063f06e9224a4ae33376fc1438e09e03d7a1c5e3b003eda9e239",
+      "kind": "dmac",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 2,
+      "rationale": "旧式 CONF/CONFA DMA；6 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 25,
+      "field_count": 117,
+      "instances": {
+        "HC32A052": [
+          "DMAC"
+        ],
+        "HC32F052": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "dmac_v4",
+      "source_sha256": "3734ff56e993861fa815a9b0e977accc49850668d737d55b549e0027d6253e6a",
+      "kind": "dmac",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "dma",
+      "tier": 2,
+      "rationale": "旧式 CONF/CONFA DMA；6 个源地址窗口，触发位与字段方言分变体",
+      "register_count": 25,
+      "field_count": 117,
+      "instances": {
+        "HC32F420": [
+          "DMAC"
+        ]
+      }
+    },
+    {
+      "source": "eau_common",
+      "source_sha256": "35eb3e2521b55664d053949b740d487ec47c3f884177bfdc573e9349c6cfc338",
+      "kind": "eau",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "算术除法控制",
+      "register_count": 5,
+      "field_count": 9,
+      "instances": {
+        "HC32A052": [
+          "EAU"
+        ],
+        "HC32F052": [
+          "EAU"
+        ]
+      }
+    },
+    {
+      "source": "flash_v9",
+      "source_sha256": "56baa0dd095c320ab4d746f0b7e37665eef0c9a355644b448f96dd4768fa91e3",
+      "kind": "flash",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 1,
+      "rationale": "紧凑操作控制；锁区与低功耗分支分变体",
+      "register_count": 6,
+      "field_count": 19,
+      "instances": {
+        "HC32L021": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v11",
+      "source_sha256": "2ce73fd6a1948ef317214c2716625aa99f2ebf67f1155b5d10ce0c54b035c802",
+      "kind": "flash",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 1,
+      "rationale": "紧凑操作控制；锁区与低功耗分支分变体",
+      "register_count": 7,
+      "field_count": 20,
+      "instances": {
+        "HC32L12x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v3",
+      "source_sha256": "8758fed7cfd222cb1fa7947361f45206f7c5335fe3f34ce62eadcf79b06449ef",
+      "kind": "flash",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 1,
+      "rationale": "紧凑操作控制；锁区与低功耗分支分变体",
+      "register_count": 7,
+      "field_count": 20,
+      "instances": {
+        "HC32F002": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v1",
+      "source_sha256": "a7498967cfe939598e620a313686b9be93668f4b08893a5c51ac93101186dedc",
+      "kind": "flash",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 1,
+      "rationale": "紧凑操作控制；锁区与低功耗分支分变体",
+      "register_count": 9,
+      "field_count": 24,
+      "instances": {
+        "HC32A052": [
+          "FLASH"
+        ],
+        "HC32F052": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v8",
+      "source_sha256": "fdf4f4b2e42a9676d663edcc863a346f7bf75186888fbddc03ca31efb899a3cf",
+      "kind": "flash",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 2,
+      "rationale": "紧凑操作控制与 CACHE",
+      "register_count": 10,
+      "field_count": 25,
+      "instances": {
+        "HC32F420": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v10",
+      "source_sha256": "d7dd72872962cc6826175150bf19d4ec2a20750147a5c1e6e5256e613096d0a6",
+      "kind": "flash",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 13,
+      "field_count": 18,
+      "instances": {
+        "HC32L110": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v4",
+      "source_sha256": "b7e74bf3a785165f43e244269e2619ba10163fbab5c85988d2c0cc34c9d8520f",
+      "kind": "flash",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 13,
+      "field_count": 30,
+      "instances": {
+        "HC32F003": [
+          "FLASH"
+        ],
+        "HC32F005": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v2",
+      "source_sha256": "b89cd3f29efc1c0794ba8f967f3965a3594b163afdeb07865e526901e7a1da51",
+      "kind": "flash",
+      "version": "v3_2",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 13,
+      "field_count": 31,
+      "instances": {
+        "HC32A136": [
+          "FLASH"
+        ],
+        "HC32F030": [
+          "FLASH"
+        ],
+        "HC32L13x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v5",
+      "source_sha256": "5606b03e333db1a6830ae14c142a4e6e5533395554079815f6ec237060abbdef",
+      "kind": "flash",
+      "version": "v3_3",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 14,
+      "field_count": 32,
+      "instances": {
+        "HC32F072": [
+          "FLASH"
+        ],
+        "HC32L07x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v6",
+      "source_sha256": "12501c0497f43bc497d658857096fd8c0c8b317f0c4c1c703d08d3f33ce18147",
+      "kind": "flash",
+      "version": "v3_4",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 14,
+      "field_count": 32,
+      "instances": {
+        "HC32F17x": [
+          "FLASH"
+        ],
+        "HC32L17x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v7",
+      "source_sha256": "9c128b9a581404149d576ed6890c74db9a03b46570da8566d68b3b52aaf22075",
+      "kind": "flash",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 4,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 16,
+      "field_count": 34,
+      "instances": {
+        "HC32F19x": [
+          "FLASH"
+        ],
+        "HC32L19x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "flash_v12",
+      "source_sha256": "71c8d21da567de0d58746cfd5142c4149aaf73afa37daf0e51c0fd7c5188ec22",
+      "kind": "flash",
+      "version": "v5",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 5,
+      "rationale": "显式编程/擦除时序；锁区扩展，再到额外读写时序组",
+      "register_count": 24,
+      "field_count": 52,
+      "instances": {
+        "HC32L16x": [
+          "FLASH"
+        ],
+        "HC32L18x": [
+          "FLASH"
+        ]
+      }
+    },
+    {
+      "source": "gpiob_common",
+      "source_sha256": "5061ec36007f140e80adbf22fccbea7376d7295bb4af06f5fa3c81cffd772f89",
+      "kind": "gpio",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "输入专用端口，保留选择与中断控制",
+      "register_count": 8,
+      "field_count": 16,
+      "instances": {
+        "HC32L021": [
+          "GPIOB"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v2",
+      "source_sha256": "e6405eebb1fd94c819f0f0c8f70448295da10ecf3a18c9c8528bcbf628a229e5",
+      "kind": "gpio",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 2,
+      "rationale": "精简端口与逐引脚复用",
+      "register_count": 77,
+      "field_count": 270,
+      "instances": {
+        "HC32F003": [
+          "GPIO"
+        ],
+        "HC32F005": [
+          "GPIO"
+        ],
+        "HC32L110": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpioa_v2",
+      "source_sha256": "ddcb58e9cc2beb73324ff455c1b65a8aca798b966ad1ed302e68602d833d4a97",
+      "kind": "gpio",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 15,
+      "field_count": 142,
+      "instances": {
+        "HC32F002": [
+          "GPIOA",
+          "GPIOB",
+          "GPIOC",
+          "GPIOD"
+        ]
+      }
+    },
+    {
+      "source": "gpioa_v1",
+      "source_sha256": "1e14f118484528266a57b13cc51113f977b79733b1fa8160c9ee9e14b55da467",
+      "kind": "gpio",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 17,
+      "field_count": 301,
+      "instances": {
+        "HC32A052": [
+          "GPIOA",
+          "GPIOB",
+          "GPIOC",
+          "GPIOD"
+        ],
+        "HC32F052": [
+          "GPIOA",
+          "GPIOB",
+          "GPIOC",
+          "GPIOD"
+        ],
+        "HC32F420": [
+          "GPIOA",
+          "GPIOB",
+          "GPIOC",
+          "GPIOD"
+        ]
+      }
+    },
+    {
+      "source": "gpioa_v3",
+      "source_sha256": "153f83cb3a6f656ae781c79eed2510905e50e89b9c6d4644643f4299a9c25978",
+      "kind": "gpio",
+      "version": "v3_2",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 31,
+      "field_count": 302,
+      "instances": {
+        "HC32L021": [
+          "GPIOA"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v1",
+      "source_sha256": "2f00c13fd229d65fc1417a1229ddf0ca850eb852ae30610cf956707dad22577f",
+      "kind": "gpio",
+      "version": "v3_3",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 131,
+      "field_count": 1113,
+      "instances": {
+        "HC32A136": [
+          "GPIO"
+        ],
+        "HC32F030": [
+          "GPIO"
+        ],
+        "HC32L13x": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v5",
+      "source_sha256": "d5ae0cb3bf3701522b3d8039a7dc85fe7e887dead5964f25a2b2d53875b0e4eb",
+      "kind": "gpio",
+      "version": "v3_4",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 131,
+      "field_count": 1119,
+      "instances": {
+        "HC32L12x": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v6",
+      "source_sha256": "71df33722e0fb28c76be10f2b228604c299d2d94596749620ad68260f2d4ec32",
+      "kind": "gpio",
+      "version": "v3_5",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 180,
+      "field_count": 1425,
+      "instances": {
+        "HC32L16x": [
+          "GPIO"
+        ],
+        "HC32L18x": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v3",
+      "source_sha256": "f0b324c5f96ab57478e48f278115608e62731ee3eb0ee2fff34a3a9baa3528d4",
+      "kind": "gpio",
+      "version": "v3_6",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 201,
+      "field_count": 1797,
+      "instances": {
+        "HC32F072": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpio_v4",
+      "source_sha256": "a703dcc6e7ebae1887c2fd353cdb155f7e9ac7df0955ce2e31da3a32927651f6",
+      "kind": "gpio",
+      "version": "v3_7",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 3,
+      "rationale": "通用输入输出与复用；端口阵列、AFR 和逐引脚 SEL 为同档分支",
+      "register_count": 202,
+      "field_count": 1804,
+      "instances": {
+        "HC32F17x": [
+          "GPIO"
+        ],
+        "HC32F19x": [
+          "GPIO"
+        ],
+        "HC32L07x": [
+          "GPIO"
+        ],
+        "HC32L17x": [
+          "GPIO"
+        ],
+        "HC32L19x": [
+          "GPIO"
+        ]
+      }
+    },
+    {
+      "source": "gpioaux_v2",
+      "source_sha256": "f101afecbb2211851732f478dab1e9c99c0d593c657a4f18ddf83be64e435aa5",
+      "kind": "gpioaux",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "GPIO 辅助复用/触发控制；目标阵容不同，保留独立变体",
+      "register_count": 2,
+      "field_count": 6,
+      "instances": {
+        "HC32F002": [
+          "GPIOAUX"
+        ]
+      }
+    },
+    {
+      "source": "gpioaux_v1",
+      "source_sha256": "b0a8e1b499c9548b29059f6a913e6f258cf54aebbaebbc1353f411d3d55ef32d",
+      "kind": "gpioaux",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "GPIO 辅助复用/触发控制；目标阵容不同，保留独立变体",
+      "register_count": 3,
+      "field_count": 14,
+      "instances": {
+        "HC32A052": [
+          "GPIOAUX"
+        ],
+        "HC32F052": [
+          "GPIOAUX"
+        ]
+      }
+    },
+    {
+      "source": "gpioaux_v3",
+      "source_sha256": "fac5dd5857f56b17a72123d1a139fa08195284f82adba08128a733ee5b645550",
+      "kind": "gpioaux",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "GPIO 辅助复用/触发控制；目标阵容不同，保留独立变体",
+      "register_count": 3,
+      "field_count": 15,
+      "instances": {
+        "HC32F420": [
+          "GPIOAUX"
+        ]
+      }
+    },
+    {
+      "source": "gpioaux_v4",
+      "source_sha256": "2fe0698842e271eb7d075ae0a6a557be185b69a4d153029f3ed929e4e883b7cc",
+      "kind": "gpioaux",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "gpio-int",
+      "tier": 1,
+      "rationale": "GPIO 辅助复用/触发控制；目标阵容不同，保留独立变体",
+      "register_count": 5,
+      "field_count": 20,
+      "instances": {
+        "HC32L021": [
+          "GPIOAUX"
+        ]
+      }
+    },
+    {
+      "source": "gtim_v2",
+      "source_sha256": "85dfa1cab3c55afe00ac6520142a2acdfbb8119da71f906f849e4677bd014200",
+      "kind": "gtim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "通用捕获/比较定时器；IER 与控制字段分变体",
+      "register_count": 12,
+      "field_count": 48,
+      "instances": {
+        "HC32F002": [
+          "GTIM"
+        ]
+      }
+    },
+    {
+      "source": "gtim_v4",
+      "source_sha256": "f03c887729efb8e5a537737fd253d38ba4e760c7775b5de94ee177e096ba742f",
+      "kind": "gtim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "通用捕获/比较定时器；IER 与控制字段分变体",
+      "register_count": 12,
+      "field_count": 50,
+      "instances": {
+        "HC32L021": [
+          "GTIM0",
+          "GTIM1"
+        ]
+      }
+    },
+    {
+      "source": "gtim_v1",
+      "source_sha256": "da404746d4fa9eb98cc92e2d481aac3b4b35b217f757c5b31c41944ef58e60e8",
+      "kind": "gtim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "通用捕获/比较定时器；IER 与控制字段分变体",
+      "register_count": 12,
+      "field_count": 54,
+      "instances": {
+        "HC32A052": [
+          "GTIM0",
+          "GTIM1"
+        ],
+        "HC32F052": [
+          "GTIM0",
+          "GTIM1"
+        ]
+      }
+    },
+    {
+      "source": "gtim_v3",
+      "source_sha256": "f1e52b7c8e1155d78a94e2d97e950fe1d1e42a9437d837580872f4f7d47c4f8e",
+      "kind": "gtim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "通用捕获/比较定时器；IER 与控制字段分变体",
+      "register_count": 12,
+      "field_count": 54,
+      "instances": {
+        "HC32F420": [
+          "GTIM0",
+          "GTIM1",
+          "GTIM2"
+        ]
+      }
+    },
+    {
+      "source": "hdiv_common",
+      "source_sha256": "480a0714a90335522169dcf978580df9c02c64788b462c365856d0432bc1fea1",
+      "kind": "hdiv",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "硬件除法",
+      "register_count": 6,
+      "field_count": 7,
+      "instances": {
+        "HC32A136": [
+          "HDIV"
+        ],
+        "HC32F030": [
+          "HDIV"
+        ],
+        "HC32F072": [
+          "HDIV"
+        ],
+        "HC32L07x": [
+          "HDIV"
+        ],
+        "HC32L13x": [
+          "HDIV"
+        ]
+      }
+    },
+    {
+      "source": "hsi_v1",
+      "source_sha256": "0b773f5428a0d9c59c43a7612b3e14eb43dfd5f4bf303650b7eacb9092e8f278",
+      "kind": "hsi2c",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "高速主从 I2C；MDER/SDER DMA 扩展分变体",
+      "register_count": 23,
+      "field_count": 135,
+      "instances": {
+        "HC32L021": [
+          "HSI2C"
+        ]
+      }
+    },
+    {
+      "source": "hsi_v2",
+      "source_sha256": "2fd9794e12f7b77cf689aeec077506c3e96e1233accc4eaac7ced3baa1b29114",
+      "kind": "hsi2c",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "高速主从 I2C；MDER/SDER DMA 扩展分变体",
+      "register_count": 25,
+      "field_count": 142,
+      "instances": {
+        "HC32L12x": [
+          "HSI2C"
+        ]
+      }
+    },
+    {
+      "source": "i_v8",
+      "source_sha256": "f89b51ae6beee21ef3967ce00dda4f6c7c2c1df0c4cc9b484e9fb5c7e5f7452a",
+      "kind": "i2c",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "基础单地址 I2C",
+      "register_count": 6,
+      "field_count": 12,
+      "instances": {
+        "HC32L110": [
+          "I2C"
+        ]
+      }
+    },
+    {
+      "source": "i_v3",
+      "source_sha256": "01e41d9f29bff16e372aa7076278c3b35e87189a388fd71b9b32be8ec47cca06",
+      "kind": "i2c",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "基础单地址 I2C",
+      "register_count": 6,
+      "field_count": 18,
+      "instances": {
+        "HC32A136": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32F030": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32F072": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32F17x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32F19x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L07x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L13x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L17x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L19x": [
+          "I2C0",
+          "I2C1"
+        ]
+      }
+    },
+    {
+      "source": "i_v5",
+      "source_sha256": "945283131ca5bcf1dafbbb9e3486864ad27895f4764a3fb0f2231b2ac9e0d42f",
+      "kind": "i2c",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "基础单地址 I2C",
+      "register_count": 6,
+      "field_count": 18,
+      "instances": {
+        "HC32F003": [
+          "I2C"
+        ],
+        "HC32F005": [
+          "I2C"
+        ]
+      }
+    },
+    {
+      "source": "i_v1",
+      "source_sha256": "4080e90127a4d7518f62d02d3a7d4923bbf5d8da46ad4bedd1f0afc0dbd8b643",
+      "kind": "i2c",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "多地址匹配，命名及字段分变体",
+      "register_count": 9,
+      "field_count": 26,
+      "instances": {
+        "HC32A052": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32F052": [
+          "I2C0",
+          "I2C1"
+        ]
+      }
+    },
+    {
+      "source": "i_v4",
+      "source_sha256": "eb89c7aacf2fb73f2e5e847e48d20885650c0e5122b9fea59a96f035df18f298",
+      "kind": "i2c",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "多地址匹配，命名及字段分变体",
+      "register_count": 9,
+      "field_count": 26,
+      "instances": {
+        "HC32F002": [
+          "I2C"
+        ]
+      }
+    },
+    {
+      "source": "i_v7",
+      "source_sha256": "da74efab76a1197d9f6f08f602acd23b0d8f93ce70339a338b129550c46ef865",
+      "kind": "i2c",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "多地址匹配，命名及字段分变体",
+      "register_count": 9,
+      "field_count": 26,
+      "instances": {
+        "HC32F420": [
+          "I2C0",
+          "I2C1"
+        ]
+      }
+    },
+    {
+      "source": "i_v9",
+      "source_sha256": "cf8399a04db4fbb6cda226649070e0376d14abaced4a97e2e0111fe78575b8bf",
+      "kind": "i2c",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "多地址匹配，命名及字段分变体",
+      "register_count": 9,
+      "field_count": 26,
+      "instances": {
+        "HC32L12x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L16x": [
+          "I2C0",
+          "I2C1"
+        ],
+        "HC32L18x": [
+          "I2C0",
+          "I2C1"
+        ]
+      }
+    },
+    {
+      "source": "i_v2",
+      "source_sha256": "225b56a4cb090b15d5ae24c2f5d579f472b324c1f32ea7de65722467289bc692",
+      "kind": "i2cslv",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "专用从机 I2C",
+      "register_count": 17,
+      "field_count": 96,
+      "instances": {
+        "HC32A052": [
+          "I2CSLV"
+        ],
+        "HC32F052": [
+          "I2CSLV"
+        ]
+      }
+    },
+    {
+      "source": "i_v6",
+      "source_sha256": "bd4975bbb1a28579e19e1246c67179659c352dd7671aa704cb05554ae7d1082d",
+      "kind": "i2s",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "音频串行控制；位域分变体",
+      "register_count": 7,
+      "field_count": 32,
+      "instances": {
+        "HC32F072": [
+          "I2S0",
+          "I2S1"
+        ],
+        "HC32L07x": [
+          "I2S0",
+          "I2S1"
+        ]
+      }
+    },
+    {
+      "source": "iwdt_v1",
+      "source_sha256": "6b379e60923b9194684a8284411140db78374488914f01927b29b9d7d7f2c5dc",
+      "kind": "iwdt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 5,
+      "field_count": 17,
+      "instances": {
+        "HC32A052": [
+          "IWDT"
+        ],
+        "HC32F052": [
+          "IWDT"
+        ],
+        "HC32F420": [
+          "IWDT"
+        ]
+      }
+    },
+    {
+      "source": "iwdt_v2",
+      "source_sha256": "47a6f103c8a9e8977cbce60a032e42de5dc8191c12ee434c22dfa03aec2b5099",
+      "kind": "iwdt",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 5,
+      "field_count": 17,
+      "instances": {
+        "HC32F002": [
+          "IWDT"
+        ]
+      }
+    },
+    {
+      "source": "iwdt_v3",
+      "source_sha256": "b8be9a3652caf4eaab435a98cf44b68e723d86f7611308b0c2186c5a45fd5226",
+      "kind": "iwdt",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 5,
+      "field_count": 17,
+      "instances": {
+        "HC32L021": [
+          "IWDT"
+        ]
+      }
+    },
+    {
+      "source": "iwdt_v4",
+      "source_sha256": "3957dd39351158ed17f1302151969810a907e543af130585e38e2d69fd5f697a",
+      "kind": "iwdt",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 5,
+      "field_count": 17,
+      "instances": {
+        "HC32L12x": [
+          "IWDT"
+        ]
+      }
+    },
+    {
+      "source": "lcd_v1",
+      "source_sha256": "7880241bf8f5cc3a8154b3ccd80b94d3d4d5e4f1ebb409c35ca3e99d0df3e00f",
+      "kind": "lcd",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "基础 LCD 驱动；RAM 位宽、COMMUX/DRVRES 分变体",
+      "register_count": 21,
+      "field_count": 383,
+      "instances": {
+        "HC32A136": [
+          "LCD"
+        ],
+        "HC32L13x": [
+          "LCD"
+        ]
+      }
+    },
+    {
+      "source": "lcd_v2",
+      "source_sha256": "ddc5edf4b317fd2975dc4654ab6d0d68468c75bb8324380a11a68de448244f2d",
+      "kind": "lcd",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "基础 LCD 驱动；RAM 位宽、COMMUX/DRVRES 分变体",
+      "register_count": 21,
+      "field_count": 531,
+      "instances": {
+        "HC32F17x": [
+          "LCD"
+        ],
+        "HC32F19x": [
+          "LCD"
+        ],
+        "HC32L17x": [
+          "LCD"
+        ],
+        "HC32L19x": [
+          "LCD"
+        ]
+      }
+    },
+    {
+      "source": "lcd_v3",
+      "source_sha256": "41b9dc4ea6986894b1531a9f851d907d19ef2224683b45ff195da66ba5bf49f8",
+      "kind": "lcd",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "基础 LCD 驱动；RAM 位宽、COMMUX/DRVRES 分变体",
+      "register_count": 21,
+      "field_count": 532,
+      "instances": {
+        "HC32L07x": [
+          "LCD"
+        ]
+      }
+    },
+    {
+      "source": "lcd_v5",
+      "source_sha256": "42465f3d1c26f7792272fd6b0ea309bf0334d20998ad04a27b309d833e02c097",
+      "kind": "lcd",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "基础 LCD 驱动；RAM 位宽、COMMUX/DRVRES 分变体",
+      "register_count": 21,
+      "field_count": 532,
+      "instances": {
+        "HC32L16x": [
+          "LCD"
+        ],
+        "HC32L18x": [
+          "LCD"
+        ]
+      }
+    },
+    {
+      "source": "lcd_v4",
+      "source_sha256": "933a86009d03c92b6d401f9ba53b793ecdc856bedf9649760ace0cfcd5a81856",
+      "kind": "lcd",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "电荷泵驱动 LCD",
+      "register_count": 22,
+      "field_count": 396,
+      "instances": {
+        "HC32L12x": [
+          "LCD"
+        ]
+      }
+    },
+    {
+      "source": "lptimer_v3",
+      "source_sha256": "72bafc9d333f16383a3429466bc00edcdd7b7fe8965998ea77127429d5b6eae0",
+      "kind": "lptim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "低功耗计数；CMP 比较为扩展，偏移及控制字段分变体",
+      "register_count": 5,
+      "field_count": 13,
+      "instances": {
+        "HC32L110": [
+          "LPTIMER"
+        ]
+      }
+    },
+    {
+      "source": "lptimer_v1",
+      "source_sha256": "89e8fdda89db1e696e63c3f159c05b2bc398b08280fd49af0d4b405eae4ae4be",
+      "kind": "lptim",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "低功耗计数；CMP 比较为扩展，偏移及控制字段分变体",
+      "register_count": 5,
+      "field_count": 18,
+      "instances": {
+        "HC32A136": [
+          "LPTIMER"
+        ],
+        "HC32L13x": [
+          "LPTIMER"
+        ]
+      }
+    },
+    {
+      "source": "lptim_common",
+      "source_sha256": "651cc5a28eb9155430b387ff20239bda792451889314d289d4b0809e6f23cccc",
+      "kind": "lptim",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "低功耗计数；CMP 比较为扩展，偏移及控制字段分变体",
+      "register_count": 5,
+      "field_count": 19,
+      "instances": {
+        "HC32A052": [
+          "LPTIM"
+        ],
+        "HC32F052": [
+          "LPTIM"
+        ]
+      }
+    },
+    {
+      "source": "lptimer_v2",
+      "source_sha256": "c89fd656ac51cb64dfd45c5d74de178231092871d391a7272d60858cd7d76e92",
+      "kind": "lptim",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "低功耗计数；CMP 比较为扩展，偏移及控制字段分变体",
+      "register_count": 5,
+      "field_count": 19,
+      "instances": {
+        "HC32L07x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ],
+        "HC32L16x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ],
+        "HC32L17x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ],
+        "HC32L18x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ],
+        "HC32L19x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ]
+      }
+    },
+    {
+      "source": "lptimer_v4",
+      "source_sha256": "7627327acd1d730f227bbb5f8457a348832bbb2d00a436b4c3ffef9600412254",
+      "kind": "lptim",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 2,
+      "rationale": "低功耗计数；CMP 比较为扩展，偏移及控制字段分变体",
+      "register_count": 6,
+      "field_count": 22,
+      "instances": {
+        "HC32L12x": [
+          "LPTIMER0",
+          "LPTIMER1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v6",
+      "source_sha256": "281d4539b4d1ae3908afea679a3324247911554a6657f5caac2bf339c3a078d2",
+      "kind": "lpuart",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 1,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 6,
+      "field_count": 22,
+      "instances": {
+        "HC32L110": [
+          "LPUART"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v2",
+      "source_sha256": "db619c5f8e14b31595989e5b0591dafebc630bc1ca309246224f860336c32d85",
+      "kind": "lpuart",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 2,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 7,
+      "field_count": 41,
+      "instances": {
+        "HC32A136": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32L13x": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v3",
+      "source_sha256": "b933ba124e4e775f4de48d3f18178f9f2fb941afea8a97f375aacad8362db220",
+      "kind": "lpuart",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 3,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 7,
+      "field_count": 40,
+      "instances": {
+        "HC32F002": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v1",
+      "source_sha256": "b7f22b97a577048886e64d7fa6004a287482bb8a641f67dee5b71d9961072b83",
+      "kind": "lpuart",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 3,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 7,
+      "field_count": 42,
+      "instances": {
+        "HC32A052": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32F052": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v4",
+      "source_sha256": "2e605d422d171509329962777e4809deca58b6c98ecf2a3685bee6af96ec13f6",
+      "kind": "lpuart",
+      "version": "v3_2",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 3,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 7,
+      "field_count": 42,
+      "instances": {
+        "HC32F072": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32L07x": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32L17x": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32L19x": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v5",
+      "source_sha256": "490f5cd4c8058cf2a987e8de43858163c46015431cf3944b3e4436659fa16e63",
+      "kind": "lpuart",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 4,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 9,
+      "field_count": 44,
+      "instances": {
+        "HC32L021": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lpuart_v7",
+      "source_sha256": "bbaff38e0cd8e199a9046d21b04750abbadc4a98704f89d48b2c3d606870c578",
+      "kind": "lpuart",
+      "version": "v4_1",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 4,
+      "rationale": "低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体",
+      "register_count": 9,
+      "field_count": 46,
+      "instances": {
+        "HC32L12x": [
+          "LPUART0",
+          "LPUART1",
+          "LPUART2"
+        ],
+        "HC32L16x": [
+          "LPUART0",
+          "LPUART1"
+        ],
+        "HC32L18x": [
+          "LPUART0",
+          "LPUART1"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v6",
+      "source_sha256": "88852e5192fcfb2315f8290c35a90a419f02b5303710c5bfaf25872f898fba50",
+      "kind": "lvd",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 11,
+      "instances": {
+        "HC32L110": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v4",
+      "source_sha256": "7d77f60283c48ce7eca08778fa210626b80f10e89a90facfe6ca098208e2bbaf",
+      "kind": "lvd",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 13,
+      "instances": {
+        "HC32F003": [
+          "LVD"
+        ],
+        "HC32F005": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v1",
+      "source_sha256": "d5d1a81b57cb1c8bbd1ca13e8be2d83601e8289c8e2d127183a3ee1f41a417ff",
+      "kind": "lvd",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 14,
+      "instances": {
+        "HC32A052": [
+          "LVD"
+        ],
+        "HC32F052": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v2",
+      "source_sha256": "fd4b3d3076e726c7a87cacaf1cb958fc1f069a179872422a4bccc2ca1eef489d",
+      "kind": "lvd",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 14,
+      "instances": {
+        "HC32A136": [
+          "LVD"
+        ],
+        "HC32F030": [
+          "LVD"
+        ],
+        "HC32F072": [
+          "LVD"
+        ],
+        "HC32F17x": [
+          "LVD"
+        ],
+        "HC32F19x": [
+          "LVD"
+        ],
+        "HC32L07x": [
+          "LVD"
+        ],
+        "HC32L13x": [
+          "LVD"
+        ],
+        "HC32L16x": [
+          "LVD"
+        ],
+        "HC32L17x": [
+          "LVD"
+        ],
+        "HC32L18x": [
+          "LVD"
+        ],
+        "HC32L19x": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v3",
+      "source_sha256": "93c904fae8de21884941c29e69b2d76ded2d5202f021a2d4989a995df4d42c4b",
+      "kind": "lvd",
+      "version": "v1_4",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 14,
+      "instances": {
+        "HC32F002": [
+          "LVD"
+        ],
+        "HC32F420": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v5",
+      "source_sha256": "c6c43ec309544ef0d4fb1f8e64898c07c5fc35ffc20d5af2225e4b4e58badb3b",
+      "kind": "lvd",
+      "version": "v1_5",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 14,
+      "instances": {
+        "HC32L021": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "lvd_v7",
+      "source_sha256": "799e45115dc752be85fa09acb66e25efd3587d003ed920d8b360df2726d105ed",
+      "kind": "lvd",
+      "version": "v1_6",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 14,
+      "instances": {
+        "HC32L12x": [
+          "LVD"
+        ]
+      }
+    },
+    {
+      "source": "opa_v5",
+      "source_sha256": "2b88692c019d4c6db4c6244484e3375942fa5693d37611e5468add3d8447744d",
+      "kind": "opa",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "单运放基础控制",
+      "register_count": 1,
+      "field_count": 8,
+      "instances": {
+        "HC32L16x": [
+          "OPA"
+        ],
+        "HC32L18x": [
+          "OPA"
+        ]
+      }
+    },
+    {
+      "source": "opa_v4",
+      "source_sha256": "915fc749d04fa0c7d1e70029049f7188b0a7db385e28ea7a2e1bfd0d1936307f",
+      "kind": "opa",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "单运放及 ADC 触发",
+      "register_count": 2,
+      "field_count": 15,
+      "instances": {
+        "HC32F17x": [
+          "OPA"
+        ],
+        "HC32F19x": [
+          "OPA"
+        ],
+        "HC32L17x": [
+          "OPA"
+        ],
+        "HC32L19x": [
+          "OPA"
+        ]
+      }
+    },
+    {
+      "source": "opa_v1",
+      "source_sha256": "d7d9111880639d6e2c8833209f037f7646bc8ccd1c4d28e70ccbd361456b6c88",
+      "kind": "opa",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 3,
+      "rationale": "双运放及 AZ 自动调零",
+      "register_count": 3,
+      "field_count": 14,
+      "instances": {
+        "HC32A052": [
+          "OPA"
+        ],
+        "HC32F052": [
+          "OPA"
+        ]
+      }
+    },
+    {
+      "source": "opa_v2",
+      "source_sha256": "b0c8a72630933c961ead455193fe0b38cd76e3a84a131ba436f4b1ba55ee9b9a",
+      "kind": "opa",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 3,
+      "rationale": "三运放独立控制，与双运放 AZ 为同档不同分支",
+      "register_count": 4,
+      "field_count": 38,
+      "instances": {
+        "HC32A136": [
+          "OPA"
+        ],
+        "HC32F030": [
+          "OPA"
+        ],
+        "HC32L13x": [
+          "OPA"
+        ]
+      }
+    },
+    {
+      "source": "opa_v3",
+      "source_sha256": "d6875a87a48c7e62f919bcb74d449fa78f1cfde6557c49c112e704e2f3dcd05d",
+      "kind": "opa",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 4,
+      "rationale": "五运放控制",
+      "register_count": 4,
+      "field_count": 34,
+      "instances": {
+        "HC32F072": [
+          "OPA"
+        ],
+        "HC32L07x": [
+          "OPA"
+        ]
+      }
+    },
+    {
+      "source": "pca_v3",
+      "source_sha256": "3bd07c972d7160b683b359ebad28feb1792e01d332c2cc5fee0a22c67d433db0",
+      "kind": "pca",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "基础计数/捕获；CARR/EPWM 扩展",
+      "register_count": 25,
+      "field_count": 73,
+      "instances": {
+        "HC32L110": [
+          "PCA"
+        ]
+      }
+    },
+    {
+      "source": "pca_v2",
+      "source_sha256": "0f070710ea4e17cfa4483d248512c0b3c2f07c03cb1aa464e541367edfe65c7f",
+      "kind": "pca",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "基础计数/捕获；CARR/EPWM 扩展",
+      "register_count": 25,
+      "field_count": 98,
+      "instances": {
+        "HC32F003": [
+          "PCA"
+        ],
+        "HC32F005": [
+          "PCA"
+        ]
+      }
+    },
+    {
+      "source": "pca_v1",
+      "source_sha256": "c2b0aafd9196cc4fccf11e3873f88f47163596381518132995f421d5a6ef4c6f",
+      "kind": "pca",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "基础计数/捕获；CARR/EPWM 扩展",
+      "register_count": 27,
+      "field_count": 102,
+      "instances": {
+        "HC32A136": [
+          "PCA"
+        ],
+        "HC32F030": [
+          "PCA"
+        ],
+        "HC32F072": [
+          "PCA"
+        ],
+        "HC32F17x": [
+          "PCA"
+        ],
+        "HC32F19x": [
+          "PCA"
+        ],
+        "HC32L07x": [
+          "PCA"
+        ],
+        "HC32L13x": [
+          "PCA"
+        ],
+        "HC32L16x": [
+          "PCA"
+        ],
+        "HC32L17x": [
+          "PCA"
+        ],
+        "HC32L18x": [
+          "PCA"
+        ],
+        "HC32L19x": [
+          "PCA"
+        ]
+      }
+    },
+    {
+      "source": "pcnt_v1",
+      "source_sha256": "ff7cbe8eb182a7eb3a80224e14b414150a13d96c60558ee858943ceef3b6a1e0",
+      "kind": "pcnt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "基础脉冲计数；DBG 扩展",
+      "register_count": 13,
+      "field_count": 58,
+      "instances": {
+        "HC32A136": [
+          "PCNT"
+        ],
+        "HC32L13x": [
+          "PCNT"
+        ]
+      }
+    },
+    {
+      "source": "pcnt_v2",
+      "source_sha256": "6e8e2ab39ee29a9634941e132a0f1e92a52aa3400fa287cc162e69982d3cc62d",
+      "kind": "pcnt",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "pca-bt-pcnt-aos",
+      "tier": 1,
+      "rationale": "基础脉冲计数；DBG 扩展",
+      "register_count": 14,
+      "field_count": 60,
+      "instances": {
+        "HC32L07x": [
+          "PCNT"
+        ],
+        "HC32L16x": [
+          "PCNT"
+        ],
+        "HC32L17x": [
+          "PCNT"
+        ],
+        "HC32L18x": [
+          "PCNT"
+        ],
+        "HC32L19x": [
+          "PCNT"
+        ]
+      }
+    },
+    {
+      "source": "ram_v3",
+      "source_sha256": "fbd45810230b96542b479a03f80cbcade9fe5200c64992d17b7f584114e45082",
+      "kind": "ram",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 1,
+      "rationale": "RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保留",
+      "register_count": 4,
+      "field_count": 5,
+      "instances": {
+        "HC32F003": [
+          "RAM"
+        ],
+        "HC32F005": [
+          "RAM"
+        ],
+        "HC32L110": [
+          "RAM"
+        ]
+      }
+    },
+    {
+      "source": "ram_v2",
+      "source_sha256": "39a12f7e3b6aeee98f33fa59ed7ca6c17aeedee20401cb2c74fb88bbc1522386",
+      "kind": "ram",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 2,
+      "rationale": "RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保留",
+      "register_count": 4,
+      "field_count": 8,
+      "instances": {
+        "HC32A136": [
+          "RAM"
+        ],
+        "HC32F030": [
+          "RAM"
+        ],
+        "HC32L13x": [
+          "RAM"
+        ]
+      }
+    },
+    {
+      "source": "ram_v1",
+      "source_sha256": "70fb575c5f2d56ffba7bf6c0923fd444cea25b92a4edd1e9c28c758fc766642c",
+      "kind": "ram",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保留",
+      "register_count": 4,
+      "field_count": 8,
+      "instances": {
+        "HC32A052": [
+          "RAM"
+        ],
+        "HC32F052": [
+          "RAM"
+        ]
+      }
+    },
+    {
+      "source": "ram_v4",
+      "source_sha256": "0b8d3c6ef4e8baa4d4f2934293a6049b876ad8906df7af1c3828d6ecec2107e6",
+      "kind": "ram",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 3,
+      "rationale": "RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保留",
+      "register_count": 4,
+      "field_count": 8,
+      "instances": {
+        "HC32F072": [
+          "RAM"
+        ],
+        "HC32F17x": [
+          "RAM"
+        ],
+        "HC32L07x": [
+          "RAM"
+        ],
+        "HC32L12x": [
+          "RAM"
+        ],
+        "HC32L17x": [
+          "RAM"
+        ]
+      }
+    },
+    {
+      "source": "ram_v5",
+      "source_sha256": "a2d5d20ebd3fc9647d3d5fccc734afcd10f54563aecc35983b40058f21517b38",
+      "kind": "ram",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "memory",
+      "tier": 4,
+      "rationale": "RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保留",
+      "register_count": 4,
+      "field_count": 8,
+      "instances": {
+        "HC32F19x": [
+          "RAM"
+        ],
+        "HC32L16x": [
+          "RAM"
+        ],
+        "HC32L18x": [
+          "RAM"
+        ],
+        "HC32L19x": [
+          "RAM"
+        ]
+      }
+    },
+    {
+      "source": "reset_v2",
+      "source_sha256": "0e3976aefc914e6503981e3b6a0e65a1e2e972b52f10e193cee14e427c238375",
+      "kind": "reset",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 2,
+      "field_count": 21,
+      "instances": {
+        "HC32F003": [
+          "RESET"
+        ],
+        "HC32F005": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v6",
+      "source_sha256": "76cb8e1d3705d7bd803be6f967d4ba4eaad5f9f71a831beafa5ac3af6b84f77d",
+      "kind": "reset",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 2,
+      "field_count": 24,
+      "instances": {
+        "HC32L110": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v1",
+      "source_sha256": "29e79bed5f2d9b8b29597722ec564ec24176c2cfd87d31c39166f957b34385f1",
+      "kind": "reset",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 2,
+      "field_count": 37,
+      "instances": {
+        "HC32A136": [
+          "RESET"
+        ],
+        "HC32F030": [
+          "RESET"
+        ],
+        "HC32L13x": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v7",
+      "source_sha256": "0a6627a8e5fc456018838754dec0f8b44f1442811f8792e0a95ea2a55e7d0d9c",
+      "kind": "reset",
+      "version": "v1_3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 3,
+      "field_count": 36,
+      "instances": {
+        "HC32L12x": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v4",
+      "source_sha256": "571603d9437527583f773ac05d003e915fccbb2a8b18f187cabfff341e4bcf60",
+      "kind": "reset",
+      "version": "v1_4",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 3,
+      "field_count": 41,
+      "instances": {
+        "HC32F17x": [
+          "RESET"
+        ],
+        "HC32F19x": [
+          "RESET"
+        ],
+        "HC32L17x": [
+          "RESET"
+        ],
+        "HC32L19x": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v3",
+      "source_sha256": "e95271ffc604df636aba38797102a4abceac8b07729438c4822dee447732925f",
+      "kind": "reset",
+      "version": "v1_5",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 3,
+      "field_count": 42,
+      "instances": {
+        "HC32F072": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v8",
+      "source_sha256": "5ed8f21dcce55d1dd476e9a5d52f2faa7d212d0ca03cee26796a34f4d5c83e4a",
+      "kind": "reset",
+      "version": "v1_6",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 3,
+      "field_count": 42,
+      "instances": {
+        "HC32L16x": [
+          "RESET"
+        ],
+        "HC32L18x": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "reset_v5",
+      "source_sha256": "c6094349549567a434be657dba4ae460f6c1f8a8b9747a438cdb3facc0a0a00b",
+      "kind": "reset",
+      "version": "v1_7",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "外设复位控制，分组规模及字段按变体保留",
+      "register_count": 3,
+      "field_count": 47,
+      "instances": {
+        "HC32L07x": [
+          "RESET"
+        ]
+      }
+    },
+    {
+      "source": "rtc_v5",
+      "source_sha256": "0ef7423c4c2ef2d0c9ab16d928aa83d7db500cd004dfd76ccf7c9e69ef8e7822",
+      "kind": "rtc",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "日历与闹钟，ALMSEC 扩展分变体",
+      "register_count": 13,
+      "field_count": 33,
+      "instances": {
+        "HC32L110": [
+          "RTC"
+        ]
+      }
+    },
+    {
+      "source": "rtc_v2",
+      "source_sha256": "c114d1d1c12e6b8a0dd92f353a4d90df7bc5ea6002af607f62875ea51c6bfcd4",
+      "kind": "rtc",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "日历与闹钟，ALMSEC 扩展分变体",
+      "register_count": 13,
+      "field_count": 46,
+      "instances": {
+        "HC32A136": [
+          "RTC"
+        ],
+        "HC32L13x": [
+          "RTC"
+        ]
+      }
+    },
+    {
+      "source": "rtc_v4",
+      "source_sha256": "5cc2e93cf91cdbaf6b51d410951f74ee538f41ae1decc6420e4ac5e10ad5b3f6",
+      "kind": "rtc",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "日历与闹钟，ALMSEC 扩展分变体",
+      "register_count": 14,
+      "field_count": 49,
+      "instances": {
+        "HC32L07x": [
+          "RTC"
+        ],
+        "HC32L16x": [
+          "RTC"
+        ],
+        "HC32L17x": [
+          "RTC"
+        ],
+        "HC32L18x": [
+          "RTC"
+        ],
+        "HC32L19x": [
+          "RTC"
+        ]
+      }
+    },
+    {
+      "source": "rtc_v1",
+      "source_sha256": "3f40edbffbda5e8b6f340d0ee2de5ecfb4bf5a860b08cf08e5f5ec4c2ea9d238",
+      "kind": "rtc",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "日历/闹钟与时间戳/唤醒定时器",
+      "register_count": 20,
+      "field_count": 102,
+      "instances": {
+        "HC32A052": [
+          "RTC"
+        ],
+        "HC32F052": [
+          "RTC"
+        ]
+      }
+    },
+    {
+      "source": "rtc_v3",
+      "source_sha256": "1d1e90d952f7c002f6442fa2e30ecfd80f06fbec4bdcd1b62bd2e1946e78a00f",
+      "kind": "rtc",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 2,
+      "rationale": "日历/闹钟与时间戳/唤醒定时器",
+      "register_count": 21,
+      "field_count": 102,
+      "instances": {
+        "HC32L021": [
+          "RTC"
+        ],
+        "HC32L12x": [
+          "RTC"
+        ]
+      }
+    },
+    {
+      "source": "spi_v6",
+      "source_sha256": "223b34a07720799c301b58fa38c2ab7d0943642ea9dc5270607d29a116f54e35",
+      "kind": "spi",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "CR/SSN 基础及 CR2 扩展",
+      "register_count": 4,
+      "field_count": 13,
+      "instances": {
+        "HC32L110": [
+          "SPI"
+        ]
+      }
+    },
+    {
+      "source": "spi_v4",
+      "source_sha256": "bbe1ed85742257757c58218c31cbad20102cbf2956aadaf65015aff1863d7e60",
+      "kind": "spi",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "CR/SSN 基础及 CR2 扩展",
+      "register_count": 4,
+      "field_count": 17,
+      "instances": {
+        "HC32F003": [
+          "SPI"
+        ],
+        "HC32F005": [
+          "SPI"
+        ]
+      }
+    },
+    {
+      "source": "spi_v2",
+      "source_sha256": "2870d5b8831242249d310d5617093ce8b2b377778ce3caff611609ee61427123",
+      "kind": "spi",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 1,
+      "rationale": "CR/SSN 基础及 CR2 扩展",
+      "register_count": 6,
+      "field_count": 27,
+      "instances": {
+        "HC32A136": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F030": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F072": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F17x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F19x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L07x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L13x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L16x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L17x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L18x": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L19x": [
+          "SPI0",
+          "SPI1"
+        ]
+      }
+    },
+    {
+      "source": "spi_v3",
+      "source_sha256": "4d2182a0411a3f159f7c3d4ea00250e2c372d7f77ec68e9b785af2eb8526dc2d",
+      "kind": "spi",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "CR0/CR1、HDOE/SSI 控制，DMA/SMP 分变体",
+      "register_count": 7,
+      "field_count": 45,
+      "instances": {
+        "HC32F002": [
+          "SPI"
+        ]
+      }
+    },
+    {
+      "source": "spi_v5",
+      "source_sha256": "66db00d726ed94ec71b88145f0700bd84b86577ea112598653086d01dd34d715",
+      "kind": "spi",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "CR0/CR1、HDOE/SSI 控制，DMA/SMP 分变体",
+      "register_count": 7,
+      "field_count": 46,
+      "instances": {
+        "HC32L021": [
+          "SPI"
+        ]
+      }
+    },
+    {
+      "source": "spi_v1",
+      "source_sha256": "e03573599dd01de40c2eacbda4e1a1ae2907844c3bb3c91822e89765b7e16f66",
+      "kind": "spi",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "spi-i2c-i2s",
+      "tier": 2,
+      "rationale": "CR0/CR1、HDOE/SSI 控制，DMA/SMP 分变体",
+      "register_count": 7,
+      "field_count": 48,
+      "instances": {
+        "HC32A052": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F052": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32F420": [
+          "SPI0",
+          "SPI1"
+        ],
+        "HC32L12x": [
+          "SPI0",
+          "SPI1"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v3",
+      "source_sha256": "8971bd62a59c73a20200fc012c538ef5891532278d0528f18500d50a54b4e137",
+      "kind": "sysctrl",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "内部 RC 时钟与基础门控，无外部晶振/PLL",
+      "register_count": 12,
+      "field_count": 69,
+      "instances": {
+        "HC32F002": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v4",
+      "source_sha256": "bc6ea15e2a15df830ce897b0f767d3a021811a40c4d011c17ad8d675dbe7fb7f",
+      "kind": "sysctrl",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 2,
+      "rationale": "外部时钟或低速晶振控制，无 PLL",
+      "register_count": 9,
+      "field_count": 56,
+      "instances": {
+        "HC32F003": [
+          "SYSCTRL"
+        ],
+        "HC32F005": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v11",
+      "source_sha256": "efcbc9a11cfa7261932030402a0656c22e94be97ce1e229f1677d4e7c6b99c02",
+      "kind": "sysctrl",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 2,
+      "rationale": "外部时钟或低速晶振控制，无 PLL",
+      "register_count": 9,
+      "field_count": 73,
+      "instances": {
+        "HC32L12x": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "clock_common",
+      "source_sha256": "de3676fd92af962a1dd922a746a5d0e231285a01fd506b9e742b8a44b6027b86",
+      "kind": "sysctrl",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 2,
+      "rationale": "外部时钟或低速晶振控制，无 PLL",
+      "register_count": 10,
+      "field_count": 62,
+      "instances": {
+        "HC32L110": [
+          "CLOCK"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v9",
+      "source_sha256": "5de231f9b4906238f4e544adfa96fc563068bad42f5cc783c4db945b613187e2",
+      "kind": "sysctrl",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 2,
+      "rationale": "外部时钟或低速晶振控制，无 PLL",
+      "register_count": 12,
+      "field_count": 82,
+      "instances": {
+        "HC32L021": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v5",
+      "source_sha256": "3c5cf12af05953737311818592f5da7ac03e64e91091f0ec397c1cf14210711b",
+      "kind": "sysctrl",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 9,
+      "field_count": 68,
+      "instances": {
+        "HC32F030": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v2",
+      "source_sha256": "c7bbb9abea7ea31508710999e82452dcfedea94596beaee2b77638c46a84de84",
+      "kind": "sysctrl",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 9,
+      "field_count": 76,
+      "instances": {
+        "HC32A136": [
+          "SYSCTRL"
+        ],
+        "HC32L13x": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v7",
+      "source_sha256": "a2d6864e3101e27500f28ca58a153f3ffd76fc6c0ab06d78e7f95a0ab7b4068e",
+      "kind": "sysctrl",
+      "version": "v3_2",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 10,
+      "field_count": 80,
+      "instances": {
+        "HC32F17x": [
+          "SYSCTRL"
+        ],
+        "HC32F19x": [
+          "SYSCTRL"
+        ],
+        "HC32L17x": [
+          "SYSCTRL"
+        ],
+        "HC32L19x": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v12",
+      "source_sha256": "35f1e36e0067e3a159fab4ebb2e7c8b8cda50fafcce1caa9b3cb4871ef5b06f8",
+      "kind": "sysctrl",
+      "version": "v3_3",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 11,
+      "field_count": 87,
+      "instances": {
+        "HC32L16x": [
+          "SYSCTRL"
+        ],
+        "HC32L18x": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v6",
+      "source_sha256": "9fb1cea3db17f546da688e6684f27d4eafd9bc19ead09cdb15e6ab913976a2a8",
+      "kind": "sysctrl",
+      "version": "v3_4",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 12,
+      "field_count": 84,
+      "instances": {
+        "HC32F072": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v10",
+      "source_sha256": "a9e0860d93c2a91de543c2b7784c126b86d53ba9af0b29b9f9e7a60ed916d742",
+      "kind": "sysctrl",
+      "version": "v3_5",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 12,
+      "field_count": 91,
+      "instances": {
+        "HC32L07x": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v1",
+      "source_sha256": "7419f5794535faad0d639d599d70d437ec42cb2fc26f6d13ea7586a81186185f",
+      "kind": "sysctrl",
+      "version": "v3_6",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 3,
+      "rationale": "PLL 时钟；RC48M、门控及复位窗口按变体保留",
+      "register_count": 18,
+      "field_count": 160,
+      "instances": {
+        "HC32A052": [
+          "SYSCTRL"
+        ],
+        "HC32F052": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "sysctrl_v8",
+      "source_sha256": "7837ca0235eea8cd43e416c4115b0984f3d1888a50e8ddf0456cce59bb41bd02",
+      "kind": "sysctrl",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 4,
+      "rationale": "PLL 与 APB0/1、AHB0/1 四组门控/复位",
+      "register_count": 21,
+      "field_count": 134,
+      "instances": {
+        "HC32F420": [
+          "SYSCTRL"
+        ]
+      }
+    },
+    {
+      "source": "tim_v13",
+      "source_sha256": "7e58f33253b104586ce997d7d047d881695d32a43e12f5e927d41ce55dcb7614",
+      "kind": "tim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 1,
+      "rationale": "紧凑基础计数器",
+      "register_count": 6,
+      "field_count": 18,
+      "instances": {
+        "HC32F003": [
+          "TIM0",
+          "TIM1",
+          "TIM2"
+        ],
+        "HC32F005": [
+          "TIM0",
+          "TIM1",
+          "TIM2"
+        ]
+      }
+    },
+    {
+      "source": "tim_v1",
+      "source_sha256": "f43604fdcf73a5b3ae9b8fb7a51b6cc5b5fd1bde272efd6ee51c0318a73cbdd2",
+      "kind": "tim",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 2,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A136": [
+          "TIM0_MODE0"
+        ],
+        "HC32F030": [
+          "TIM0_MODE0"
+        ],
+        "HC32F072": [
+          "TIM0_MODE0"
+        ],
+        "HC32F17x": [
+          "TIM0_MODE0"
+        ],
+        "HC32F19x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L07x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L12x": [
+          "TIM0_MODE0",
+          "TIM1_MODE0",
+          "TIM2_MODE0",
+          "TIM3_MODE0"
+        ],
+        "HC32L13x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L16x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L17x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L18x": [
+          "TIM0_MODE0"
+        ],
+        "HC32L19x": [
+          "TIM0_MODE0"
+        ]
+      }
+    },
+    {
+      "source": "tim_v10",
+      "source_sha256": "b7dd981a898818168e10ef13a9266b73562ee2f899126ffba62120e84d55320a",
+      "kind": "tim",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 2,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A136": [
+          "TIM3_MODE0"
+        ],
+        "HC32F030": [
+          "TIM3_MODE0"
+        ],
+        "HC32F072": [
+          "TIM3_MODE0"
+        ],
+        "HC32F17x": [
+          "TIM3_MODE0"
+        ],
+        "HC32F19x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L07x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L13x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L16x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L17x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L18x": [
+          "TIM3_MODE0"
+        ],
+        "HC32L19x": [
+          "TIM3_MODE0"
+        ]
+      }
+    },
+    {
+      "source": "tim_v4",
+      "source_sha256": "9227574ae3facfbc654d33bd616b6390611bb750ba218dbc3de74dd0d6f9dea9",
+      "kind": "tim",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 2,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A136": [
+          "TIM1_MODE0"
+        ],
+        "HC32F030": [
+          "TIM1_MODE0"
+        ],
+        "HC32F072": [
+          "TIM1_MODE0"
+        ],
+        "HC32F17x": [
+          "TIM1_MODE0"
+        ],
+        "HC32F19x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L07x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L13x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L16x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L17x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L18x": [
+          "TIM1_MODE0"
+        ],
+        "HC32L19x": [
+          "TIM1_MODE0"
+        ]
+      }
+    },
+    {
+      "source": "tim_v7",
+      "source_sha256": "dcc525c19df75b647d1c4df0fc87650a7b0a1d5b025c4062e0e2c810a2fd2c7d",
+      "kind": "tim",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 2,
+      "rationale": "MODE0 计数视图",
+      "register_count": 7,
+      "field_count": 21,
+      "instances": {
+        "HC32A136": [
+          "TIM2_MODE0"
+        ],
+        "HC32F030": [
+          "TIM2_MODE0"
+        ],
+        "HC32F072": [
+          "TIM2_MODE0"
+        ],
+        "HC32F17x": [
+          "TIM2_MODE0"
+        ],
+        "HC32F19x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L07x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L13x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L16x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L17x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L18x": [
+          "TIM2_MODE0"
+        ],
+        "HC32L19x": [
+          "TIM2_MODE0"
+        ]
+      }
+    },
+    {
+      "source": "tim_v11",
+      "source_sha256": "ea8706df58c72e9a3c8b76941f113893127cfd99b3b40b7236992ac6f4cdc890",
+      "kind": "tim",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 29,
+      "instances": {
+        "HC32A136": [
+          "TIM3_MODE1"
+        ],
+        "HC32F030": [
+          "TIM3_MODE1"
+        ],
+        "HC32F072": [
+          "TIM3_MODE1"
+        ],
+        "HC32F17x": [
+          "TIM3_MODE1"
+        ],
+        "HC32F19x": [
+          "TIM3_MODE1"
+        ],
+        "HC32L07x": [
+          "TIM3_MODE1"
+        ],
+        "HC32L13x": [
+          "TIM3_MODE1"
+        ],
+        "HC32L17x": [
+          "TIM3_MODE1"
+        ],
+        "HC32L19x": [
+          "TIM3_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v2",
+      "source_sha256": "1e8a0f2e1368daf22da965bca1088aecb352bd2a51f9c473224f69750387ac3c",
+      "kind": "tim",
+      "version": "v3_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 29,
+      "instances": {
+        "HC32A136": [
+          "TIM0_MODE1"
+        ],
+        "HC32F030": [
+          "TIM0_MODE1"
+        ],
+        "HC32F072": [
+          "TIM0_MODE1"
+        ],
+        "HC32F17x": [
+          "TIM0_MODE1"
+        ],
+        "HC32F19x": [
+          "TIM0_MODE1"
+        ],
+        "HC32L07x": [
+          "TIM0_MODE1"
+        ],
+        "HC32L13x": [
+          "TIM0_MODE1"
+        ],
+        "HC32L17x": [
+          "TIM0_MODE1"
+        ],
+        "HC32L19x": [
+          "TIM0_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v5",
+      "source_sha256": "823c880a15cc6a400eb7995ec6cae7f3a7c7af6fe0578dc3f0e6be9e7167c62d",
+      "kind": "tim",
+      "version": "v3_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 29,
+      "instances": {
+        "HC32A136": [
+          "TIM1_MODE1"
+        ],
+        "HC32F030": [
+          "TIM1_MODE1"
+        ],
+        "HC32F072": [
+          "TIM1_MODE1"
+        ],
+        "HC32F17x": [
+          "TIM1_MODE1"
+        ],
+        "HC32F19x": [
+          "TIM1_MODE1"
+        ],
+        "HC32L07x": [
+          "TIM1_MODE1"
+        ],
+        "HC32L13x": [
+          "TIM1_MODE1"
+        ],
+        "HC32L17x": [
+          "TIM1_MODE1"
+        ],
+        "HC32L19x": [
+          "TIM1_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v8",
+      "source_sha256": "e59e85825dda601e695f9b1a9c3ceb6234cd878545524cbef9958b39810ad3fa",
+      "kind": "tim",
+      "version": "v3_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 29,
+      "instances": {
+        "HC32A136": [
+          "TIM2_MODE1"
+        ],
+        "HC32F030": [
+          "TIM2_MODE1"
+        ],
+        "HC32F072": [
+          "TIM2_MODE1"
+        ],
+        "HC32F17x": [
+          "TIM2_MODE1"
+        ],
+        "HC32F19x": [
+          "TIM2_MODE1"
+        ],
+        "HC32L07x": [
+          "TIM2_MODE1"
+        ],
+        "HC32L13x": [
+          "TIM2_MODE1"
+        ],
+        "HC32L17x": [
+          "TIM2_MODE1"
+        ],
+        "HC32L19x": [
+          "TIM2_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v18",
+      "source_sha256": "75dc721f4d02deaf0948fa1ade06c1d756293d6fe29f53a70b232dc50d48cb84",
+      "kind": "tim",
+      "version": "v3_4",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32L12x": [
+          "TIM0_MODE1",
+          "TIM1_MODE1",
+          "TIM2_MODE1",
+          "TIM3_MODE1"
+        ],
+        "HC32L16x": [
+          "TIM0_MODE1"
+        ],
+        "HC32L18x": [
+          "TIM0_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v21",
+      "source_sha256": "ab037a9e8014f4d0d411066661f6462647174637ebe98dc4403c2f011b1bdaea",
+      "kind": "tim",
+      "version": "v3_5",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32L16x": [
+          "TIM1_MODE1"
+        ],
+        "HC32L18x": [
+          "TIM1_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v23",
+      "source_sha256": "7e883eb74d44531f6ab9e2ae7fef0f860cd0ca7b4c53a5179769d838d766fa15",
+      "kind": "tim",
+      "version": "v3_6",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32L16x": [
+          "TIM2_MODE1"
+        ],
+        "HC32L18x": [
+          "TIM2_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v25",
+      "source_sha256": "67770aa15fbd553aff0ff79a4b48fa9b1ad110a227ea4e12acfc33bf2ae546a5",
+      "kind": "tim",
+      "version": "v3_7",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 3,
+      "rationale": "MODE1 门控/捕获，CSA/CSB 按变体保留",
+      "register_count": 8,
+      "field_count": 31,
+      "instances": {
+        "HC32L16x": [
+          "TIM3_MODE1"
+        ],
+        "HC32L18x": [
+          "TIM3_MODE1"
+        ]
+      }
+    },
+    {
+      "source": "tim_v14",
+      "source_sha256": "99e412b2910b3ca531515d4e77f926ddb7e6c8f66cbf33b214513d560f8faa40",
+      "kind": "tim",
+      "version": "v4",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 97,
+      "instances": {
+        "HC32F072": [
+          "TIM0_MODE23"
+        ],
+        "HC32F17x": [
+          "TIM0_MODE23"
+        ],
+        "HC32F19x": [
+          "TIM0_MODE23"
+        ],
+        "HC32L07x": [
+          "TIM0_MODE23"
+        ],
+        "HC32L17x": [
+          "TIM0_MODE23"
+        ],
+        "HC32L19x": [
+          "TIM0_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v15",
+      "source_sha256": "3b7fe22b6c3e828bc0ae13b953860616faf809eb9996c3fd24464f97b6cd0c26",
+      "kind": "tim",
+      "version": "v4_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 97,
+      "instances": {
+        "HC32F072": [
+          "TIM1_MODE23"
+        ],
+        "HC32F17x": [
+          "TIM1_MODE23"
+        ],
+        "HC32F19x": [
+          "TIM1_MODE23"
+        ],
+        "HC32L07x": [
+          "TIM1_MODE23"
+        ],
+        "HC32L17x": [
+          "TIM1_MODE23"
+        ],
+        "HC32L19x": [
+          "TIM1_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v16",
+      "source_sha256": "d412750d479eb3338cd4df75f470c37cb95683af5d90961a1c9234e49c086d50",
+      "kind": "tim",
+      "version": "v4_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 97,
+      "instances": {
+        "HC32F072": [
+          "TIM2_MODE23"
+        ],
+        "HC32F17x": [
+          "TIM2_MODE23"
+        ],
+        "HC32F19x": [
+          "TIM2_MODE23"
+        ],
+        "HC32L07x": [
+          "TIM2_MODE23"
+        ],
+        "HC32L17x": [
+          "TIM2_MODE23"
+        ],
+        "HC32L19x": [
+          "TIM2_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v3",
+      "source_sha256": "5cc25b86fc27c56a9423aa87a13c424f372ec77052f08838b378418d2ee95367",
+      "kind": "tim",
+      "version": "v4_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 98,
+      "instances": {
+        "HC32A136": [
+          "TIM0_MODE23"
+        ],
+        "HC32F030": [
+          "TIM0_MODE23"
+        ],
+        "HC32L13x": [
+          "TIM0_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v6",
+      "source_sha256": "329d365279bf197fe37da3672890685a375073efac405ada9b3f9ad333fd3d46",
+      "kind": "tim",
+      "version": "v4_4",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 98,
+      "instances": {
+        "HC32A136": [
+          "TIM1_MODE23"
+        ],
+        "HC32F030": [
+          "TIM1_MODE23"
+        ],
+        "HC32L13x": [
+          "TIM1_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v9",
+      "source_sha256": "0a21a0ce6cab07a7f751a5c403050405fa27e5f150a194d1aa9b4d3945e2399b",
+      "kind": "tim",
+      "version": "v4_5",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 98,
+      "instances": {
+        "HC32A136": [
+          "TIM2_MODE23"
+        ],
+        "HC32F030": [
+          "TIM2_MODE23"
+        ],
+        "HC32L13x": [
+          "TIM2_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v19",
+      "source_sha256": "1cef863bfb80581842b135622f675bbff0b3f479abc87d8f9743f02a5c9c7557",
+      "kind": "tim",
+      "version": "v4_6",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 105,
+      "instances": {
+        "HC32L12x": [
+          "TIM0_MODE23",
+          "TIM1_MODE23",
+          "TIM2_MODE23"
+        ],
+        "HC32L16x": [
+          "TIM0_MODE23"
+        ],
+        "HC32L18x": [
+          "TIM0_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v22",
+      "source_sha256": "5417387d40ff523ba8430f514f84c9d2596263b9682e4c7dfdc40c8ee4dd9311",
+      "kind": "tim",
+      "version": "v4_7",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 105,
+      "instances": {
+        "HC32L16x": [
+          "TIM1_MODE23"
+        ],
+        "HC32L18x": [
+          "TIM1_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v24",
+      "source_sha256": "78aa53b79324fd1f8d80f626abd6764e0d65e54711705b4742ae52b41b2469f5",
+      "kind": "tim",
+      "version": "v4_8",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 4,
+      "rationale": "MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 14,
+      "field_count": 105,
+      "instances": {
+        "HC32L16x": [
+          "TIM2_MODE23"
+        ],
+        "HC32L18x": [
+          "TIM2_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v17",
+      "source_sha256": "2cca681110c83829c9a5c64a1b23e2d771acb315c4741c70ced5c48e1700c412",
+      "kind": "tim",
+      "version": "v5",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 5,
+      "rationale": "MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 20,
+      "field_count": 161,
+      "instances": {
+        "HC32F072": [
+          "TIM3_MODE23"
+        ],
+        "HC32F17x": [
+          "TIM3_MODE23"
+        ],
+        "HC32F19x": [
+          "TIM3_MODE23"
+        ],
+        "HC32L07x": [
+          "TIM3_MODE23"
+        ],
+        "HC32L17x": [
+          "TIM3_MODE23"
+        ],
+        "HC32L19x": [
+          "TIM3_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v12",
+      "source_sha256": "0e4522a77b8386bda70b2166410e59eacb436082861aea13da640085309c9013",
+      "kind": "tim",
+      "version": "v5_1",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 5,
+      "rationale": "MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 20,
+      "field_count": 162,
+      "instances": {
+        "HC32A136": [
+          "TIM3_MODE23"
+        ],
+        "HC32F030": [
+          "TIM3_MODE23"
+        ],
+        "HC32L13x": [
+          "TIM3_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v26",
+      "source_sha256": "0cd84b43290777b4ca9620d0dd102ba6ba10e14fe73d0a511635fb9ea4cc6333",
+      "kind": "tim",
+      "version": "v5_2",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 5,
+      "rationale": "MODE23 捕获/PWM，4 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 24,
+      "field_count": 189,
+      "instances": {
+        "HC32L16x": [
+          "TIM3_MODE23"
+        ],
+        "HC32L18x": [
+          "TIM3_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "tim_v20",
+      "source_sha256": "23679409d6675664f3619f0cbfa03ea627981672033105091bc8e789cfe37e72",
+      "kind": "tim",
+      "version": "v5_3",
+      "status": "proposed",
+      "topic": "timer-gen",
+      "tier": 5,
+      "rationale": "MODE23 捕获/PWM，4 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留",
+      "register_count": 24,
+      "field_count": 191,
+      "instances": {
+        "HC32L12x": [
+          "TIM3_MODE23"
+        ]
+      }
+    },
+    {
+      "source": "trng_v1",
+      "source_sha256": "39c060ea63cef91bda090201661dc5cfe70798d9c20c959c6f4b3576bb8d685e",
+      "kind": "trng",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "随机数控制；ENDIE 等字段按变体保留",
+      "register_count": 4,
+      "field_count": 9,
+      "instances": {
+        "HC32A136": [
+          "TRNG"
+        ],
+        "HC32F030": [
+          "TRNG"
+        ],
+        "HC32F072": [
+          "TRNG"
+        ],
+        "HC32F17x": [
+          "TRNG"
+        ],
+        "HC32F19x": [
+          "TRNG"
+        ],
+        "HC32L021": [
+          "TRNG"
+        ],
+        "HC32L07x": [
+          "TRNG"
+        ],
+        "HC32L13x": [
+          "TRNG"
+        ],
+        "HC32L16x": [
+          "TRNG"
+        ],
+        "HC32L17x": [
+          "TRNG"
+        ],
+        "HC32L18x": [
+          "TRNG"
+        ],
+        "HC32L19x": [
+          "TRNG"
+        ]
+      }
+    },
+    {
+      "source": "trng_v2",
+      "source_sha256": "6bdc2a1aa39c4d55f001cf5a12138c62210768a7442ee83a65e3089c3538bf6d",
+      "kind": "trng",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "随机数控制；ENDIE 等字段按变体保留",
+      "register_count": 4,
+      "field_count": 9,
+      "instances": {
+        "HC32L12x": [
+          "TRNG"
+        ]
+      }
+    },
+    {
+      "source": "uart_v2",
+      "source_sha256": "27891004bf2666aeedf1add41a0429378708f681d10bd0feeded77b7b2e1779d",
+      "kind": "uart",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 1,
+      "rationale": "基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力",
+      "register_count": 6,
+      "field_count": 18,
+      "instances": {
+        "HC32F003": [
+          "UART0",
+          "UART1"
+        ],
+        "HC32F005": [
+          "UART0",
+          "UART1"
+        ],
+        "HC32L110": [
+          "UART0",
+          "UART1"
+        ]
+      }
+    },
+    {
+      "source": "uart_v1",
+      "source_sha256": "978227184d7c9a56ffc2a09dc485c9df7e53ada3a1e82f27c90ed10457e61af9",
+      "kind": "uart",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 2,
+      "rationale": "基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力",
+      "register_count": 7,
+      "field_count": 40,
+      "instances": {
+        "HC32A136": [
+          "UART0",
+          "UART1"
+        ],
+        "HC32F030": [
+          "UART0",
+          "UART1"
+        ],
+        "HC32L13x": [
+          "UART0",
+          "UART1"
+        ]
+      }
+    },
+    {
+      "source": "uart_v3",
+      "source_sha256": "d7a6a05d6732cf24ae60652892f67797d3a014084a3b3dc4af09b0023a9f3031",
+      "kind": "uart",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 3,
+      "rationale": "基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力",
+      "register_count": 7,
+      "field_count": 41,
+      "instances": {
+        "HC32F072": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32F17x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32F19x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32L07x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32L16x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32L17x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32L18x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ],
+        "HC32L19x": [
+          "UART0",
+          "UART1",
+          "UART2",
+          "UART3"
+        ]
+      }
+    },
+    {
+      "source": "usart_common",
+      "source_sha256": "a7210d016d0e1944dde65f3a933e2c4b72a7aaecad3f529906ee26fdd26d9f5e",
+      "kind": "usart",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "serial",
+      "tier": 1,
+      "rationale": "同步/异步串口，LIN、SmartCard、IrDA 与自动波特率",
+      "register_count": 14,
+      "field_count": 96,
+      "instances": {
+        "HC32A052": [
+          "USART0",
+          "USART1"
+        ],
+        "HC32F052": [
+          "USART0",
+          "USART1"
+        ],
+        "HC32F420": [
+          "USART0",
+          "USART1",
+          "USART2",
+          "USART3"
+        ],
+        "HC32L12x": [
+          "USART0",
+          "USART1"
+        ]
+      }
+    },
+    {
+      "source": "usbfs_common",
+      "source_sha256": "43e9ef47d04d31766f3fd44ee1a761f11d7f2f11042e00e7b86fa8ad9fc8f894",
+      "kind": "usbfs",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "crypto-comm",
+      "tier": 1,
+      "rationale": "USB 全速控制（仅 DDL 纳入）",
+      "register_count": 67,
+      "field_count": 312,
+      "instances": {
+        "HC32F072": [
+          "USBFS"
+        ],
+        "HC32L07x": [
+          "USBFS"
+        ]
+      }
+    },
+    {
+      "source": "vc_v5",
+      "source_sha256": "8c8f0a6dea88d203156ba59d6108470549a2682c0beebd0d624a417b22543910",
+      "kind": "vc",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "独立比较器实例，CR0/CR1/CR2 与状态窗口",
+      "register_count": 4,
+      "field_count": 26,
+      "instances": {
+        "HC32F420": [
+          "VC0",
+          "VC1"
+        ]
+      }
+    },
+    {
+      "source": "vc_v1",
+      "source_sha256": "0b2c1d29b6315d79638396209ee24e3c6adf66318ff79f7ea2953a213998da38",
+      "kind": "vc",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "独立比较器实例，CR0/CR1/CR2 与状态窗口",
+      "register_count": 4,
+      "field_count": 28,
+      "instances": {
+        "HC32A052": [
+          "VC0",
+          "VC1"
+        ],
+        "HC32F052": [
+          "VC0",
+          "VC1"
+        ]
+      }
+    },
+    {
+      "source": "vc_v8",
+      "source_sha256": "6c86aa6d9208f04d0118e7262cac0d70faeaad3ed3114945114ce471939e3b63",
+      "kind": "vc",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 1,
+      "rationale": "独立比较器实例，CR0/CR1/CR2 与状态窗口",
+      "register_count": 4,
+      "field_count": 29,
+      "instances": {
+        "HC32L12x": [
+          "VC0",
+          "VC1"
+        ]
+      }
+    },
+    {
+      "source": "vc_v2",
+      "source_sha256": "36eb912113414672b4bfb91a906e2fe5aac779180d879f9fe8539f76a0671bf4",
+      "kind": "vc",
+      "version": "v2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "双比较器；输出路由与校准为同档不同分支",
+      "register_count": 6,
+      "field_count": 61,
+      "instances": {
+        "HC32A136": [
+          "VC"
+        ],
+        "HC32F030": [
+          "VC"
+        ],
+        "HC32L13x": [
+          "VC"
+        ]
+      }
+    },
+    {
+      "source": "vc_v7",
+      "source_sha256": "698314f8f5ffc79025111b696cf30a5fb00f9d13bec66fe2de7ca398cf15926a",
+      "kind": "vc",
+      "version": "v2_1",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "双比较器；输出路由与校准为同档不同分支",
+      "register_count": 6,
+      "field_count": 61,
+      "instances": {
+        "HC32L110": [
+          "VC"
+        ]
+      }
+    },
+    {
+      "source": "vc_v3",
+      "source_sha256": "a5291c42a5060b29e050971b6bf681819bf8748a2820d7e79c573537dca46d4e",
+      "kind": "vc",
+      "version": "v2_2",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "双比较器；输出路由与校准为同档不同分支",
+      "register_count": 6,
+      "field_count": 63,
+      "instances": {
+        "HC32F003": [
+          "VC"
+        ],
+        "HC32F005": [
+          "VC"
+        ]
+      }
+    },
+    {
+      "source": "vc_v6",
+      "source_sha256": "068c669c9527305717106d40923bb68a70c5a3d609c3cd6ebbc1f0e20c3791da",
+      "kind": "vc",
+      "version": "v2_3",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 2,
+      "rationale": "双比较器；输出路由与校准为同档不同分支",
+      "register_count": 9,
+      "field_count": 53,
+      "instances": {
+        "HC32L021": [
+          "VC"
+        ]
+      }
+    },
+    {
+      "source": "vc_v4",
+      "source_sha256": "04decc81f6d2b9524dc0dead68c1bb4c8f4abc92629a42f784173a3ec8692193",
+      "kind": "vc",
+      "version": "v3",
+      "status": "proposed",
+      "topic": "analog",
+      "tier": 3,
+      "rationale": "三比较器与输出路由",
+      "register_count": 8,
+      "field_count": 89,
+      "instances": {
+        "HC32F072": [
+          "VC"
+        ],
+        "HC32F17x": [
+          "VC"
+        ],
+        "HC32F19x": [
+          "VC"
+        ],
+        "HC32L07x": [
+          "VC"
+        ],
+        "HC32L16x": [
+          "VC"
+        ],
+        "HC32L17x": [
+          "VC"
+        ],
+        "HC32L18x": [
+          "VC"
+        ],
+        "HC32L19x": [
+          "VC"
+        ]
+      }
+    },
+    {
+      "source": "vctrim_common",
+      "source_sha256": "c9d0419fd6482ecd4f06c8d80f24bcd0f9b7ead9cdf9cbb465fb2fc8be1a7281",
+      "kind": "vctrim",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "clock-reset",
+      "tier": 1,
+      "rationale": "比较器校准",
+      "register_count": 1,
+      "field_count": 3,
+      "instances": {
+        "HC32L12x": [
+          "VCTRIM"
+        ]
+      }
+    },
+    {
+      "source": "wdt_v2",
+      "source_sha256": "a6abe674104b6463e9de8cb3256972a32fe7f9639222457aacbcae6426987be2",
+      "kind": "wdt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 6,
+      "instances": {
+        "HC32L110": [
+          "WDT"
+        ]
+      }
+    },
+    {
+      "source": "wdt_v1",
+      "source_sha256": "c8a85c47ecb9b418d1e8c2c01506050e26f7f940284cf647f1863800a566c2ab",
+      "kind": "wdt",
+      "version": "v1_1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 8,
+      "instances": {
+        "HC32A136": [
+          "WDT"
+        ],
+        "HC32F003": [
+          "WDT"
+        ],
+        "HC32F005": [
+          "WDT"
+        ],
+        "HC32F030": [
+          "WDT"
+        ],
+        "HC32F072": [
+          "WDT"
+        ],
+        "HC32F17x": [
+          "WDT"
+        ],
+        "HC32F19x": [
+          "WDT"
+        ],
+        "HC32L07x": [
+          "WDT"
+        ],
+        "HC32L13x": [
+          "WDT"
+        ],
+        "HC32L17x": [
+          "WDT"
+        ],
+        "HC32L19x": [
+          "WDT"
+        ]
+      }
+    },
+    {
+      "source": "wdt_v3",
+      "source_sha256": "7363b14dc07360426f5f316b57c32629e75cfeddd4e5ce4c3a01897e7a1982c9",
+      "kind": "wdt",
+      "version": "v1_2",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 2,
+      "field_count": 8,
+      "instances": {
+        "HC32L16x": [
+          "WDT"
+        ],
+        "HC32L18x": [
+          "WDT"
+        ]
+      }
+    },
+    {
+      "source": "wwdt_common",
+      "source_sha256": "cd33a562d10639fb85be3db42a96b79a0c92651fb5cfb4c7284c0d0f15b0b824",
+      "kind": "wwdt",
+      "version": "v1",
+      "status": "proposed",
+      "topic": "power-wdt",
+      "tier": 1,
+      "rationale": "同档控制；窗口偏移、锁定、阈值/滤波或字段方言分变体",
+      "register_count": 3,
+      "field_count": 9,
+      "instances": {
+        "HC32A052": [
+          "WWDT"
+        ],
+        "HC32F002": [
+          "WWDT"
+        ],
+        "HC32F052": [
+          "WWDT"
+        ],
+        "HC32F420": [
+          "WWDT"
+        ],
+        "HC32L12x": [
+          "WWDT"
+        ],
+        "HC32L16x": [
+          "WWDT"
+        ],
+        "HC32L18x": [
+          "WWDT"
+        ]
+      }
+    }
+  ]
+}

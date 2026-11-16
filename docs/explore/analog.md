@@ -1,51 +1,187 @@
-# 模拟
+# ADC、DAC、运放与比较器
 
-## 功能档位
+ADC 以基础转换、序列控制和结果读出能力排序。F002 为基础转换，L021 为四通道顺序转换，
+F420 有内嵌 BGR/SQR 和单 RESULT；F003/F005/L110 为早期多结果布局。
+A052/F052 与 L12x 分别为四、六 rank，长序列组保留十六个顺序结果和插队结果。
+长序列的 ALLSTART、CHMAP、RTC 触发位及字段命名不同，分别保留布局变体。
+F420 与早期多结果组侧重点不同，主档位排序不是寄存器兼容或功能包含关系。
 
-ADC 按基础转换、序列控制及结果读出能力分档。`adc_v7_1` 在 `adc_v7` 的 SQR/JQR 布局上增加 `ALLSTART@0xCC`，并有 CHMAP 和 RTC 触发位差异。
+OPA 从单运放基础控制、ADC 触发扩展，再到双运放自动调零/三运放分支和五运放。
+VC 按独立实例、双比较器窗口、三比较器路由分档；L021 的校准窗口不能当作其他系列的同址窗口。
+DAC 按单通道、双通道及双数据写入分档。
 
 A136 的 SDK 设备头 `HC32A136_DDL_Rev2.1.0/mcu/common/hc32a136.h` 与 SVD 一致，
-ADC、OPA、VC、LVD、BGR 的基址都是 `0x40002400`。各块的寄存器按偏移拆开，
-如 BGR.CR 在 `+0x00`、ADC.CR0 在 `+0x04`、VC.CR 在 `+0x10`、
-LVD.CR 在 `+0x28`、OPA.CR0 在 `+0x30`。
+ADC、OPA、VC、LVD、BGR 基址均为 `0x40002400`。寄存器分处不同偏移：
+BGR.CR +0x00、ADC.CR0 +0x04、VC.CR +0x10、LVD.CR +0x28、OPA.CR0 +0x30。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `adc_v1` | F002 | 9 寄存器最简型 |
-| `adc_v2` | L021 | 11 寄存器 4 通道 |
-| `adc_v3` | F420 | 16 寄存器，内嵌 BGR、SQR 与单个 RESULT。 |
-| `adc_v4` | F003 F005 L110 | 18 寄存器早期基本型（RESULT0..8） |
-| `adc_v5` | A052 F052 | 27 寄存器、4 rank、块首内嵌 BGR 寄存器 |
-| `adc_v6` | L12x | 28 寄存器 6 rank + 内嵌 BGR |
-| `adc_v7` | A136 F030 L13x | 37 个寄存器，无 ALLSTART。 |
-| `adc_v7_1` | F072 L07x F17x F19x L16x L17x L18x L19x | 38 个寄存器，包含 16 个 SQR 结果寄存器、JQR 和 ALLSTART。 |
-| `dac_v1` | F17x F19x L16x L17x L18x L19x | 8 寄存器单通道 12bit |
-| `dac_v2` | F072 L07x | 15 寄存器双通道 |
-| `opa_v1` | A136 F030 L13x | 3 运放、每运放一套 CR |
-| `opa_v2` | F072 L07x | 5 运放阵列位段 |
-| `opa_v3` | F17x F19x L17x L19x | 单运放+ADC 触发 |
-| `opa_v4` | L16x L18x | 单运放精简 |
-| `opa_v5` | A052 F052 | 2 运放 + AZ |
-| `vc_v1` | F072 F17x F19x L07x L16x L17x L18x L19x | 8 寄存器 3 比较器 |
-| `vc_v2` | A136 F030 L13x | 6 寄存器 2 比较器（OUT_CFG→TIMxRCLR/TIMBK） |
-| `vc_v2_1` | F003 F005 | 同上，OUT_CFG→PCA 系 |
-| `vc_v2_2` | L110 | 同上，OUT_CFG 目标再多 TIM3G/TIM3ECLK |
-| `vc_v3` | A052 F052 | VC0/VC1 独立实例（derivedFrom），4 寄存器 |
-| `vc_v3_1` | L12x | 同上，字段命名差异 |
-| `vc_v4` | L021 | 9 寄存器含 VC_TRIM |
-| `bgr_v1` | A136 F003 F005 F030 F072 F17x F19x L07x L110 L13x L16x L17x L18x L19x | 单寄存器 |
-| `hdiv_v1` | A136 F030 F072 L07x L13x | 6 寄存器 |
+F420 ADC0/1 有 16 路外部输入以及 AVCC/3、温度传感器输入，共用 IRQ 10。
+VC0/1 共用 IRQ 1，ADC0/1 和 VC 门控为 APB1EN bit 8/9/10。
+`ADC_Enable_EOC_DMATransfer()` 使能 EOC DMA，请求值见 `driver/inc/dmac.h` 的 0x4D/0x4F。
+VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成布局仍分别登记。
 
-## HC32F420（Cortex-M4）
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-ADC0/1 归 `adc_v3`，VC0/1 归 `vc_v3_2`。ADC 驱动头列出 16 路外部输入和
-AVCC/3、温度传感器两路内部输入。ADC0/1 共用 IRQ 10，
-VC0/1 共用 IRQ 1。ADC0/1 和 VC 的门控为 APB1EN bit 8/9/10。
-ADC 的 EOC 通过 `ADC_Enable_EOC_DMATransfer()` 使能 DMA 请求，
-在 `driver/inc/dmac.h` 中 ADC0/1 请求值为 `0x4D`/`0x4F`。
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-`adc_v3` 有 16 个寄存器，保留内嵌 BGR 和 SQR，采用单 RESULT，省去 JQR 和 SQRRESULT 数组。
-`vc_v3_2` 保留 A052/F052 的 CR0/CR1/CR2/SR 布局，去掉 CR2.ATIM1CLR/ATIM2CLR。
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+
+### adc：v1
+
+基础转换、单结果。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v1.rs` | [adc_v3](../../data/registers/adc_v3.yaml) | F002: ADC | 9 / 21 | 本档位对照基准；完整定义见来源 YAML |
+
+### adc：v2
+
+四通道顺序转换。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v2.rs` | [adc_v9](../../data/registers/adc_v9.yaml) | L021: ADC | 11 / 30 | 本档位对照基准；完整定义见来源 YAML |
+
+### adc：v3
+
+内嵌 BGR、SQR、单 RESULT。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v3.rs` | [adc_v7](../../data/registers/adc_v7.yaml) | F420: ADC0 | 16 / 87 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v3_1.rs` | [adc_v8](../../data/registers/adc_v8.yaml) | F420: ADC1 | 16 / 87 | 相对 adc_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+
+### adc：v4
+
+早期多结果读出。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v4.rs` | [adc_v4](../../data/registers/adc_v4.yaml) | F003/F005/L110: ADC | 18 / 47 | 本档位对照基准；完整定义见来源 YAML |
+
+### adc：v5
+
+四 rank 顺序/插队转换、内嵌 BGR。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v5.rs` | [adc_v1](../../data/registers/adc_v1.yaml) | A052/F052: ADC | 27 / 112 | 本档位对照基准；完整定义见来源 YAML |
+
+### adc：v6
+
+六 rank、顺序/插队转换。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v6.rs` | [adc_v11](../../data/registers/adc_v11.yaml) | L12x: ADC | 28 / 89 | 本档位对照基准；完整定义见来源 YAML |
+
+### adc：v7
+
+十六个顺序结果、插队结果与累计结果；ALLSTART/CHMAP 等按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adc_ddl_v7.rs` | [adc_v2](../../data/registers/adc_v2.yaml) | A136/F030/L13x: ADC | 37 / 178 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v7_1.rs` | [adc_v12](../../data/registers/adc_v12.yaml) | L16x/L18x: ADC | 38 / 178 | 相对 adc_ddl_v7：增加 ALLSTART/SQRRESULT13；缺少 SQR_RESULT13；定义差异 EXTTRIGGER0/EXTTRIGGER1 |
+| `adc_ddl_v7_2.rs` | [adc_v5](../../data/registers/adc_v5.yaml) | F072: ADC | 38 / 179 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0/EXTTRIGGER0/EXTTRIGGER1 |
+| `adc_ddl_v7_3.rs` | [adc_v6](../../data/registers/adc_v6.yaml) | F17x/F19x/L17x/L19x: ADC | 38 / 180 | 相对 adc_ddl_v7：增加 ALLSTART |
+| `adc_ddl_v7_4.rs` | [adc_v10](../../data/registers/adc_v10.yaml) | L07x: ADC | 38 / 181 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0 |
+
+### bgr：v1
+
+带隙基准控制。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `bgr_ddl_v1.rs` | [bgr_v2](../../data/registers/bgr_v2.yaml) | L110: BGR | 1 / 2 | 本档位对照基准；完整定义见来源 YAML |
+| `bgr_ddl_v1_1.rs` | [bgr_v1](../../data/registers/bgr_v1.yaml) | A136/F003/F005/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: BGR | 1 / 3 | 相对 bgr_ddl_v1：定义差异 CR |
+
+### dac：v1
+
+单通道转换。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `dac_ddl_v1.rs` | [dac_v2](../../data/registers/dac_v2.yaml) | F17x/F19x/L16x/L17x/L18x/L19x: DAC | 8 / 23 | 本档位对照基准；完整定义见来源 YAML |
+
+### dac：v2
+
+双通道、双数据写入。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `dac_ddl_v2.rs` | [dac_v1](../../data/registers/dac_v1.yaml) | F072/L07x: DAC | 15 / 50 | 本档位对照基准；完整定义见来源 YAML |
+
+### hdiv：v1
+
+硬件除法。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `hdiv_ddl_v1.rs` | [hdiv_common](../../data/registers/hdiv_common.yaml) | A136/F030/F072/L07x/L13x: HDIV | 6 / 7 | 本档位对照基准；完整定义见来源 YAML |
+
+### opa：v1
+
+单运放基础控制。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `opa_ddl_v1.rs` | [opa_v5](../../data/registers/opa_v5.yaml) | L16x/L18x: OPA | 1 / 8 | 本档位对照基准；完整定义见来源 YAML |
+
+### opa：v2
+
+单运放及 ADC 触发。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `opa_ddl_v2.rs` | [opa_v4](../../data/registers/opa_v4.yaml) | F17x/F19x/L17x/L19x: OPA | 2 / 15 | 本档位对照基准；完整定义见来源 YAML |
+
+### opa：v3
+
+双运放及 AZ 自动调零；三运放独立控制，与双运放 AZ 为同档不同分支。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `opa_ddl_v3.rs` | [opa_v1](../../data/registers/opa_v1.yaml) | A052/F052: OPA | 3 / 14 | 本档位对照基准；完整定义见来源 YAML |
+| `opa_ddl_v3_1.rs` | [opa_v2](../../data/registers/opa_v2.yaml) | A136/F030/L13x: OPA | 4 / 38 | 相对 opa_ddl_v3：增加 CR/CR2；缺少 AZ；定义差异 CR0/CR1 |
+
+### opa：v4
+
+五运放控制。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `opa_ddl_v4.rs` | [opa_v3](../../data/registers/opa_v3.yaml) | F072/L07x: OPA | 4 / 34 | 本档位对照基准；完整定义见来源 YAML |
+
+### vc：v1
+
+独立比较器实例，CR0/CR1/CR2 与状态窗口。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `vc_ddl_v1.rs` | [vc_v5](../../data/registers/vc_v5.yaml) | F420: VC0, VC1 | 4 / 26 | 本档位对照基准；完整定义见来源 YAML |
+| `vc_ddl_v1_1.rs` | [vc_v1](../../data/registers/vc_v1.yaml) | A052/F052: VC0, VC1 | 4 / 28 | 相对 vc_ddl_v1：定义差异 CR2 |
+| `vc_ddl_v1_2.rs` | [vc_v8](../../data/registers/vc_v8.yaml) | L12x: VC0, VC1 | 4 / 29 | 相对 vc_ddl_v1：增加 IFR；缺少 SR；定义差异 CR0/CR1/CR2 |
+
+### vc：v2
+
+双比较器；输出路由与校准为同档不同分支。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `vc_ddl_v2.rs` | [vc_v2](../../data/registers/vc_v2.yaml) | A136/F030/L13x: VC | 6 / 61 | 本档位对照基准；完整定义见来源 YAML |
+| `vc_ddl_v2_1.rs` | [vc_v7](../../data/registers/vc_v7.yaml) | L110: VC | 6 / 61 | 相对 vc_ddl_v2：定义差异 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
+| `vc_ddl_v2_2.rs` | [vc_v3](../../data/registers/vc_v3.yaml) | F003/F005: VC | 6 / 63 | 相对 vc_ddl_v2：定义差异 VC0_CR/VC0_OUT_CFG/VC1_CR/VC1_OUT_CFG |
+| `vc_ddl_v2_3.rs` | [vc_v6](../../data/registers/vc_v6.yaml) | L021: VC | 9 / 53 | 相对 vc_ddl_v2：增加 VC0_CR0/VC0_CR1/VC0_CR2/VC0_SR/VC1_CR0 等 9 项；缺少 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
+
+### vc：v3
+
+三比较器与输出路由。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `vc_ddl_v3.rs` | [vc_v4](../../data/registers/vc_v4.yaml) | F072/F17x/F19x/L07x/L16x/L17x/L18x/L19x: VC | 8 / 89 | 本档位对照基准；完整定义见来源 YAML |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 

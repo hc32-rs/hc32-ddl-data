@@ -1,36 +1,88 @@
-# 高级定时器与紧急刹车
+# 高级定时器
 
-## Cortex-M0/M0+
+ADT/ADTIM 统一使用 adt 名称：基础布局之后是含 SCMAR/SCMBR、专用比较中断/DMA 控制的扩展，
+L16x/L18x 的 14 路刹车输入与标准布局用后缀区分，不再忽略 EN7/EN15、POL7/POL15 的差异。
 
-ADT 为 adt_v1–v3；ATIM 为 atim_v1–v7、atim_1ch_v1/v2，和通用定时器报告核对模式视图。
+ATIM 保留每个 MODE 视图，按 MODE0 计数、MODE1 门控/捕获及 MODE23 捕获/PWM 通道规模分档。
+数字后缀保留 ARRDM、CSA/CSB、刹车与第四通道控制差异。TIM3 归真实的 tim 来源，见
+[通用定时器](timer-gen.md)，不再同时赋予 atim_1ch/timer3 等多套编号。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `adt_v1` | A136, F030, F072, F17x, F19x, L07x, L13x, L17x, L19x | 38 寄存器全功能布局（md5 d58bb62a） |
-| `adt_v2` | F003, F005, L110 | 无 SCMAR/SCMBR、无专用比较中断/DMA 门控（L110 与 F003 仅 RSV 占位差异，合并） |
-| `adt_v3` | L16x, L18x | = v1，但端口刹车输入 14 路（无 EN7/EN15、POL7/POL15） |
-| `atim_v1` | A136/F030/L13x 的 TIM3 | 3 通道 + ARRDM + VC0E/VC1E（md5 2b7057f1） |
-| `atim_v2` | F072/F17x/F19x/L07x/L17x/L19x 的 TIM3 | v1 仅 DTR.VCE 单路（md5 325bd683）；若接受位级差异可与 v1 合并 |
-| `atim_v3` | L16x/L18x TIM3 | 4 通道，包含 OVF/UNDF。 |
-| `atim_v4` | L12x 的 TIM3 | 同 v3 仅 CRCH3A/3B 多 CM3AE/CM3BE；若接受位级差异可并入 v3 |
-| `atim_v5` | F002 的 ATIM3 | 旧字段命名风格、3+1 通道、无 ARRDM |
-| `atim_v6` | L021 的 ATIM3 | 3 通道 + OVF/UNDF − CDEA/CDEB − CCDS |
-| `atim_v7` | F052/A052 的 ATIM3（atimer3） | 4 通道 + 同代命名风格（可视为 v5 的 4 通道版） |
-| `atim_1ch_v1` | A052/F052 ATIM0–2 | MODE23 为 13 个寄存器，另有 MODE0/1 视图。 |
-| `atim_1ch_v2` | L12x TIM0–2 | 含 ARRDM，与通用定时器页对应。 |
+F420 ATIM0 MODE23 的 IFR/ICLR bit 18 有 CA3，A052/F052 无该字段；
+ATIM3 MODE1.CR0 增加 CSA/CSB，MODE23 部分标志改名。SVD 与设备头定义这些差异，
+`atim0.h` 的标志宏未列 CA3。MODE 视图共用物理基址，不能当作独立计数器数量。
+ATIM0 的 UEV/CHA/CHB/BKETR IRQ 为 43–46，ATIM3 对应 47–50。
+门控 APB0EN bit 24/27，DMA A/B 请求为 0x58/0x59 和 0x5E/0x5F。
 
-## HC32F420（Cortex-M4）
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-ATIM0/3 分别保留 `atim_1ch_v3`、`atim_v8` 候选。F420 ATIM0 的 MODE23
-在 IFR/ICLR bit 18 有 `CA3` 定义，A052/F052 的 ATIM0 无此字段。F420 ATIM3
-的 MODE1.CR0 多 `CSA/CSB`，MODE23.IFR/ICLR 的部分标志改名。
-F420 的设备头和 SVD 都定义这些差异，`atim0.h` 的 ATIM0 标志宏未列 CA3。ATIM0 和 ATIM3 的 MODE0/MODE1
-寄存器布局相同，各自的三个模式视图共用一个基址。
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-| F420 实例 | IRQ | APB0EN 位 | DMA A/B 请求 |
-|---|---|---:|---|
-| ATIM0 | UEV/CHA/CHB/BKETR 为 43–46 | 24 | `0x58/0x59` |
-| ATIM3 | UEV/CHA/CHB/BK_ETR_OV_UD_CMP3 为 47–50 | 27 | `0x5E/0x5F` |
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+
+### adt：v1
+
+高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adt_ddl_v1.rs` | [adt_common](../../data/registers/adt_common.yaml) | L110: ADT0, ADT1, ADT2 | 36 / 285 | 本档位对照基准；完整定义见来源 YAML |
+| `adt_ddl_v1_1.rs` | [adtim_v2](../../data/registers/adtim_v2.yaml) | F003/F005: ADTIM4, ADTIM5, ADTIM6 | 36 / 317 | 相对 adt_ddl_v1：定义差异 AOSCL/AOSSR/BCONR/CNTER/CR 等 32 项 |
+
+### adt：v2
+
+高级定时器；影子比较及专用中断/DMA 为扩展能力，刹车位分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `adt_ddl_v2.rs` | [adtim_v3](../../data/registers/adtim_v3.yaml) | L16x/L18x: ADTIM4, ADTIM5, ADTIM6 | 38 / 337 | 本档位对照基准；完整定义见来源 YAML |
+| `adt_ddl_v2_1.rs` | [adtim_v1](../../data/registers/adtim_v1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: ADTIM4, ADTIM5, ADTIM6 | 38 / 341 | 相对 adt_ddl_v2：定义差异 PTBKP/PTBKS |
+
+### atim：v1
+
+MODE0 计数视图。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `atim_ddl_v1.rs` | [atim_v1](../../data/registers/atim_v1.yaml) | A052/F052: ATIM0MODE0, ATIM1MODE0, ATIM2MODE0 | 7 / 21 | 本档位对照基准；完整定义见来源 YAML |
+| `atim_ddl_v1_1.rs` | [atim_v10](../../data/registers/atim_v10.yaml) | F420: ATIM0MODE0 | 7 / 21 | 相对 atim_ddl_v1：定义差异 DTR/M0CR |
+| `atim_ddl_v1_2.rs` | [atim_v15](../../data/registers/atim_v15.yaml) | L021: ATIM3_MODE0 | 7 / 21 | 相对 atim_ddl_v1：定义差异 ICLR/IFR |
+| `atim_ddl_v1_3.rs` | [atim_v4](../../data/registers/atim_v4.yaml) | A052/F052: ATIM3MODE0 | 7 / 21 | 相对 atim_ddl_v1：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `atim_ddl_v1_4.rs` | [atim_v7](../../data/registers/atim_v7.yaml) | F002/F420: ATIM3MODE0 | 7 / 21 | 相对 atim_ddl_v1：定义差异 DTR/M0CR |
+
+### atim：v2
+
+MODE1 门控/捕获，CSA/CSB 按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `atim_ddl_v2.rs` | [atim_v8](../../data/registers/atim_v8.yaml) | F002: ATIM3MODE1 | 8 / 29 | 本档位对照基准；完整定义见来源 YAML |
+| `atim_ddl_v2_1.rs` | [atim_v11](../../data/registers/atim_v11.yaml) | F420: ATIM0MODE1 | 8 / 31 | 相对 atim_ddl_v2：定义差异 CR0 |
+| `atim_ddl_v2_2.rs` | [atim_v13](../../data/registers/atim_v13.yaml) | F420: ATIM3MODE1 | 8 / 31 | 相对 atim_ddl_v2：定义差异 CR0 |
+| `atim_ddl_v2_3.rs` | [atim_v16](../../data/registers/atim_v16.yaml) | L021: ATIM3_MODE1 | 8 / 31 | 相对 atim_ddl_v2：定义差异 CCR0A/CR0/ICLR/IFR/M1CR |
+| `atim_ddl_v2_4.rs` | [atim_v2](../../data/registers/atim_v2.yaml) | A052/F052: ATIM0MODE1, ATIM1MODE1, ATIM2MODE1 | 8 / 31 | 相对 atim_ddl_v2：定义差异 CR0/ICLR/M1CR |
+| `atim_ddl_v2_5.rs` | [atim_v5](../../data/registers/atim_v5.yaml) | A052/F052: ATIM3MODE1 | 8 / 31 | 相对 atim_ddl_v2：定义差异 CR0/ICLR/M1CR |
+
+### atim：v3
+
+MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `atim_ddl_v3.rs` | [atim_v3](../../data/registers/atim_v3.yaml) | A052/F052: ATIM0MODE23, ATIM1MODE23, ATIM2MODE23 | 13 / 103 | 本档位对照基准；完整定义见来源 YAML |
+| `atim_ddl_v3_1.rs` | [atim_v12](../../data/registers/atim_v12.yaml) | F420: ATIM0MODE23 | 13 / 105 | 相对 atim_ddl_v3：定义差异 ADTR/CRCH0/DTR/ICLR/IFR 等 6 项 |
+
+### atim：v4
+
+MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留；MODE23 捕获/PWM，4 组 A 通道寄存器；ARRDM、刹车/第四通道按变体保留。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `atim_ddl_v4.rs` | [atim_v17](../../data/registers/atim_v17.yaml) | L021: ATIM3_MODE23 | 20 / 162 | 本档位对照基准；完整定义见来源 YAML |
+| `atim_ddl_v4_1.rs` | [atim_v14](../../data/registers/atim_v14.yaml) | F420: ATIM3MODE23 | 21 / 177 | 相对 atim_ddl_v4：增加 CCR3/CRCH3；缺少 ARRDM；定义差异 ADTR/CRCH0/CRCH1/CRCH2/DTR 等 11 项 |
+| `atim_ddl_v4_2.rs` | [atim_v9](../../data/registers/atim_v9.yaml) | F002: ATIM3MODE23 | 21 / 177 | 相对 atim_ddl_v4：增加 CCR3/CRCH3；缺少 ARRDM；定义差异 ADTR/CRCH0/CRCH1/CRCH2/DTR 等 11 项 |
+| `atim_ddl_v4_3.rs` | [atim_v6](../../data/registers/atim_v6.yaml) | A052/F052: ATIM3MODE23 | 23 / 187 | 相对 atim_ddl_v4：增加 CCR3A/CCR3B/CRCH3A/CRCH3B；缺少 ARRDM；定义差异 CRCH0/CRCH1/CRCH2/FLTR/ICLR 等 8 项 |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 

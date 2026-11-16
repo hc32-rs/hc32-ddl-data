@@ -1,28 +1,90 @@
 # UART、LPUART、USART 与 LIN
 
-## Cortex-M0/M0+
+UART 按基础、SCNT 波特率计数及 HDSEL 半双工分档。
+LPUART 从基础六寄存器、波特率计数/流控、半双工到 BSEL/MODU 扩展。
+L021 缺少 DMARXEN/DMATXEN，F002 使用 DR/CR/ADDR/ADDRMASK 命名；这些差异保留为变体。
+原文建议把 8051 命名与现代命名直接合并，现改为保留实际生成字段。
 
-UART 分 uart_v1–v3；LPUART 分 lpuart_v1–v5、v7；A052/F052/L12x 的 USART 为 usart_v1。LIN 是 USART 的模式。
+A052/F052/L12x/F420 的 USART 当前共用一份生成 IR，含 LIN、SmartCard、IrDA、同步和自动波特率。
+L12x 的 BRR/SR/TDR/ICR 复位值与 A052/F052 的 SVD 记录不同，原始值继续保留在审计来源。
+F420 USART0–3 各有 RX/TX/FLAG 三条固定 IRQ：12+3x、13+3x、14+3x。
+门控为 APB0EN bit 0–3，DMA TX/RX 请求为 0x40+2x/0x41+2x。
+SDK 的 `example/usart/usart_lin_master/` 使用 USART 的 LIN 模式。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `uart_v1` | F003, F005, L110（UART0/1） | U1：6 寄存器无 SCNT |
-| `uart_v2` | A136, F030, L13x（UART0/1） | U2：7 寄存器无 HDSEL |
-| `uart_v3` | F072, F17x, F19x, L07x, L16x, L17x, L18x, L19x（UART0-3） | U3：7 寄存器 +HDSEL |
-| `lpuart_v1` | L110（LPUART） | L1：6 寄存器 +SCLKSEL/TEEN/PRS/LPMODE |
-| `lpuart_v2` | A136, L13x（LPUART0/1） | L2：无 HDSEL，8051 命名方言 |
-| `lpuart_v3` | A052, F052, F072, L07x, L17x, L19x（LPUART0/1） | L3+L4 合并：位布局相同（含 HDSEL），仅命名方言不同；规范名取现代方言（MODE/RXEN/STOP/CLKSRC/DR8CFG） |
-| `lpuart_v4` | L12x（LPUART0-2）, L16x, L18x（LPUART0/1） | L5：+BSEL/MODU |
-| `lpuart_v5` | L021（LPUART0/1） | L6：同 L5 布局但缺 DMARXEN/DMATXEN、ADDR/MASK 命名——位差异真实存在，单独成版 |
-| `lpuart_v7` | F002（LPUART0/1） | L8：独立命名布局 + RTS/CTS 流控，无法合并 |
-| `usart_v1` | A052, F052, L12x（USART0/1） | 寄存器与位域布局相同，含 LIN、SmartCard、IrDA、同步、自动波特率。L12x 的 BRR/SR/TDR/ICR 复位值与 A052/F052 的 SVD 记录有差异，按系列保留。 |
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-## HC32F420（Cortex-M4）
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-USART0–3 沿用 `usart_v1`，每实例有 RX、TX、FLAG 三条固定 IRQ（分别为
-`12+3x`、`13+3x`、`14+3x`）。SDK 的 `example/usart/usart_lin_master/` 使用 USART 的 LIN 模式。
-USART0–3 的时钟门控在 APB0EN bit 0–3，DMA 的 TX/RX 请求值分别为
-`0x40+2x`、`0x41+2x`。
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+
+### lpuart：v1
+
+低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `lpuart_ddl_v1.rs` | [lpuart_v6](../../data/registers/lpuart_v6.yaml) | L110: LPUART | 6 / 22 | 本档位对照基准；完整定义见来源 YAML |
+
+### lpuart：v2
+
+低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `lpuart_ddl_v2.rs` | [lpuart_v2](../../data/registers/lpuart_v2.yaml) | A136/L13x: LPUART0, LPUART1 | 7 / 41 | 本档位对照基准；完整定义见来源 YAML |
+
+### lpuart：v3
+
+低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `lpuart_ddl_v3.rs` | [lpuart_v3](../../data/registers/lpuart_v3.yaml) | F002: LPUART0, LPUART1 | 7 / 40 | 本档位对照基准；完整定义见来源 YAML |
+| `lpuart_ddl_v3_1.rs` | [lpuart_v1](../../data/registers/lpuart_v1.yaml) | A052/F052: LPUART0, LPUART1 | 7 / 42 | 相对 lpuart_ddl_v3：增加 SADDR/SADEN/SBUF/SCNT/SCON；缺少 ADDR/ADDRMASK/BRR/CR/DR；定义差异 ICR |
+| `lpuart_ddl_v3_2.rs` | [lpuart_v4](../../data/registers/lpuart_v4.yaml) | F072/L07x/L17x/L19x: LPUART0, LPUART1 | 7 / 42 | 相对 lpuart_ddl_v3：增加 SADDR/SADEN/SBUF/SCNT/SCON；缺少 ADDR/ADDRMASK/BRR/CR/DR；定义差异 ICR |
+
+### lpuart：v4
+
+低功耗串口：基础 → 波特率计数/流控 → 半双工 → BSEL/MODU；DMA 与方言分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `lpuart_ddl_v4.rs` | [lpuart_v5](../../data/registers/lpuart_v5.yaml) | L021: LPUART0, LPUART1 | 9 / 44 | 本档位对照基准；完整定义见来源 YAML |
+| `lpuart_ddl_v4_1.rs` | [lpuart_v7](../../data/registers/lpuart_v7.yaml) | L12x: LPUART0, LPUART1, LPUART2；L16x/L18x: LPUART0, LPUART1 | 9 / 46 | 相对 lpuart_ddl_v4：定义差异 SADDR/SADEN/SCON |
+
+### uart：v1
+
+基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `uart_ddl_v1.rs` | [uart_v2](../../data/registers/uart_v2.yaml) | F003/F005/L110: UART0, UART1 | 6 / 18 | 本档位对照基准；完整定义见来源 YAML |
+
+### uart：v2
+
+基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `uart_ddl_v2.rs` | [uart_v1](../../data/registers/uart_v1.yaml) | A136/F030/L13x: UART0, UART1 | 7 / 40 | 本档位对照基准；完整定义见来源 YAML |
+
+### uart：v3
+
+基础串口；SCNT 波特率计数及 HDSEL 半双工为递增能力。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `uart_ddl_v3.rs` | [uart_v3](../../data/registers/uart_v3.yaml) | F072/F17x/F19x/L07x/L16x/L17x/L18x/L19x: UART0, UART1, UART2, UART3 | 7 / 41 | 本档位对照基准；完整定义见来源 YAML |
+
+### usart：v1
+
+同步/异步串口，LIN、SmartCard、IrDA 与自动波特率。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `usart_ddl_v1.rs` | [usart_common](../../data/registers/usart_common.yaml) | A052/F052/L12x: USART0, USART1；F420: USART0, USART1, USART2, USART3 | 14 / 96 | 本档位对照基准；完整定义见来源 YAML |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 

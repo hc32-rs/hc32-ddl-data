@@ -1,37 +1,93 @@
 # SPI、I2C 与 I2S
 
-## Cortex-M0/M0+
+SPI 的 CR/SSN 基础布局和增加 CR2@0x10、ICLR@0x14 的扩展使用同档后缀。
+CR0/CR1/HDOE/SSI 架构另设主档位；F002 无 SMP/DMA，L021 无 DMA，分别保留布局变体。
+I2C 从单地址到多地址匹配分档，L110 的字段名、ADDR1/2 命名与 STAT 差异不自动合并。
+F002/F420 的 BRREN/BRR/DR 布局与 TMRUN/TM/DATA 分支使用不同后缀。
 
-SPI 的 CR/SSN 布局分为 `spi_v1` 和扩展变体 `spi_v1_1`。后者增加 `CR2@0x10`、`ICLR@0x14`，STAT 位域也有变化。CR0/CR1 起始的布局归 `spi_v2`。
+I2CSLV 是专用从机控制块。HSI2C 的 L021 基础布局有 23 个寄存器，L12x 增加
+MDER@0x4C、SDER@0x13C；不再采用“optional 字段即可合并”的建议。
+F072/L07x 的 I2S 为 CR/SR/CFGR/PR/ICR/DRL/DRR，IRQ 与 SPI 共用。
+当前生成 kind=i/hsi 被截断，拟议文件名恢复为 i2c、i2cslv、i2s、hsi2c。
 
-| 建议版本 | 系列或实例 | 布局备注 |
-|---|---|---|
-| `spi_v1` | F003, F005, L110 | CR/SSN/STAT/DATA。4 寄存器最简版；L110 仅字段命名差异 |
-| `spi_v1_1` | A136, F030, F072, F17x, F19x, L07x, L13x, L16x, L17x, L18x, L19x | CR/SSN/STAT/DATA/CR2/ICLR。md5 882833a4 全同；带 I2S 系列亦同 |
-| `spi_v2` | A052, F052, L12x, F002, L021 | CR0/CR1/HDOE/SSI/SR/ICR/DR。offset 序列全同；差异仅特性位（F002 无 SMP/DMA、L021 无 DMA）与 RSV 噪音 |
-| `i2c_v1` | A136, F003, F005, F030, F072, F17x, F19x, L07x, L13x, L17x, L19x, L110 | TMRUN/TM/CR/DATA/ADDR/STAT。md5 f6f1e4c7 全同；L110 仅 I2Cxxx 字段命名差异 |
-| `i2c_v2` | A052, F052, L12x, L16x, L18x | TMRUN/TM/CR/DATA/ADDR0/STAT/ADDR1/ADDR2/MATCH。offset 全同；A052/F052 与 L 系仅 ADDR1/ADDR2/STA 命名与 STAT.reset 差异 |
-| `i2c_v3` | F002 | BRREN/BRR/CR/DR/ADDR0/STAT/ADDR1/ADDR2/MATCH。F002 的 BRREN/BRR/DR 命名及偏移在 F420 的 I2C0/1 上沿用。 |
-| `i2cslv_v1` | A052, F052 | SR/DOUTR/ADIR/SLADR0-3/DINR/CR/ADMR0/FLT/TOR/ODDR/RSR/IER/ICR/DIDR。6c7c7ade 逐字段相同 |
-| `hsi2c_v1` | L021 | MCR…MDMR（23 个，无 MDER/SDER）。580e973b |
-| `hsi2c_v2` | L12x | MCR…MDER（25 个，多 MDER@0x4C/SDER@0x13C）。044e6d3b；v1 超集（若求文件数可合并为一个 version，字段标 optional） |
-| `i2s_v1` | F072, L07x | CR/SR/CFGR/PR/ICR/DRL/DRR，IRQ 与 SPI 共用。 |
+F420 I2C0/1 的 IRQ 为 24/25，APB0EN bit 10/11；DMAC 未列其请求。
+SPI0 的 TX/RX/SSR/ERR 为 IRQ 26–29，SPI1 为 30–33，门控 bit 14/15。
+DMA 请求分别为 0x50/0x51 与 0x52/0x53。
+入口见 `driver/inc/spi.h` 的 Spi_Init 和 `driver/inc/i2c.h` 的 I2C_MasterInit/I2C_SlaveInit。
 
-## HC32F420（Cortex-M4）
+[编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
-SPI0/1 归 `spi_v2`，与 A052/F052/L12x 的 SPI 寄存器和位域一致。
-I2C0/1 归 `i2c_v3`，与 F002 的 I2C 的寄存器名、偏移及位域一致，块首是
-`BRREN@0x00`、`BRR@0x04`，数据寄存器是 `DR@0x0C`。
-`i2c_v2` 的对应寄存器为 `TMRUN`、`TM`、`DATA`。F420 设备头和驱动使用 v3 的命名。
+<!-- peripheral-versions:begin -->
+## 版本与系列对照
 
-| F420 实例 | IRQ | APB0EN 位 | DMA 请求值 |
-|---|---|---:|---|
-| I2C0、I2C1 | 24、25 | 10、11 | `dmac.h` 未列出 |
-| SPI0 | TX/RX/SSR/ERR 为 26–29 | 14 | TX/RX 为 `0x50/0x51` |
-| SPI1 | TX/RX/SSR/ERR 为 30–33 | 15 | TX/RX 为 `0x52/0x53` |
+以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
 
-入口见 `driver/inc/spi.h` 的 `Spi_Init()` 和 `driver/inc/i2c.h` 的
-`I2C_MasterInit()`、`I2C_SlaveInit()`。
+### hsi2c：v1
+
+高速主从 I2C；MDER/SDER DMA 扩展分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `hsi2c_ddl_v1.rs` | [hsi_v1](../../data/registers/hsi_v1.yaml) | L021: HSI2C | 23 / 135 | 本档位对照基准；完整定义见来源 YAML |
+| `hsi2c_ddl_v1_1.rs` | [hsi_v2](../../data/registers/hsi_v2.yaml) | L12x: HSI2C | 25 / 142 | 相对 hsi2c_ddl_v1：增加 MDER/SDER；定义差异 MSCR/SSCR |
+
+### i2c：v1
+
+基础单地址 I2C。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `i2c_ddl_v1.rs` | [i_v8](../../data/registers/i_v8.yaml) | L110: I2C | 6 / 12 | 本档位对照基准；完整定义见来源 YAML |
+| `i2c_ddl_v1_1.rs` | [i_v3](../../data/registers/i_v3.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: I2C0, I2C1 | 6 / 18 | 相对 i2c_ddl_v1：定义差异 ADDR/CR/DATA/STAT/TM 等 6 项 |
+| `i2c_ddl_v1_2.rs` | [i_v5](../../data/registers/i_v5.yaml) | F003/F005: I2C | 6 / 18 | 相对 i2c_ddl_v1：定义差异 ADDR/CR/DATA/STAT/TM 等 6 项 |
+
+### i2c：v2
+
+多地址匹配，命名及字段分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `i2c_ddl_v2.rs` | [i_v1](../../data/registers/i_v1.yaml) | A052/F052: I2C0, I2C1 | 9 / 26 | 本档位对照基准；完整定义见来源 YAML |
+| `i2c_ddl_v2_1.rs` | [i_v4](../../data/registers/i_v4.yaml) | F002: I2C | 9 / 26 | 相对 i2c_ddl_v2：增加 BRR/BRREN/DR；缺少 DATA/TM/TMRUN；定义差异 CR |
+| `i2c_ddl_v2_2.rs` | [i_v7](../../data/registers/i_v7.yaml) | F420: I2C0, I2C1 | 9 / 26 | 相对 i2c_ddl_v2：增加 BRR/BRREN/DR；缺少 DATA/TM/TMRUN；定义差异 CR |
+| `i2c_ddl_v2_3.rs` | [i_v9](../../data/registers/i_v9.yaml) | L12x/L16x/L18x: I2C0, I2C1 | 9 / 26 | 相对 i2c_ddl_v2：定义差异 ADDR1/ADDR2/STAT |
+
+### i2cslv：v1
+
+专用从机 I2C。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `i2cslv_ddl_v1.rs` | [i_v2](../../data/registers/i_v2.yaml) | A052/F052: I2CSLV | 17 / 96 | 本档位对照基准；完整定义见来源 YAML |
+
+### i2s：v1
+
+音频串行控制；位域分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `i2s_ddl_v1.rs` | [i_v6](../../data/registers/i_v6.yaml) | F072/L07x: I2S0, I2S1 | 7 / 32 | 本档位对照基准；完整定义见来源 YAML |
+
+### spi：v1
+
+CR/SSN 基础及 CR2 扩展。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `spi_ddl_v1.rs` | [spi_v6](../../data/registers/spi_v6.yaml) | L110: SPI | 4 / 13 | 本档位对照基准；完整定义见来源 YAML |
+| `spi_ddl_v1_1.rs` | [spi_v4](../../data/registers/spi_v4.yaml) | F003/F005: SPI | 4 / 17 | 相对 spi_ddl_v1：定义差异 CR/DATA/SSN/STAT |
+| `spi_ddl_v1_2.rs` | [spi_v2](../../data/registers/spi_v2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: SPI0, SPI1 | 6 / 27 | 相对 spi_ddl_v1：增加 CR2/ICLR；定义差异 CR/DATA/SSN/STAT |
+
+### spi：v2
+
+CR0/CR1、HDOE/SSI 控制，DMA/SMP 分变体。
+
+| 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
+|---|---|---|---:|---|
+| `spi_ddl_v2.rs` | [spi_v3](../../data/registers/spi_v3.yaml) | F002: SPI | 7 / 45 | 本档位对照基准；完整定义见来源 YAML |
+| `spi_ddl_v2_1.rs` | [spi_v5](../../data/registers/spi_v5.yaml) | L021: SPI | 7 / 46 | 相对 spi_ddl_v2：定义差异 CR0 |
+| `spi_ddl_v2_2.rs` | [spi_v1](../../data/registers/spi_v1.yaml) | A052/F052/F420/L12x: SPI0, SPI1 | 7 / 48 | 相对 spi_ddl_v2：定义差异 CR0/CR1 |
+<!-- peripheral-versions:end -->
 
 ## SVD 实例与基址
 
