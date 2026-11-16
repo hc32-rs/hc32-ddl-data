@@ -29,6 +29,11 @@
                 <offset>0x0</offset>
                 <size>0xD0</size>
             </addressBlock>
+            <interrupt>
+                <name>ADC_DAC</name>
+                <description>ADC_DAC interrupt</description>
+                <value>24</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -1718,6 +1723,11 @@
                 <offset>0x0</offset>
                 <size>0x400</size>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM4</name>
+                <description>ADTIM4 interrupt</description>
+                <value>18</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CNTER</name>
@@ -4534,6 +4544,11 @@
                 <offset>0x0</offset>
                 <size>0x400</size>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM5</name>
+                <description>ADTIM5 interrupt</description>
+                <value>19</value>
+            </interrupt>
         </peripheral>
         <peripheral derivedFrom="ADTIM4">
             <name>ADTIM6</name>
@@ -4543,6 +4558,11 @@
                 <offset>0x0</offset>
                 <size>0x400</size>
             </addressBlock>
+            <interrupt>
+                <name>ADTIM6</name>
+                <description>ADTIM6 interrupt</description>
+                <value>20</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>AES</name>
@@ -5176,6 +5196,11 @@
                 <offset>0x0</offset>
                 <size>0x3C</size>
             </addressBlock>
+            <interrupt>
+                <name>ADC_DAC</name>
+                <description>ADC_DAC interrupt</description>
+                <value>24</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -5549,6 +5574,11 @@
                 <offset>0x0</offset>
                 <size>0x30</size>
             </addressBlock>
+            <interrupt>
+                <name>DMAC</name>
+                <description>DMAC interrupt</description>
+                <value>4</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CONF</name>
@@ -5953,6 +5983,11 @@
                 <offset>0x0</offset>
                 <size>0x38</size>
             </addressBlock>
+            <interrupt>
+                <name>FLASH_RAM</name>
+                <description>FLASH_RAM interrupt</description>
+                <value>30</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>TNVS</name>
@@ -21203,6 +21238,11 @@
                 <offset>0x0</offset>
                 <size>0x18</size>
             </addressBlock>
+            <interrupt>
+                <name>I2C0</name>
+                <description>I2C0 interrupt</description>
+                <value>12</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>TMRUN</name>
@@ -21406,6 +21446,11 @@
                 <offset>0x0</offset>
                 <size>0x18</size>
             </addressBlock>
+            <interrupt>
+                <name>I2C1</name>
+                <description>I2C1 interrupt</description>
+                <value>13</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>LCD</name>
@@ -21415,6 +21460,11 @@
                 <offset>0x0</offset>
                 <size>0x80</size>
             </addressBlock>
+            <interrupt>
+                <name>LCD</name>
+                <description>LCD interrupt</description>
+                <value>29</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -25375,6 +25425,11 @@
                 <offset>0x0</offset>
                 <size>0x30</size>
             </addressBlock>
+            <interrupt>
+                <name>LVD</name>
+                <description>LVD interrupt</description>
+                <value>28</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -25645,6 +25700,11 @@
                 <offset>0x0</offset>
                 <size>0x6C</size>
             </addressBlock>
+            <interrupt>
+                <name>PCA</name>
+                <description>PCA interrupt</description>
+                <value>21</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CCON</name>
@@ -26667,6 +26727,11 @@
                 <offset>0x0</offset>
                 <size>0x10</size>
             </addressBlock>
+            <interrupt>
+                <name>FLASH_RAM</name>
+                <description>FLASH_RAM interrupt</description>
+                <value>30</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -27109,6 +27174,11 @@
                 <offset>0x0</offset>
                 <size>0x18</size>
             </addressBlock>
+            <interrupt>
+                <name>SPI0</name>
+                <description>SPI0 interrupt</description>
+                <value>10</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -27375,6 +27445,11 @@
                 <offset>0x0</offset>
                 <size>0x18</size>
             </addressBlock>
+            <interrupt>
+                <name>SPI1</name>
+                <description>SPI1 interrupt</description>
+                <value>11</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>SYSCTRL</name>
@@ -34229,6 +34304,11 @@
                 <offset>0x0</offset>
                 <size>0x1C</size>
             </addressBlock>
+            <interrupt>
+                <name>UART0_2</name>
+                <description>UART0_2 interrupt</description>
+                <value>6</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>SBUF</name>
@@ -34604,6 +34684,11 @@
                 <offset>0x0</offset>
                 <size>0x1C</size>
             </addressBlock>
+            <interrupt>
+                <name>UART1_3</name>
+                <description>UART1_3 interrupt</description>
+                <value>7</value>
+            </interrupt>
         </peripheral>
         <peripheral derivedFrom="UART0">
             <name>UART2</name>
@@ -34613,6 +34698,11 @@
                 <offset>0x0</offset>
                 <size>0x1C</size>
             </addressBlock>
+            <interrupt>
+                <name>UART0_2</name>
+                <description>UART0_2 interrupt</description>
+                <value>6</value>
+            </interrupt>
         </peripheral>
         <peripheral derivedFrom="UART0">
             <name>UART3</name>
@@ -34622,6 +34712,11 @@
                 <offset>0x0</offset>
                 <size>0x1C</size>
             </addressBlock>
+            <interrupt>
+                <name>UART1_3</name>
+                <description>UART1_3 interrupt</description>
+                <value>7</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>VC</name>
@@ -34632,6 +34727,16 @@
                 <offset>0x0</offset>
                 <size>0x158</size>
             </addressBlock>
+            <interrupt>
+                <name>VC0</name>
+                <description>VC0 interrupt</description>
+                <value>26</value>
+            </interrupt>
+            <interrupt>
+                <name>VC1_2</name>
+                <description>VC1_2 interrupt</description>
+                <value>27</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -35354,6 +35459,11 @@
                 <offset>0x0</offset>
                 <size>0x88</size>
             </addressBlock>
+            <interrupt>
+                <name>WDT</name>
+                <description>WDT interrupt</description>
+                <value>22</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>RST</name>

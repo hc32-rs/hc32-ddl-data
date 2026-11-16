@@ -29,6 +29,11 @@
                 <offset>0x0</offset>
                 <size>0xD0</size>
             </addressBlock>
+            <interrupt>
+                <name>ADC</name>
+                <description>ADC interrupt</description>
+                <value>24</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -2678,6 +2683,11 @@
                 <offset>0x0</offset>
                 <size>0x2C</size>
             </addressBlock>
+            <interrupt>
+                <name>CTRIM_CLKDET</name>
+                <description>CTRIM_CLKDET interrupt</description>
+                <value>31</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>ARR</name>
@@ -3093,6 +3103,11 @@
                 <offset>0x0</offset>
                 <size>0x70</size>
             </addressBlock>
+            <interrupt>
+                <name>FLASH</name>
+                <description>FLASH interrupt</description>
+                <value>30</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -3303,6 +3318,11 @@
                 <offset>0x0</offset>
                 <size>0x114</size>
             </addressBlock>
+            <interrupt>
+                <name>PORTA</name>
+                <description>PORTA interrupt</description>
+                <value>0</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>PIN00_SEL</name>
@@ -5976,6 +5996,11 @@
                 <offset>0x0</offset>
                 <size>0x214</size>
             </addressBlock>
+            <interrupt>
+                <name>PORTB</name>
+                <description>PORTB interrupt</description>
+                <value>1</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>PIN00_SEL</name>
@@ -6691,6 +6716,11 @@
                 <offset>0x0</offset>
                 <size>0x154</size>
             </addressBlock>
+            <interrupt>
+                <name>HSI2C</name>
+                <description>HSI2C interrupt</description>
+                <value>18</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>MCR</name>
@@ -7900,6 +7930,11 @@
                 <offset>0x0</offset>
                 <size>0x94</size>
             </addressBlock>
+            <interrupt>
+                <name>IWDT</name>
+                <description>IWDT interrupt</description>
+                <value>22</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>KR</name>
@@ -8085,6 +8120,11 @@
                 <offset>0x0</offset>
                 <size>0x24</size>
             </addressBlock>
+            <interrupt>
+                <name>LPUART0</name>
+                <description>LPUART0 interrupt</description>
+                <value>8</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>SBUF</name>
@@ -8503,6 +8543,11 @@
                 <offset>0x0</offset>
                 <size>0x24</size>
             </addressBlock>
+            <interrupt>
+                <name>LPUART1</name>
+                <description>LPUART1 interrupt</description>
+                <value>9</value>
+            </interrupt>
         </peripheral>
         <peripheral>
             <name>LVD</name>
@@ -8512,6 +8557,11 @@
                 <offset>0x0</offset>
                 <size>0x8</size>
             </addressBlock>
+            <interrupt>
+                <name>LVD</name>
+                <description>LVD interrupt</description>
+                <value>28</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR</name>
@@ -8643,6 +8693,11 @@
                 <offset>0x0</offset>
                 <size>0x64</size>
             </addressBlock>
+            <interrupt>
+                <name>RTC</name>
+                <description>RTC interrupt</description>
+                <value>23</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -9599,6 +9654,11 @@
                 <offset>0x0</offset>
                 <size>0x1C</size>
             </addressBlock>
+            <interrupt>
+                <name>SPI</name>
+                <description>SPI interrupt</description>
+                <value>10</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>CR0</name>
@@ -10844,6 +10904,16 @@
                 <offset>0x0</offset>
                 <size>0x20</size>
             </addressBlock>
+            <interrupt>
+                <name>VC0</name>
+                <description>VC0 interrupt</description>
+                <value>26</value>
+            </interrupt>
+            <interrupt>
+                <name>VC1</name>
+                <description>VC1 interrupt</description>
+                <value>27</value>
+            </interrupt>
             <registers>
                 <register>
                     <name>VC0_CR0</name>

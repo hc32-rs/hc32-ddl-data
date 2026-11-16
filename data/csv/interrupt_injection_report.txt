@@ -1,0 +1,42 @@
+# SVD 中断注入报告（hc32-ddl-data）
+# 对注入前基线（git HEAD）重放 hc32-data-tools/patch_svd_interrupts.py 逻辑生成，
+# 等价于 2026-11-16 实际运行的 stdout 报告（脚本不落盘，特此留档）。
+# 汇总: 注入 494 节点；移除旧节点 0（其中删而无替 0）；未解析名 0 条
+
+  OK  HC32A052: 注入 34 节点 / 34 外设，移除旧节点 0 个
+      family 实例不在 SVD: ATIM0, ATIM1, ATIM2, ATIM3
+  OK  HC32A136: 注入 23 节点 / 22 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32F002: 注入 18 节点 / 18 外设，移除旧节点 0 个
+      family 实例不在 SVD: ATIM3
+  OK  HC32F003: 注入 18 节点 / 17 外设，移除旧节点 0 个
+  OK  HC32F005: 注入 18 节点 / 17 外设，移除旧节点 0 个
+  OK  HC32F030: 注入 18 节点 / 17 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32F052: 注入 34 节点 / 34 外设，移除旧节点 0 个
+      family 实例不在 SVD: ATIM0, ATIM1, ATIM2, ATIM3
+  OK  HC32F072: 注入 27 节点 / 27 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32F17x: 注入 22 节点 / 21 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32F19x: 注入 22 节点 / 21 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32F420: 注入 50 节点 / 25 外设，移除旧节点 0 个
+      family 实例不在 SVD: ATIM0, ATIM3
+  OK  HC32L021: 注入 14 节点 / 13 外设，移除旧节点 0 个
+      family 实例不在 SVD: ATIM3
+  OK  HC32L07x: 注入 30 节点 / 30 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L110: 注入 15 节点 / 14 外设，移除旧节点 0 个
+  OK  HC32L12x: 注入 22 节点 / 22 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L13x: 注入 23 节点 / 22 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L16x: 注入 27 节点 / 26 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L17x: 注入 26 节点 / 25 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L18x: 注入 27 节点 / 26 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
+  OK  HC32L19x: 注入 26 节点 / 25 外设，移除旧节点 0 个
+      family 实例不在 SVD: TIM0, TIM1, TIM2, TIM3
