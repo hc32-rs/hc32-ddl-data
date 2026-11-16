@@ -1,7 +1,6 @@
 # HC32L110C4PA（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
 name: HC32L110C4PA
 family: HC32L110
-subfamily: cortex-m0
 packages:
 - name: HC32L110C4PA
   package: TSSOP20

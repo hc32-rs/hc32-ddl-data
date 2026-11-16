@@ -1,7 +1,6 @@
 # HC32F052FATB（hc32-data-tools/csv_to_yaml.py 生成，数据来源见 _raw.source）
 name: HC32F052FATB
 family: HC32F052
-subfamily: cortex-m0
 packages:
 - name: HC32F052FATB
   package: LQFP32
