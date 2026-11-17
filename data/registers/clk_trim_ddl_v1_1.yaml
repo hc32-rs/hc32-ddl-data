@@ -1,0 +1,121 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F003/CLK_TRIM；覆盖系列：HC32F003, HC32F005。
+block/CLK_TRIM:
+  description: desc CLK_TRIM.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 0
+    fieldset: CR
+  - name: REFCON
+    description: desc REFCON.
+    byte_offset: 4
+    fieldset: REFCON
+  - name: REFCNT
+    description: desc REFCNT.
+    byte_offset: 8
+    access: Read
+    fieldset: REFCNT
+  - name: CALCNT
+    description: desc CALCNT.
+    byte_offset: 12
+    access: Read
+    fieldset: CALCNT
+  - name: IFR
+    description: desc IFR.
+    byte_offset: 16
+    access: Read
+    fieldset: IFR
+  - name: ICLR
+    description: desc ICLR.
+    byte_offset: 20
+    fieldset: ICLR
+  - name: CALCON
+    description: desc CALCON.
+    byte_offset: 24
+    fieldset: CALCON
+fieldset/CALCNT:
+  description: desc CALCNT.
+  fields:
+  - name: CALCNT
+    description: desc CALCNT.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CALCON:
+  description: desc CALCON.
+  fields:
+  - name: CCNTVAL
+    description: desc CCNTVAL.
+    bit_offset: 0
+    bit_size: 32
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: TRIM_START
+    description: desc TRIM_START.
+    bit_offset: 0
+    bit_size: 1
+  - name: REFCLK_SEL
+    description: desc REFCLK_SEL.
+    bit_offset: 1
+    bit_size: 3
+  - name: CALCLK_SEL
+    description: desc CALCLK_SEL.
+    bit_offset: 4
+    bit_size: 2
+  - name: MON_EN
+    description: desc MON_EN.
+    bit_offset: 6
+    bit_size: 1
+  - name: IE
+    description: desc IE.
+    bit_offset: 7
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/ICLR:
+  description: desc ICLR.
+  fields:
+  - name: XTH_FAULT_CLR
+    description: desc XTH_FAULT_CLR.
+    bit_offset: 3
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/IFR:
+  description: desc IFR.
+  fields:
+  - name: STOP
+    description: desc STOP.
+    bit_offset: 0
+    bit_size: 1
+  - name: CALCNT_OF
+    description: desc CALCNT_OF.
+    bit_offset: 1
+    bit_size: 1
+  - name: XTH_FAULT
+    description: desc XTH_FAULT.
+    bit_offset: 3
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1
+fieldset/REFCNT:
+  description: desc REFCNT.
+  fields:
+  - name: REFCNT
+    description: desc REFCNT.
+    bit_offset: 0
+    bit_size: 32
+fieldset/REFCON:
+  description: desc REFCON.
+  fields:
+  - name: RCNTVAL
+    description: desc RCNTVAL.
+    bit_offset: 0
+    bit_size: 32

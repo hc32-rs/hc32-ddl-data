@@ -26,7 +26,7 @@ L12x 通道 1 的 SRCADR/DSTADR 偏移为 0x28/0x2C。
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### dmac：v1
 
@@ -34,10 +34,10 @@ L12x 通道 1 的 SRCADR/DSTADR 偏移为 0x28/0x2C。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `dmac_ddl_v1.rs` | [dmac_v5](../../data/registers/dmac_v5.yaml) | L12x: DMAC | 9 / 41 | 本档位对照基准；完整定义见来源 YAML |
-| `dmac_ddl_v1_1.rs` | [dmac_v6](../../data/registers/dmac_v6.yaml) | L16x/L18x: DMAC | 9 / 41 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR |
-| `dmac_ddl_v1_2.rs` | [dmac_v2](../../data/registers/dmac_v2.yaml) | A136/F030/L13x: DMAC | 9 / 42 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR；定义差异 CONF/CONFA0/CONFA1 |
-| `dmac_ddl_v1_3.rs` | [dmac_v3](../../data/registers/dmac_v3.yaml) | F072/F17x/F19x/L07x/L17x/L19x: DMAC | 9 / 42 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR；定义差异 CONF |
+| `dmac_ddl_v1.rs` | [dmac_ddl_v1](../../data/registers/dmac_ddl_v1.yaml) | L12x: DMAC | 9 / 41 | 本档位对照基准；完整定义见来源 YAML |
+| `dmac_ddl_v1_1.rs` | [dmac_ddl_v1_1](../../data/registers/dmac_ddl_v1_1.yaml) | L16x/L18x: DMAC | 9 / 41 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR |
+| `dmac_ddl_v1_2.rs` | [dmac_ddl_v1_2](../../data/registers/dmac_ddl_v1_2.yaml) | A136/F030/L13x: DMAC | 9 / 42 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR；定义差异 CONF/CONFA0/CONFA1 |
+| `dmac_ddl_v1_3.rs` | [dmac_ddl_v1_3](../../data/registers/dmac_ddl_v1_3.yaml) | F072/F17x/F19x/L07x/L17x/L19x: DMAC | 9 / 42 | 相对 dmac_ddl_v1：增加 DSTADR1/SRCADR1；缺少 DSTADR/SRCADR；定义差异 CONF |
 
 ### dmac：v2
 
@@ -45,8 +45,8 @@ L12x 通道 1 的 SRCADR/DSTADR 偏移为 0x28/0x2C。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `dmac_ddl_v2.rs` | [dmac_v1](../../data/registers/dmac_v1.yaml) | A052/F052: DMAC | 25 / 117 | 本档位对照基准；完整定义见来源 YAML |
-| `dmac_ddl_v2_1.rs` | [dmac_v4](../../data/registers/dmac_v4.yaml) | F420: DMAC | 25 / 117 | 相对 dmac_ddl_v2：定义差异 CONFA0/CONFA1/CONFA2/CONFA3/CONFA4 等 12 项 |
+| `dmac_ddl_v2.rs` | [dmac_ddl_v2](../../data/registers/dmac_ddl_v2.yaml) | A052/F052: DMAC | 25 / 117 | 本档位对照基准；完整定义见来源 YAML |
+| `dmac_ddl_v2_1.rs` | [dmac_ddl_v2_1](../../data/registers/dmac_ddl_v2_1.yaml) | F420: DMAC | 25 / 117 | 相对 dmac_ddl_v2：定义差异 CONFA0/CONFA1/CONFA2/CONFA3/CONFA4 等 12 项 |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

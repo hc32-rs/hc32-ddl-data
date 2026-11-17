@@ -26,5 +26,5 @@ SDK 路径以下均相对于工作区的 `xh_ddl_sdk/`。F420 的包目录为 `H
 | [Flash 与 RAM](explore/memory.md) | F420 的 CACHE 位于 +0x0C，使后续四个寄存器偏移改变。例程为 128 KiB Flash、24 KiB RAM。 | F420、A052/F052 SVD；F420 的 `example/flash/flash_erase_write/EWARM/hc32f420.icf`。 |
 | [CRC、AES、TRNG、RTC、LCD 与 CAN](explore/crypto-comm.md) | F420 CRC 的 BUSY 是 SDK 驱动轮询位，DR 与 A052/F052 的 DATA 偏移一致。 | F420 的 `driver/src/crc.c` 及 F420、A052/F052 SVD。 |
 
-版本命名已统一为[待确认方案](layout-versions.md)，实际生成布局以来源 YAML 和显式映射为准。核对涵盖 SDK 归属、实例存在性和表中列出的差异。
+版本命名已统一为[已启用命名](layout-versions.md)，实际生成布局以来源 YAML 和显式映射为准。核对涵盖 SDK 归属、实例存在性和表中列出的差异。
 复位值、封装引脚表和各系列例程行为仍需按生成目标逐项确认。

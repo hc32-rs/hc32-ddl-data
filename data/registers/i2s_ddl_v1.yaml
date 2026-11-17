@@ -1,0 +1,182 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32F072/I2S0；覆盖系列：HC32F072, HC32L07x。
+block/I2S:
+  description: desc I2S.
+  items:
+  - name: CR
+    description: desc CR.
+    byte_offset: 4
+    fieldset: CR
+  - name: SR
+    description: desc SR.
+    byte_offset: 8
+    fieldset: SR
+  - name: CFGR
+    description: desc CFGR.
+    byte_offset: 28
+    fieldset: CFGR
+  - name: PR
+    description: desc PR.
+    byte_offset: 32
+    fieldset: PR
+  - name: ICR
+    description: desc ICR.
+    byte_offset: 36
+    fieldset: ICR
+  - name: DRL
+    description: desc DRL.
+    byte_offset: 40
+    fieldset: DRL
+  - name: DRR
+    description: desc DRR.
+    byte_offset: 44
+    fieldset: DRR
+fieldset/CFGR:
+  description: desc CFGR.
+  fields:
+  - name: CHIEN
+    description: desc CHIEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: DATLEN
+    description: desc DATLEN.
+    bit_offset: 1
+    bit_size: 2
+  - name: CKPOL
+    description: desc CKPOL.
+    bit_offset: 3
+    bit_size: 1
+  - name: STD
+    description: desc STD.
+    bit_offset: 4
+    bit_size: 2
+  - name: CKSEL
+    description: desc CKSEL.
+    bit_offset: 6
+    bit_size: 1
+  - name: PCMSYNC
+    description: desc PCMSYNC.
+    bit_offset: 7
+    bit_size: 1
+  - name: CFG
+    description: desc CFG.
+    bit_offset: 8
+    bit_size: 2
+  - name: E
+    description: desc E.
+    bit_offset: 10
+    bit_size: 1
+fieldset/CR:
+  description: desc CR.
+  fields:
+  - name: LDMAEN
+    description: desc LDMAEN.
+    bit_offset: 0
+    bit_size: 1
+  - name: RDMAEN
+    description: desc RDMAEN.
+    bit_offset: 1
+    bit_size: 1
+  - name: ERRIE
+    description: desc ERRIE.
+    bit_offset: 5
+    bit_size: 1
+  - name: RXNEIE
+    description: desc RXNEIE.
+    bit_offset: 6
+    bit_size: 1
+  - name: TXEIE
+    description: desc TXEIE.
+    bit_offset: 7
+    bit_size: 1
+fieldset/DRL:
+  description: desc DRL.
+  fields:
+  - name: DRL
+    description: desc DRL.
+    bit_offset: 0
+    bit_size: 16
+fieldset/DRR:
+  description: desc DRR.
+  fields:
+  - name: DRR
+    description: desc DRR.
+    bit_offset: 0
+    bit_size: 16
+fieldset/ICR:
+  description: desc ICR.
+  fields:
+  - name: UDF
+    description: desc UDF.
+    bit_offset: 3
+    bit_size: 1
+  - name: OVR
+    description: desc OVR.
+    bit_offset: 6
+    bit_size: 1
+  - name: FRE
+    description: desc FRE.
+    bit_offset: 8
+    bit_size: 1
+fieldset/PR:
+  description: desc PR.
+  fields:
+  - name: I2SDIV
+    description: desc I2SDIV.
+    bit_offset: 0
+    bit_size: 8
+  - name: ODD
+    description: desc ODD.
+    bit_offset: 8
+    bit_size: 1
+  - name: MCKOE
+    description: desc MCKOE.
+    bit_offset: 9
+    bit_size: 1
+  - name: FRACT
+    description: desc FRACT.
+    bit_offset: 10
+    bit_size: 6
+fieldset/SR:
+  description: desc SR.
+  fields:
+  - name: RXNE_L
+    description: desc RXNE_L.
+    bit_offset: 0
+    bit_size: 1
+  - name: TXE_L
+    description: desc TXE_L.
+    bit_offset: 1
+    bit_size: 1
+  - name: UDR_L
+    description: desc UDR_L.
+    bit_offset: 2
+    bit_size: 1
+  - name: UDR_R
+    description: desc UDR_R.
+    bit_offset: 3
+    bit_size: 1
+  - name: OVR_L
+    description: desc OVR_L.
+    bit_offset: 6
+    bit_size: 1
+  - name: BSY
+    description: desc BSY.
+    bit_offset: 7
+    bit_size: 1
+  - name: FRE
+    description: desc FRE.
+    bit_offset: 8
+    bit_size: 1
+  - name: OVR_R
+    description: desc OVR_R.
+    bit_offset: 13
+    bit_size: 1
+  - name: RXNE_R
+    description: desc RXNE_R.
+    bit_offset: 14
+    bit_size: 1
+  - name: TXE_R
+    description: desc TXE_R.
+    bit_offset: 15
+    bit_size: 1

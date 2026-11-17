@@ -24,7 +24,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### adc：v1
 
@@ -32,7 +32,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v1.rs` | [adc_v3](../../data/registers/adc_v3.yaml) | F002: ADC | 9 / 21 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v1.rs` | [adc_ddl_v1](../../data/registers/adc_ddl_v1.yaml) | F002: ADC | 9 / 21 | 本档位对照基准；完整定义见来源 YAML |
 
 ### adc：v2
 
@@ -40,7 +40,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v2.rs` | [adc_v9](../../data/registers/adc_v9.yaml) | L021: ADC | 11 / 30 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v2.rs` | [adc_ddl_v2](../../data/registers/adc_ddl_v2.yaml) | L021: ADC | 11 / 30 | 本档位对照基准；完整定义见来源 YAML |
 
 ### adc：v3
 
@@ -48,8 +48,8 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v3.rs` | [adc_v7](../../data/registers/adc_v7.yaml) | F420: ADC0 | 16 / 87 | 本档位对照基准；完整定义见来源 YAML |
-| `adc_ddl_v3_1.rs` | [adc_v8](../../data/registers/adc_v8.yaml) | F420: ADC1 | 16 / 87 | 相对 adc_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `adc_ddl_v3.rs` | [adc_ddl_v3](../../data/registers/adc_ddl_v3.yaml) | F420: ADC0 | 16 / 87 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v3_1.rs` | [adc_ddl_v3_1](../../data/registers/adc_ddl_v3_1.yaml) | F420: ADC1 | 16 / 87 | 相对 adc_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
 
 ### adc：v4
 
@@ -57,7 +57,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v4.rs` | [adc_v4](../../data/registers/adc_v4.yaml) | F003/F005/L110: ADC | 18 / 47 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v4.rs` | [adc_ddl_v4](../../data/registers/adc_ddl_v4.yaml) | F003/F005/L110: ADC | 18 / 47 | 本档位对照基准；完整定义见来源 YAML |
 
 ### adc：v5
 
@@ -65,7 +65,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v5.rs` | [adc_v1](../../data/registers/adc_v1.yaml) | A052/F052: ADC | 27 / 112 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v5.rs` | [adc_ddl_v5](../../data/registers/adc_ddl_v5.yaml) | A052/F052: ADC | 27 / 112 | 本档位对照基准；完整定义见来源 YAML |
 
 ### adc：v6
 
@@ -73,7 +73,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v6.rs` | [adc_v11](../../data/registers/adc_v11.yaml) | L12x: ADC | 28 / 89 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v6.rs` | [adc_ddl_v6](../../data/registers/adc_ddl_v6.yaml) | L12x: ADC | 28 / 89 | 本档位对照基准；完整定义见来源 YAML |
 
 ### adc：v7
 
@@ -81,11 +81,11 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `adc_ddl_v7.rs` | [adc_v2](../../data/registers/adc_v2.yaml) | A136/F030/L13x: ADC | 37 / 178 | 本档位对照基准；完整定义见来源 YAML |
-| `adc_ddl_v7_1.rs` | [adc_v12](../../data/registers/adc_v12.yaml) | L16x/L18x: ADC | 38 / 178 | 相对 adc_ddl_v7：增加 ALLSTART/SQRRESULT13；缺少 SQR_RESULT13；定义差异 EXTTRIGGER0/EXTTRIGGER1 |
-| `adc_ddl_v7_2.rs` | [adc_v5](../../data/registers/adc_v5.yaml) | F072: ADC | 38 / 179 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0/EXTTRIGGER0/EXTTRIGGER1 |
-| `adc_ddl_v7_3.rs` | [adc_v6](../../data/registers/adc_v6.yaml) | F17x/F19x/L17x/L19x: ADC | 38 / 180 | 相对 adc_ddl_v7：增加 ALLSTART |
-| `adc_ddl_v7_4.rs` | [adc_v10](../../data/registers/adc_v10.yaml) | L07x: ADC | 38 / 181 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0 |
+| `adc_ddl_v7.rs` | [adc_ddl_v7](../../data/registers/adc_ddl_v7.yaml) | A136/F030/L13x: ADC | 37 / 178 | 本档位对照基准；完整定义见来源 YAML |
+| `adc_ddl_v7_1.rs` | [adc_ddl_v7_1](../../data/registers/adc_ddl_v7_1.yaml) | L16x/L18x: ADC | 38 / 178 | 相对 adc_ddl_v7：增加 ALLSTART/SQRRESULT13；缺少 SQR_RESULT13；定义差异 EXTTRIGGER0/EXTTRIGGER1 |
+| `adc_ddl_v7_2.rs` | [adc_ddl_v7_2](../../data/registers/adc_ddl_v7_2.yaml) | F072: ADC | 38 / 179 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0/EXTTRIGGER0/EXTTRIGGER1 |
+| `adc_ddl_v7_3.rs` | [adc_ddl_v7_3](../../data/registers/adc_ddl_v7_3.yaml) | F17x/F19x/L17x/L19x: ADC | 38 / 180 | 相对 adc_ddl_v7：增加 ALLSTART |
+| `adc_ddl_v7_4.rs` | [adc_ddl_v7_4](../../data/registers/adc_ddl_v7_4.yaml) | L07x: ADC | 38 / 181 | 相对 adc_ddl_v7：增加 ALLSTART；定义差异 CR0 |
 
 ### bgr：v1
 
@@ -93,8 +93,8 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `bgr_ddl_v1.rs` | [bgr_v2](../../data/registers/bgr_v2.yaml) | L110: BGR | 1 / 2 | 本档位对照基准；完整定义见来源 YAML |
-| `bgr_ddl_v1_1.rs` | [bgr_v1](../../data/registers/bgr_v1.yaml) | A136/F003/F005/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: BGR | 1 / 3 | 相对 bgr_ddl_v1：定义差异 CR |
+| `bgr_ddl_v1.rs` | [bgr_ddl_v1](../../data/registers/bgr_ddl_v1.yaml) | L110: BGR | 1 / 2 | 本档位对照基准；完整定义见来源 YAML |
+| `bgr_ddl_v1_1.rs` | [bgr_ddl_v1_1](../../data/registers/bgr_ddl_v1_1.yaml) | A136/F003/F005/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: BGR | 1 / 3 | 相对 bgr_ddl_v1：定义差异 CR |
 
 ### dac：v1
 
@@ -102,7 +102,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `dac_ddl_v1.rs` | [dac_v2](../../data/registers/dac_v2.yaml) | F17x/F19x/L16x/L17x/L18x/L19x: DAC | 8 / 23 | 本档位对照基准；完整定义见来源 YAML |
+| `dac_ddl_v1.rs` | [dac_ddl_v1](../../data/registers/dac_ddl_v1.yaml) | F17x/F19x/L16x/L17x/L18x/L19x: DAC | 8 / 23 | 本档位对照基准；完整定义见来源 YAML |
 
 ### dac：v2
 
@@ -110,7 +110,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `dac_ddl_v2.rs` | [dac_v1](../../data/registers/dac_v1.yaml) | F072/L07x: DAC | 15 / 50 | 本档位对照基准；完整定义见来源 YAML |
+| `dac_ddl_v2.rs` | [dac_ddl_v2](../../data/registers/dac_ddl_v2.yaml) | F072/L07x: DAC | 15 / 50 | 本档位对照基准；完整定义见来源 YAML |
 
 ### hdiv：v1
 
@@ -118,7 +118,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `hdiv_ddl_v1.rs` | [hdiv_common](../../data/registers/hdiv_common.yaml) | A136/F030/F072/L07x/L13x: HDIV | 6 / 7 | 本档位对照基准；完整定义见来源 YAML |
+| `hdiv_ddl_v1.rs` | [hdiv_ddl_v1](../../data/registers/hdiv_ddl_v1.yaml) | A136/F030/F072/L07x/L13x: HDIV | 6 / 7 | 本档位对照基准；完整定义见来源 YAML |
 
 ### opa：v1
 
@@ -126,7 +126,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `opa_ddl_v1.rs` | [opa_v5](../../data/registers/opa_v5.yaml) | L16x/L18x: OPA | 1 / 8 | 本档位对照基准；完整定义见来源 YAML |
+| `opa_ddl_v1.rs` | [opa_ddl_v1](../../data/registers/opa_ddl_v1.yaml) | L16x/L18x: OPA | 1 / 8 | 本档位对照基准；完整定义见来源 YAML |
 
 ### opa：v2
 
@@ -134,7 +134,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `opa_ddl_v2.rs` | [opa_v4](../../data/registers/opa_v4.yaml) | F17x/F19x/L17x/L19x: OPA | 2 / 15 | 本档位对照基准；完整定义见来源 YAML |
+| `opa_ddl_v2.rs` | [opa_ddl_v2](../../data/registers/opa_ddl_v2.yaml) | F17x/F19x/L17x/L19x: OPA | 2 / 15 | 本档位对照基准；完整定义见来源 YAML |
 
 ### opa：v3
 
@@ -142,8 +142,8 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `opa_ddl_v3.rs` | [opa_v1](../../data/registers/opa_v1.yaml) | A052/F052: OPA | 3 / 14 | 本档位对照基准；完整定义见来源 YAML |
-| `opa_ddl_v3_1.rs` | [opa_v2](../../data/registers/opa_v2.yaml) | A136/F030/L13x: OPA | 4 / 38 | 相对 opa_ddl_v3：增加 CR/CR2；缺少 AZ；定义差异 CR0/CR1 |
+| `opa_ddl_v3.rs` | [opa_ddl_v3](../../data/registers/opa_ddl_v3.yaml) | A052/F052: OPA | 3 / 14 | 本档位对照基准；完整定义见来源 YAML |
+| `opa_ddl_v3_1.rs` | [opa_ddl_v3_1](../../data/registers/opa_ddl_v3_1.yaml) | A136/F030/L13x: OPA | 4 / 38 | 相对 opa_ddl_v3：增加 CR/CR2；缺少 AZ；定义差异 CR0/CR1 |
 
 ### opa：v4
 
@@ -151,7 +151,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `opa_ddl_v4.rs` | [opa_v3](../../data/registers/opa_v3.yaml) | F072/L07x: OPA | 4 / 34 | 本档位对照基准；完整定义见来源 YAML |
+| `opa_ddl_v4.rs` | [opa_ddl_v4](../../data/registers/opa_ddl_v4.yaml) | F072/L07x: OPA | 4 / 34 | 本档位对照基准；完整定义见来源 YAML |
 
 ### vc：v1
 
@@ -159,9 +159,9 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `vc_ddl_v1.rs` | [vc_v5](../../data/registers/vc_v5.yaml) | F420: VC0, VC1 | 4 / 26 | 本档位对照基准；完整定义见来源 YAML |
-| `vc_ddl_v1_1.rs` | [vc_v1](../../data/registers/vc_v1.yaml) | A052/F052: VC0, VC1 | 4 / 28 | 相对 vc_ddl_v1：定义差异 CR2 |
-| `vc_ddl_v1_2.rs` | [vc_v8](../../data/registers/vc_v8.yaml) | L12x: VC0, VC1 | 4 / 29 | 相对 vc_ddl_v1：增加 IFR；缺少 SR；定义差异 CR0/CR1/CR2 |
+| `vc_ddl_v1.rs` | [vc_ddl_v1](../../data/registers/vc_ddl_v1.yaml) | F420: VC0, VC1 | 4 / 26 | 本档位对照基准；完整定义见来源 YAML |
+| `vc_ddl_v1_1.rs` | [vc_ddl_v1_1](../../data/registers/vc_ddl_v1_1.yaml) | A052/F052: VC0, VC1 | 4 / 28 | 相对 vc_ddl_v1：定义差异 CR2 |
+| `vc_ddl_v1_2.rs` | [vc_ddl_v1_2](../../data/registers/vc_ddl_v1_2.yaml) | L12x: VC0, VC1 | 4 / 29 | 相对 vc_ddl_v1：增加 IFR；缺少 SR；定义差异 CR0/CR1/CR2 |
 
 ### vc：v2
 
@@ -169,10 +169,10 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `vc_ddl_v2.rs` | [vc_v2](../../data/registers/vc_v2.yaml) | A136/F030/L13x: VC | 6 / 61 | 本档位对照基准；完整定义见来源 YAML |
-| `vc_ddl_v2_1.rs` | [vc_v7](../../data/registers/vc_v7.yaml) | L110: VC | 6 / 61 | 相对 vc_ddl_v2：定义差异 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
-| `vc_ddl_v2_2.rs` | [vc_v3](../../data/registers/vc_v3.yaml) | F003/F005: VC | 6 / 63 | 相对 vc_ddl_v2：定义差异 VC0_CR/VC0_OUT_CFG/VC1_CR/VC1_OUT_CFG |
-| `vc_ddl_v2_3.rs` | [vc_v6](../../data/registers/vc_v6.yaml) | L021: VC | 9 / 53 | 相对 vc_ddl_v2：增加 VC0_CR0/VC0_CR1/VC0_CR2/VC0_SR/VC1_CR0 等 9 项；缺少 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
+| `vc_ddl_v2.rs` | [vc_ddl_v2](../../data/registers/vc_ddl_v2.yaml) | A136/F030/L13x: VC | 6 / 61 | 本档位对照基准；完整定义见来源 YAML |
+| `vc_ddl_v2_1.rs` | [vc_ddl_v2_1](../../data/registers/vc_ddl_v2_1.yaml) | L110: VC | 6 / 61 | 相对 vc_ddl_v2：定义差异 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
+| `vc_ddl_v2_2.rs` | [vc_ddl_v2_2](../../data/registers/vc_ddl_v2_2.yaml) | F003/F005: VC | 6 / 63 | 相对 vc_ddl_v2：定义差异 VC0_CR/VC0_OUT_CFG/VC1_CR/VC1_OUT_CFG |
+| `vc_ddl_v2_3.rs` | [vc_ddl_v2_3](../../data/registers/vc_ddl_v2_3.yaml) | L021: VC | 9 / 53 | 相对 vc_ddl_v2：增加 VC0_CR0/VC0_CR1/VC0_CR2/VC0_SR/VC1_CR0 等 9 项；缺少 CR/IFR/VC0_CR/VC0_OUT_CFG/VC1_CR 等 6 项 |
 
 ### vc：v3
 
@@ -180,7 +180,7 @@ VC0/1 的 CR2 不含 A052/F052 的 ATIM1CLR/ATIM2CLR。F420 两个 ADC 的生成
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `vc_ddl_v3.rs` | [vc_v4](../../data/registers/vc_v4.yaml) | F072/F17x/F19x/L07x/L16x/L17x/L18x/L19x: VC | 8 / 89 | 本档位对照基准；完整定义见来源 YAML |
+| `vc_ddl_v3.rs` | [vc_ddl_v3](../../data/registers/vc_ddl_v3.yaml) | F072/F17x/F19x/L07x/L16x/L17x/L18x/L19x: VC | 8 / 89 | 本档位对照基准；完整定义见来源 YAML |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

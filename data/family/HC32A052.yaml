@@ -6,7 +6,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v1
+    version: ddl_v5
   rcc:
     enable:
       register: PERICLKEN0
@@ -75,7 +75,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN1
@@ -88,7 +88,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN1
@@ -101,7 +101,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN1
@@ -114,7 +114,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -127,7 +127,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -140,7 +140,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -153,7 +153,7 @@
   registers:
     kind: can
     block: CAN
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN1
@@ -166,7 +166,7 @@
   registers:
     kind: crc
     block: CRC
-    version: v1
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -176,7 +176,7 @@
   registers:
     kind: ctrim
     block: CTRIM
-    version: v1
+    version: ddl_v1_3
   rcc:
     enable:
       register: PERICLKEN0
@@ -189,7 +189,7 @@
   registers:
     kind: dmac
     block: DMAC
-    version: v1
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -202,7 +202,7 @@
   registers:
     kind: eau
     block: EAU
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -212,7 +212,7 @@
   registers:
     kind: flash
     block: FLASH
-    version: v1
+    version: ddl_v1_3
   rcc:
     enable:
       register: PERICLKEN0
@@ -223,9 +223,9 @@
 - name: GPIOA
   address: 0x40020C00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -238,13 +238,13 @@
   registers:
     kind: gpioaux
     block: GPIOAUX
-    version: v1
+    version: ddl_v1_1
 - name: GPIOB
   address: 0x40021C00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -255,9 +255,9 @@
 - name: GPIOC
   address: 0x40022000
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -268,9 +268,9 @@
 - name: GPIOD
   address: 0x40022400
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN1
@@ -283,7 +283,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v1
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERICLKEN1
@@ -296,7 +296,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v1
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERICLKEN1
@@ -307,9 +307,9 @@
 - name: I2C0
   address: 0x40000400
   registers:
-    kind: i
-    block: I
-    version: v1
+    kind: i2c
+    block: I2C
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -320,9 +320,9 @@
 - name: I2C1
   address: 0x40004400
   registers:
-    kind: i
-    block: I
-    version: v1
+    kind: i2c
+    block: I2C
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -333,9 +333,9 @@
 - name: I2CSLV
   address: 0x40004C00
   registers:
-    kind: i
-    block: I
-    version: v2
+    kind: i2cslv
+    block: I2CSLV
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -348,7 +348,7 @@
   registers:
     kind: iwdt
     block: IWDT
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -361,7 +361,7 @@
   registers:
     kind: lptim
     block: LPTIM
-    version: common
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERICLKEN0
@@ -374,7 +374,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v1
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -387,7 +387,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v1
+    version: ddl_v3_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -400,7 +400,7 @@
   registers:
     kind: lvd
     block: LVD
-    version: v1
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERICLKEN0
@@ -413,7 +413,7 @@
   registers:
     kind: opa
     block: OPA
-    version: v1
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -423,7 +423,7 @@
   registers:
     kind: ram
     block: RAM
-    version: v1
+    version: ddl_v3
   interrupts:
   - signal: FLASH_RAM
     interrupt: FLASH_RAM
@@ -432,7 +432,7 @@
   registers:
     kind: rtc
     block: RTC
-    version: v1
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -445,7 +445,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v1
+    version: ddl_v2_2
   rcc:
     enable:
       register: PERICLKEN0
@@ -458,7 +458,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v1
+    version: ddl_v2_2
   rcc:
     enable:
       register: PERICLKEN0
@@ -471,13 +471,13 @@
   registers:
     kind: sysctrl
     block: SYSCTRL
-    version: v1
+    version: ddl_v3_6
 - name: USART0
   address: 0x40006000
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -490,7 +490,7 @@
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -503,7 +503,7 @@
   registers:
     kind: vc
     block: VC
-    version: v1
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -516,7 +516,7 @@
   registers:
     kind: vc
     block: VC
-    version: v1
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -529,7 +529,7 @@
   registers:
     kind: wwdt
     block: WWDT
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0

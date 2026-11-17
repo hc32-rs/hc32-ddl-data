@@ -6,7 +6,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v6
+    version: ddl_v7_3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -17,9 +17,9 @@
 - name: ADTIM4
   address: 0x40003000
   registers:
-    kind: adtim
-    block: ADTIM
-    version: v1
+    kind: adt
+    block: ADT
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -30,9 +30,9 @@
 - name: ADTIM5
   address: 0x40003400
   registers:
-    kind: adtim
-    block: ADTIM
-    version: v1
+    kind: adt
+    block: ADT
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -43,9 +43,9 @@
 - name: ADTIM6
   address: 0x40003800
   registers:
-    kind: adtim
-    block: ADTIM
-    version: v1
+    kind: adt
+    block: ADT
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -58,7 +58,7 @@
   registers:
     kind: aes
     block: AES
-    version: v2
+    version: ddl_v2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -68,7 +68,7 @@
   registers:
     kind: bgr
     block: BGR
-    version: v1
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -76,9 +76,9 @@
 - name: CLK_TRIM
   address: 0x40001800
   registers:
-    kind: clk
-    block: CLK
-    version: v1
+    kind: clk_trim
+    block: CLK_TRIM
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -88,7 +88,7 @@
   registers:
     kind: crc
     block: CRC
-    version: v2
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -98,7 +98,7 @@
   registers:
     kind: dac
     block: DAC
-    version: v2
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -109,15 +109,15 @@
 - name: DEBUG_ACTIVE
   address: 0x40002038
   registers:
-    kind: debug
-    block: DEBUG
-    version: v3
+    kind: debug_active
+    block: DEBUG_ACTIVE
+    version: ddl_v1_3
 - name: DMAC
   address: 0x40021000
   registers:
     kind: dmac
     block: DMAC
-    version: v3
+    version: ddl_v1_3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -130,7 +130,7 @@
   registers:
     kind: flash
     block: FLASH
-    version: v7
+    version: ddl_v4
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -143,7 +143,7 @@
   registers:
     kind: gpio
     block: GPIO
-    version: v4
+    version: ddl_v3_7
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -151,9 +151,9 @@
 - name: I2C0
   address: 0x40000400
   registers:
-    kind: i
-    block: I
-    version: v3
+    kind: i2c
+    block: I2C
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -164,9 +164,9 @@
 - name: I2C1
   address: 0x40004400
   registers:
-    kind: i
-    block: I
-    version: v3
+    kind: i2c
+    block: I2C
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -179,7 +179,7 @@
   registers:
     kind: lcd
     block: LCD
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -192,7 +192,7 @@
   registers:
     kind: lvd
     block: LVD
-    version: v2
+    version: ddl_v1_3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -205,7 +205,7 @@
   registers:
     kind: opa
     block: OPA
-    version: v4
+    version: ddl_v2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -215,7 +215,7 @@
   registers:
     kind: pca
     block: PCA
-    version: v1
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -228,7 +228,7 @@
   registers:
     kind: ram
     block: RAM
-    version: v5
+    version: ddl_v4
   interrupts:
   - signal: FLASH_RAM
     interrupt: FLASH_RAM
@@ -237,13 +237,13 @@
   registers:
     kind: reset
     block: RESET
-    version: v4
+    version: ddl_v1_4
 - name: SPI0
   address: 0x40000800
   registers:
     kind: spi
     block: SPI
-    version: v2
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -256,7 +256,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v2
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -269,7 +269,7 @@
   registers:
     kind: sysctrl
     block: SYSCTRL
-    version: v7
+    version: ddl_v3_2
 - name: TIM0
   address: 0x40000C00
   registers:
@@ -323,7 +323,7 @@
   registers:
     kind: trng
     block: TRNG
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -333,7 +333,7 @@
   registers:
     kind: uart
     block: UART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -346,7 +346,7 @@
   registers:
     kind: uart
     block: UART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -359,7 +359,7 @@
   registers:
     kind: uart
     block: UART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -372,7 +372,7 @@
   registers:
     kind: uart
     block: UART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -385,7 +385,7 @@
   registers:
     kind: vc
     block: VC
-    version: v4
+    version: ddl_v3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -400,7 +400,7 @@
   registers:
     kind: wdt
     block: WDT
-    version: v1
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN0

@@ -1,0 +1,52 @@
+# 由 chiptool extract-all 生成（hc32-data-tools/chiptool_registers.py）。
+# 布局代表：HC32L12x/DEBUG_ACTIVE；覆盖系列：HC32L12x。
+block/DEBUG_ACTIVE:
+  description: desc DEBUG_ACTIVE.
+  items:
+  - name: DEBUG_ACTIVE
+    description: desc DEBUG_ACTIVE.
+    byte_offset: 0
+    fieldset: DEBUG_ACTIVE
+fieldset/DEBUG_ACTIVE:
+  description: desc DEBUG_ACTIVE.
+  fields:
+  - name: TIM0
+    description: desc TIM0.
+    bit_offset: 0
+    bit_size: 1
+  - name: TIM1
+    description: desc TIM1.
+    bit_offset: 1
+    bit_size: 1
+  - name: TIM2
+    description: desc TIM2.
+    bit_offset: 2
+    bit_size: 1
+  - name: LPTIM0
+    description: desc LPTIM0.
+    bit_offset: 3
+    bit_size: 1
+  - name: IWDT
+    description: desc IWDT.
+    bit_offset: 8
+    bit_size: 1
+  - name: RTC
+    description: desc RTC.
+    bit_offset: 9
+    bit_size: 1
+  - name: TIM3
+    description: desc TIM3.
+    bit_offset: 11
+    bit_size: 1
+  - name: LPTIM1
+    description: desc LPTIM1.
+    bit_offset: 12
+    bit_size: 1
+  - name: WWDT
+    description: desc WWDT.
+    bit_offset: 13
+    bit_size: 1
+  - name: RSV
+    description: desc RSV.
+    bit_offset: 31
+    bit_size: 1

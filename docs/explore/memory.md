@@ -17,7 +17,7 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### flash：v1
 
@@ -25,10 +25,10 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `flash_ddl_v1.rs` | [flash_v9](../../data/registers/flash_v9.yaml) | L021: FLASH | 6 / 19 | 本档位对照基准；完整定义见来源 YAML |
-| `flash_ddl_v1_1.rs` | [flash_v11](../../data/registers/flash_v11.yaml) | L12x: FLASH | 7 / 20 | 相对 flash_ddl_v1：增加 SLOCK1 |
-| `flash_ddl_v1_2.rs` | [flash_v3](../../data/registers/flash_v3.yaml) | F002: FLASH | 7 / 20 | 相对 flash_ddl_v1：增加 LOCKSTATE/SLOCK/WAIT；缺少 LOCK_ST/SLOCK0；定义差异 BYPASS/CR/ICLR/IFR |
-| `flash_ddl_v1_3.rs` | [flash_v1](../../data/registers/flash_v1.yaml) | A052/F052: FLASH | 9 / 24 | 相对 flash_ddl_v1：增加 ICR/IER/LOCKST/SLOCK1/WAIT；缺少 ICLR/LOCK_ST；定义差异 BYPASS/CR/IFR |
+| `flash_ddl_v1.rs` | [flash_ddl_v1](../../data/registers/flash_ddl_v1.yaml) | L021: FLASH | 6 / 19 | 本档位对照基准；完整定义见来源 YAML |
+| `flash_ddl_v1_1.rs` | [flash_ddl_v1_1](../../data/registers/flash_ddl_v1_1.yaml) | L12x: FLASH | 7 / 20 | 相对 flash_ddl_v1：增加 SLOCK1 |
+| `flash_ddl_v1_2.rs` | [flash_ddl_v1_2](../../data/registers/flash_ddl_v1_2.yaml) | F002: FLASH | 7 / 20 | 相对 flash_ddl_v1：增加 LOCKSTATE/SLOCK/WAIT；缺少 LOCK_ST/SLOCK0；定义差异 BYPASS/CR/ICLR/IFR |
+| `flash_ddl_v1_3.rs` | [flash_ddl_v1_3](../../data/registers/flash_ddl_v1_3.yaml) | A052/F052: FLASH | 9 / 24 | 相对 flash_ddl_v1：增加 ICR/IER/LOCKST/SLOCK1/WAIT；缺少 ICLR/LOCK_ST；定义差异 BYPASS/CR/IFR |
 
 ### flash：v2
 
@@ -36,7 +36,7 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `flash_ddl_v2.rs` | [flash_v8](../../data/registers/flash_v8.yaml) | F420: FLASH | 10 / 25 | 本档位对照基准；完整定义见来源 YAML |
+| `flash_ddl_v2.rs` | [flash_ddl_v2](../../data/registers/flash_ddl_v2.yaml) | F420: FLASH | 10 / 25 | 本档位对照基准；完整定义见来源 YAML |
 
 ### flash：v3
 
@@ -44,11 +44,11 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `flash_ddl_v3.rs` | [flash_v10](../../data/registers/flash_v10.yaml) | L110: FLASH | 13 / 18 | 本档位对照基准；完整定义见来源 YAML |
-| `flash_ddl_v3_1.rs` | [flash_v4](../../data/registers/flash_v4.yaml) | F003/F005: FLASH | 13 / 30 | 相对 flash_ddl_v3：定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
-| `flash_ddl_v3_2.rs` | [flash_v2](../../data/registers/flash_v2.yaml) | A136/F030/L13x: FLASH | 13 / 31 | 相对 flash_ddl_v3：定义差异 BYPASS/CR/ICLR/IFR/SLOCK 等 13 项 |
-| `flash_ddl_v3_3.rs` | [flash_v5](../../data/registers/flash_v5.yaml) | F072/L07x: FLASH | 14 / 32 | 相对 flash_ddl_v3：增加 SLOCK0/SLOCK1；缺少 SLOCK；定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
-| `flash_ddl_v3_4.rs` | [flash_v6](../../data/registers/flash_v6.yaml) | F17x/L17x: FLASH | 14 / 32 | 相对 flash_ddl_v3：增加 SLOCK0/SLOCK1；缺少 SLOCK；定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
+| `flash_ddl_v3.rs` | [flash_ddl_v3](../../data/registers/flash_ddl_v3.yaml) | L110: FLASH | 13 / 18 | 本档位对照基准；完整定义见来源 YAML |
+| `flash_ddl_v3_1.rs` | [flash_ddl_v3_1](../../data/registers/flash_ddl_v3_1.yaml) | F003/F005: FLASH | 13 / 30 | 相对 flash_ddl_v3：定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
+| `flash_ddl_v3_2.rs` | [flash_ddl_v3_2](../../data/registers/flash_ddl_v3_2.yaml) | A136/F030/L13x: FLASH | 13 / 31 | 相对 flash_ddl_v3：定义差异 BYPASS/CR/ICLR/IFR/SLOCK 等 13 项 |
+| `flash_ddl_v3_3.rs` | [flash_ddl_v3_3](../../data/registers/flash_ddl_v3_3.yaml) | F072/L07x: FLASH | 14 / 32 | 相对 flash_ddl_v3：增加 SLOCK0/SLOCK1；缺少 SLOCK；定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
+| `flash_ddl_v3_4.rs` | [flash_ddl_v3_4](../../data/registers/flash_ddl_v3_4.yaml) | F17x/L17x: FLASH | 14 / 32 | 相对 flash_ddl_v3：增加 SLOCK0/SLOCK1；缺少 SLOCK；定义差异 BYPASS/CR/ICLR/IFR/TMERASE 等 12 项 |
 
 ### flash：v4
 
@@ -56,7 +56,7 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `flash_ddl_v4.rs` | [flash_v7](../../data/registers/flash_v7.yaml) | F19x/L19x: FLASH | 16 / 34 | 本档位对照基准；完整定义见来源 YAML |
+| `flash_ddl_v4.rs` | [flash_ddl_v4](../../data/registers/flash_ddl_v4.yaml) | F19x/L19x: FLASH | 16 / 34 | 本档位对照基准；完整定义见来源 YAML |
 
 ### flash：v5
 
@@ -64,7 +64,7 @@ F420 的紧凑 FLASH 在 +0x0C 增加 CACHE，使 IER/IFR/ICR/BYPASS 后移四�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `flash_ddl_v5.rs` | [flash_v12](../../data/registers/flash_v12.yaml) | L16x/L18x: FLASH | 24 / 52 | 本档位对照基准；完整定义见来源 YAML |
+| `flash_ddl_v5.rs` | [flash_ddl_v5](../../data/registers/flash_ddl_v5.yaml) | L16x/L18x: FLASH | 24 / 52 | 本档位对照基准；完整定义见来源 YAML |
 
 ### ram：v1
 
@@ -72,7 +72,7 @@ RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `ram_ddl_v1.rs` | [ram_v3](../../data/registers/ram_v3.yaml) | F003/F005/L110: RAM | 4 / 5 | 本档位对照基准；完整定义见来源 YAML |
+| `ram_ddl_v1.rs` | [ram_ddl_v1](../../data/registers/ram_ddl_v1.yaml) | F003/F005/L110: RAM | 4 / 5 | 本档位对照基准；完整定义见来源 YAML |
 
 ### ram：v2
 
@@ -80,7 +80,7 @@ RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `ram_ddl_v2.rs` | [ram_v2](../../data/registers/ram_v2.yaml) | A136/F030/L13x: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
+| `ram_ddl_v2.rs` | [ram_ddl_v2](../../data/registers/ram_ddl_v2.yaml) | A136/F030/L13x: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
 
 ### ram：v3
 
@@ -88,8 +88,8 @@ RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `ram_ddl_v3.rs` | [ram_v1](../../data/registers/ram_v1.yaml) | A052/F052: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
-| `ram_ddl_v3_1.rs` | [ram_v4](../../data/registers/ram_v4.yaml) | F072/F17x/L07x/L12x/L17x: RAM | 4 / 8 | 相对 ram_ddl_v3：定义差异 ICLR |
+| `ram_ddl_v3.rs` | [ram_ddl_v3](../../data/registers/ram_ddl_v3.yaml) | A052/F052: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
+| `ram_ddl_v3_1.rs` | [ram_ddl_v3_1](../../data/registers/ram_ddl_v3_1.yaml) | F072/F17x/L07x/L12x/L17x: RAM | 4 / 8 | 相对 ram_ddl_v3：定义差异 ICLR |
 
 ### ram：v4
 
@@ -97,7 +97,7 @@ RAM 错误地址覆盖：11 → 12 → 13 → 14 位；控制字段按变体保�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `ram_ddl_v4.rs` | [ram_v5](../../data/registers/ram_v5.yaml) | F19x/L16x/L18x/L19x: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
+| `ram_ddl_v4.rs` | [ram_ddl_v4](../../data/registers/ram_ddl_v4.yaml) | F19x/L16x/L18x/L19x: RAM | 4 / 8 | 本档位对照基准；完整定义见来源 YAML |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

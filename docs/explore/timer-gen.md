@@ -19,7 +19,7 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### btim：v1
 
@@ -27,10 +27,10 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `btim_ddl_v1.rs` | [btim_v1](../../data/registers/btim_v1.yaml) | A052/F052: BTIM0, BTIM1, BTIM2；L021: BTIM0, BTIM1, BTIM2, BTIM3, BTIM4, BTIM5 | 8 / 35 | 本档位对照基准；完整定义见来源 YAML |
-| `btim_ddl_v1_1.rs` | [btim_v2](../../data/registers/btim_v2.yaml) | A052/F002/F052/F420: BTIM3, BTIM4, BTIM5 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
-| `btim_ddl_v1_2.rs` | [btim_v3](../../data/registers/btim_v3.yaml) | F420: BTIM0, BTIM1, BTIM2 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
-| `btim_ddl_v1_3.rs` | [btim_v4](../../data/registers/btim_v4.yaml) | F420: BTIM6, BTIM7, BTIM8 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
+| `btim_ddl_v1.rs` | [btim_ddl_v1](../../data/registers/btim_ddl_v1.yaml) | A052/F052: BTIM0, BTIM1, BTIM2；L021: BTIM0, BTIM1, BTIM2, BTIM3, BTIM4, BTIM5 | 8 / 35 | 本档位对照基准；完整定义见来源 YAML |
+| `btim_ddl_v1_1.rs` | [btim_ddl_v1_1](../../data/registers/btim_ddl_v1_1.yaml) | A052/F002/F052/F420: BTIM3, BTIM4, BTIM5 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
+| `btim_ddl_v1_2.rs` | [btim_ddl_v1_2](../../data/registers/btim_ddl_v1_2.yaml) | F420: BTIM0, BTIM1, BTIM2 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
+| `btim_ddl_v1_3.rs` | [btim_ddl_v1_3](../../data/registers/btim_ddl_v1_3.yaml) | F420: BTIM6, BTIM7, BTIM8 | 8 / 35 | 相对 btim_ddl_v1：定义差异 AICR/AIFR |
 
 ### gtim：v1
 
@@ -38,10 +38,10 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `gtim_ddl_v1.rs` | [gtim_v2](../../data/registers/gtim_v2.yaml) | F002: GTIM | 12 / 48 | 本档位对照基准；完整定义见来源 YAML |
-| `gtim_ddl_v1_1.rs` | [gtim_v4](../../data/registers/gtim_v4.yaml) | L021: GTIM0, GTIM1 | 12 / 50 | 相对 gtim_ddl_v1：定义差异 IER |
-| `gtim_ddl_v1_2.rs` | [gtim_v1](../../data/registers/gtim_v1.yaml) | A052/F052: GTIM0, GTIM1 | 12 / 54 | 相对 gtim_ddl_v1：定义差异 IER |
-| `gtim_ddl_v1_3.rs` | [gtim_v3](../../data/registers/gtim_v3.yaml) | F420: GTIM0, GTIM1, GTIM2 | 12 / 54 | 相对 gtim_ddl_v1：定义差异 IER |
+| `gtim_ddl_v1.rs` | [gtim_ddl_v1](../../data/registers/gtim_ddl_v1.yaml) | F002: GTIM | 12 / 48 | 本档位对照基准；完整定义见来源 YAML |
+| `gtim_ddl_v1_1.rs` | [gtim_ddl_v1_1](../../data/registers/gtim_ddl_v1_1.yaml) | L021: GTIM0, GTIM1 | 12 / 50 | 相对 gtim_ddl_v1：定义差异 IER |
+| `gtim_ddl_v1_2.rs` | [gtim_ddl_v1_2](../../data/registers/gtim_ddl_v1_2.yaml) | A052/F052: GTIM0, GTIM1 | 12 / 54 | 相对 gtim_ddl_v1：定义差异 IER |
+| `gtim_ddl_v1_3.rs` | [gtim_ddl_v1_3](../../data/registers/gtim_ddl_v1_3.yaml) | F420: GTIM0, GTIM1, GTIM2 | 12 / 54 | 相对 gtim_ddl_v1：定义差异 IER |
 
 ### lptim：v1
 
@@ -49,10 +49,10 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `lptim_ddl_v1.rs` | [lptimer_v3](../../data/registers/lptimer_v3.yaml) | L110: LPTIMER | 5 / 13 | 本档位对照基准；完整定义见来源 YAML |
-| `lptim_ddl_v1_1.rs` | [lptimer_v1](../../data/registers/lptimer_v1.yaml) | A136/L13x: LPTIMER | 5 / 18 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
-| `lptim_ddl_v1_2.rs` | [lptim_common](../../data/registers/lptim_common.yaml) | A052/F052: LPTIM | 5 / 19 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
-| `lptim_ddl_v1_3.rs` | [lptimer_v2](../../data/registers/lptimer_v2.yaml) | L07x/L16x/L17x/L18x/L19x: LPTIMER0, LPTIMER1 | 5 / 19 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
+| `lptim_ddl_v1.rs` | [lptim_ddl_v1](../../data/registers/lptim_ddl_v1.yaml) | L110: LPTIMER | 5 / 13 | 本档位对照基准；完整定义见来源 YAML |
+| `lptim_ddl_v1_1.rs` | [lptim_ddl_v1_1](../../data/registers/lptim_ddl_v1_1.yaml) | A136/L13x: LPTIMER | 5 / 18 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
+| `lptim_ddl_v1_2.rs` | [lptim_ddl_v1_2](../../data/registers/lptim_ddl_v1_2.yaml) | A052/F052: LPTIM | 5 / 19 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
+| `lptim_ddl_v1_3.rs` | [lptim_ddl_v1_3](../../data/registers/lptim_ddl_v1_3.yaml) | L07x/L16x/L17x/L18x/L19x: LPTIMER0, LPTIMER1 | 5 / 19 | 相对 lptim_ddl_v1：定义差异 ARR/CNT/CR/ICLR/IFR |
 
 ### lptim：v2
 
@@ -60,7 +60,7 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `lptim_ddl_v2.rs` | [lptimer_v4](../../data/registers/lptimer_v4.yaml) | L12x: LPTIMER0, LPTIMER1 | 6 / 22 | 本档位对照基准；完整定义见来源 YAML |
+| `lptim_ddl_v2.rs` | [lptim_ddl_v2](../../data/registers/lptim_ddl_v2.yaml) | L12x: LPTIMER0, LPTIMER1 | 6 / 22 | 本档位对照基准；完整定义见来源 YAML |
 
 ### tim：v1
 
@@ -68,7 +68,7 @@ F420 CTIM0–2 各对应 GTIM0–2 及 BTIM0–2/3–5/6–8 视图，由 SYSCTR
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `tim_ddl_v1.rs` | [tim_v13](../../data/registers/tim_v13.yaml) | F003/F005: TIM0, TIM1, TIM2 | 6 / 18 | 本档位对照基准；完整定义见来源 YAML |
+| `tim_ddl_v1.rs` | [tim_ddl_v1](../../data/registers/tim_ddl_v1.yaml) | F003/F005: TIM0, TIM1, TIM2 | 6 / 18 | 本档位对照基准；完整定义见来源 YAML |
 
 ### tim：v2
 
@@ -76,10 +76,10 @@ MODE0 计数视图。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `tim_ddl_v2.rs` | [tim_v1](../../data/registers/tim_v1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM0_MODE0；L12x: TIM0_MODE0, TIM1_MODE0, TIM2_MODE0, TIM3_MODE0 | 7 / 21 | 本档位对照基准；完整定义见来源 YAML |
-| `tim_ddl_v2_1.rs` | [tim_v10](../../data/registers/tim_v10.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM3_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v2_2.rs` | [tim_v4](../../data/registers/tim_v4.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM1_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v2_3.rs` | [tim_v7](../../data/registers/tim_v7.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM2_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v2.rs` | [tim_ddl_v2](../../data/registers/tim_ddl_v2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM0_MODE0；L12x: TIM0_MODE0, TIM1_MODE0, TIM2_MODE0, TIM3_MODE0 | 7 / 21 | 本档位对照基准；完整定义见来源 YAML |
+| `tim_ddl_v2_1.rs` | [tim_ddl_v2_1](../../data/registers/tim_ddl_v2_1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM3_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v2_2.rs` | [tim_ddl_v2_2](../../data/registers/tim_ddl_v2_2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM1_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v2_3.rs` | [tim_ddl_v2_3](../../data/registers/tim_ddl_v2_3.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: TIM2_MODE0 | 7 / 21 | 相对 tim_ddl_v2：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
 
 ### tim：v3
 
@@ -87,14 +87,14 @@ MODE1 门控/捕获，CSA/CSB 按变体保留。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `tim_ddl_v3.rs` | [tim_v11](../../data/registers/tim_v11.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM3_MODE1 | 8 / 29 | 本档位对照基准；完整定义见来源 YAML |
-| `tim_ddl_v3_1.rs` | [tim_v2](../../data/registers/tim_v2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM0_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v3_2.rs` | [tim_v5](../../data/registers/tim_v5.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM1_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v3_3.rs` | [tim_v8](../../data/registers/tim_v8.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM2_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v3_4.rs` | [tim_v18](../../data/registers/tim_v18.yaml) | L12x: TIM0_MODE1, TIM1_MODE1, TIM2_MODE1, TIM3_MODE1；L16x/L18x: TIM0_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
-| `tim_ddl_v3_5.rs` | [tim_v21](../../data/registers/tim_v21.yaml) | L16x/L18x: TIM1_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
-| `tim_ddl_v3_6.rs` | [tim_v23](../../data/registers/tim_v23.yaml) | L16x/L18x: TIM2_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
-| `tim_ddl_v3_7.rs` | [tim_v25](../../data/registers/tim_v25.yaml) | L16x/L18x: TIM3_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
+| `tim_ddl_v3.rs` | [tim_ddl_v3](../../data/registers/tim_ddl_v3.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM3_MODE1 | 8 / 29 | 本档位对照基准；完整定义见来源 YAML |
+| `tim_ddl_v3_1.rs` | [tim_ddl_v3_1](../../data/registers/tim_ddl_v3_1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM0_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v3_2.rs` | [tim_ddl_v3_2](../../data/registers/tim_ddl_v3_2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM1_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v3_3.rs` | [tim_ddl_v3_3](../../data/registers/tim_ddl_v3_3.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: TIM2_MODE1 | 8 / 29 | 相对 tim_ddl_v3：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v3_4.rs` | [tim_ddl_v3_4](../../data/registers/tim_ddl_v3_4.yaml) | L12x: TIM0_MODE1, TIM1_MODE1, TIM2_MODE1, TIM3_MODE1；L16x/L18x: TIM0_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
+| `tim_ddl_v3_5.rs` | [tim_ddl_v3_5](../../data/registers/tim_ddl_v3_5.yaml) | L16x/L18x: TIM1_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
+| `tim_ddl_v3_6.rs` | [tim_ddl_v3_6](../../data/registers/tim_ddl_v3_6.yaml) | L16x/L18x: TIM2_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
+| `tim_ddl_v3_7.rs` | [tim_ddl_v3_7](../../data/registers/tim_ddl_v3_7.yaml) | L16x/L18x: TIM3_MODE1 | 8 / 31 | 相对 tim_ddl_v3：定义差异 CR0 |
 
 ### tim：v4
 
@@ -102,15 +102,15 @@ MODE23 捕获/PWM，1 组 A 通道寄存器；ARRDM、刹车/第四通道按变�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `tim_ddl_v4.rs` | [tim_v14](../../data/registers/tim_v14.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM0_MODE23 | 14 / 97 | 本档位对照基准；完整定义见来源 YAML |
-| `tim_ddl_v4_1.rs` | [tim_v15](../../data/registers/tim_v15.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM1_MODE23 | 14 / 97 | 相对 tim_ddl_v4：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v4_2.rs` | [tim_v16](../../data/registers/tim_v16.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM2_MODE23 | 14 / 97 | 相对 tim_ddl_v4：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
-| `tim_ddl_v4_3.rs` | [tim_v3](../../data/registers/tim_v3.yaml) | A136/F030/L13x: TIM0_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
-| `tim_ddl_v4_4.rs` | [tim_v6](../../data/registers/tim_v6.yaml) | A136/F030/L13x: TIM1_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
-| `tim_ddl_v4_5.rs` | [tim_v9](../../data/registers/tim_v9.yaml) | A136/F030/L13x: TIM2_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
-| `tim_ddl_v4_6.rs` | [tim_v19](../../data/registers/tim_v19.yaml) | L12x: TIM0_MODE23, TIM1_MODE23, TIM2_MODE23；L16x/L18x: TIM0_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
-| `tim_ddl_v4_7.rs` | [tim_v22](../../data/registers/tim_v22.yaml) | L16x/L18x: TIM1_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
-| `tim_ddl_v4_8.rs` | [tim_v24](../../data/registers/tim_v24.yaml) | L16x/L18x: TIM2_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
+| `tim_ddl_v4.rs` | [tim_ddl_v4](../../data/registers/tim_ddl_v4.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM0_MODE23 | 14 / 97 | 本档位对照基准；完整定义见来源 YAML |
+| `tim_ddl_v4_1.rs` | [tim_ddl_v4_1](../../data/registers/tim_ddl_v4_1.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM1_MODE23 | 14 / 97 | 相对 tim_ddl_v4：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v4_2.rs` | [tim_ddl_v4_2](../../data/registers/tim_ddl_v4_2.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM2_MODE23 | 14 / 97 | 相对 tim_ddl_v4：寄存器坐标/内联字段未见差异；保留独立 IR 节点/枚举/描述来源，不据此合并 |
+| `tim_ddl_v4_3.rs` | [tim_ddl_v4_3](../../data/registers/tim_ddl_v4_3.yaml) | A136/F030/L13x: TIM0_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
+| `tim_ddl_v4_4.rs` | [tim_ddl_v4_4](../../data/registers/tim_ddl_v4_4.yaml) | A136/F030/L13x: TIM1_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
+| `tim_ddl_v4_5.rs` | [tim_ddl_v4_5](../../data/registers/tim_ddl_v4_5.yaml) | A136/F030/L13x: TIM2_MODE23 | 14 / 98 | 相对 tim_ddl_v4：定义差异 DTR |
+| `tim_ddl_v4_6.rs` | [tim_ddl_v4_6](../../data/registers/tim_ddl_v4_6.yaml) | L12x: TIM0_MODE23, TIM1_MODE23, TIM2_MODE23；L16x/L18x: TIM0_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
+| `tim_ddl_v4_7.rs` | [tim_ddl_v4_7](../../data/registers/tim_ddl_v4_7.yaml) | L16x/L18x: TIM1_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
+| `tim_ddl_v4_8.rs` | [tim_ddl_v4_8](../../data/registers/tim_ddl_v4_8.yaml) | L16x/L18x: TIM2_MODE23 | 14 / 105 | 相对 tim_ddl_v4：定义差异 ICLR/IFR/M23CR/RCR |
 
 ### tim：v5
 
@@ -118,10 +118,10 @@ MODE23 捕获/PWM，3 组 A 通道寄存器；ARRDM、刹车/第四通道按变�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `tim_ddl_v5.rs` | [tim_v17](../../data/registers/tim_v17.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM3_MODE23 | 20 / 161 | 本档位对照基准；完整定义见来源 YAML |
-| `tim_ddl_v5_1.rs` | [tim_v12](../../data/registers/tim_v12.yaml) | A136/F030/L13x: TIM3_MODE23 | 20 / 162 | 相对 tim_ddl_v5：定义差异 DTR |
-| `tim_ddl_v5_2.rs` | [tim_v26](../../data/registers/tim_v26.yaml) | L16x/L18x: TIM3_MODE23 | 24 / 189 | 相对 tim_ddl_v5：增加 CCR3A/CCR3B/CRCH3A/CRCH3B；定义差异 ICLR/IFR/M23CR/RCR |
-| `tim_ddl_v5_3.rs` | [tim_v20](../../data/registers/tim_v20.yaml) | L12x: TIM3_MODE23 | 24 / 191 | 相对 tim_ddl_v5：增加 CCR3A/CCR3B/CRCH3A/CRCH3B；定义差异 ICLR/IFR/M23CR/RCR |
+| `tim_ddl_v5.rs` | [tim_ddl_v5](../../data/registers/tim_ddl_v5.yaml) | F072/F17x/F19x/L07x/L17x/L19x: TIM3_MODE23 | 20 / 161 | 本档位对照基准；完整定义见来源 YAML |
+| `tim_ddl_v5_1.rs` | [tim_ddl_v5_1](../../data/registers/tim_ddl_v5_1.yaml) | A136/F030/L13x: TIM3_MODE23 | 20 / 162 | 相对 tim_ddl_v5：定义差异 DTR |
+| `tim_ddl_v5_2.rs` | [tim_ddl_v5_2](../../data/registers/tim_ddl_v5_2.yaml) | L16x/L18x: TIM3_MODE23 | 24 / 189 | 相对 tim_ddl_v5：增加 CCR3A/CCR3B/CRCH3A/CRCH3B；定义差异 ICLR/IFR/M23CR/RCR |
+| `tim_ddl_v5_3.rs` | [tim_ddl_v5_3](../../data/registers/tim_ddl_v5_3.yaml) | L12x: TIM3_MODE23 | 24 / 191 | 相对 tim_ddl_v5：增加 CCR3A/CCR3B/CRCH3A/CRCH3B；定义差异 ICLR/IFR/M23CR/RCR |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

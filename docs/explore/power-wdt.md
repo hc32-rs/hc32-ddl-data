@@ -14,7 +14,7 @@ F420 LVD 使用 F002 的生成布局，IWDT/WWDT 使用 A052/F052 对应布局�
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### iwdt：v1
 
@@ -22,10 +22,10 @@ F420 LVD 使用 F002 的生成布局，IWDT/WWDT 使用 A052/F052 对应布局�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `iwdt_ddl_v1.rs` | [iwdt_v1](../../data/registers/iwdt_v1.yaml) | A052/F052/F420: IWDT | 5 / 17 | 本档位对照基准；完整定义见来源 YAML |
-| `iwdt_ddl_v1_1.rs` | [iwdt_v2](../../data/registers/iwdt_v2.yaml) | F002: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 CR |
-| `iwdt_ddl_v1_2.rs` | [iwdt_v3](../../data/registers/iwdt_v3.yaml) | L021: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 ARR/CR/KR/SR/WINR |
-| `iwdt_ddl_v1_3.rs` | [iwdt_v4](../../data/registers/iwdt_v4.yaml) | L12x: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 SR |
+| `iwdt_ddl_v1.rs` | [iwdt_ddl_v1](../../data/registers/iwdt_ddl_v1.yaml) | A052/F052/F420: IWDT | 5 / 17 | 本档位对照基准；完整定义见来源 YAML |
+| `iwdt_ddl_v1_1.rs` | [iwdt_ddl_v1_1](../../data/registers/iwdt_ddl_v1_1.yaml) | F002: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 CR |
+| `iwdt_ddl_v1_2.rs` | [iwdt_ddl_v1_2](../../data/registers/iwdt_ddl_v1_2.yaml) | L021: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 ARR/CR/KR/SR/WINR |
+| `iwdt_ddl_v1_3.rs` | [iwdt_ddl_v1_3](../../data/registers/iwdt_ddl_v1_3.yaml) | L12x: IWDT | 5 / 17 | 相对 iwdt_ddl_v1：定义差异 SR |
 
 ### lvd：v1
 
@@ -33,13 +33,13 @@ F420 LVD 使用 F002 的生成布局，IWDT/WWDT 使用 A052/F052 对应布局�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `lvd_ddl_v1.rs` | [lvd_v6](../../data/registers/lvd_v6.yaml) | L110: LVD | 2 / 11 | 本档位对照基准；完整定义见来源 YAML |
-| `lvd_ddl_v1_1.rs` | [lvd_v4](../../data/registers/lvd_v4.yaml) | F003/F005: LVD | 2 / 13 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
-| `lvd_ddl_v1_2.rs` | [lvd_v1](../../data/registers/lvd_v1.yaml) | A052/F052: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
-| `lvd_ddl_v1_3.rs` | [lvd_v2](../../data/registers/lvd_v2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: LVD | 2 / 14 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
-| `lvd_ddl_v1_4.rs` | [lvd_v3](../../data/registers/lvd_v3.yaml) | F002/F420: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
-| `lvd_ddl_v1_5.rs` | [lvd_v5](../../data/registers/lvd_v5.yaml) | L021: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
-| `lvd_ddl_v1_6.rs` | [lvd_v7](../../data/registers/lvd_v7.yaml) | L12x: LVD | 2 / 14 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
+| `lvd_ddl_v1.rs` | [lvd_ddl_v1](../../data/registers/lvd_ddl_v1.yaml) | L110: LVD | 2 / 11 | 本档位对照基准；完整定义见来源 YAML |
+| `lvd_ddl_v1_1.rs` | [lvd_ddl_v1_1](../../data/registers/lvd_ddl_v1_1.yaml) | F003/F005: LVD | 2 / 13 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
+| `lvd_ddl_v1_2.rs` | [lvd_ddl_v1_2](../../data/registers/lvd_ddl_v1_2.yaml) | A052/F052: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
+| `lvd_ddl_v1_3.rs` | [lvd_ddl_v1_3](../../data/registers/lvd_ddl_v1_3.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: LVD | 2 / 14 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
+| `lvd_ddl_v1_4.rs` | [lvd_ddl_v1_4](../../data/registers/lvd_ddl_v1_4.yaml) | F002/F420: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
+| `lvd_ddl_v1_5.rs` | [lvd_ddl_v1_5](../../data/registers/lvd_ddl_v1_5.yaml) | L021: LVD | 2 / 14 | 相对 lvd_ddl_v1：增加 SR；缺少 IFR；定义差异 CR |
+| `lvd_ddl_v1_6.rs` | [lvd_ddl_v1_6](../../data/registers/lvd_ddl_v1_6.yaml) | L12x: LVD | 2 / 14 | 相对 lvd_ddl_v1：定义差异 CR/IFR |
 
 ### wdt：v1
 
@@ -47,9 +47,9 @@ F420 LVD 使用 F002 的生成布局，IWDT/WWDT 使用 A052/F052 对应布局�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `wdt_ddl_v1.rs` | [wdt_v2](../../data/registers/wdt_v2.yaml) | L110: WDT | 2 / 6 | 本档位对照基准；完整定义见来源 YAML |
-| `wdt_ddl_v1_1.rs` | [wdt_v1](../../data/registers/wdt_v1.yaml) | A136/F003/F005/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: WDT | 2 / 8 | 相对 wdt_ddl_v1：定义差异 CON/RST |
-| `wdt_ddl_v1_2.rs` | [wdt_v3](../../data/registers/wdt_v3.yaml) | L16x/L18x: WDT | 2 / 8 | 相对 wdt_ddl_v1：定义差异 CON/RST |
+| `wdt_ddl_v1.rs` | [wdt_ddl_v1](../../data/registers/wdt_ddl_v1.yaml) | L110: WDT | 2 / 6 | 本档位对照基准；完整定义见来源 YAML |
+| `wdt_ddl_v1_1.rs` | [wdt_ddl_v1_1](../../data/registers/wdt_ddl_v1_1.yaml) | A136/F003/F005/F030/F072/F17x/F19x/L07x/L13x/L17x/L19x: WDT | 2 / 8 | 相对 wdt_ddl_v1：定义差异 CON/RST |
+| `wdt_ddl_v1_2.rs` | [wdt_ddl_v1_2](../../data/registers/wdt_ddl_v1_2.yaml) | L16x/L18x: WDT | 2 / 8 | 相对 wdt_ddl_v1：定义差异 CON/RST |
 
 ### wwdt：v1
 
@@ -57,7 +57,7 @@ F420 LVD 使用 F002 的生成布局，IWDT/WWDT 使用 A052/F052 对应布局�
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `wwdt_ddl_v1.rs` | [wwdt_common](../../data/registers/wwdt_common.yaml) | A052/F002/F052/F420/L12x/L16x/L18x: WWDT | 3 / 9 | 本档位对照基准；完整定义见来源 YAML |
+| `wwdt_ddl_v1.rs` | [wwdt_ddl_v1](../../data/registers/wwdt_ddl_v1.yaml) | A052/F002/F052/F420/L12x/L16x/L18x: WWDT | 3 / 9 | 本档位对照基准；完整定义见来源 YAML |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

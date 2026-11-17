@@ -13,7 +13,7 @@ BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### bt：v1
 
@@ -21,7 +21,7 @@ BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `bt_ddl_v1.rs` | [bt_common](../../data/registers/bt_common.yaml) | L110: BT0, BT1, BT2 | 6 / 13 | 本档位对照基准；完整定义见来源 YAML |
+| `bt_ddl_v1.rs` | [bt_ddl_v1](../../data/registers/bt_ddl_v1.yaml) | L110: BT0, BT1, BT2 | 6 / 13 | 本档位对照基准；完整定义见来源 YAML |
 
 ### eau：v1
 
@@ -29,7 +29,7 @@ BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `eau_ddl_v1.rs` | [eau_common](../../data/registers/eau_common.yaml) | A052/F052: EAU | 5 / 9 | 本档位对照基准；完整定义见来源 YAML |
+| `eau_ddl_v1.rs` | [eau_ddl_v1](../../data/registers/eau_ddl_v1.yaml) | A052/F052: EAU | 5 / 9 | 本档位对照基准；完整定义见来源 YAML |
 
 ### pca：v1
 
@@ -37,9 +37,9 @@ BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `pca_ddl_v1.rs` | [pca_v3](../../data/registers/pca_v3.yaml) | L110: PCA | 25 / 73 | 本档位对照基准；完整定义见来源 YAML |
-| `pca_ddl_v1_1.rs` | [pca_v2](../../data/registers/pca_v2.yaml) | F003/F005: PCA | 25 / 98 | 相对 pca_ddl_v1：定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
-| `pca_ddl_v1_2.rs` | [pca_v1](../../data/registers/pca_v1.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: PCA | 27 / 102 | 相对 pca_ddl_v1：增加 CARR/EPWM；定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
+| `pca_ddl_v1.rs` | [pca_ddl_v1](../../data/registers/pca_ddl_v1.yaml) | L110: PCA | 25 / 73 | 本档位对照基准；完整定义见来源 YAML |
+| `pca_ddl_v1_1.rs` | [pca_ddl_v1_1](../../data/registers/pca_ddl_v1_1.yaml) | F003/F005: PCA | 25 / 98 | 相对 pca_ddl_v1：定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
+| `pca_ddl_v1_2.rs` | [pca_ddl_v1_2](../../data/registers/pca_ddl_v1_2.yaml) | A136/F030/F072/F17x/F19x/L07x/L13x/L16x/L17x/L18x/L19x: PCA | 27 / 102 | 相对 pca_ddl_v1：增加 CARR/EPWM；定义差异 CCAP0/CCAP0H/CCAP0L/CCAP1/CCAP1H 等 25 项 |
 
 ### pcnt：v1
 
@@ -47,8 +47,8 @@ BTIM/GTIM 也在该页。F420 无 PCA、PCNT 或 AOS，包含 BTIM 与 GTIM。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `pcnt_ddl_v1.rs` | [pcnt_v1](../../data/registers/pcnt_v1.yaml) | A136/L13x: PCNT | 13 / 58 | 本档位对照基准；完整定义见来源 YAML |
-| `pcnt_ddl_v1_1.rs` | [pcnt_v2](../../data/registers/pcnt_v2.yaml) | L07x/L16x/L17x/L18x/L19x: PCNT | 14 / 60 | 相对 pcnt_ddl_v1：增加 DBG |
+| `pcnt_ddl_v1.rs` | [pcnt_ddl_v1](../../data/registers/pcnt_ddl_v1.yaml) | A136/L13x: PCNT | 13 / 58 | 本档位对照基准；完整定义见来源 YAML |
+| `pcnt_ddl_v1_1.rs` | [pcnt_ddl_v1_1](../../data/registers/pcnt_ddl_v1_1.yaml) | L07x/L16x/L17x/L18x/L19x: PCNT | 14 / 60 | 相对 pcnt_ddl_v1：增加 DBG |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

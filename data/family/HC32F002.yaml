@@ -6,7 +6,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v3
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -31,7 +31,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -44,7 +44,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -57,7 +57,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -70,7 +70,7 @@
   registers:
     kind: ctrim
     block: CTRIM
-    version: v2
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -83,7 +83,7 @@
   registers:
     kind: flash
     block: FLASH
-    version: v3
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERICLKEN0
@@ -94,9 +94,9 @@
 - name: GPIOA
   address: 0x40020C00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v2
+    kind: gpio
+    block: GPIO
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -109,13 +109,13 @@
   registers:
     kind: gpioaux
     block: GPIOAUX
-    version: v2
+    version: ddl_v1
 - name: GPIOB
   address: 0x40020D00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v2
+    kind: gpio
+    block: GPIO
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -126,9 +126,9 @@
 - name: GPIOC
   address: 0x40020E00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v2
+    kind: gpio
+    block: GPIO
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -139,9 +139,9 @@
 - name: GPIOD
   address: 0x40020F00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v2
+    kind: gpio
+    block: GPIO
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -154,7 +154,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v2
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0
@@ -165,9 +165,9 @@
 - name: I2C
   address: 0x40000400
   registers:
-    kind: i
-    block: I
-    version: v4
+    kind: i2c
+    block: I2C
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -180,7 +180,7 @@
   registers:
     kind: iwdt
     block: IWDT
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERICLKEN0
@@ -193,7 +193,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -206,7 +206,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v3
+    version: ddl_v3
   rcc:
     enable:
       register: PERICLKEN0
@@ -219,7 +219,7 @@
   registers:
     kind: lvd
     block: LVD
-    version: v3
+    version: ddl_v1_4
   interrupts:
   - signal: LVD
     interrupt: LVD
@@ -228,7 +228,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v3
+    version: ddl_v2
   rcc:
     enable:
       register: PERICLKEN0
@@ -241,13 +241,13 @@
   registers:
     kind: sysctrl
     block: SYSCTRL
-    version: v3
+    version: ddl_v1
 - name: WWDT
   address: 0x40006800
   registers:
     kind: wwdt
     block: WWDT
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: PERICLKEN0

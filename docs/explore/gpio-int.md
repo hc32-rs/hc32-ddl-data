@@ -15,7 +15,7 @@ IRQ 始终按设备头 IRQn_Type 记录，不从版本号推断。
 <!-- peripheral-versions:begin -->
 ## 版本与系列对照
 
-以下为待确认命名，当前来源仍使用旧文件名。系列名前缀 `HC32` 省略。
+以下名称与生成输入保持一致。系列名前缀 `HC32` 省略。
 
 ### debug_active：v1
 
@@ -23,11 +23,11 @@ IRQ 始终按设备头 IRQn_Type 记录，不从版本号推断。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `debug_active_ddl_v1.rs` | [debug_v2](../../data/registers/debug_v2.yaml) | F003/F005/F030/F072: DEBUG_ACTIVE | 1 / 10 | 本档位对照基准；完整定义见来源 YAML |
-| `debug_active_ddl_v1_1.rs` | [debug_v4](../../data/registers/debug_v4.yaml) | L12x: DEBUG_ACTIVE | 1 / 10 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
-| `debug_active_ddl_v1_2.rs` | [debug_v1](../../data/registers/debug_v1.yaml) | A136/L13x: DEBUG_ACTIVE | 1 / 12 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
-| `debug_active_ddl_v1_3.rs` | [debug_v3](../../data/registers/debug_v3.yaml) | F17x/F19x/L07x/L17x/L19x: DEBUG_ACTIVE | 1 / 13 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
-| `debug_active_ddl_v1_4.rs` | [debug_v5](../../data/registers/debug_v5.yaml) | L16x/L18x: DEBUG_ACTIVE | 1 / 14 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
+| `debug_active_ddl_v1.rs` | [debug_active_ddl_v1](../../data/registers/debug_active_ddl_v1.yaml) | F003/F005/F030/F072: DEBUG_ACTIVE | 1 / 10 | 本档位对照基准；完整定义见来源 YAML |
+| `debug_active_ddl_v1_1.rs` | [debug_active_ddl_v1_1](../../data/registers/debug_active_ddl_v1_1.yaml) | L12x: DEBUG_ACTIVE | 1 / 10 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
+| `debug_active_ddl_v1_2.rs` | [debug_active_ddl_v1_2](../../data/registers/debug_active_ddl_v1_2.yaml) | A136/L13x: DEBUG_ACTIVE | 1 / 12 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
+| `debug_active_ddl_v1_3.rs` | [debug_active_ddl_v1_3](../../data/registers/debug_active_ddl_v1_3.yaml) | F17x/F19x/L07x/L17x/L19x: DEBUG_ACTIVE | 1 / 13 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
+| `debug_active_ddl_v1_4.rs` | [debug_active_ddl_v1_4](../../data/registers/debug_active_ddl_v1_4.yaml) | L16x/L18x: DEBUG_ACTIVE | 1 / 14 | 相对 debug_active_ddl_v1：定义差异 DEBUG_ACTIVE |
 
 ### gpio：v1
 
@@ -35,7 +35,7 @@ IRQ 始终按设备头 IRQn_Type 记录，不从版本号推断。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `gpio_ddl_v1.rs` | [gpiob_common](../../data/registers/gpiob_common.yaml) | L021: GPIOB | 8 / 16 | 本档位对照基准；完整定义见来源 YAML |
+| `gpio_ddl_v1.rs` | [gpio_ddl_v1](../../data/registers/gpio_ddl_v1.yaml) | L021: GPIOB | 8 / 16 | 本档位对照基准；完整定义见来源 YAML |
 
 ### gpio：v2
 
@@ -43,7 +43,7 @@ IRQ 始终按设备头 IRQn_Type 记录，不从版本号推断。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `gpio_ddl_v2.rs` | [gpio_v2](../../data/registers/gpio_v2.yaml) | F003/F005/L110: GPIO | 77 / 270 | 本档位对照基准；完整定义见来源 YAML |
+| `gpio_ddl_v2.rs` | [gpio_ddl_v2](../../data/registers/gpio_ddl_v2.yaml) | F003/F005/L110: GPIO | 77 / 270 | 本档位对照基准；完整定义见来源 YAML |
 
 ### gpio：v3
 
@@ -51,14 +51,14 @@ IRQ 始终按设备头 IRQn_Type 记录，不从版本号推断。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `gpio_ddl_v3.rs` | [gpioa_v2](../../data/registers/gpioa_v2.yaml) | F002: GPIOA, GPIOB, GPIOC, GPIOD | 15 / 142 | 本档位对照基准；完整定义见来源 YAML |
-| `gpio_ddl_v3_1.rs` | [gpioa_v1](../../data/registers/gpioa_v1.yaml) | A052/F052/F420: GPIOA, GPIOB, GPIOC, GPIOD | 17 / 301 | 相对 gpio_ddl_v3：增加 AFRH/DRIVER/PUPD；缺少 PU；定义差异 ADS/BRR/BSRR/DIR/FALLIE 等 13 项 |
-| `gpio_ddl_v3_2.rs` | [gpioa_v3](../../data/registers/gpioa_v3.yaml) | L021: GPIOA | 31 / 302 | 相对 gpio_ddl_v3：增加 BCLR/BSET/BSETCLR/FIE/HIE 等 26 项；缺少 AFRL/BRR/BSRR/FALLIE/HIGHIE 等 10 项；定义差异 ADS/DIR/IN/OUT/PU |
-| `gpio_ddl_v3_3.rs` | [gpio_v1](../../data/registers/gpio_v1.yaml) | A136/F030/L13x: GPIO | 131 / 1113 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 131 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
-| `gpio_ddl_v3_4.rs` | [gpio_v5](../../data/registers/gpio_v5.yaml) | L12x: GPIO | 131 / 1119 | 相对 gpio_ddl_v3：增加 CTRL1/CTRL2/FLTCFG/PA00_SEL/PA01_SEL 等 131 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
-| `gpio_ddl_v3_5.rs` | [gpio_v6](../../data/registers/gpio_v6.yaml) | L16x/L18x: GPIO | 180 / 1425 | 相对 gpio_ddl_v3：增加 CTRL1/CTRL2/PA00_SEL/PA01_SEL/PA02_SEL 等 180 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
-| `gpio_ddl_v3_6.rs` | [gpio_v3](../../data/registers/gpio_v3.yaml) | F072: GPIO | 201 / 1797 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 201 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
-| `gpio_ddl_v3_7.rs` | [gpio_v4](../../data/registers/gpio_v4.yaml) | F17x/F19x/L07x/L17x/L19x: GPIO | 202 / 1804 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 202 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
+| `gpio_ddl_v3.rs` | [gpio_ddl_v3](../../data/registers/gpio_ddl_v3.yaml) | F002: GPIOA, GPIOB, GPIOC, GPIOD | 15 / 142 | 本档位对照基准；完整定义见来源 YAML |
+| `gpio_ddl_v3_1.rs` | [gpio_ddl_v3_1](../../data/registers/gpio_ddl_v3_1.yaml) | A052/F052/F420: GPIOA, GPIOB, GPIOC, GPIOD | 17 / 301 | 相对 gpio_ddl_v3：增加 AFRH/DRIVER/PUPD；缺少 PU；定义差异 ADS/BRR/BSRR/DIR/FALLIE 等 13 项 |
+| `gpio_ddl_v3_2.rs` | [gpio_ddl_v3_2](../../data/registers/gpio_ddl_v3_2.yaml) | L021: GPIOA | 31 / 302 | 相对 gpio_ddl_v3：增加 BCLR/BSET/BSETCLR/FIE/HIE 等 26 项；缺少 AFRL/BRR/BSRR/FALLIE/HIGHIE 等 10 项；定义差异 ADS/DIR/IN/OUT/PU |
+| `gpio_ddl_v3_3.rs` | [gpio_ddl_v3_3](../../data/registers/gpio_ddl_v3_3.yaml) | A136/F030/L13x: GPIO | 131 / 1113 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 131 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
+| `gpio_ddl_v3_4.rs` | [gpio_ddl_v3_4](../../data/registers/gpio_ddl_v3_4.yaml) | L12x: GPIO | 131 / 1119 | 相对 gpio_ddl_v3：增加 CTRL1/CTRL2/FLTCFG/PA00_SEL/PA01_SEL 等 131 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
+| `gpio_ddl_v3_5.rs` | [gpio_ddl_v3_5](../../data/registers/gpio_ddl_v3_5.yaml) | L16x/L18x: GPIO | 180 / 1425 | 相对 gpio_ddl_v3：增加 CTRL1/CTRL2/PA00_SEL/PA01_SEL/PA02_SEL 等 180 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
+| `gpio_ddl_v3_6.rs` | [gpio_ddl_v3_6](../../data/registers/gpio_ddl_v3_6.yaml) | F072: GPIO | 201 / 1797 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 201 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
+| `gpio_ddl_v3_7.rs` | [gpio_ddl_v3_7](../../data/registers/gpio_ddl_v3_7.yaml) | F17x/F19x/L07x/L17x/L19x: GPIO | 202 / 1804 | 相对 gpio_ddl_v3：增加 CTRL0/CTRL1/CTRL2/PA00_SEL/PA01_SEL 等 202 项；缺少 ADS/AFRL/BRR/BSRR/DIR 等 15 项 |
 
 ### gpioaux：v1
 
@@ -66,10 +66,10 @@ GPIO 辅助复用/触发控制；目标阵容不同，保留独立变体。
 
 | 目标文件 | 当前来源 | 系列：实例 | 寄存器 / 字段条目 | 变体差异提示 |
 |---|---|---|---:|---|
-| `gpioaux_ddl_v1.rs` | [gpioaux_v2](../../data/registers/gpioaux_v2.yaml) | F002: GPIOAUX | 2 / 6 | 本档位对照基准；完整定义见来源 YAML |
-| `gpioaux_ddl_v1_1.rs` | [gpioaux_v1](../../data/registers/gpioaux_v1.yaml) | A052/F052: GPIOAUX | 3 / 14 | 相对 gpioaux_ddl_v1：增加 CR0/CR2；缺少 CR4；定义差异 CR1 |
-| `gpioaux_ddl_v1_2.rs` | [gpioaux_v3](../../data/registers/gpioaux_v3.yaml) | F420: GPIOAUX | 3 / 15 | 相对 gpioaux_ddl_v1：增加 CR0/CR2；缺少 CR4；定义差异 CR1 |
-| `gpioaux_ddl_v1_3.rs` | [gpioaux_v4](../../data/registers/gpioaux_v4.yaml) | L021: GPIOAUX | 5 / 20 | 相对 gpioaux_ddl_v1：增加 CTRL1/CTRL2/FLTCFG/TIMCPS/TIMES；缺少 CR1/CR4 |
+| `gpioaux_ddl_v1.rs` | [gpioaux_ddl_v1](../../data/registers/gpioaux_ddl_v1.yaml) | F002: GPIOAUX | 2 / 6 | 本档位对照基准；完整定义见来源 YAML |
+| `gpioaux_ddl_v1_1.rs` | [gpioaux_ddl_v1_1](../../data/registers/gpioaux_ddl_v1_1.yaml) | A052/F052: GPIOAUX | 3 / 14 | 相对 gpioaux_ddl_v1：增加 CR0/CR2；缺少 CR4；定义差异 CR1 |
+| `gpioaux_ddl_v1_2.rs` | [gpioaux_ddl_v1_2](../../data/registers/gpioaux_ddl_v1_2.yaml) | F420: GPIOAUX | 3 / 15 | 相对 gpioaux_ddl_v1：增加 CR0/CR2；缺少 CR4；定义差异 CR1 |
+| `gpioaux_ddl_v1_3.rs` | [gpioaux_ddl_v1_3](../../data/registers/gpioaux_ddl_v1_3.yaml) | L021: GPIOAUX | 5 / 20 | 相对 gpioaux_ddl_v1：增加 CTRL1/CTRL2/FLTCFG/TIMCPS/TIMES；缺少 CR1/CR4 |
 <!-- peripheral-versions:end -->
 
 ## SVD 实例与基址

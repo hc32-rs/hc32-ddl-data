@@ -6,7 +6,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v9
+    version: ddl_v2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -31,7 +31,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -41,7 +41,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -51,7 +51,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -61,7 +61,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -71,7 +71,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -81,7 +81,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -91,7 +91,7 @@
   registers:
     kind: ctrim
     block: CTRIM
-    version: v4
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -104,7 +104,7 @@
   registers:
     kind: flash
     block: FLASH
-    version: v9
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -115,9 +115,9 @@
 - name: GPIOA
   address: 0x40020C00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v3
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -130,7 +130,7 @@
   registers:
     kind: gpioaux
     block: GPIOAUX
-    version: v4
+    version: ddl_v1_3
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -138,9 +138,9 @@
 - name: GPIOB
   address: 0x40020C40
   registers:
-    kind: gpiob
-    block: GPIOB
-    version: common
+    kind: gpio
+    block: GPIO
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -153,7 +153,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v4
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -163,7 +163,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v4
+    version: ddl_v1_1
   rcc:
     enable:
       register: PERI_CLKEN1
@@ -171,9 +171,9 @@
 - name: HSI2C
   address: 0x4000BC00
   registers:
-    kind: hsi
-    block: HSI
-    version: v1
+    kind: hsi2c
+    block: HSI2C
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -186,7 +186,7 @@
   registers:
     kind: iwdt
     block: IWDT
-    version: v3
+    version: ddl_v1_2
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -199,7 +199,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v5
+    version: ddl_v4
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -212,7 +212,7 @@
   registers:
     kind: lpuart
     block: LPUART
-    version: v5
+    version: ddl_v4
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -225,7 +225,7 @@
   registers:
     kind: lvd
     block: LVD
-    version: v5
+    version: ddl_v1_5
   interrupts:
   - signal: LVD
     interrupt: LVD
@@ -234,7 +234,7 @@
   registers:
     kind: rtc
     block: RTC
-    version: v3
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -247,7 +247,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v5
+    version: ddl_v2_1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -260,13 +260,13 @@
   registers:
     kind: sysctrl
     block: SYSCTRL
-    version: v9
+    version: ddl_v2_3
 - name: TRNG
   address: 0x40008C00
   registers:
     kind: trng
     block: TRNG
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: PERI_CLKEN0
@@ -276,7 +276,7 @@
   registers:
     kind: vc
     block: VC
-    version: v6
+    version: ddl_v2_3
   rcc:
     enable:
       register: PERI_CLKEN0

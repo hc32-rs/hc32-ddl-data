@@ -6,7 +6,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v7
+    version: ddl_v3
   rcc:
     enable:
       register: APB1EN
@@ -19,7 +19,7 @@
   registers:
     kind: adc
     block: ADC
-    version: v8
+    version: ddl_v3_1
   rcc:
     enable:
       register: APB1EN
@@ -68,7 +68,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v3
+    version: ddl_v1_2
   rcc:
     enable:
       register: AHB0EN
@@ -78,7 +78,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v3
+    version: ddl_v1_2
   rcc:
     enable:
       register: AHB0EN
@@ -88,7 +88,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v3
+    version: ddl_v1_2
   rcc:
     enable:
       register: AHB0EN
@@ -98,7 +98,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: AHB0EN
@@ -108,7 +108,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: AHB0EN
@@ -118,7 +118,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v2
+    version: ddl_v1_1
   rcc:
     enable:
       register: AHB0EN
@@ -128,7 +128,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v4
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -138,7 +138,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v4
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -148,7 +148,7 @@
   registers:
     kind: btim
     block: BTIM
-    version: v4
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -158,7 +158,7 @@
   registers:
     kind: crc
     block: CRC
-    version: v4
+    version: ddl_v2_2
   rcc:
     enable:
       register: AHB0EN
@@ -168,7 +168,7 @@
   registers:
     kind: ctrim
     block: CTRIM
-    version: v3
+    version: ddl_v1_1
   rcc:
     enable:
       register: APB1EN
@@ -181,7 +181,7 @@
   registers:
     kind: dmac
     block: DMAC
-    version: v4
+    version: ddl_v2_1
   rcc:
     enable:
       register: AHB0EN
@@ -204,7 +204,7 @@
   registers:
     kind: flash
     block: FLASH
-    version: v8
+    version: ddl_v2
   rcc:
     enable:
       register: AHB0EN
@@ -215,9 +215,9 @@
 - name: GPIOA
   address: 0x40024000
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: AHB1EN
@@ -230,13 +230,13 @@
   registers:
     kind: gpioaux
     block: GPIOAUX
-    version: v3
+    version: ddl_v1_2
 - name: GPIOB
   address: 0x40024400
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: AHB1EN
@@ -247,9 +247,9 @@
 - name: GPIOC
   address: 0x40024800
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: AHB1EN
@@ -260,9 +260,9 @@
 - name: GPIOD
   address: 0x40024C00
   registers:
-    kind: gpioa
-    block: GPIOA
-    version: v1
+    kind: gpio
+    block: GPIO
+    version: ddl_v3_1
   rcc:
     enable:
       register: AHB1EN
@@ -275,7 +275,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v3
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -292,7 +292,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v3
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -309,7 +309,7 @@
   registers:
     kind: gtim
     block: GTIM
-    version: v3
+    version: ddl_v1_3
   rcc:
     enable:
       register: AHB0EN
@@ -324,9 +324,9 @@
 - name: I2C0
   address: 0x40002800
   registers:
-    kind: i
-    block: I
-    version: v7
+    kind: i2c
+    block: I2C
+    version: ddl_v2_2
   rcc:
     enable:
       register: AHB0EN
@@ -337,9 +337,9 @@
 - name: I2C1
   address: 0x40002C00
   registers:
-    kind: i
-    block: I
-    version: v7
+    kind: i2c
+    block: I2C
+    version: ddl_v2_2
   rcc:
     enable:
       register: AHB0EN
@@ -352,7 +352,7 @@
   registers:
     kind: iwdt
     block: IWDT
-    version: v1
+    version: ddl_v1
   rcc:
     enable:
       register: APB1EN
@@ -365,7 +365,7 @@
   registers:
     kind: lvd
     block: LVD
-    version: v3
+    version: ddl_v1_4
   rcc:
     enable:
       register: APB1EN
@@ -378,7 +378,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v1
+    version: ddl_v2_2
   rcc:
     enable:
       register: AHB0EN
@@ -397,7 +397,7 @@
   registers:
     kind: spi
     block: SPI
-    version: v1
+    version: ddl_v2_2
   rcc:
     enable:
       register: AHB0EN
@@ -416,13 +416,13 @@
   registers:
     kind: sysctrl
     block: SYSCTRL
-    version: v8
+    version: ddl_v4
 - name: USART0
   address: 0x40000000
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: AHB0EN
@@ -439,7 +439,7 @@
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: AHB0EN
@@ -456,7 +456,7 @@
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: AHB0EN
@@ -473,7 +473,7 @@
   registers:
     kind: usart
     block: USART
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: AHB0EN
@@ -490,7 +490,7 @@
   registers:
     kind: vc
     block: VC
-    version: v5
+    version: ddl_v1
   rcc:
     enable:
       register: APB1EN
@@ -503,7 +503,7 @@
   registers:
     kind: vc
     block: VC
-    version: v5
+    version: ddl_v1
   rcc:
     enable:
       register: APB1EN
@@ -516,7 +516,7 @@
   registers:
     kind: wwdt
     block: WWDT
-    version: common
+    version: ddl_v1
   rcc:
     enable:
       register: APB1EN
