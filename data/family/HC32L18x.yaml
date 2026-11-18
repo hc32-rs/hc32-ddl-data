@@ -1,5 +1,7 @@
 # HC32L18x 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
 # 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# MODE 拆分定时器（TIMx/ATIMx）用 views 挂 SVD 视图（同基址寄存器布局
+# 叠影，工作模式由控制寄存器 MD 位运行时选择），地址/门控/中断在物理实例；
 # 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
 - name: ADC
   address: 0x40002400
@@ -354,8 +356,21 @@
     version: ddl_v3_3
 - name: TIM0
   address: 0x40000C00
-  registers:
+  views:
+  - name: TIM0_MODE0
+    mode: MODE0
     kind: tim
+    version: ddl_v2
+    block: TIM
+  - name: TIM0_MODE1
+    mode: MODE1
+    kind: tim
+    version: ddl_v3_4
+    block: TIM
+  - name: TIM0_MODE23
+    mode: MODE23
+    kind: tim
+    version: ddl_v4_6
     block: TIM
   rcc:
     enable:
@@ -366,8 +381,21 @@
     interrupt: TIM0
 - name: TIM1
   address: 0x40000D00
-  registers:
+  views:
+  - name: TIM1_MODE0
+    mode: MODE0
     kind: tim
+    version: ddl_v2_2
+    block: TIM
+  - name: TIM1_MODE1
+    mode: MODE1
+    kind: tim
+    version: ddl_v3_5
+    block: TIM
+  - name: TIM1_MODE23
+    mode: MODE23
+    kind: tim
+    version: ddl_v4_7
     block: TIM
   rcc:
     enable:
@@ -378,8 +406,21 @@
     interrupt: TIM1
 - name: TIM2
   address: 0x40000E00
-  registers:
+  views:
+  - name: TIM2_MODE0
+    mode: MODE0
     kind: tim
+    version: ddl_v2_3
+    block: TIM
+  - name: TIM2_MODE1
+    mode: MODE1
+    kind: tim
+    version: ddl_v3_6
+    block: TIM
+  - name: TIM2_MODE23
+    mode: MODE23
+    kind: tim
+    version: ddl_v4_8
     block: TIM
   rcc:
     enable:
@@ -390,8 +431,21 @@
     interrupt: TIM2
 - name: TIM3
   address: 0x40005800
-  registers:
+  views:
+  - name: TIM3_MODE0
+    mode: MODE0
     kind: tim
+    version: ddl_v2_1
+    block: TIM
+  - name: TIM3_MODE1
+    mode: MODE1
+    kind: tim
+    version: ddl_v3_7
+    block: TIM
+  - name: TIM3_MODE23
+    mode: MODE23
+    kind: tim
+    version: ddl_v5_2
     block: TIM
   rcc:
     enable:

@@ -13,6 +13,10 @@ ATIM3 MODE1.CR0 增加 CSA/CSB，MODE23 部分标志改名。SVD 与设备头定
 ATIM0 的 UEV/CHA/CHB/BKETR IRQ 为 43–46，ATIM3 对应 47–50。
 门控 APB0EN bit 24/27，DMA A/B 请求为 0x58/0x59 和 0x5E/0x5F。
 
+MODE 视图已挂接物理实例（hc32-data-tools `csv_to_yaml.py`）：17 系列 60 个
+TIM/ATIM 实例经 family YAML `views:` 关联到本文档登记的版本档位，
+生成侧不再降级为纯地址外设；PAC 每视图一条同基址 const（名 = SVD 视图名）。
+
 [编号规则](../layout-versions.md) · [实例 CSV](../peripheral-versions.csv) · [SDK 核验](../sdk-verification.md)。
 
 <!-- peripheral-versions:begin -->

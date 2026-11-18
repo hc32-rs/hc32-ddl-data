@@ -1,5 +1,7 @@
 # HC32F420 系列外设实例（hc32-data-tools/csv_to_yaml.py 生成）。
 # 地址来自 SVD；时钟门控来自设备头 FCG/PWC 位定义；
+# MODE 拆分定时器（TIMx/ATIMx）用 views 挂 SVD 视图（同基址寄存器布局
+# 叠影，工作模式由控制寄存器 MD 位运行时选择），地址/门控/中断在物理实例；
 # 引脚复用（pins）暂缺，待从数据手册 GPIO 章节补齐。
 - name: ADC0
   address: 0x4000A000
@@ -29,8 +31,21 @@
     interrupt: ADC0_ADC1
 - name: ATIM0
   address: 0x40006000
-  registers:
+  views:
+  - name: ATIM0MODE0
+    mode: MODE0
     kind: atim
+    version: ddl_v1_1
+    block: ATIM
+  - name: ATIM0MODE1
+    mode: MODE1
+    kind: atim
+    version: ddl_v2_1
+    block: ATIM
+  - name: ATIM0MODE23
+    mode: MODE23
+    kind: atim
+    version: ddl_v3_1
     block: ATIM
   rcc:
     enable:
@@ -47,8 +62,21 @@
     interrupt: ATIM0_BKETR
 - name: ATIM3
   address: 0x40006C00
-  registers:
+  views:
+  - name: ATIM3MODE0
+    mode: MODE0
     kind: atim
+    version: ddl_v1_4
+    block: ATIM
+  - name: ATIM3MODE1
+    mode: MODE1
+    kind: atim
+    version: ddl_v2_2
+    block: ATIM
+  - name: ATIM3MODE23
+    mode: MODE23
+    kind: atim
+    version: ddl_v4_1
     block: ATIM
   rcc:
     enable:

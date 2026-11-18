@@ -22,6 +22,13 @@ cores:
   include_interrupts: ../interrupts/HC32F030.yaml
   include_dma_channels:
     DMA1: ../dma/HC32F030_DMA1.yaml
+  dma_channels:
+  - name: DMA1_CH0
+    dma: DMA1
+    channel: 0
+  - name: DMA1_CH1
+    dma: DMA1
+    channel: 1
 _raw:
   series: HC32F030
   freq_mhz: '48'

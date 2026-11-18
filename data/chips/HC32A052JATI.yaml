@@ -22,6 +22,22 @@ cores:
   include_interrupts: ../interrupts/HC32A052.yaml
   include_dma_channels:
     DMA1: ../dma/HC32A052_DMA1.yaml
+  dma_channels:
+  - name: DMA1_CH0
+    dma: DMA1
+    channel: 0
+  - name: DMA1_CH1
+    dma: DMA1
+    channel: 1
+  - name: DMA1_CH2
+    dma: DMA1
+    channel: 2
+  - name: DMA1_CH3
+    dma: DMA1
+    channel: 3
+  - name: DMA1_CH4
+    dma: DMA1
+    channel: 4
 _raw:
   series: HC32A052
   freq_mhz: '64'

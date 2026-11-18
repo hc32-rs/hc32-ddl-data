@@ -56,6 +56,17 @@ python3 tools/extract_ddl_csv.py [--sdk-root xh_ddl_sdk] [--svd-dir hc32-ddl-dat
   `DmaXxxTrig` 枚举值 / `DMA_TRISRC_*` 的索引），而非物理通道号；物理通道由
   软件在运行时选择（F420 6 通道、F030 2 通道等，见各 RM DMAC 章节）。
   `dma` 列统一填 `DMA1`（各系列至多一个 DMAC）。软件触发（索引 0）不产出行。
+- **物理通道数**记录在 `channels` 列（dmac.h `DmaCh*`/`DMA_CHANNEL*` 枚举）：
+  A052/F052=5（RM Rev1.10 §12.1"DMAC 具有 5 条独立的 DMA 通道"，
+  SVD 的 CONFA5 为保留槽不算）、F420=6（RM §12.1"6 条"）、其余=2。
+  csv_to_yaml.py 用它生成 chips YAML 的 `cores[].dma_channels` 通道清单。
+- **触发表是跨系列共享模板**：dmac.h 枚举含目标系列没有的外设触发
+  （F030/F17x/F19x 无 LPUART 硬件却有 `LP_UART0/1`；多数系列无 TIM4-6 实例
+  却有 `TIM4_A..TIM6_B`；F030 无 LCD 却有 `LCDTX`）。生成侧把这些列为
+  共享模板幽灵项跳过（hc32-data-gen INFO 计数），不挂载。
+- **A052/F052 的 UART0/UART1 触发指向 USART0/USART1**（dmac.h 注释与
+  RM TRI_SEL 表一致，如 `DmaUart0RxTrig=0x41 /* USART0接收Buf非空 */`）；
+  生成侧经已确认系列别名表挂到 USART0/1 实例（hc32-data-gen/src/dma.rs）。
 
 ## 时钟门控（peripherals.csv 的 fcg_reg/fcg_field）
 
