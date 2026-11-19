@@ -14,6 +14,7 @@ HC32F420 使用旧式 DDL 接口，时钟、GPIO 等仍与本仓库若干 M0/M0+
 - [外设版本与 MCU 对照 CSV](docs/peripheral-versions.csv)逐行列出系列、实例、当前版本与目标文件名。
 - [显式版本映射](docs/peripheral-version-map.json)是文档表格与 CSV 的唯一编号来源。
 - [SDK 核验记录](docs/sdk-verification.md)列出逐组证据及待确认项。
+- [USART TOE 枚举补录](docs/register-enums/usart_ddl_v1.yaml)记录编码、保留值和切换约束。
 
 SDK 源码在工作区相邻的 `../xh_ddl_sdk/`。设备头、驱动和例程用于核对 SVD 中的寄存器、
 中断、时钟门控与触发源。当前已有 SVD、审计 CSV、芯片/系列 YAML 与寄存器生成数据。
@@ -26,8 +27,8 @@ SDK 源码在工作区相邻的 `../xh_ddl_sdk/`。设备头、驱动和例程�
 | 目录 | 用途 |
 |---|---|
 | `data/chips/` | 型号、封装、内存与系列引用 |
-| `data/family/` | 系列共享外设 |
-| `data/peripherals/` | 外设实例、时钟门控、引脚功能和 DMA 请求 |
+| `data/family/` | 系列共享外设实例、门控和中断引用。F420 的已核对实例附带时钟信息。 |
+| `data/csv/` | 提取与生成用的审计 CSV |
 | `data/registers/` | 按 `<kind>_<version>.yaml` 命名的寄存器块 |
 | `data/interrupts/` | 中断向量 |
 | `data/dma/` | DMA 通道与请求映射 |

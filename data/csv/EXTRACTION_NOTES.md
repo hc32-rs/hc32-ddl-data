@@ -79,8 +79,9 @@ python3 tools/extract_ddl_csv.py [--sdk-root xh_ddl_sdk] [--svd-dir hc32-ddl-dat
   `SYSCTRL_PERICLK_*` 而非枚举）；L021：`SYSCTRL->PERI_CLKEN0/1`
   （枚举 `en_sysctrl_periph_clock_t`，+0x20 进 CLKEN1）。
 - F420：`HC_SYSCTRL->APB0EN/APB1EN/AHB0EN/AHB1EN`（掩码 0x20/0x40/0x80），
-  `fcg_reg` 即这些 EN 寄存器名；bus 列亦由该寄存器推出（APB*/AHB*），
-  其余系列 bus 留空（SVD/RM 未逐条核对总线）。
+  `fcg_reg` 即这些 EN 寄存器名。提取器读取完整的
+  `SYSCTRL_PeriphClkEnable()` 函数体，末尾默认分支为 `APB0EN`。
+  F420 的 USART、I2C、SPI、BTIM、GTIM、ATIM 共有 22 条外设记录使用该门控。
 - L110：`M0P_CLOCK->PERI_CLKEN`（clk.h 的 `en_clk_peripheral_gate`）。
 
 ## 假设与特殊处理
@@ -121,5 +122,5 @@ python3 tools/extract_ddl_csv.py [--sdk-root xh_ddl_sdk] [--svd-dir hc32-ddl-dat
 - dma：5 个无 DMA 系列正确为 0 行；其余 15 系列的触发源与 dmac.h 一致。
 - peripherals：门控覆盖除 meta 块（SYSCTRL/RAM/RESET/DEBUG_ACTIVE/GPIOAUX/
   LVD(无门控位)）外全部实例；L021 LVD、F002 LVD 在门控枚举中无对应位。
-- bus 列：仅 F420 由 EN 寄存器名推出 APB/AHB；其余系列留空（RM 逐外设核对
-  未做，属后续工作）。
+- bus 列：当前全部留空。F420 的已核对总线域、门控极性和 USART 功能时钟
+  由 `hc32-data-tools/scripts/csv_to_yaml.py` 的 `RCC_META` 补入 family YAML。
