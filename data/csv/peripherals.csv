@@ -338,17 +338,17 @@ HC32F19x,VC,vc,0x40002400,,PERI_CLKEN0,SysctrlPeripheralVcLvd,VC0;VC1_2,
 HC32F19x,WDT,wdt,0x40000F00,,PERI_CLKEN0,SysctrlPeripheralWdt,WDT,
 HC32F420,ADC0,adc,0x4000A000,,APB1EN,SysctrlPeripheralAdc0,ADC0_ADC1,
 HC32F420,ADC1,adc,0x4000A400,,APB1EN,SysctrlPeripheralAdc1,ADC0_ADC1,
-HC32F420,ATIM0,atim,0x40006000,,AHB0EN,SysctrlPeripheralATim0,ATIM0_UEV;ATIM0_CHA;ATIM0_CHB;ATIM0_BKETR,SVD register views ATIM0MODE0 collapsed (same base)
-HC32F420,ATIM3,atim,0x40006C00,,AHB0EN,SysctrlPeripheralATim3,ATIM3_UEV;ATIM3_CHA;ATIM3_CHB;ATIM3_BK_ETR_OV_UD_CMP3,SVD register views ATIM3MODE0 collapsed (same base)
-HC32F420,BTIM0,btim,0x40005000,,AHB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
-HC32F420,BTIM1,btim,0x40005100,,AHB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
-HC32F420,BTIM2,btim,0x40005200,,AHB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
-HC32F420,BTIM3,btim,0x40005400,,AHB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
-HC32F420,BTIM4,btim,0x40005500,,AHB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
-HC32F420,BTIM5,btim,0x40005600,,AHB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
-HC32F420,BTIM6,btim,0x40005800,,AHB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
-HC32F420,BTIM7,btim,0x40005900,,AHB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
-HC32F420,BTIM8,btim,0x40005A00,,AHB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
+HC32F420,ATIM0,atim,0x40006000,,APB0EN,SysctrlPeripheralATim0,ATIM0_UEV;ATIM0_CHA;ATIM0_CHB;ATIM0_BKETR,SVD register views ATIM0MODE0 collapsed (same base)
+HC32F420,ATIM3,atim,0x40006C00,,APB0EN,SysctrlPeripheralATim3,ATIM3_UEV;ATIM3_CHA;ATIM3_CHB;ATIM3_BK_ETR_OV_UD_CMP3,SVD register views ATIM3MODE0 collapsed (same base)
+HC32F420,BTIM0,btim,0x40005000,,APB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
+HC32F420,BTIM1,btim,0x40005100,,APB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
+HC32F420,BTIM2,btim,0x40005200,,APB0EN,SysctrlPeripheralCTim0,,clocked by SysctrlPeripheralCTim0 (composite timer unit)
+HC32F420,BTIM3,btim,0x40005400,,APB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
+HC32F420,BTIM4,btim,0x40005500,,APB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
+HC32F420,BTIM5,btim,0x40005600,,APB0EN,SysctrlPeripheralCTim1,,clocked by SysctrlPeripheralCTim1 (composite timer unit)
+HC32F420,BTIM6,btim,0x40005800,,APB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
+HC32F420,BTIM7,btim,0x40005900,,APB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
+HC32F420,BTIM8,btim,0x40005A00,,APB0EN,SysctrlPeripheralCTim2,,clocked by SysctrlPeripheralCTim2 (composite timer unit)
 HC32F420,CRC,crc,0x40020800,,AHB0EN,SysctrlPeripheralCrc,,
 HC32F420,CTRIM,ctrim,0x40008000,,APB1EN,SysctrlPeripheralCtrim,CTRIM,
 HC32F420,DMAC,dmac,0x40020000,,AHB0EN,SysctrlPeripheralDma,DMA_CH0;DMA_CH1;DMA_CH2;DMA_CH3;DMA_CH4;DMA_CH5,
@@ -358,20 +358,20 @@ HC32F420,GPIOAUX,gpioaux,0x4000B800,,,,,
 HC32F420,GPIOB,gpiob,0x40024400,,AHB1EN,SysctrlPeripheralGpiob,PORTB,
 HC32F420,GPIOC,gpioc,0x40024800,,AHB1EN,SysctrlPeripheralGpioc,PORTC,
 HC32F420,GPIOD,gpiod,0x40024C00,,AHB1EN,SysctrlPeripheralGpiod,PORTD,
-HC32F420,GTIM0,gtim,0x40005000,,AHB0EN,SysctrlPeripheralCTim0,GTIM0_UEV_ETR_BTIMA;GTIM0_CH01_BTIMB;GTIM0_CH23_BTIMC,
-HC32F420,GTIM1,gtim,0x40005400,,AHB0EN,SysctrlPeripheralCTim1,GTIM1_UEV_ETR_BTIMA;GTIM1_CH01_BTIMB;GTIM1_CH23_BTIMC,
-HC32F420,GTIM2,gtim,0x40005800,,AHB0EN,SysctrlPeripheralCTim2,GTIM2_UEV_ETR_BTIMA;GTIM2_CH01_BTIMB;GTIM2_CH23_BTIMC,
-HC32F420,I2C0,i2c,0x40002800,,AHB0EN,SysctrlPeripheralI2c0,I2C0,
-HC32F420,I2C1,i2c,0x40002C00,,AHB0EN,SysctrlPeripheralI2c1,I2C1,
+HC32F420,GTIM0,gtim,0x40005000,,APB0EN,SysctrlPeripheralCTim0,GTIM0_UEV_ETR_BTIMA;GTIM0_CH01_BTIMB;GTIM0_CH23_BTIMC,
+HC32F420,GTIM1,gtim,0x40005400,,APB0EN,SysctrlPeripheralCTim1,GTIM1_UEV_ETR_BTIMA;GTIM1_CH01_BTIMB;GTIM1_CH23_BTIMC,
+HC32F420,GTIM2,gtim,0x40005800,,APB0EN,SysctrlPeripheralCTim2,GTIM2_UEV_ETR_BTIMA;GTIM2_CH01_BTIMB;GTIM2_CH23_BTIMC,
+HC32F420,I2C0,i2c,0x40002800,,APB0EN,SysctrlPeripheralI2c0,I2C0,
+HC32F420,I2C1,i2c,0x40002C00,,APB0EN,SysctrlPeripheralI2c1,I2C1,
 HC32F420,IWDT,iwdt,0x40008C80,,APB1EN,SysctrlPeripheralIwt,IWDT,
 HC32F420,LVD,lvd,0x4000AA00,,APB1EN,SysctrlPeripherallvd,LVD,
-HC32F420,SPI0,spi,0x40003800,,AHB0EN,SysctrlPeripheralSpi0,SPI0_TX;SPI0_RX;SPI0_SSR;SPI0_ERR,
-HC32F420,SPI1,spi,0x40003C00,,AHB0EN,SysctrlPeripheralSpi1,SPI1_TX;SPI1_RX;SPI1_SSR;SPI1_ERR,
+HC32F420,SPI0,spi,0x40003800,,APB0EN,SysctrlPeripheralSpi0,SPI0_TX;SPI0_RX;SPI0_SSR;SPI0_ERR,
+HC32F420,SPI1,spi,0x40003C00,,APB0EN,SysctrlPeripheralSpi1,SPI1_TX;SPI1_RX;SPI1_SSR;SPI1_ERR,
 HC32F420,SYSCTRL,sysctrl,0x4000B800,,,,,
-HC32F420,USART0,usart,0x40000000,,AHB0EN,SysctrlPeripheralUsart0,USART0_RX;USART0_TX;USART0_FLAG,
-HC32F420,USART1,usart,0x40000400,,AHB0EN,SysctrlPeripheralUsart1,USART1_RX;USART1_TX;USART1_FLAG,
-HC32F420,USART2,usart,0x40000800,,AHB0EN,SysctrlPeripheralUsart2,USART2_RX;USART2_TX;USART2_FLAG,
-HC32F420,USART3,usart,0x40000C00,,AHB0EN,SysctrlPeripheralUsart3,USART3_RX;USART3_TX;USART3_FLAG,
+HC32F420,USART0,usart,0x40000000,,APB0EN,SysctrlPeripheralUsart0,USART0_RX;USART0_TX;USART0_FLAG,
+HC32F420,USART1,usart,0x40000400,,APB0EN,SysctrlPeripheralUsart1,USART1_RX;USART1_TX;USART1_FLAG,
+HC32F420,USART2,usart,0x40000800,,APB0EN,SysctrlPeripheralUsart2,USART2_RX;USART2_TX;USART2_FLAG,
+HC32F420,USART3,usart,0x40000C00,,APB0EN,SysctrlPeripheralUsart3,USART3_RX;USART3_TX;USART3_FLAG,
 HC32F420,VC0,vc,0x4000A800,,APB1EN,SysctrlPeripheralVc,VC,
 HC32F420,VC1,vc,0x4000A810,,APB1EN,SysctrlPeripheralVc,VC,
 HC32F420,WWDT,wwdt,0x40008800,,APB1EN,SysctrlPeripheralWwt,WWDT,

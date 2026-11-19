@@ -3,6 +3,8 @@ name: HC32F003C4PA
 family: HC32F003
 packages:
 - name: HC32F003C4PA
+  package: SOP20
+- name: HC32F003C4PA
   package: TSSOP20
 include_memory: ../memory/HC32F003_F16S2.yaml
 memory_sizes:
@@ -25,7 +27,7 @@ _raw:
   freq_mhz: '32'
   flash_kb: '16'
   sram_kb: '2'
-  package: TSSOP20
+  package: SOP20
   pin_count: '20'
   gpio: '16'
   vdd_min: '1.8'

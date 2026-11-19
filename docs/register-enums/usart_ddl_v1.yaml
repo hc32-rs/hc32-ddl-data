@@ -1,0 +1,59 @@
+# chiptool enum 补录数据：usart_ddl_v1（HC32A052/F052/F420/L12x 共用布局）
+# 由 chiptool_registers.py 在 rename_block 之后、布局签名/SHA-256 校验之前注入 IR。
+# 保留编码不命名为变体：chiptool 渲染时自动生成 _RESERVED_<hex> 不可用变体。
+# 修改/新增条目须先在 RM + SDK 双源核对（编码、位宽、访问语义、保留值、模式条件）。
+
+source: usart_ddl_v1
+
+# 字段 → 枚举映射（fieldset.field 唯一定位；enum 名称进 IR 的 enum/ 节点）
+fields:
+  CR1.TOE:
+    enum: TOE
+    description: 多功能定时器工作模式配置位
+    mode_note: >-
+      所有功能的 TOE 都由硬件清零；从一种功能切换到另一种功能须先写 TOE=000
+      再写新值（RM 表 17-12 注 1/2，四系列一致）。
+    access: read-write
+
+# 枚举定义（value 为未移位编码；bit_size 与字段位宽一致）
+enums:
+  TOE:
+    bit_size: 3
+    description: 多功能定时器工作模式（0b110/0b111 保留，同 0b000 关闭计数功能）
+    variants:
+      - name: STOP
+        value: 0
+        description: 停止定时计数器
+      - name: GENERAL
+        value: 1
+        description: 通用定时功能
+      - name: RECEIVE
+        value: 2
+        description: 接收定时功能
+      - name: DATA_FRAME
+        value: 3
+        description: 数据帧间定时功能
+      - name: LIN_BREAK
+        value: 4
+        description: LIN 模式下，同步间隔段计数使能
+      - name: AUTO_BAUDRATE
+        value: 5
+        description: LIN 模式或异步串口模式下，波特率自动检测使能
+    reserved:
+      note: 0b110~0b111 保留，同 0b000（关闭计数功能）；不命名为有效变体
+      values: [6, 7]
+
+# 来源记录（每条枚举须双源核对：RM 表号 + SDK 头文件行号）
+sources:
+  - series: HC32F420
+    rm: RM_HC32F420系列参考手册_Rev1.30.pdf 表 17-12（CR1 位定义，b10~b8 TOE，p.331）
+    sdk: HC32F420_DDL_Rev1.3.1/driver/inc/usart.h:540-545（USART_TOE_* 宏）
+  - series: HC32L12x
+    rm: RM_HC32L12x系列参考手册_Rev1.20.pdf 表 18-11（CR1 位定义，10:8 TOE，p.331）
+    sdk: HC32L12x_DDL_Rev1.1.0/driver/inc/usart.h:291-305（en_usart_to_mode_t 枚举）
+  - series: HC32A052
+    rm: RM_HC32A052系列参考手册_Rev1.10.pdf §19 CR1 位定义（10:8 TOE，p.359）
+    sdk: HC32A052_DLL_Rev1.0.1/driver/inc/usart.h:543-551（USART_TOE_* 宏）
+  - series: HC32F052
+    rm: 未独立核对（F052 RM 为 F420 同代衍生版；SDK 宏与 A052/F420/L12x 完全一致）
+    sdk: HC32F052_DDL_Rev1.1.0/driver/inc/usart.h:543-551（USART_TOE_* 宏，逐字节一致）

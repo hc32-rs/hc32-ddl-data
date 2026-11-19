@@ -13,6 +13,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralAdc0
+    polarity: high
   interrupts:
   - signal: ADC0_ADC1
     interrupt: ADC0_ADC1
@@ -26,6 +27,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralAdc1
+    polarity: high
   interrupts:
   - signal: ADC0_ADC1
     interrupt: ADC0_ADC1
@@ -49,8 +51,10 @@
     block: ATIM
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralATim0
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: ATIM0_UEV
     interrupt: ATIM0_UEV
@@ -80,8 +84,10 @@
     block: ATIM
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralATim3
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: ATIM3_UEV
     interrupt: ATIM3_UEV
@@ -99,8 +105,10 @@
     version: ddl_v1_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim0
+    polarity: high
+    bus: apb0
 - name: BTIM1
   address: 0x40005100
   registers:
@@ -109,8 +117,10 @@
     version: ddl_v1_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim0
+    polarity: high
+    bus: apb0
 - name: BTIM2
   address: 0x40005200
   registers:
@@ -119,8 +129,10 @@
     version: ddl_v1_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim0
+    polarity: high
+    bus: apb0
 - name: BTIM3
   address: 0x40005400
   registers:
@@ -129,8 +141,10 @@
     version: ddl_v1_1
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim1
+    polarity: high
+    bus: apb0
 - name: BTIM4
   address: 0x40005500
   registers:
@@ -139,8 +153,10 @@
     version: ddl_v1_1
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim1
+    polarity: high
+    bus: apb0
 - name: BTIM5
   address: 0x40005600
   registers:
@@ -149,8 +165,10 @@
     version: ddl_v1_1
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim1
+    polarity: high
+    bus: apb0
 - name: BTIM6
   address: 0x40005800
   registers:
@@ -159,8 +177,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim2
+    polarity: high
+    bus: apb0
 - name: BTIM7
   address: 0x40005900
   registers:
@@ -169,8 +189,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim2
+    polarity: high
+    bus: apb0
 - name: BTIM8
   address: 0x40005A00
   registers:
@@ -179,8 +201,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim2
+    polarity: high
+    bus: apb0
 - name: CRC
   address: 0x40020800
   registers:
@@ -191,6 +215,7 @@
     enable:
       register: AHB0EN
       field: SysctrlPeripheralCrc
+    polarity: high
 - name: CTRIM
   address: 0x40008000
   registers:
@@ -201,6 +226,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralCtrim
+    polarity: high
   interrupts:
   - signal: CTRIM
     interrupt: CTRIM
@@ -214,6 +240,7 @@
     enable:
       register: AHB0EN
       field: SysctrlPeripheralDma
+    polarity: high
   interrupts:
   - signal: DMA_CH0
     interrupt: DMA_CH0
@@ -237,6 +264,7 @@
     enable:
       register: AHB0EN
       field: SysctrlPeripheralFlash
+    polarity: high
   interrupts:
   - signal: FLASH
     interrupt: FLASH
@@ -250,6 +278,7 @@
     enable:
       register: AHB1EN
       field: SysctrlPeripheralGpioa
+    polarity: high
   interrupts:
   - signal: PORTA
     interrupt: PORTA
@@ -269,6 +298,7 @@
     enable:
       register: AHB1EN
       field: SysctrlPeripheralGpiob
+    polarity: high
   interrupts:
   - signal: PORTB
     interrupt: PORTB
@@ -282,6 +312,7 @@
     enable:
       register: AHB1EN
       field: SysctrlPeripheralGpioc
+    polarity: high
   interrupts:
   - signal: PORTC
     interrupt: PORTC
@@ -295,6 +326,7 @@
     enable:
       register: AHB1EN
       field: SysctrlPeripheralGpiod
+    polarity: high
   interrupts:
   - signal: PORTD
     interrupt: PORTD
@@ -306,8 +338,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim0
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: GTIM0_UEV_ETR_BTIMA
     interrupt: GTIM0_UEV_ETR_BTIMA
@@ -323,8 +357,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim1
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: GTIM1_UEV_ETR_BTIMA
     interrupt: GTIM1_UEV_ETR_BTIMA
@@ -340,8 +376,10 @@
     version: ddl_v1_3
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralCTim2
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: GTIM2_UEV_ETR_BTIMA
     interrupt: GTIM2_UEV_ETR_BTIMA
@@ -357,8 +395,10 @@
     version: ddl_v2_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralI2c0
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: I2C0
     interrupt: I2C0
@@ -370,8 +410,10 @@
     version: ddl_v2_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralI2c1
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: I2C1
     interrupt: I2C1
@@ -385,6 +427,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralIwt
+    polarity: high
   interrupts:
   - signal: IWDT
     interrupt: IWDT
@@ -398,6 +441,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripherallvd
+    polarity: high
   interrupts:
   - signal: LVD
     interrupt: LVD
@@ -409,8 +453,10 @@
     version: ddl_v2_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralSpi0
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: SPI0_TX
     interrupt: SPI0_TX
@@ -428,8 +474,10 @@
     version: ddl_v2_2
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralSpi1
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: SPI1_TX
     interrupt: SPI1_TX
@@ -451,10 +499,15 @@
     kind: usart
     block: USART
     version: ddl_v1
+  kernel_clock:
+    type: fixed
+    name: pclk0
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralUsart0
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: USART0_RX
     interrupt: USART0_RX
@@ -468,10 +521,15 @@
     kind: usart
     block: USART
     version: ddl_v1
+  kernel_clock:
+    type: fixed
+    name: pclk0
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralUsart1
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: USART1_RX
     interrupt: USART1_RX
@@ -485,10 +543,15 @@
     kind: usart
     block: USART
     version: ddl_v1
+  kernel_clock:
+    type: fixed
+    name: pclk0
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralUsart2
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: USART2_RX
     interrupt: USART2_RX
@@ -502,10 +565,15 @@
     kind: usart
     block: USART
     version: ddl_v1
+  kernel_clock:
+    type: fixed
+    name: pclk0
   rcc:
     enable:
-      register: AHB0EN
+      register: APB0EN
       field: SysctrlPeripheralUsart3
+    polarity: high
+    bus: apb0
   interrupts:
   - signal: USART3_RX
     interrupt: USART3_RX
@@ -523,6 +591,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralVc
+    polarity: high
   interrupts:
   - signal: VC
     interrupt: VC
@@ -536,6 +605,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralVc
+    polarity: high
   interrupts:
   - signal: VC
     interrupt: VC
@@ -549,6 +619,7 @@
     enable:
       register: APB1EN
       field: SysctrlPeripheralWwt
+    polarity: high
   interrupts:
   - signal: WWDT
     interrupt: WWDT
